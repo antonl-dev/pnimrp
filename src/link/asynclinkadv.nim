@@ -15,15 +15,23 @@ proc asyncLinkCheckTolerantWithContentType*(url: string; timeout = 10000): Futur
   try:
   #block:
     var client = newAsyncHttpClient(
-      #timeout = timeout,
       sslContext = sslCtxWithNoVerify,
       userAgent = "pnimrp/0.1",
       maxRedirects = 2
-      )
+    )
     await sleepAsync 5
-    let clientResponse = await client.head(url)
 
+    let headFuture = client.head(url)
     await sleepAsync 5
+
+    if not await withTimeout(headFuture, 5000):
+      await sleepAsync 5
+      client.close()
+      return lsUnknown
+
+    let clientResponse = await headFuture
+    await sleepAsync 5
+
     let clientResponseContentType = clientResponse.contentType()
     await sleepAsync 5
     let clientResponseStatusCodeString = $clientResponse.code()
@@ -37,7 +45,6 @@ proc asyncLinkCheckTolerantWithContentType*(url: string; timeout = 10000): Futur
           result = lsValid
         else: result = lsUnknown
 
-
     tempFileLogContent =
       tempFileLogContent & "url: " & url & " | " & clientResponseStatusCodeString
 
@@ -48,7 +55,7 @@ proc asyncLinkCheckTolerantWithContentType*(url: string; timeout = 10000): Futur
       of "405", "400":
           tryHttpGetWhenMediaServerDoesNotSupportHead(url)
           return lsUnknown
-      else: return lsUnknown #Invalid
+      else: return lsUnknown
 
     elif clientResponseStatusCodeString[0] == '5': return lsUnknown
 
