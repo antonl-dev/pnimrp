@@ -74,9 +74,10 @@ template cE(status: bool) =
 
 func linkStatustoBool(status: LinkStatus): uint8 =
   case status
-  of lsInvalid: 0 #false
-  of lsValid: 1 #true
+  of lsInvalid:  0 #false
+  of lsValid:    1 #true
   of lsChecking: 2
+  of lsUnknown:  3
     #raise newException(OSError, "are you writing CheckingStatus to cache?")
 
 func boolToLinkStatus(status: int): LinkStatus =
@@ -84,6 +85,7 @@ func boolToLinkStatus(status: int): LinkStatus =
   of 0: lsInvalid #false
   of 1: lsValid #true
   of 2: lsChecking
+  of 3: lsUnknown
   else:
     raise newException(OSError, "are you writing CheckingStatus to cache?")
 

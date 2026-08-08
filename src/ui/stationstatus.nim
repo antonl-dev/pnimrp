@@ -29,11 +29,13 @@ func toStatusCodeEmoji(status: LinkStatus): (ForegroundColor, string) =
     of lsValid:    (fgDefault, "🟢")
     of lsInvalid:  (fgDefault, "🔴")
     of lsChecking: (fgDefault, "🟡")
+    of lsUnknown:  (fgDefault, "❓")
   else:
     case status
     of lsValid:    (fgGreen,  "/")
     of lsInvalid:  (fgRed,    "x")
     of lsChecking: (fgYellow, "o")
+    of lsUnknown:  (fgRed,    "?")
 
 proc drawStatusIndicator*(x, y: int, status = lsChecking, isInitial = false) =
   setCursorPos(x, y)
@@ -63,7 +65,7 @@ proc checkAndDraw(station: StationStatus) {.async.} =
     let result1 = await withTimeoutAndGetVal(station.future, timeout = 6000)
     await sleepAsync(5)
      
-    if result1.timedOut: station.status = lsChecking
+    if result1.timedOut: station.status = lsUnknown
     else:                station.status = result1.value
   await sleepAsync(5)
   drawStatusIndicator(station.coord[0], station.coord[1], station.status)

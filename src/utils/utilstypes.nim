@@ -19,7 +19,7 @@ type
 
 type
   LinkStatus* = enum
-    lsChecking, lsValid, lsInvalid
+    lsChecking, lsValid, lsInvalid, lsUnknown
 
 type
   MenuError* = object of CatchableError  # Custom error type for menu-related issues

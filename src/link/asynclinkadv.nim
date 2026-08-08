@@ -35,7 +35,7 @@ proc asyncLinkCheckTolerantWithContentType*(url: string; timeout = 10000): Futur
       if clientResponseStatusCodeString[0] in ['1', '2', '3']:
         if clientResponseContentType.isValidAudioOrPlaylistStreamContentType():
           result = lsValid
-        else: result = lsChecking
+        else: result = lsUnknown
 
 
     tempFileLogContent =
@@ -47,17 +47,17 @@ proc asyncLinkCheckTolerantWithContentType*(url: string; timeout = 10000): Futur
       of "401", "403", "404", "408", "410": return lsInvalid
       of "405", "400":
           tryHttpGetWhenMediaServerDoesNotSupportHead(url)
-          return lsChecking
-      else: return lsChecking#Invalid
+          return lsUnknown
+      else: return lsUnknown #Invalid
 
-    elif clientResponseStatusCodeString[0] == '5': return lsChecking
+    elif clientResponseStatusCodeString[0] == '5': return lsUnknown
 
     #result = LinkValidationResult(
     #  isValid: status
     #)
   except SslError, ProtocolError:
     #Handle exceptions using the reusable error-handling function
-    return lsChecking
+    return lsUnknown
 
   except OSError:
     #if "Connection Refused" == getCurrentExceptionMsg():
