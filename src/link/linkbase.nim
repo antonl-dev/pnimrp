@@ -61,11 +61,31 @@ const validPlaylistTypesList* = [
   "application/pls+xml",
   "application/xspf+xml",
   "audio/x-ms-asx",
+  "application/m3u8",
+  "video/x-ms-asf",
+  "text/m3u"
+]
+
+const validRawStreamTypesList* = [
+  "application/ogg",
+  "application/x-ogg",
+  "application/aac",
+  "application/aacp",
+  "application/x-aac",
   "application/octet-stream"
 ]
 
+func isValidRawStreamContentType*(contentType: string): bool =
+  let normalized = contentType.toLowerAscii()
+  if normalized.startsWith("audio/"): return true
+  elif normalized in validRawStreamTypesList: return true
+  return false
+
+func isValidPlaylistContentType*(contentType: string): bool =
+  let normalized = contentType.toLowerAscii()
+  if normalized in validPlaylistTypesList: return true
+  return false
+
 func isValidAudioOrPlaylistStreamContentType*(contentType: string): bool =
-  let normalizedContentType = contentType.toLowerAscii()
-  if normalizedContentType.startsWith("audio/"): return true
-  elif normalizedContentType in validPlaylistTypesList: return true
-  return
+  return isValidRawStreamContentType(contentType) or
+    isValidPlaylistContentType(contentType)
