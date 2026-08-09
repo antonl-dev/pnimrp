@@ -1,3 +1,5 @@
+
+
 <div style="display: flex; align-items: center;">
   <img src="https://github.com/bloomingchad/pnimrp/raw/main/web/ico.ico" alt="pnimrp Icon" width="90" style="margin-right: 10px;" />
   <h1>♪♫ pnimrp - Poor Man's Radio Player in Nim ♫♪</h1>
@@ -123,7 +125,7 @@ want to use smaller bin size?: add `-d:useJsmn`
 
 | key          | action                      |
 | ------------ | --------------------------- |
-| **1-9, a-m** | select menu options         |
+| **1-9, a-l** | select menu options         |
 | **r**        | return to the previous menu |
 | **q**        | quit the application        |
 | **p**        | pause/resume playback       |
