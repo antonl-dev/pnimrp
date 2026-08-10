@@ -28,7 +28,7 @@ proc asyncLinkCheckTolerantWithContentType*(url: string; timeout = 10000): Futur
     let headFuture = client.head(url)
     await sleepAsync 5
 
-    if not await withTimeout(headFuture, 5000):
+    if not await withTimeout(headFuture, 10000):
       await sleepAsync 5
       client.close()
       return lsUnknown
