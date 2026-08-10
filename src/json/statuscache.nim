@@ -127,12 +127,16 @@ type CacheDoesntMatchParentJsonError = object of CatchableError
 
 proc waitForProcessButSpin() =
   var spinner: int
+  let startTime = getTime()
+  
   try:
-    while true:
+    while (getTime() - startTime).inSeconds < 10:
       spinner.spinLoadingSpinnerOnce((termWidth - 3,3))
       poll()
+
   except ValueError:
     discard
+
   finally:
     setCursorPos(termWidth - 3,3)
     stdout.write("   ")
