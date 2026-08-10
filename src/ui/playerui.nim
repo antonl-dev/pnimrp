@@ -1,8 +1,9 @@
 # SPDX-License-Identifier: MPL-2.0
 import
   terminal, strutils, net,
-  tables, os,
+  tables, os
 
+import
   illwill, playeruiutils, menuui,
 
   ../audio/mpv/[

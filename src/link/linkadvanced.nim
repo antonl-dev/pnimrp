@@ -1,5 +1,7 @@
 # SPDX-License-Identifier: MPL-2.0
-import std/net, httpclient, linkbase, strutils
+import linkbase
+
+import net, httpclient, strutils
 
 proc validateLinkWithContentTypeCheck*(url: string; timeout = 2000): LinkValidationResult =
   let url = normalizeUrl(url)

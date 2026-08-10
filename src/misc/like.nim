@@ -2,7 +2,8 @@
 import
   terminal, times,
 
-  ../utils/utils, ../audio/mpv/player
+  ../utils/utils,
+  ../audio/mpv/player
 
 proc appendToFileReUsable(filen: string, config: MenuConfig, isLike: bool) =
   try:

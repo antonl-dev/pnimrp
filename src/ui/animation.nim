@@ -1,7 +1,9 @@
 # SPDX-License-Identifier: MPL-2.0
 # animation.nim
 
-import terminal, ../utils/utils
+import ../utils/utils
+
+import terminal
 
 proc updateJinglingAnimation*(status: string, animationCounter: int): string =
   if animationCounter == 27:

@@ -2,9 +2,10 @@ const isVlc =
   static:
     defined(vlc)
 
+import os
+
 import vlc/helper
 import mpv/player
-import os
 
 type
   audioHandle* = object

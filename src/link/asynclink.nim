@@ -2,10 +2,12 @@
 # asynclink.nim
 
 import
-  times, ../utils/utils, asyncdispatch,
-  asyncnet, strutils, linkbase
+  times, asyncdispatch, asyncnet,
+  strutils
 
 from net import TimeoutError
+
+import  ../utils/utils, linkbase
 
 when defined(asynclinkadv):
   import asynclinkadv

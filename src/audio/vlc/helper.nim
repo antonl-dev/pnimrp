@@ -1,4 +1,4 @@
-import libvlc/libvlc, libvlc/base
+import libvlc/[libvlc, base]
 
 type VlcError* = object of CatchableError
 

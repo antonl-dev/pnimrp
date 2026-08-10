@@ -1,11 +1,15 @@
+# SPDX-License-Identifier: MPL-2.0
 import
-  terminal, random, os,
-  strutils, ../audio/mpv/player,
+  ../audio/mpv/player,
 
   ../utils/[
     utils,
     jsonutils
   ]
+
+import
+  terminal, random, os,
+  strutils
 
 when not defined(simple):
   import stationstatus

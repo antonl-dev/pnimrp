@@ -1,9 +1,12 @@
 # SPDX-License-Identifier: MPL-2.0
 # stationstatus.nim
 
-import terminal, asyncdispatch,
+
+import
   ../utils/utils,
   ../link/asynclink
+
+import terminal, asyncdispatch
 
 type
   TimeoutResult[T] = object

@@ -1,7 +1,9 @@
 # SPDX-License-Identifier: MPL-2.0
 # link.nim
 
-import std/net, linkbase
+import linkbase
+
+import net
 
 #when not defined(simple):
 #  import linkadvanced

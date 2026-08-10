@@ -1,10 +1,12 @@
 # SPDX-License-Identifier: MPL-2.0
 #asynclinkadv.nim
 import
-  times, ../utils/utils, asyncdispatch,
-  strutils, linkbase
+  times,  asyncdispatch,
+  strutils, net, httpclient
 
-import std/net, httpclient
+import
+  linkbase,
+  ../utils/utils
 
 var tempFileLogContent*: string
 

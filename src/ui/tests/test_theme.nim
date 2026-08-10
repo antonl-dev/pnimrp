@@ -1,6 +1,8 @@
 # SPDX-License-Identifier: MPL-2.0
 # Unit tests for theme.nim
-import ../theme, terminal, ../../utils/utils
+import terminal
+
+import ../theme, ../../utils/utils
 
 when isMainModule:
   import unittest, os

@@ -3,10 +3,10 @@
 
 import
   json, os, asyncdispatch,
-  ../utils/utils, strutils,
-  times, terminal, ../ui/[menuui, illwill],
+  times, terminal, strutils,
 
-  ../ui/stationstatus
+  ../utils/utils,
+  ../ui/[menuui, illwill, stationstatus]
 
 #[spec
   {

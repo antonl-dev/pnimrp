@@ -2,10 +2,11 @@
 # theme.nim
 
 import
-  json, strutils,
-  terminal, tables,
-
   ../utils/utils
+
+import
+  json, strutils,
+  terminal, tables
 
 proc loadThemeConfig*(configPath: string): ThemeConfig =
   try:

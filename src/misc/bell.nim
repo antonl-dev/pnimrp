@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: MPL-2.0
 import
-  os,
-  terminal,
+  os, terminal,
+
   ../audio/mpv/[
     player,
     libmpv

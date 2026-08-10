@@ -2,9 +2,12 @@
 # menu.nim
 
 import
-  terminal, os, strutils, net,
-  random,
+  terminal, os,
+  strutils, net,
+  random
 
+
+import
   ui/[
     illwill,
     playerui,

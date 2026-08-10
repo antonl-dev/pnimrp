@@ -1,11 +1,10 @@
-import terminal
-import menuui
-import commonui
+import
+  menuui,
+  commonui,
+  ../utils/utils
 
 import
-  ../utils/[
-    utils
-  ]
+  terminal
 
 proc drawHeaderPlayerUI(section: string) =
   ## Draws the header section of the player UI.

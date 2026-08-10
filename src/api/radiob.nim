@@ -1,5 +1,6 @@
-import net, httpclient, uri, json, strutils
-import std/cmdline
+import
+  net, httpclient, uri,
+  json, strutils, std/cmdline
 
 const apiEndPoint = "https://all.api.radio-browser.info/"
 const maxStationCap = 20

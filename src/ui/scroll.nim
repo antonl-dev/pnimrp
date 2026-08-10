@@ -1,7 +1,8 @@
 # SPDX-License-Identifier: MPL-2.0
 # scroll.nim
+import ../utils/utils
 
-import strutils, terminal, illwill, ../utils/utils
+import strutils, terminal, illwill
 
 proc clearLineForScroll(start: int, len: int, indentLevel: int = 0) =
   ## Clears a specific portion of the line for scrolling.
