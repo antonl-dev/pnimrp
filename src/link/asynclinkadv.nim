@@ -15,8 +15,10 @@ proc asyncLinkCheckTolerantWithContentType*(url: string; timeout = 10000): Futur
   try:
   #block:
     var client = newAsyncHttpClient(
-      sslContext = sslCtxWithNoVerify,
-      userAgent = "pnimrp/0.1",
+      sslContext   = sslCtxWithNoVerify,
+      userAgent    =
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      #= "pnimrp/0.1",
       maxRedirects = 2
     )
     await sleepAsync 5
