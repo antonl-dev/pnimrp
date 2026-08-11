@@ -125,12 +125,12 @@ proc readFromExistingStatusCache*(stations; statuscontext): JsonNode =
 
 type CacheDoesntMatchParentJsonError = object of CatchableError
 
-proc waitForProcessButSpin() =
+proc waitForProcessButSpin(fut: Future[void]) =
   var spinner: int
   let startTime = getTime()
   
   try:
-    while (getTime() - startTime).inSeconds < 10:
+    while not fut.finished and (getTime() - startTime).inSeconds < 10:
       spinner.spinLoadingSpinnerOnce((termWidth - 3,3))
       poll()
 
@@ -144,8 +144,8 @@ proc waitForProcessButSpin() =
 template waitForResolveNewStatusAndSave =
   initCheckingStationNotice()
   when defined(asynccheckspinner):
-    asyncCheck resolveAndDisplay(stations)
-    waitForProcessButSpin()
+    let checkFut = resolveAndDisplay(stations)
+    waitForProcessButSpin(checkFut)
   else:
     waitFor resolveAndDisplay(stations)
   finishCheckingStationNotice()
@@ -187,7 +187,7 @@ proc hookCacheResolveAndDisplay*(stations; statuscontext) =
         waitForResolveNewStatusAndSave()
   else:
     when defined(asynccheckspinner):
-      asyncCheck resolveAndDisplay(stations)
-      waitForProcessButSpin()
+      let checkFut = resolveAndDisplay(stations)
+      waitForProcessButSpin(checkFut)
     else:
       waitFor resolveAndDisplay(stations)
