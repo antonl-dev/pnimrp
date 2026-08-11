@@ -1,12 +1,13 @@
 # SPDX-License-Identifier: MPL-2.0
 # stationstatus.nim
 
-
 import
   ../utils/utils,
   ../link/asynclink
 
 import terminal, asyncdispatch
+
+var currentMenuGen* = 0
 
 type
   TimeoutResult[T] = object
@@ -59,7 +60,7 @@ type
     status*:   LinkStatus
     future*:   Future[LinkStatus]
 
-proc checkAndDraw(station: StationStatus) {.async.} =
+proc checkAndDraw(station: StationStatus, myGen: int) {.async.} =
   station.future = resolveLink(station.url) # Store future
   await sleepAsync(5)
   when not defined(asynclinktimeout):
@@ -71,17 +72,20 @@ proc checkAndDraw(station: StationStatus) {.async.} =
     if result1.timedOut: station.status = lsUnknown
     else:                station.status = result1.value
   await sleepAsync(5)
-  drawStatusIndicator(station.coord[0], station.coord[1], station.status)
-  await sleepAsync(5)
-  stdout.flushFile()
-      #flush to actually send the written stdout to stdout
-      #this gives us immediate status display effect
+
+  if myGen == currentMenuGen:
+    drawStatusIndicator(station.coord[0], station.coord[1], station.status)
+    await sleepAsync(5)
+    stdout.flushFile()
 
 proc resolveAndDisplay*(stations: seq[StationStatus]) {.async.} =
+  inc currentMenuGen
+  let thisGen = currentMenuGen
+
   var allChecks = newSeqOfCap[Future[void]](32)
 
   for station in stations:
-    allChecks.add(checkAndDraw(station))
+    allChecks.add(checkAndDraw(station, thisGen))
 
   await all(allChecks)
 

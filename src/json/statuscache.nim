@@ -178,6 +178,7 @@ proc applyLinkStatusFromCacheToState(stations; stationsList: JsonNode; statuscon
     return e.handleApplytoCacheError(stations, statuscontext)
 
 proc hookCacheResolveAndDisplay*(stations; statuscontext) =
+  inc currentMenuGen
   when defined(statuscache):
     if not checkIfCacheAlreadyExistAndIsValid(stations, statuscontext):
       waitForResolveNewStatusAndSave()
