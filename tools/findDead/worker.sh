@@ -73,7 +73,7 @@ log_echo() {
     echo "$1" >> error.txt
 }
 
-# Check if STATION_NAME and URL are provided
+# Check if STATION_NAME, URL, and JSON_FILE are provided
 if [[ -z "$1" || -z "$2" ]]; then
     echo "Error: STATION_NAME or URL not provided."
     exit 1
@@ -82,6 +82,7 @@ fi
 # Define arguments
 STATION_NAME="$1"
 URL="$2"
+JSON_FILE="$3"
 
 # Define the target keywords (case-insensitive)
 KEYWORDS=("flac" "aac" "mp3" "adts" "mpeg" "hls" "layer iii" "layer 3" "dash" "pls" "mpd" "m3u" "ogg" "vorbis" "opus")
@@ -118,14 +119,14 @@ if echo "$URL" | grep -iq "m3u"; then
   curl_status=$?
   
   if (( curl_status != 0 && curl_status != 28 )); then
-    log_echo "❌ $STATION_NAME: CurlError $curl_status"
-    _echo "❌ $STATION_NAME: CurlError $curl_status"
+    log_echo "❌ $JSON_FILE | $STATION_NAME | $URL | CurlError $curl_status"
+    _echo "❌ $JSON_FILE | $STATION_NAME | $URL | CurlError $curl_status"
     exit 1
   fi
 
   if grep -q -e "#EXTM3U" -e "http" "$TEMP_FILE"; then
-     _echo "✅ $STATION_NAME (M3U/M3U8 PLAYLIST)"
-     log_echo "✅ $STATION_NAME (M3U/M3U8 PLAYLIST)"
+     _echo "✅ $JSON_FILE | $STATION_NAME | $URL | (M3U/M3U8 PLAYLIST)"
+     log_echo "✅ $JSON_FILE | $STATION_NAME | $URL | (M3U/M3U8 PLAYLIST)"
      exit 0
   fi
 fi
@@ -135,8 +136,8 @@ curl_output=$(make_request)
 curl_status="$?"
 
 if (( curl_status != 0 && curl_status != 28 )); then
-  log_echo "❌ $STATION_NAME: CurlError $curl_status"
-  _echo "❌ $STATION_NAME: CurlError $curl_status"
+  log_echo "❌ $JSON_FILE | $STATION_NAME | $URL | CurlError $curl_status"
+  _echo "❌ $JSON_FILE | $STATION_NAME | $URL | CurlError $curl_status"
   log_echo "START curloutp-----------------------------------------"
   log_echo "$curl_output"
   log_echo "END curloutp-----------------------------------------"
@@ -158,11 +159,11 @@ if [[ -s "$TEMP_FILE" ]]; then
 
     # Return success or error based on whether a keyword was found
     if [[ $FOUND -eq 1 ]]; then
-        _echo "✅ $STATION_NAME ($MATCHED_KEYWORD)"
+        _echo "✅ $JSON_FILE | $STATION_NAME | $URL | ($MATCHED_KEYWORD)"
         exit 0
     else
-        log_echo "❌ $STATION_NAME: No matching keywords found."
-        _echo "❌ $STATION_NAME: No matching keywords found."
+        log_echo "❌ $JSON_FILE | $STATION_NAME | $URL | No matching keywords found."
+        _echo "❌ $JSON_FILE | $STATION_NAME | $URL | No matching keywords found."
         log_echo "START-----------------------------------------"
         log_echo "file said:"
         file "$TEMP_FILE" >> error.txt
@@ -175,6 +176,5 @@ if [[ -s "$TEMP_FILE" ]]; then
     fi
 else
     # Temporary file is empty or does not exist
-    _echo "❌ $STATION_NAME: Downloaded file is empty or missing."
     exit 1
 fi
