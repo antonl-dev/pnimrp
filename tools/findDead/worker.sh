@@ -176,5 +176,6 @@ if [[ -s "$TEMP_FILE" ]]; then
     fi
 else
     # Temporary file is empty or does not exist
+    _echo "❌ $JSON_FILE | $STATION_NAME | $URL | Downloaded file is empty or missing."
     exit 1
 fi
