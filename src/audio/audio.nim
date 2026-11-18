@@ -188,17 +188,30 @@ proc getCurrentMediaTitle*(ctx: AudioContext, appState: AppState = nil): string 
     if ctx == nil: return ""
     when isVlc:
         let vlc = VlcAudioContext(ctx)
-        if vlc.vlcHandle != nil:
+        if vlc.vlcHandle != nil and vlc.vlcHandle.mediaDscptr != nil:
+            let md = vlc.vlcHandle.mediaDscptr
             result = vlc.vlcHandle.getCurrentMediaTitleVlc()
-            if result == "" or result == "nil":
-                let artist = if vlc.vlcHandle.mediaDscptr != nil: $libvlc.mediaGetMeta(vlc.vlcHandle.mediaDscptr, libvlc.metaArtist) else: ""
-                let title = if vlc.vlcHandle.mediaDscptr != nil: $libvlc.mediaGetMeta(vlc.vlcHandle.mediaDscptr, libvlc.metaTitle) else: ""
-                if artist != "" and artist != "nil" and title != "" and title != "nil":
+            if result == "":
+                proc getMetaStr(e: libvlc.meta): string =
+                    let c = libvlc.mediaGetMeta(md, e)
+                    if c != nil:
+                        let s = ($c).strip()
+                        if s != "" and s != "nil":
+                            return s
+                    return ""
+
+                func isUrlOrFilename(s: string): bool =
+                    s.contains("://") or s.endsWith(".mp3") or s.endsWith(".aac") or
+                    s.endsWith(".ogg") or s.endsWith(".pls") or s.endsWith(".m3u")
+
+                let artist = getMetaStr(libvlc.meta_Artist)
+                let title = getMetaStr(libvlc.metaTitle)
+                if artist != "" and title != "" and not isUrlOrFilename(title):
                     result = artist & " - " & title
-                elif title != "" and title != "nil":
+                elif title != "" and not isUrlOrFilename(title):
                     result = title
-                else:
-                    result = ""
+                elif artist != "":
+                    result = artist
             if appState != nil:
                 appState.fullMediaTitle = result
     else:

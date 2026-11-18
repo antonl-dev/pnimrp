@@ -245,10 +245,67 @@ proc updateMetadataUI*(config: MenuConfig, ctx: ptr Handle,
 
     cursorUp goingDown + startingPoint
 
+when defined(vlc):
+    import ../vlc/libvlc/libvlc, ../vlc/libvlc/media, ../vlc/helper
+
+    proc getVlcMetadata*(vlc: VlcAudioContext): Table[string, string] =
+        result = initTable[string, string]()
+        if vlc == nil or vlc.vlcHandle == nil or vlc.vlcHandle.mediaDscptr == nil:
+            return
+        let md = vlc.vlcHandle.mediaDscptr
+
+        proc getMetaStr(e: libvlc.meta): string =
+            let c = libvlc.mediaGetMeta(md, e)
+            if c != nil:
+                let s = ($c).strip()
+                if s != "" and s != "nil":
+                    return s
+            return ""
+
+        let genre = getMetaStr(libvlc.metaGenre)
+        if genre != "": result["Genre"] = genre
+
+        let desc = getMetaStr(libvlc.metaDescription)
+        if desc != "": result["Description"] = desc
+
+        let url = getMetaStr(libvlc.metaURL)
+        if url != "": result["URL"] = url
+
+        let album = getMetaStr(libvlc.metaAlbum)
+        if album != "": result["Album"] = album
+
+        let artist = getMetaStr(libvlc.meta_Artist)
+        if artist != "": result["Artist"] = artist
+
+        let pub = getMetaStr(libvlc.metaPublisher)
+        if pub != "": result["Publisher"] = pub
+
+        let date = getMetaStr(libvlc.metaDate)
+        if date != "": result["Date"] = date
+
 proc updateMetadataUI*(config: MenuConfig, ctx: AudioContext,
         state: PlayerState): Table[string, string] =
     ## Unified overload for AudioContext.
     when defined(vlc):
+        if ctx != nil and ctx of VlcAudioContext:
+            result = getVlcMetadata(VlcAudioContext(ctx))
+            var goingDown: int
+
+            let maxHeight = terminalHeight()
+            let startingPoint = 6
+            cursorDown startingPoint
+
+            if willHitUIBottom():
+                return result
+
+            if result.len > 0:
+                for key, value in result:
+                    if (value == "") or (key.toLowerAscii().contains("title")): continue
+                    styledEcho fgCyan, "  " & key & ": '" & value.truncateMe() & "'"
+                    goingDown += 1
+
+            cursorUp goingDown + startingPoint
+            return result
         return initTable[string, string]()
     else:
         if ctx != nil and ctx of MpvAudioContext and MpvAudioContext(ctx).mpvHandle != nil:

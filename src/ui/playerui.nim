@@ -142,6 +142,15 @@ proc playStation*(appState: AppState, config: MenuConfig) =
                     ctx.setVolume(volumeForFading)
                     sleep getPerCycleSleepTimeFade state.volume
             finishedLoading = true
+            let initialTitle = ctx.getCurrentMediaTitle(appState)
+            if initialTitle != "" and initialTitle != "nil":
+                state.currentSong = initialTitle
+                fullTitle = initialTitle
+                appState.fullMediaTitle = fullTitle
+                appState.updateCurrentSongPlayerUI(state.currentSong)
+                setCursorXPos 0
+                when not defined(simple):
+                    appState.globalMetadata = updateMetadataUI(config, ctx, state)
         else:
             if not finishedLoading:
                 spinnerState.spinLoadingSpinnerOnce(appState)

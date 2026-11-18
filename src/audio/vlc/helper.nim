@@ -1,3 +1,4 @@
+import strutils
 import libvlc/[libvlc, base]
 
 type VlcError* = object of CatchableError
@@ -89,7 +90,13 @@ proc isIdle*(Handle): bool =
 #proc observeMediaTitle(Handle)
 
 proc getCurrentMediaTitleVlc*(Handle): string =
-    return $libvlc.mediaGetMeta(Handle.mediaDscptr, libvlc.metaNowPlaying)
+    if Handle == nil or Handle.mediaDscptr == nil: return ""
+    let c = libvlc.mediaGetMeta(Handle.mediaDscptr, libvlc.metaNowPlaying)
+    if c != nil:
+        let s = ($c).strip()
+        if s != "" and s != "nil":
+            return s
+    return ""
 
 proc initNewCtx*(): ref libvlchandle =
     result = new libvlcHandle
