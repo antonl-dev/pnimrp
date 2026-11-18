@@ -14,7 +14,7 @@ import
     ../link/link,
     ../utils/[
         utils
-        ],
+    ],
 
     ../misc/[like, bell]
 
@@ -22,15 +22,15 @@ when not defined(simple):
     import
         ../audio/metadata,
         ../ui/[
-          scroll,
-          animation,
+            scroll,
+            animation,
         ]
 
 proc editBadFileHint(config: MenuConfig, extraMsg = "") =
     if extraMsg != "": warn(extraMsg)
 
     let fileHint = (
-      if config.currentSubsection != "": config.currentSubsection
+        if config.currentSubsection != "": config.currentSubsection
         else: config.currentSection
     )
     setCursorPos(0, terminalHeight() - 4)
@@ -61,48 +61,224 @@ func getPerCycleSleepTimeFade(vol: int): int =
     let steps = int vol / 5
     result = int toTime / steps
 
-template tryToPlayAgain(url: string) =
-    ctx.allocateJob(url)
+proc fadeVolume*(ctx: AudioContext, targetVol, startVol: int) =
+    ## Smoothly ramps audio volume between startVol and targetVol.
+    var current = startVol
+    if targetVol > startVol:
+        while current < targetVol:
+            current = min(current + VolumeStep, targetVol)
+            ctx.setVolume(current)
+            sleep getPerCycleSleepTimeFade targetVol
+    elif targetVol < startVol:
+        while current > targetVol:
+            current = max(current - VolumeStep, targetVol)
+            ctx.setVolume(current)
+            sleep getPerCycleSleepTimeFade startVol
 
-proc playStation*(appState: AppState, config: MenuConfig) =
-    ## Plays a radio station and handles user input for playback control.
-    let ctx = config.ctx
+proc validateStationPreflight*(appState: AppState, config: MenuConfig): bool =
+    ## Validates station URL and link availability prior to playback.
     if config.stationUrl == "":
         editBadFileHint(config)
-        return
+        return false
 
-    # Validate the link
     try:
         initCheckingStationNotice()
         if not validateLink(config.stationUrl).isValid:
             editBadFileHint(config)
-            return
+            return false
         finishCheckingStationNotice(appState)
+        return true
     except Exception:
         editBadFileHint(config)
+        return false
+
+proc handlePlayerAudioEvent*(
+    ctx: AudioContext,
+    audioEvent: AudioEventKind,
+    state: var PlayerState,
+    config: MenuConfig,
+    appState: AppState,
+    fullTitle: var string,
+    wasTheStreamPlayingForSomeTime: var bool,
+    finishedLoading: var bool
+) =
+    ## Dispatches audio core events to UI updates and volume fading.
+    if audioEvent in [aevFileLoaded, aevTitleChanged]:
+        let newTitle = ctx.getCurrentMediaTitle(appState)
+        if newTitle != "" and newTitle != "nil":
+            state.currentSong = newTitle
+            if fullTitle != state.currentSong:
+                appState.appendToHistory(config)
+            fullTitle = state.currentSong
+            appState.fullMediaTitle = fullTitle
+            appState.updateCurrentSongPlayerUI(state.currentSong)
+            setCursorXPos 0
+            when not defined(simple):
+                appState.globalMetadata = updateMetadataUI(config, ctx, state)
+
+    if audioEvent == aevFileLoaded:
+        wasTheStreamPlayingForSomeTime = true
+        when defined(volumeFade):
+            ctx.fadeVolume(targetVol = state.volume, startVol = 0)
+        finishedLoading = true
+
+proc handlePlayerKeyInput*(
+    ctx: AudioContext,
+    key: Key,
+    state: var PlayerState,
+    appState: AppState,
+    config: MenuConfig
+): bool =
+    ## Dispatches user keyboard controls. Returns true if playback should stop/return.
+    result = false
+    case key:
+    of Key.P, Key.Space:
+        state.isPaused = not state.isPaused
+        ctx.pause(state.isPaused)
+        appState.updatePlayMutedStatePlayerUI(currentStatusEmoji(
+                currentStatus(state), appState.terminalSupportsEmoji))
+
+    of Key.M:
+        state.isMuted = not state.isMuted
+        ctx.mute(state.isMuted)
+        appState.updatePlayMutedStatePlayerUI(currentStatusEmoji(
+                currentStatus(state), appState.terminalSupportsEmoji))
+
+    of Key.Slash, Key.Plus:
+        state.volume = min(state.volume + VolumeStep, MaxVolume)
+        appState.lastVolume = state.volume
+        ctx.setVolume(state.volume)
+        appState.updateVolumePlayerUI(state.volume)
+
+    of Key.Asterisk, Key.Minus:
+        state.volume = max(state.volume - VolumeStep, MinVolume)
+        appState.lastVolume = state.volume
+        ctx.setVolume(state.volume)
+        appState.updateVolumePlayerUI(state.volume)
+
+    of Key.R, Key.BackSpace:
+        when defined(volumeFade):
+            if not state.isPaused and state.volume > 0:
+                ctx.fadeVolume(targetVol = 0, startVol = state.volume)
+
+        if not state.isPaused:
+            ctx.cleanupPlayer()
+
+        ctx.stopCurrentJob()
+        when defined(volumeFade):
+            ctx.setVolume(state.volume)
+
+        return true
+
+    of Key.Q, Key.Escape, CtrlQ:
+        ctx.cleanupPlayer()
+        showExitMessage()
+        quit(QuitSuccess)
+
+    of Key.L:
+        if state.currentSong != "":
+            appState.appendToLikedSongs(config)
+        else:
+            warn("song field is currently empty")
+
+    of Key.None:
+        discard
+
+    of Key.Up, Key.Down, Key.Left, Key.Right:
+        when not defined(android):
+            showInvalidChoice()
+
+    else:
+        showInvalidChoice()
+
+proc handleIdleAndDisconnection*(
+    ctx: AudioContext,
+    audioEvent: AudioEventKind,
+    config: MenuConfig,
+    wasTheStreamPlayingForSomeTime: bool,
+    streamInterruptRetryCount: var int,
+    playlistFirstPass: var bool
+): bool =
+    ## Handles idle timeouts, stream disconnection, and automatic reconnects.
+    ## Returns true if the session has terminated.
+    result = false
+    if ctx.isIdle():
+        if streamInterruptRetryCount < RetryTimesWhenStreamInterrupt and
+           wasTheStreamPlayingForSomeTime:
+            ctx.allocateJob(config.stationUrl)
+            streamInterruptRetryCount += 1
+            setCursorPos 4, 7
+            stdout.write "retrying count "
+            echo streamInterruptRetryCount
+            if streamInterruptRetryCount mod 2 != 0:
+                warnBell()
+            sleep 500
+            cursorUp()
+            eraseLine()
+        else:
+            handlePlayerError("Player core idle", config)
+            return true
+
+    if audioEvent == aevEndFile:
+        if config.stationUrl.isValidPlaylistUrl():
+            if playlistFirstPass:
+                handlePlayerError("End of playlist reached", config)
+                return true
+            playlistFirstPass = true
+        else:
+            handlePlayerError("Stream ended", config)
+            return true
+
+proc tickPlayerUIFrame*(
+    appState: AppState,
+    state: PlayerState,
+    fullTitle: string,
+    animationCounter: var int,
+    scrollCounter: var int,
+    scrollOffset: var int
+) =
+    ## Ticks text marquee scrolling and status animation.
+    when not defined(simple):
+        animationCounter += 1
+        if animationCounter == 27:
+            appState.updateAnimationOnly(currentStatusEmoji(currentStatus(
+                    state), appState.terminalSupportsEmoji),
+                    state.currentSong, animationCounter)
+            animationCounter = 0
+
+        if scrollCounter == 11:
+            if state.currentSong.checkIfTooLongForUI(appState.termWidth):
+                scrollTextOnce(fullTitle, scrollOffset, appState.termWidth,
+                        appState.startingX)
+                if fullTitle.len > appState.termWidth - appState.startingX:
+                    scrollOffset += 1
+                scrollCounter = 0
+        else:
+            scrollCounter += 1
+
+proc playStation*(appState: AppState, config: MenuConfig) =
+    ## Plays a radio station and handles user input for playback control.
+    let ctx = config.ctx
+    if not appState.validateStationPreflight(config):
         return
 
     var state = PlayerState(
-      isPaused: false,
-      isMuted: false,
-      volume: appState.lastVolume
-    ) # Use lastVolume
-    var isObserving = false
+        isPaused: false,
+        isMuted: false,
+        volume: appState.lastVolume
+    )
     var coreIdleCounter: uint8
     var playlistFirstPass = false
     var scrollOffset: int = 0
-    var lastWidth: int = 0
-    var fullTitle: string # Declare fullTitle here
+    var fullTitle: string
     var finishedLoading = false
     var spinnerState = 0
     var wasTheStreamPlayingForSomeTime: bool
     var streamInterruptRetryCount = 1
 
     when not defined(simple):
-        var metadata = initTable[string, string](8) # Declare metadata here
         var scrollCounter: int = 0
-        var animationCounter: int = 0 # Counter for animation updates
-
+        var animationCounter: int = 0
 
     ctx.allocateJob(config.stationUrl)
 
@@ -121,160 +297,29 @@ proc playStation*(appState: AppState, config: MenuConfig) =
         if not state.isPaused:
             audioEvent = ctx.pollAudioEvent(mpvEventLoopTimeout)
 
-        if audioEvent == aevTitleChanged:
-            state.currentSong = ctx.getCurrentMediaTitle(appState)
-            if fullTitle != state.currentSong:
-                appState.appendToHistory(config)
-            fullTitle = state.currentSong # Assign to fullTitle
-            appState.fullMediaTitle = fullTitle
-            appState.updateCurrentSongPlayerUI(state.currentSong)
-            setCursorXPos 0
-            when not defined(simple):
-                appState.globalMetadata = updateMetadataUI(config, ctx, state)
+        ctx.handlePlayerAudioEvent(audioEvent, state, config, appState,
+                fullTitle, wasTheStreamPlayingForSomeTime, finishedLoading)
 
-        if audioEvent == aevFileLoaded:
-            wasTheStreamPlayingForSomeTime = true
-            when defined(volumeFade):
-                var volumeForFading = 0
-                ctx.setVolume(volumeForFading)
-                while volumeForFading < state.volume:
-                    volumeForFading = min(volumeForFading + VolumeStep, state.volume)
-                    ctx.setVolume(volumeForFading)
-                    sleep getPerCycleSleepTimeFade state.volume
-            finishedLoading = true
-            let initialTitle = ctx.getCurrentMediaTitle(appState)
-            if initialTitle != "" and initialTitle != "nil":
-                state.currentSong = initialTitle
-                fullTitle = initialTitle
-                appState.fullMediaTitle = fullTitle
-                appState.updateCurrentSongPlayerUI(state.currentSong)
-                setCursorXPos 0
-                when not defined(simple):
-                    appState.globalMetadata = updateMetadataUI(config, ctx, state)
-        else:
-            if not finishedLoading:
-                spinnerState.spinLoadingSpinnerOnce(appState)
+        if not finishedLoading and audioEvent != aevFileLoaded:
+            spinnerState.spinLoadingSpinnerOnce(appState)
 
         when not defined(simple):
-            # Increment the animation counter every 25ms (getKeyWithTimeout interval)
-            animationCounter += 1
-
-            # Check if it's time to update the animation (1350ms / 50ms = 54 iterations)
-            if animationCounter == 27:
-                appState.updateAnimationOnly(currentStatusEmoji(currentStatus(
-                        state), appState.terminalSupportsEmoji),
-                        state.currentSong, animationCounter)
-                animationCounter = 0 # Reset the counter
-
-
-        # Scrolling Logic
-            if scrollCounter == 11:
-                if state.currentSong.checkIfTooLongForUI(appState.termWidth):
-                    scrollTextOnce(fullTitle, scrollOffset, appState.termWidth,
-                            appState.startingX) # Corrected call
-                    if fullTitle.len > appState.termWidth - appState.startingX:
-                        scrollOffset += 1
-                    scrollCounter = 0
-            else:
-                scrollCounter += 1
+            appState.tickPlayerUIFrame(state, fullTitle, animationCounter,
+                    scrollCounter, scrollOffset)
 
         # Periodic checks
         if coreIdleCounter >= CheckIdleInterval:
-            if ctx.isIdle():
-                if streamInterruptRetryCount < RetryTimesWhenStreamInterrupt and
-                  wasTheStreamPlayingForSomeTime:
-                    tryToPlayAgain(config.stationUrl)
-                    streamInterruptRetryCount += 1
-                    setCursorPos 4, 7
-                    stdout.write "retrying count "
-                    echo streamInterruptRetryCount
-                    if streamInterruptRetryCount mod 2 != 0:
-                        warnBell()
-                    sleep 500
-                    cursorUp()
-                    eraseLine()
-
-                else:
-                    handlePlayerError("Player core idle", config)
-                    break
-
-            if audioEvent == aevEndFile:
-                if config.stationUrl.isValidPlaylistUrl():
-                    if playlistFirstPass:
-                        handlePlayerError("End of playlist reached", config)
-                        break
-                    playlistFirstPass = true
-                else:
-                    handlePlayerError("Stream ended", config)
-                    break
+            if handleIdleAndDisconnection(ctx, audioEvent, config,
+                    wasTheStreamPlayingForSomeTime, streamInterruptRetryCount,
+                    playlistFirstPass):
+                break
             coreIdleCounter = 0
         inc coreIdleCounter
 
         # Handle user input
-        case getKeyWithTimeout(KeyTimeout):
-            of Key.P, Key.Space:
-                state.isPaused = not state.isPaused
-                ctx.pause(state.isPaused)
-                appState.updatePlayMutedStatePlayerUI(currentStatusEmoji(
-                        currentStatus(state), appState.terminalSupportsEmoji))
-
-            of Key.M:
-                state.isMuted = not state.isMuted
-                ctx.mute(state.isMuted)
-                appState.updatePlayMutedStatePlayerUI(currentStatusEmoji(
-                        currentStatus(state), appState.terminalSupportsEmoji))
-
-            of Key.Slash, Key.Plus:
-                state.volume = min(state.volume + VolumeStep, MaxVolume)
-                appState.lastVolume = state.volume
-                ctx.setVolume(state.volume)
-                appState.updateVolumePlayerUI(state.volume)
-
-            of Key.Asterisk, Key.Minus:
-                state.volume = max(state.volume - VolumeStep, MinVolume)
-                appState.lastVolume = state.volume
-                ctx.setVolume(state.volume)
-                appState.updateVolumePlayerUI(state.volume)
-
-            of Key.R, Key.BackSpace:
-                when defined(volumeFade):
-                    if not state.isPaused and state.volume > 0:
-                        var volumeForFading = state.volume
-                        while volumeForFading > 0:
-                            volumeForFading = max(volumeForFading - VolumeStep, 0)
-                            ctx.setVolume(volumeForFading)
-                            sleep getPerCycleSleepTimeFade state.volume
-
-                if not state.isPaused:
-                    ctx.cleanupPlayer()
-
-                ctx.stopCurrentJob()
-                when defined(volumeFade):
-                    ctx.setVolume(state.volume)
-
-                break
-
-            of Key.Q, Key.Escape, CtrlQ:
-                ctx.cleanupPlayer()
-                showExitMessage()
-                quit(QuitSuccess)
-
-            of Key.L: # New key binding for "Like" action
-                if state.currentSong != "":
-                    appState.appendToLikedSongs(config)
-                else:
-                    warn("song field is currently empty")
-
-            of Key.None:
-                continue
-
-            of Key.Up, Key.Down, Key.Left, Key.Right:
-                when defined(android):
-                    continue
-                else: showInvalidChoice()
-
-            else:
-                showInvalidChoice()
+        let key = getKeyWithTimeout(KeyTimeout)
+        if ctx.handlePlayerKeyInput(key, state, appState, config):
+            break
 
     if state.isPaused: # reset states for globalCtx if user returned with P/M
         ctx.resume()
@@ -295,9 +340,3 @@ when not defined(vlc):
         appState.mpvCtx = ctx
         appState.audioCtx = MpvAudioContext(mpvHandle: ctx)
         playStation(appState, config)
-
-#except Exception:
-    #  let fileHint = if config.currentSubsection != "": config.currentSubsection else: config.currentSection
-    #  warn("An error occurred during playback. Edit the station list in: " & fileHint & ".json")
-    #  cleanupPlayer(mpvCtx)
-    #  return
