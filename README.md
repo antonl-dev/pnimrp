@@ -79,6 +79,23 @@ made with [asciinema](https://asciinema.org/)
 **Termux (Android):**
 ```pkg install mpv```
 
+#### alternative: using **libvlc** instead of **mpv**
+
+prefer using VLC instead of MPV? You can optionally build **pnimrp** with the LibVLC audio backend:
+
+*   **Debian/Ubuntu:**
+    ```bash
+    sudo apt install libvlc-dev libvlc5 vlc-plugin-base
+    ```
+    > **Note:** `vlc-plugin-base` is essential because LibVLC requires its core audio/demux plugin modules to initialize. If using PipeWire, you can also install `vlc-plugin-pipewire`.
+*   **Arch Linux:** `sudo pacman -S vlc`
+*   **Fedora:** `sudo dnf install vlc-devel`
+
+To compile with the VLC backend, pass `-d:vlc`:
+```bash
+nim c -d:release -d:vlc pnimrp
+```
+
 ### step 2: install the nim compiler:
 
 - **unix**:
@@ -116,6 +133,8 @@ nim c -d:release -d:simple pnimrp
 cant/dont want emojis?: add `-d:noEmoji`
 
 want to use smaller bin size?: add `-d:useJsmn`
+
+want to use libvlc instead of mpv?: add `-d:vlc` (e.g. `nim c -d:release -d:vlc pnimrp`)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -163,7 +182,8 @@ for more information about WTFPL, see: [WTFPL License](http://www.wtfpl.net/).
 ## 🙏 credits
 
 - **pmrp**: inspiration and initial codebase 💡
-- **libmpv**: playback functionality
+- **libmpv**: default playback functionality
+- **libvlc**: alternative playback backend
 - **c2nim**: wrapping objects
 - **illwill**: async input handling
 - **jsmn.nim**: minimal json parser impl

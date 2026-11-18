@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: MPL-2.0
 # metadata.nim
 
-import libmpv, ../../utils/utils
+import libmpv, ../../utils/utils, ../../utils/utilstypes, ../audio
 
 import tables, strutils, terminal
 
@@ -244,3 +244,13 @@ proc updateMetadataUI*(config: MenuConfig, ctx: ptr Handle,
             goingDown += 1
 
     cursorUp goingDown + startingPoint
+
+proc updateMetadataUI*(config: MenuConfig, ctx: AudioContext,
+        state: PlayerState): Table[string, string] =
+    ## Unified overload for AudioContext.
+    when defined(vlc):
+        return initTable[string, string]()
+    else:
+        if ctx != nil and ctx of MpvAudioContext and MpvAudioContext(ctx).mpvHandle != nil:
+            return updateMetadataUI(config, MpvAudioContext(ctx).mpvHandle, state)
+        return initTable[string, string]()

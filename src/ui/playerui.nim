@@ -6,9 +6,10 @@ import
 import
     ../vendor/illwill, playeruiutils, menuui,
 
+    ../audio/audio,
     ../audio/mpv/[
         player
-        ],
+    ],
 
     ../link/link,
     ../utils/[
@@ -61,7 +62,7 @@ func getPerCycleSleepTimeFade(vol: int): int =
     result = int toTime / steps
 
 template tryToPlayAgain(url: string) =
-    ctx.allocateJobMpv(url)
+    ctx.allocateJob(url)
 
 proc playStation*(appState: AppState, config: MenuConfig) =
     ## Plays a radio station and handles user input for playback control.
@@ -103,11 +104,10 @@ proc playStation*(appState: AppState, config: MenuConfig) =
         var animationCounter: int = 0 # Counter for animation updates
 
 
-    ctx.allocateJobMpv(config.stationUrl)
-    var event = ctx.waitEvent()
+    ctx.allocateJob(config.stationUrl)
 
     when defined(volumeFade):
-        ctx.setVolumeMpv(0)
+        ctx.setVolume(0)
 
     # Draw the initial player UI
     appState.drawPlayerUI(config.stationName, "Loading...", currentStatusEmoji(
@@ -117,16 +117,11 @@ proc playStation*(appState: AppState, config: MenuConfig) =
         fullTitle = fullTitle.truncateMe(appState.termWidth)
 
     while true:
+        var audioEvent = aevNone
         if not state.isPaused:
-            event = ctx.waitEvent(mpvEventLoopTimeout)
+            audioEvent = ctx.pollAudioEvent(mpvEventLoopTimeout)
 
-        # Handle playback events
-        if event.eventID in {IDPlaybackRestart} and not isObserving:
-            when not defined(simple): ctx.observeMetadata()
-            else: ctx.observeMediaTitle()
-            isObserving = true
-
-        if event.eventID in {IDEventPropertyChange}:
+        if audioEvent == aevTitleChanged:
             state.currentSong = ctx.getCurrentMediaTitle(appState)
             if fullTitle != state.currentSong:
                 appState.appendToHistory(config)
@@ -137,17 +132,15 @@ proc playStation*(appState: AppState, config: MenuConfig) =
             when not defined(simple):
                 appState.globalMetadata = updateMetadataUI(config, ctx, state)
 
-        if event.eventID in {IDFileLoaded}:
+        if audioEvent == aevFileLoaded:
             wasTheStreamPlayingForSomeTime = true
             when defined(volumeFade):
                 var volumeForFading = 0
-                ctx.setVolumeMpv(volumeForFading)
-                while true:
-                    volumeForFading += VolumeStep
-                    ctx.setVolumeMpv(volumeForFading)
+                ctx.setVolume(volumeForFading)
+                while volumeForFading < state.volume:
+                    volumeForFading = min(volumeForFading + VolumeStep, state.volume)
+                    ctx.setVolume(volumeForFading)
                     sleep getPerCycleSleepTimeFade state.volume
-                    if volumeForFading == state.volume:
-                        break
             finishedLoading = true
         else:
             if not finishedLoading:
@@ -196,7 +189,7 @@ proc playStation*(appState: AppState, config: MenuConfig) =
                     handlePlayerError("Player core idle", config)
                     break
 
-            if event.eventID in {IDEndFile, IDShutdown}:
+            if audioEvent == aevEndFile:
                 if config.stationUrl.isValidPlaylistUrl():
                     if playlistFirstPass:
                         handlePlayerError("End of playlist reached", config)
@@ -223,35 +216,39 @@ proc playStation*(appState: AppState, config: MenuConfig) =
                         currentStatus(state), appState.terminalSupportsEmoji))
 
             of Key.Slash, Key.Plus:
-                incVolume(appState)
+                state.volume = min(state.volume + VolumeStep, MaxVolume)
+                appState.lastVolume = state.volume
+                ctx.setVolume(state.volume)
                 appState.updateVolumePlayerUI(state.volume)
 
             of Key.Asterisk, Key.Minus:
-                decVolume(appState)
+                state.volume = max(state.volume - VolumeStep, MinVolume)
+                appState.lastVolume = state.volume
+                ctx.setVolume(state.volume)
                 appState.updateVolumePlayerUI(state.volume)
 
             of Key.R, Key.BackSpace:
+                when defined(volumeFade):
+                    if not state.isPaused and state.volume > 0:
+                        var volumeForFading = state.volume
+                        while volumeForFading > 0:
+                            volumeForFading = max(volumeForFading - VolumeStep, 0)
+                            ctx.setVolume(volumeForFading)
+                            sleep getPerCycleSleepTimeFade state.volume
+
                 if not state.isPaused:
                     ctx.cleanupPlayer()
 
-                when defined(volumeFade):
-                    var volumeForFading = state.volume
-                    while true:
-                        volumeForFading -= VolumeStep
-                        ctx.setVolumeMpv(volumeForFading)
-                        sleep getPerCycleSleepTimeFade state.volume
-                        if volumeForFading == 0:
-                            break
-
                 ctx.stopCurrentJob()
                 when defined(volumeFade):
-                    ctx.setVolumeMpv(state.volume)
+                    ctx.setVolume(state.volume)
 
                 break
 
             of Key.Q, Key.Escape, CtrlQ:
                 ctx.cleanupPlayer()
-                ctx.exit(state.isPaused)
+                showExitMessage()
+                quit(QuitSuccess)
 
             of Key.L: # New key binding for "Like" action
                 if state.currentSong != "":
@@ -270,15 +267,25 @@ proc playStation*(appState: AppState, config: MenuConfig) =
             else:
                 showInvalidChoice()
 
-    if state.isPaused: #reset states for globalCtx if user returned with P/M
+    if state.isPaused: # reset states for globalCtx if user returned with P/M
         ctx.resume()
     if state.isMuted:
         ctx.unmute()
 
-proc playStation*(ctx: ptr Handle, config: MenuConfig) =
+proc playStation*(ctx: AudioContext, config: MenuConfig) =
     var appState = newAppState()
-    appState.mpvCtx = ctx
+    appState.audioCtx = ctx
+    when not defined(vlc):
+        if ctx != nil and ctx of MpvAudioContext:
+            appState.mpvCtx = MpvAudioContext(ctx).mpvHandle
     playStation(appState, config)
+
+when not defined(vlc):
+    proc playStation*(ctx: ptr Handle, config: MenuConfig) =
+        var appState = newAppState()
+        appState.mpvCtx = ctx
+        appState.audioCtx = MpvAudioContext(mpvHandle: ctx)
+        playStation(appState, config)
 
 #except Exception:
     #  let fileHint = if config.currentSubsection != "": config.currentSubsection else: config.currentSection

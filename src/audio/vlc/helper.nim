@@ -34,8 +34,11 @@ proc pausePlayer*(Handle) =
     mediaPlayerPause(Handle.mediaPlayerCtx)
 
 proc setVolume*(Handle; volume: int) =
-    let msg: cstring = "fail set volume"
-    cE(audioSetVolume(Handle.mediaPlayerCtx, cint(volume)), msg)
+    if Handle == nil: return
+    let clamped = clamp(volume, 0, 200)
+    Handle.stateInfo.currentVol = cint(clamped)
+    if Handle.mediaPlayerCtx != nil:
+        discard audioSetVolume(Handle.mediaPlayerCtx, cint(clamped))
 
 template volumeChange*(Handle; inc: bool) =
     when inc: currentVol += 5
@@ -44,14 +47,20 @@ template volumeChange*(Handle; inc: bool) =
     Handle.setVolume(currentVol)
 
 proc muteVolume*(Handle) =
-    Handle.stateInfo.volumeBeforeMuted = libvlc.audioGetVolume(
-            Handle.mediaPlayerCtx)
+    if Handle == nil: return
+    let current = if Handle.mediaPlayerCtx != nil:
+        int(libvlc.audioGetVolume(Handle.mediaPlayerCtx))
+    else:
+        int(Handle.stateInfo.currentVol)
+    Handle.stateInfo.volumeBeforeMuted = if current > 0: current else: int(Handle.stateInfo.currentVol)
     setVolume(Handle, 0)
 
 proc unmuteVolume*(Handle) =
-    if Handle.stateInfo.volumeBeforeMuted == 0:
-        Handle.stateInfo.volumeBeforeMuted = 100
-    Handle.setVolume(Handle.stateInfo.volumeBeforeMuted)
+    if Handle == nil: return
+    var targetVol = Handle.stateInfo.volumeBeforeMuted
+    if targetVol <= 0:
+        targetVol = 100
+    Handle.setVolume(targetVol)
     Handle.stateInfo.volumeBeforeMuted = -1
 
 template volumeUp*(Handle) =
@@ -65,7 +74,8 @@ proc setVolumeOfBellRelativeToMainCtx*(Handle) =
     setVolume(Handle, relativeVol)
 
 proc stopPlayer*(Handle) =
-    libvlc.mediaPlayerStop(Handle.mediaPlayerCtx)
+    if Handle != nil and Handle.mediaPlayerCtx != nil:
+        libvlc.mediaPlayerStop(Handle.mediaPlayerCtx)
 
 proc isIdle*(Handle): bool =
     Handle.stateInfo.playerCurrentSituation = libvlc.mediaPlayerGetState(
@@ -83,21 +93,42 @@ proc getCurrentMediaTitleVlc*(Handle): string =
 
 proc initNewCtx*(): ref libvlchandle =
     result = new libvlcHandle
-    var ctx = libvlc.new(0, allocCStringArray [])
+    var ctx = libvlc.new(0, nil)
     if ctx.isNil:
-        raise newException(VlcError, "Failed to create libvlc instance")
+        let err = libvlc.errmsg()
+        let detail = (
+            if err != nil: $err
+            else: "No VLC plugins found. Please install 'vlc-plugin-base' (e.g. sudo apt install vlc-plugin-base)."
+        )
+        raise newException(VlcError, "Failed to create libvlc instance: " & detail)
 
     result.ctx = ctx
     return result
 
 proc deinitPlayer*(Handle) =
-    libvlc.mediaPlayerRelease(Handle.mediaPlayerCtx)
-    libvlc.mediaRelease(Handle.mediaDscptr)
-    libvlc.release(Handle.ctx)
+    if Handle == nil: return
+    if Handle.mediaPlayerCtx != nil:
+        libvlc.mediaPlayerRelease(Handle.mediaPlayerCtx)
+        Handle.mediaPlayerCtx = nil
+    if Handle.mediaDscptr != nil:
+        libvlc.mediaRelease(Handle.mediaDscptr)
+        Handle.mediaDscptr = nil
+    if Handle.ctx != nil:
+        libvlc.release(Handle.ctx)
+        Handle.ctx = nil
 
 proc allocateJobVlc*(Handle; url: string) =
+    if Handle.mediaPlayerCtx != nil:
+        libvlc.mediaPlayerStop(Handle.mediaPlayerCtx)
+        libvlc.mediaPlayerRelease(Handle.mediaPlayerCtx)
+        Handle.mediaPlayerCtx = nil
+    if Handle.mediaDscptr != nil:
+        libvlc.mediaRelease(Handle.mediaDscptr)
+        Handle.mediaDscptr = nil
     Handle.mediaDscptr = libvlc.mediaNewLocation(Handle.ctx, cstring(url))
     Handle.mediaPlayerCtx = libvlc.mediaPlayerNewFromMedia(Handle.mediaDscptr)
+    if Handle.stateInfo.currentVol > 0:
+        discard audioSetVolume(Handle.mediaPlayerCtx, Handle.stateInfo.currentVol)
 
 proc setAllyOptionsVlc*(Handle) =
     libvlc.setUserAgent(Handle.ctx, "pnimrp/0.1", "pnimrp/0.1")

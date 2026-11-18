@@ -23,6 +23,17 @@ type
         lsChecking, lsValid, lsInvalid, lsUnknown
 
 type
+    AudioEventKind* = enum
+        aevNone,
+        aevFileLoaded,
+        aevTitleChanged,
+        aevEndFile
+
+    AudioContext* = ref object of RootObj
+
+    audioHandle* = AudioContext
+
+type
     MenuError* = object of CatchableError # Custom error type for menu-related issues
     PlayerState* = object    # Structure to hold the player's current state
         isPaused*: bool      # Whether the player is paused
@@ -31,7 +42,7 @@ type
         volume*: int         # Current volume level
 
     MenuConfig* = object           # Configuration for the menu and player
-        ctx*: ptr Handle           # Player handle
+        ctx*: AudioContext         # Unified audio context
         currentSection*: string    # Current menu section
         currentSubsection*: string # Current menu subsection
         stationName*: string       # Name of the selected station
@@ -88,8 +99,10 @@ type
         configDir*: string
         version*: string
 
-        # Audio / MPV state
-        mpvCtx*: ptr Handle
+        # Audio state
+        audioCtx*: AudioContext
+        when not defined(vlc):
+            mpvCtx*: ptr Handle
         lastVolume*: int
         fullMediaTitle*: string
 

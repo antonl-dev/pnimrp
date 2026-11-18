@@ -7,6 +7,7 @@ import
     src/[
         menu, vendor/illwill, ui/hidestderr, ui/menuui,
         utils/utils,
+        audio/audio,
         audio/mpv/player,
     ]
 
@@ -135,9 +136,11 @@ proc main() =
         hideCursor()
         randomize()
 
-        #init global mpv context for reuse
-        appState.mpvCtx = initGlobalMpv()
-        defer: appState.mpvCtx.terminateDestroy()
+        # Initialize unified audio context (MPV or VLC)
+        appState.audioCtx = initAudio()
+        when not defined(vlc):
+            appState.mpvCtx = MpvAudioContext(appState.audioCtx).mpvHandle
+        defer: appState.audioCtx.deinitAudio()
 
         # Start the main menu with the configured assets directory
         appState.drawMainMenu(appState.stationsDir)

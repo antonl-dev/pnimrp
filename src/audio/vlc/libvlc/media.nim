@@ -1,5 +1,8 @@
 import base
 
+when not defined(nlvm):
+    {.push dynlib: dynlibName.}
+
 type meta* = enum
     metaTitle
     meta_Artist
@@ -55,3 +58,6 @@ proc mediaRelease*(p_md: ptr media)
 
 proc mediaNewLocation*(p_instance: ptr instance, psz_mrl: cstring): ptr media
     {.importc: "libvlc_media_new_location".}
+
+when not defined(nlvm):
+    {.pop.}

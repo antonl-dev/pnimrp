@@ -1,5 +1,8 @@
 import base, media
 
+when not defined(nlvm):
+    {.push dynlib: dynlibName.}
+
 proc mediaPlayerPlay*(p_mi: ptr mediaPlayer): cint
     {.importc: "libvlc_media_player_play".}
 
@@ -26,3 +29,6 @@ proc mediaPlayerRelease*(p_mi: ptr mediaPlayer)
 
 proc mediaPlayerNewFromMedia*(p_md: ptr media): ptr mediaPlayer
     {.importc: "libvlc_media_player_new_from_media".}
+
+when not defined(nlvm):
+    {.pop.}

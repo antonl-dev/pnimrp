@@ -20,6 +20,7 @@ import
     ],
 
     audio/[
+      audio,
       mpv/player,
       mpv/libmpv
     ]
@@ -190,7 +191,7 @@ proc handleMenu*(
                         else:
                             # Treat as a station URL and play directly
                             let config = MenuConfig(
-                              ctx: appState.mpvCtx,
+                              ctx: appState.audioCtx,
                               currentSection: section,
                               currentSubsection: "",
                               stationName: items[choosenItem],
@@ -240,7 +241,7 @@ proc handleMenu*(
             break
 
 proc handleMenu*(
-    ctx: ptr Handle,
+    ctx: AudioContext,
     section: string,
     items: seq[string],
     paths: seq[string],
@@ -249,8 +250,23 @@ proc handleMenu*(
     handleMenuIsHandling: handleMenuIsHandling,
 ) =
     var appState = newAppState()
-    appState.mpvCtx = ctx
+    appState.audioCtx = ctx
     appState.handleMenu(section, items, paths, isMainMenu, baseDir, handleMenuIsHandling)
+
+when not defined(vlc):
+    proc handleMenu*(
+        ctx: ptr Handle,
+        section: string,
+        items: seq[string],
+        paths: seq[string],
+        isMainMenu: bool = false,
+        baseDir: string = getAppDir() / "assets",
+        handleMenuIsHandling: handleMenuIsHandling,
+    ) =
+        var appState = newAppState()
+        appState.mpvCtx = ctx
+        appState.audioCtx = MpvAudioContext(mpvHandle: ctx)
+        appState.handleMenu(section, items, paths, isMainMenu, baseDir, handleMenuIsHandling)
 
 proc drawMainMenu*(appState: AppState, baseDir = "") =
     ## Draws and handles the main category menu.
@@ -271,9 +287,16 @@ proc drawMainMenu*(appState: AppState, baseDir = "") =
       handleMenuIsHandling = hmIsHandlingDirectory,
     )
 
-proc drawMainMenu*(ctx: ptr Handle, baseDir = getAppDir() / "assets") =
+proc drawMainMenu*(ctx: AudioContext, baseDir = getAppDir() / "assets") =
     var appState = newAppState(assetsDir = baseDir, stationsDir = baseDir / "stations")
-    appState.mpvCtx = ctx
+    appState.audioCtx = ctx
     drawMainMenu(appState, baseDir)
+
+when not defined(vlc):
+    proc drawMainMenu*(ctx: ptr Handle, baseDir = getAppDir() / "assets") =
+        var appState = newAppState(assetsDir = baseDir, stationsDir = baseDir / "stations")
+        appState.mpvCtx = ctx
+        appState.audioCtx = MpvAudioContext(mpvHandle: ctx)
+        drawMainMenu(appState, baseDir)
 
 export hideCursor, error
