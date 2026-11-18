@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: MPL-2.0
 # metadata.nim
 
-import libmpv, ../../utils/utils, ../../utils/utilstypes, ../audio
+import mpv/libmpv, ../utils/utils, ../utils/utilstypes, audio
 
 import tables, strutils, terminal
 
@@ -246,7 +246,7 @@ proc updateMetadataUI*(config: MenuConfig, ctx: ptr Handle,
     cursorUp goingDown + startingPoint
 
 when defined(vlc):
-    import ../vlc/libvlc/libvlc, ../vlc/libvlc/media, ../vlc/helper
+    import vlc/libvlc/libvlc, vlc/libvlc/media, vlc/helper
 
     proc getVlcMetadata*(vlc: VlcAudioContext): Table[string, string] =
         result = initTable[string, string]()

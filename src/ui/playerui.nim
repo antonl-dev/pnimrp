@@ -20,7 +20,7 @@ import
 
 when not defined(simple):
     import
-        ../audio/mpv/metadata,
+        ../audio/metadata,
         ../ui/[
           scroll,
           animation,
