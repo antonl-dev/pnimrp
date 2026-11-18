@@ -1,5 +1,5 @@
 import
-  base, media, mediaPlayer
+    base, media, mediaPlayer
 
 proc setUserAgent*(p_instance: ptr instance, name: cstring, http: cstring)
     {.importc: "libvlc_set_user_agent".}
@@ -14,15 +14,15 @@ proc release*(p_instance: ptr instance)
     {.importc: "libvlc_release".}
 
 export #base
-  instance, media, mediaPlayer
+    instance, media, mediaPlayer
 
 export #media
-  meta, mediaGetMeta, mediaGetState, mediaRelease, mediaNewLocation,
-  state
+    meta, mediaGetMeta, mediaGetState, mediaRelease, mediaNewLocation,
+    state
 
 export #mediaPlayer
-  audioSetVolume, audioGetVolume,
-  mediaPlayerRelease, mediaPlayerNewFromMedia,
-  mediaPlayerPlay, mediaPlayerPause, mediaPlayerStop,
-  mediaPlayerGetState,
-  mediaPlayerIsPlaying
+    audioSetVolume, audioGetVolume,
+    mediaPlayerRelease, mediaPlayerNewFromMedia,
+    mediaPlayerPlay, mediaPlayerPause, mediaPlayerStop,
+    mediaPlayerGetState,
+    mediaPlayerIsPlaying

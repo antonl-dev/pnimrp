@@ -5,11 +5,11 @@ import terminal
 import ../theme, ../../utils/utils
 
 when isMainModule:
-  import unittest, os
+    import unittest, os
 
-  suite "Theme Tests":
-    test "loadThemeConfig":
-      let testJson = """
+    suite "Theme Tests":
+        test "loadThemeConfig":
+            let testJson = """
       {
         "themes": {
           "default": {
@@ -29,14 +29,14 @@ when isMainModule:
         "currentTheme": "default"
       }
       """
-      writeFile("test_theme.json", testJson)
-      let config = loadThemeConfig("test_theme.json")
-      check config.currentTheme == "default"
-      #check (config.themes["default"].header == fgBlue)
-      removeFile("test_theme.json")
+            writeFile("test_theme.json", testJson)
+            let config = loadThemeConfig("test_theme.json")
+            check config.currentTheme == "default"
+            #check (config.themes["default"].header == fgBlue)
+            removeFile("test_theme.json")
 
-    test "getCurrentTheme":
-      let testJson = """
+        test "getCurrentTheme":
+            let testJson = """
       {
         "themes": {
           "default": {
@@ -56,14 +56,14 @@ when isMainModule:
         "currentTheme": "default"
       }
       """
-      writeFile("test_theme.json", testJson)
-      let config = loadThemeConfig("test_theme.json")
-      let theme = getCurrentTheme(config)
-      check theme.header == fgBlue
-      removeFile("test_theme.json")
+            writeFile("test_theme.json", testJson)
+            let config = loadThemeConfig("test_theme.json")
+            let theme = getCurrentTheme(config)
+            check theme.header == fgBlue
+            removeFile("test_theme.json")
 
-    test "setCurrentTheme":
-      let testJson = """
+        test "setCurrentTheme":
+            let testJson = """
       {
         "themes": {
           "default": {
@@ -96,8 +96,8 @@ when isMainModule:
         "currentTheme": "default"
       }
       """
-      writeFile("test_theme.json", testJson)
-      var config = loadThemeConfig("test_theme.json")
-      setCurrentTheme(config, "dark")
-      check config.currentTheme == "dark"
-      removeFile("test_theme.json")
+            writeFile("test_theme.json", testJson)
+            var config = loadThemeConfig("test_theme.json")
+            setCurrentTheme(config, "dark")
+            check config.currentTheme == "dark"
+            removeFile("test_theme.json")

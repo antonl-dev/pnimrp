@@ -2,95 +2,104 @@
 # stationstatus.nim
 
 import
-  ../utils/utils,
-  ../link/asynclink
+    ../utils/utils,
+    ../link/asynclink
 
 import terminal, asyncdispatch
 
 type
-  TimeoutResult[T] = object
-    timedOut: bool
-    value: T
+    TimeoutResult[T] = object
+        timedOut: bool
+        value: T
 
-proc withTimeoutAndGetVal[T](fut: Future[T], timeout: int): Future[TimeoutResult[T]] {.async.} =
-  let timeoutResult = await withTimeout(fut, timeout)
-  await sleepAsync(5)
-  var result: TimeoutResult[T]
-  await sleepAsync(5)
-  result.timedOut = not timeoutResult
-  
-  if timeoutResult:
-    # Future completed before timeout, get its value
+proc withTimeoutAndGetVal[T](fut: Future[T], timeout: int): Future[
+        TimeoutResult[T]] {.async.} =
+    let timeoutResult = await withTimeout(fut, timeout)
     await sleepAsync(5)
-    result.value = await fut
-  return result
+    var result: TimeoutResult[T]
+    await sleepAsync(5)
+    result.timedOut = not timeoutResult
 
-func toStatusCodeEmoji(status: LinkStatus, useEmoji: bool = true): (ForegroundColor, string) =
-  if useEmoji:
-    case status
-    of lsValid:    (fgDefault, "🟢")
-    of lsInvalid:  (fgDefault, "🔴")
-    of lsChecking: (fgDefault, "🟡")
-    of lsUnknown:  (fgDefault, "❓")
-  else:
-    case status
-    of lsValid:    (fgGreen,  "/")
-    of lsInvalid:  (fgRed,    "x")
-    of lsChecking: (fgYellow, "o")
-    of lsUnknown:  (fgRed,    "?")
+    if timeoutResult:
+        # Future completed before timeout, get its value
+        await sleepAsync(5)
+        result.value = await fut
+    return result
 
-proc drawStatusIndicator*(x, y: int, status = lsChecking, isInitial = false, useEmoji: bool = true) =
-  setCursorPos(x, y)
-  let (color, symbol) =
-    if isInitial:
-      if useEmoji: (fgDefault, "🟡")
-      else: (fgYellow, "o")
+func toStatusCodeEmoji(status: LinkStatus, useEmoji: bool = true): (
+        ForegroundColor, string) =
+    if useEmoji:
+        case status
+        of lsValid: (fgDefault, "🟢")
+        of lsInvalid: (fgDefault, "🔴")
+        of lsChecking: (fgDefault, "🟡")
+        of lsUnknown: (fgDefault, "❓")
     else:
-      toStatusCodeEmoji(status, useEmoji)
-  stdout.styledWrite(color, symbol)
-  stdout.flushFile()
+        case status
+        of lsValid: (fgGreen, "/")
+        of lsInvalid: (fgRed, "x")
+        of lsChecking: (fgYellow, "o")
+        of lsUnknown: (fgRed, "?")
 
-type
-  StationStatus* = ref object
-    name*:     string
-    coord*:    (int, int)
-    url*:      string
-    status*:   LinkStatus
-    future*:   Future[LinkStatus]
-
-proc checkAndDraw(station: StationStatus, myGen: int, appState: AppState) {.async.} =
-  station.future = resolveLink(station.url) # Store future
-  await sleepAsync(5)
-  when not defined(asynclinktimeout):
-    station.status = await station.future
-  else:
-    let result1 = await withTimeoutAndGetVal(station.future, timeout = 6000)
-    await sleepAsync(5)
-     
-    if result1.timedOut: station.status = lsUnknown
-    else:                station.status = result1.value
-  await sleepAsync(5)
-
-  if myGen == appState.currentMenuGen:
-    drawStatusIndicator(station.coord[0], station.coord[1], station.status, useEmoji = appState.terminalSupportsEmoji)
-    await sleepAsync(5)
+proc drawStatusIndicator*(x, y: int, status = lsChecking, isInitial = false,
+        useEmoji: bool = true) =
+    setCursorPos(x, y)
+    let (color, symbol) = (
+      if isInitial:
+        if useEmoji: (fgDefault, "🟡")
+        else: (fgYellow, "o")
+    else:
+        toStatusCodeEmoji(status, useEmoji)
+    )
+    stdout.styledWrite(color, symbol)
     stdout.flushFile()
 
-proc resolveAndDisplay*(stations: seq[StationStatus], appState: AppState) {.async.} =
-  inc appState.currentMenuGen
-  let thisGen = appState.currentMenuGen
+type
+    StationStatus* = ref object
+        name*: string
+        coord*: (int, int)
+        url*: string
+        status*: LinkStatus
+        future*: Future[LinkStatus]
 
-  var allChecks = newSeqOfCap[Future[void]](32)
+proc checkAndDraw(station: StationStatus, myGen: int,
+        appState: AppState) {.async.} =
+    station.future = resolveLink(station.url) # Store future
+    await sleepAsync(5)
+    when not defined(asynclinktimeout):
+        station.status = await station.future
+    else:
+        let result1 = await withTimeoutAndGetVal(station.future, timeout = 6000)
+        await sleepAsync(5)
 
-  for station in stations:
-    allChecks.add(checkAndDraw(station, thisGen, appState))
+        if result1.timedOut: station.status = lsUnknown
+        else: station.status = result1.value
+    await sleepAsync(5)
 
-  await all(allChecks)
+    if myGen == appState.currentMenuGen:
+        drawStatusIndicator(station.coord[0], station.coord[1], station.status,
+                useEmoji = appState.terminalSupportsEmoji)
+        await sleepAsync(5)
+        stdout.flushFile()
+
+proc resolveAndDisplay*(stations: seq[StationStatus],
+        appState: AppState) {.async.} =
+    inc appState.currentMenuGen
+    let thisGen = appState.currentMenuGen
+
+    var allChecks = newSeqOfCap[Future[void]](32)
+
+    for station in stations:
+        allChecks.add(checkAndDraw(station, thisGen, appState))
+
+    await all(allChecks)
 
 proc drawMenuEmojis*(appState: AppState) =
-  for pos in appState.emojiPositions:
-    drawStatusIndicator(pos[0], pos[1], lsChecking, useEmoji = appState.terminalSupportsEmoji)
+    for pos in appState.emojiPositions:
+        drawStatusIndicator(pos[0], pos[1], lsChecking,
+                useEmoji = appState.terminalSupportsEmoji)
 
 proc initDrawMenuEmojis*(appState: AppState) =
-  for pos in appState.emojiPositions:
-    drawStatusIndicator(pos[0], pos[1], isInitial = true, useEmoji = appState.terminalSupportsEmoji)
+    for pos in appState.emojiPositions:
+        drawStatusIndicator(pos[0], pos[1], isInitial = true,
+                useEmoji = appState.terminalSupportsEmoji)

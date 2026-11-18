@@ -3,15 +3,15 @@
 import ../link
 
 when isMainModule:
-  import unittest
+    import unittest
 
-  suite "Link Tests":
-    test "validateLink":
-      let result = validateLink("https://example.com")
-      check result.isValid == true
-      check result.protocol == "https"
-      check result.domain == "example.com"
+    suite "Link Tests":
+        test "validateLink":
+            let result = validateLink("https://example.com")
+            check result.isValid == true
+            check result.protocol == "https"
+            check result.domain == "example.com"
 
-    test "invalidLink":
-      let result = validateLink("invalid-url")
-      check result.isValid == false
+        test "invalidLink":
+            let result = validateLink("invalid-url")
+            check result.isValid == false
