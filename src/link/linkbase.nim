@@ -56,33 +56,49 @@ template tryHttpGetWhenMediaServerDoesNotSupportHead*(url: string) = #TODO
 const validPlaylistTypesList* = [
     "audio/x-scpls",
     "audio/x-mpegurl",
+    "audio/mpegurl",
     "application/vnd.apple.mpegurl",
+    "application/vnd.apple.mpegurl.audio",
     "application/x-mpegurl",
     "application/pls+xml",
     "application/xspf+xml",
     "audio/x-ms-asx",
     "application/m3u8",
     "video/x-ms-asf",
-    "text/m3u"
+    "text/m3u",
+    "text/m3u8"
 ]
 
 const validRawStreamTypesList* = [
     "application/ogg",
     "application/x-ogg",
+    "application/flac",
+    "application/x-flac",
     "application/aac",
     "application/aacp",
     "application/x-aac",
     "application/octet-stream"
 ]
 
+func cleanContentType*(contentType: string): string =
+    let parts = contentType.split(';')
+    if parts.len > 0:
+        return parts[0].strip().toLowerAscii()
+    return contentType.strip().toLowerAscii()
+
+func isPlaylistUrl*(url: string): bool =
+    let path = parseUri(url).path.toLowerAscii()
+    return path.endsWith(".m3u8") or path.endsWith(".m3u") or path.endsWith(".pls")
+
 func isValidRawStreamContentType*(contentType: string): bool =
-    let normalized = contentType.toLowerAscii()
+    let normalized = cleanContentType(contentType)
     if normalized.startsWith("audio/"): return true
     elif normalized in validRawStreamTypesList: return true
+    elif "flac" in normalized or "ogg" in normalized: return true
     return false
 
 func isValidPlaylistContentType*(contentType: string): bool =
-    let normalized = contentType.toLowerAscii()
+    let normalized = cleanContentType(contentType)
     if normalized in validPlaylistTypesList: return true
     return false
 
