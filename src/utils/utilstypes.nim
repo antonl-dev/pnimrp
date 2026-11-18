@@ -2,7 +2,8 @@
 import
   times, terminal, tables,
 
-  ../audio/mpv/libmpv
+  ../audio/mpv/libmpv,
+  ../ui/hidestderr
 
 type
   QuoteData* = object
@@ -65,18 +66,9 @@ type
     StatusPaused
     StatusPausedMuted
 
-#const area
-
-var termWidth* = terminalWidth() ## Tracks the current terminal width.
-var lastMenuSeparatorY* {.global.}: int
-
 const
   AsciiFrames* = [$'#', "%"]
   EmojiFrames* = ["🎵", "🎶"]
-
-var
-  animationFrame*: int = 0  # Tracks the current frame of the animation
-  lastAnimationUpdate*: DateTime = now()  # Tracks the last time the animation was updated
 
 when not defined(simple):
   type
@@ -88,20 +80,70 @@ when not defined(simple):
       themes*: Table[string, Theme]
       currentTheme*: string
 
+type
+  AppState* = ref object
+    # Directories and metadata
+    assetsDir*: string
+    stationsDir*: string
+    configDir*: string
+    version*: string
 
-  var globalMetadata* {.global.}: Table[string, string]
+    # Audio / MPV state
+    mpvCtx*: ptr Handle
+    lastVolume*: int
+    fullMediaTitle*: string
 
-  # Global variable to store emoji positions.  Each tuple is (x, y).
-  var emojiPositions* = newSeqOfCap[(int, int)](32)
+    # Theme
+    theme*: Theme
+    when not defined(simple):
+      themeConfig*: ThemeConfig
 
-# Global variable to hold the current theme
-var currentTheme*: Theme
+    # Menu navigation state
+    chooseForMe*: bool
+    lastStationIdx*: int
+    currentMenuGen*: int
 
-var
-  scrollOffset* = 0
-  lastWidth* = 0
-  startingX* = 0
-  scrollCounter* = 0
+    # UI and terminal state
+    termWidth*: int
+    lastTermWidth*: int
+    lastMenuSeparatorY*: int
+    animationFrame*: int
+    lastAnimationUpdate*: DateTime
+    startingX*: int
+    when not defined(simple):
+      emojiPositions*: seq[(int, int)]
+      globalMetadata*: Table[string, string]
+    terminalSupportsEmoji*: bool
+    stderrState*: StderrState
+
+proc newAppState*(
+    assetsDir: string = "",
+    stationsDir: string = "",
+    configDir: string = "",
+    version: string = "0.1"
+): AppState =
+  let curWidth = terminalWidth()
+  result = AppState(
+    assetsDir: assetsDir,
+    stationsDir: stationsDir,
+    configDir: configDir,
+    version: version,
+    lastVolume: 100,
+    fullMediaTitle: "",
+    chooseForMe: false,
+    lastStationIdx: -1,
+    currentMenuGen: 0,
+    termWidth: curWidth,
+    lastTermWidth: curWidth,
+    lastMenuSeparatorY: 0,
+    animationFrame: 0,
+    lastAnimationUpdate: now(),
+    startingX: 0,
+    terminalSupportsEmoji: (when defined(noEmoji): false else: true)
+  )
+  when not defined(simple):
+    result.emojiPositions = newSeqOfCap[(int, int)](32)
+    result.globalMetadata = initTable[string, string]()
 
 func milSecToSec(ms: int): float = ms / 1000
 

@@ -33,8 +33,9 @@ proc say*(
   else:
     styledEcho(color, message)
 
-proc showQuotes* =
-  let quotesData = loadQuotes(getAppDir() / "assets" / "config" / "qoute.json")
+proc showQuotes*(configDir: string = "") =
+  let quotesPath = if configDir != "": configDir / "qoute.json" else: getAppDir() / "assets" / "config" / "qoute.json"
+  let quotesData = loadQuotes(quotesPath)
   let rand = rand(0 .. quotesData.quotes.high)
 
   when debug:
@@ -59,53 +60,45 @@ proc showExitMessage* =
   echo ""
   quit(QuitSuccess)
 
-proc drawSeperatorUI*(xpos = -1, sep = '=', offset = 5, color = fgGreen) =
+proc drawSeperatorUI*(xpos = -1, sep = '=', offset = 5, color = fgGreen, width: int = terminalWidth()) =
   if not xpos == -1:
     setCursorXPos xpos
-  say(sep.repeat(termWidth), color, offset)
+  say(sep.repeat(width), color, offset)
 
-proc drawHeader*() =
+proc drawHeader*(appState: AppState) =
   ## Draws the application header with decorative lines and emojis.
-  updateTermWidth()
-  if termWidth < MinTerminalWidth:
+  updateTermWidth(appState)
+  if appState.termWidth < MinTerminalWidth:
     raise newException(UIError, "Terminal width too small.")
 
   # Draw the top border using the theme's separator color
-  drawSeperatorUI(xpos = -1, offset = 0, color = currentTheme.separator)
+  drawSeperatorUI(xpos = -1, offset = 0, color = appState.theme.separator, width = appState.termWidth)
 
   # Draw the application title with emojis using the theme's header color
   let title =
-    when not defined(noEmoji):
+    if appState.terminalSupportsEmoji:
       "       🎧 " & AppName & " 🎧"
     else:
       "          " & AppName
-  say(title, currentTheme.header, xOffset = (termWidth - title.len) div 2)
+  say(title, appState.theme.header, xOffset = (appState.termWidth - title.len) div 2)
 
   # Draw the bottom border of the header using the theme's separator color
-  drawSeperatorUI(xpos = -1, offset = 0, color = currentTheme.separator)
-
-var lastTermWidth = termWidth # Track the last terminal width
-
-proc updateTermWidth* =
-  ## Updates the terminal width if it has changed significantly.
-  let newWidth = terminalWidth()
-  if abs(newWidth - lastTermWidth) >= 5: # Only update if the change is significant
-    termWidth = newWidth
-    lastTermWidth = newWidth
+  drawSeperatorUI(xpos = -1, offset = 0, color = appState.theme.separator, width = appState.termWidth)
 
 proc renderMenuOptions(
+    appState: AppState,
     options: MenuOptions, numColumns: int, maxColumnLengths: seq[int], spacing: int
 ) =
   ## Renders the menu options in a multi-column layout.
   when not defined(simple):
-    emojiPositions = @[] # Clear previous positions
+    appState.emojiPositions.setLen(0) # Clear previous positions
   let itemsPerColumn = (options.len + numColumns - 1) div numColumns
 
   # Wait for the terminal width to stabilize
   var stableWidth = false
   while not stableWidth:
-    updateTermWidth()
-    if abs(termWidth - lastTermWidth) < 5: # Terminal width is stable
+    updateTermWidth(appState)
+    if abs(appState.termWidth - appState.lastTermWidth) < 5: # Terminal width is stable
       stableWidth = true
     else:
       sleep(100) # Wait for 100ms before checking again
@@ -133,13 +126,13 @@ proc renderMenuOptions(
           emojiX += prefix.len + 1 # +1 for the space after the number/letter
 
           # Add to emojiPositions.  currentY is calculated *before* adding the line.
-          emojiPositions.add((emojiX, currentY))
+          appState.emojiPositions.add((emojiX, currentY))
 
         prefix = " " & prefix
 
         # Truncate and format
         let truncatedName =
-          truncateName(options[index], maxColumnLengths[col] - prefix.len)
+          truncateName(options[index], maxColumnLengths[col] - prefix.len, appState.termWidth)
         var dashToSpaced = truncatedName
 
         proc isFound(s: int): bool =
@@ -148,12 +141,14 @@ proc renderMenuOptions(
 
         if isFound dashToSpaced.find("!"):
           dashToSpaced = dashToSpaced.replace("!", "")
-          dashToSpaced[0] = dashToSpaced[0].toUpperAscii()
+          if dashToSpaced.len > 0:
+            dashToSpaced[0] = dashToSpaced[0].toUpperAscii()
 
         if isFound dashToSpaced.find("_"):
           var getVal = dashToSpaced.find("_")
           dashToSpaced = dashToSpaced.replace("_", " ")
-          dashToSpaced[getVal+1] = dashToSpaced[getVal+1].toUpperAscii()
+          if getVal + 1 < dashToSpaced.len:
+            dashToSpaced[getVal+1] = dashToSpaced[getVal+1].toUpperAscii()
 
         let formattedOption = prefix & dashToSpaced
         let padding = maxColumnLengths[col] - formattedOption.len
@@ -173,6 +168,7 @@ proc renderMenuOptions(
 
 
 proc displayMenu*(
+    appState: AppState,
     options: MenuOptions,
     showReturnOption = true,
     highlightActive = true,
@@ -181,7 +177,7 @@ proc displayMenu*(
     isHandlingJSON = false
 ) =
   ## Displays menu options in a formatted multi-column layout.
-  updateTermWidth()
+  updateTermWidth(appState)
 
   var options = options
 
@@ -190,20 +186,20 @@ proc displayMenu*(
 
   # Draw the "Station Categories" section header
   let categoriesHeader =
-    when not defined(noEmoji):
-          "         📻 Station Categories 📻"
+    if appState.terminalSupportsEmoji:
+      "         📻 Station Categories 📻"
     else:
       "         \\[o=] Station Categories [o=]/"
-  say(categoriesHeader, fgCyan, xOffset = (termWidth - categoriesHeader.len) div 2)
+  say(categoriesHeader, fgCyan, xOffset = (appState.termWidth - categoriesHeader.len) div 2)
   currentY += 1 # Increment after header
 
   # Draw the separator line
-  drawSeperatorUI(xpos = -1, sep = '-', offset = 0)
+  drawSeperatorUI(xpos = -1, sep = '-', offset = 0, width = appState.termWidth)
   currentY += 1 # Increment after separator
 
   # Calculate column layout and render menu options
-  let (numColumns, maxColumnLengths, spacing) = calculateColumnLayout(options)
-  renderMenuOptions(options, numColumns, maxColumnLengths, spacing)
+  let (numColumns, maxColumnLengths, spacing) = calculateColumnLayout(options, appState.termWidth)
+  appState.renderMenuOptions(options, numColumns, maxColumnLengths, spacing)
 
   # 3. Counting Rows (after rendering)
   let itemsPerColumn = (options.len + numColumns - 1) div numColumns
@@ -211,27 +207,26 @@ proc displayMenu*(
 
   when not defined(simple):
     if isHandlingJSON:
-      initDrawMenuEmojis() # Draw yellow emojis *after* rendering text
+      appState.initDrawMenuEmojis() # Draw yellow emojis *after* rendering text
   echo ""
   currentY += 1 # Increment after the empty line
   # 4. Tracking the Separator's Y
-  # footerSeparatorLineY = currentY  # Store the Y position *before* drawing
-  lastMenuSeparatorY = currentY # Store the Y position *before* drawing, renamed variable
+  appState.lastMenuSeparatorY = currentY # Store the Y position *before* drawing, renamed variable
   # Draw the separator line
-  #say(separatorLine, fgGreen, xOffset = 0)
-  drawSeperatorUI(xpos = -1, sep = '-', offset = 0)
+  drawSeperatorUI(xpos = -1, sep = '-', offset = 0, width = appState.termWidth)
   currentY += 1 #increment after second separator
 
   # Display the footer options
   let footerOptions = getFooterOptions(isMainMenu, isPlayerUI) # Pass isPlayerUI here
-  say(footerOptions, fgYellow, xOffset = (termWidth - footerOptions.len) div 2)
+  say(footerOptions, fgYellow, xOffset = (appState.termWidth - footerOptions.len) div 2)
   currentY += 1
 
   # Draw the bottom border
-  drawSeperatorUI(xpos = -1, offset = 0)
+  drawSeperatorUI(xpos = -1, offset = 0, width = appState.termWidth)
   currentY += 1 #we are not tracking this, but it's good practice
 
 proc drawMenu*(
+    appState: AppState,
     section: string,
     options: string | MenuOptions,
     subsection = "",
@@ -244,13 +239,13 @@ proc drawMenu*(
   clear()
 
   # Draw header
-  drawHeader()
+  appState.drawHeader()
   # Display menu options
   when options is string:
     for line in splitLines(options):
       say(line, fgBlue)
   else:
-    displayMenu(
+    appState.displayMenu(
       options,
       isMainMenu = isMainMenu,
       isPlayerUI = isPlayerUI,
@@ -258,6 +253,7 @@ proc drawMenu*(
     )
 
 proc showFooter*(
+    appState: AppState,
     lineToDraw = 4,
     isMainMenu = false,
     isPlayerUI = false,
@@ -265,35 +261,35 @@ proc showFooter*(
     footerColor = fgYellow
 ) =
   ## Displays the footer with dynamic options based on the context.
-  updateTermWidth()
+  updateTermWidth(appState)
   setCursorPos(0, lineToDraw)
-  drawSeperatorUI(xpos = -1, '-', offset = 0, separatorColor)
+  drawSeperatorUI(xpos = -1, '-', offset = 0, color = separatorColor, width = appState.termWidth)
 
   # Add footer with controls at the bottom
   setCursorPos(0, lineToDraw + 1)
   let footerOptions = getFooterOptions(isMainMenu, isPlayerUI)
-  say(footerOptions, footerColor, xOffset = (termWidth - footerOptions.len) div 2)
+  say(footerOptions, footerColor, xOffset = (appState.termWidth - footerOptions.len) div 2)
 
   # Draw bottom border
   setCursorPos(0, lineToDraw + 2)
-  drawSeperatorUI(xpos = -1, '=', offset = 0, separatorColor)
+  drawSeperatorUI(xpos = -1, '=', offset = 0, color = separatorColor, width = appState.termWidth)
 
-proc drawHeader*(section: string) =
+proc drawHeader*(appState: AppState, section: string) =
   ## Draws the application header with the current section.
-  updateTermWidth()
+  updateTermWidth(appState)
 
-  if termWidth < MinTerminalWidth:
+  if appState.termWidth < MinTerminalWidth:
     raise newException(UIError, "Terminal width too small")
 
   # Draw header
   say(AppNameShort & " > " & section, fgGreen)
-  drawSeperatorUI(xpos = -1, '-')
+  drawSeperatorUI(xpos = -1, '-', width = appState.termWidth)
 
-proc showHelp*() =
+proc showHelp*(appState: AppState) =
   ## Displays instructions on how to use the app.
   clear()
 
-  drawHeader()
+  appState.drawHeader()
   say("Welcome to " & AppName & "!", fgYellow)
   say("Here's how to use the app:", fgGreen)
   say("1. Use the number keys (1-9) or letters (A-Z) to select a station.", fgBlue)
@@ -303,15 +299,15 @@ proc showHelp*() =
   say("   - [R] Return to the previous menu", fgBlue)
   say("   - [Q] Quit the application", fgBlue)
   say("3. Press [N] in the main menu to view notes.", fgBlue)
-  say("4. Press [H] in the main menu to view this help screen.", fgBlue)
-  say("=".repeat(termWidth), fgGreen, xOffset = 0)
+  say("4. Press [U] in the main menu to view this help screen.", fgBlue)
+  say("=".repeat(appState.termWidth), fgGreen, xOffset = 0)
   say("Press any key to return to the main menu.", fgYellow)
   discard getch()
 
-proc showNotes* =
+proc showNotes*(appState: AppState) =
   while true:
     var shouldReturn = false
-    drawMenu(
+    appState.drawMenu(
       "Notes",
       """PNimRP Copyright (C) 2021, 2022, 2024–2025, 2026 antonl-dev
 This program comes with ABSOLUTELY NO WARRANTY
@@ -319,7 +315,7 @@ This is free software, and you are welcome to redistribute
 under certain conditions.""",
       showNowPlaying = false
     )
-    showFooter(lineToDraw = 9, isMainMenu = true)
+    appState.showFooter(lineToDraw = 9, isMainMenu = true)
 
     while true:
       case getch():
@@ -338,9 +334,10 @@ proc exit*(ctx: ptr Handle, isPaused: bool) =
   showExitMessage()
   quit(QuitSuccess)
 
-proc spinLoadingSpinnerOnce*(frame: var int, coord = (-1, -1)) =
+proc spinLoadingSpinnerOnce*(frame: var int, appState: AppState = nil, coord = (-1, -1)) =
   const spinner = @["-", "\\", "|", "/"]
-  if coord == (-1, -1): setCursorPos(termWidth - 3, 2)
+  let width = if appState != nil: appState.termWidth else: terminalWidth()
+  if coord == (-1, -1): setCursorPos(width - 3, 2)
   else:                 setCursorPos(coord[0], coord[1])
   stdout.write("[" & spinner[frame] & "]")
   stdout.flushFile()

@@ -10,15 +10,15 @@ when isMainModule:
       expect CatchableError:
         checkError(-1)
 
-    test "makeVersion":
-      check makeVersion(1, 107) == 0x2006B
+    test "makePackedVersion":
+      check makePackedVersion(1, 107) == 0x1006B'u32
 
     test "getClientApiVersion":
-      check getClientApiVersion() == clientApiVersion
+      check getUnpackedVersionComponents(getClientApiVersion()) == clientApiVersion
 
     test "errorString":
-      check errorString(cint(errSuccess)) == "Success"
-      check errorString(cint(errNoMem)) == "Memory allocation failed"
+      check errorString(cint(errSuccess)) == "success"
+      check errorString(cint(errNoMem)) == "memory allocation failed"
 
     test "eventName":
       check eventName(IDNone) == "none"

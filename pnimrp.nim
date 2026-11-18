@@ -18,13 +18,7 @@ when not defined(simple):
 when compileOption("profiler"):
   import std/nimprof
 
-type
-  AppConfig = object
-    assetsDir: string # Directory where application assets are stored
-    stationsDir: string
-    version: string   # Application version
-
-var state: StderrState
+var gAppState: AppState
 
 const
   AppName = "Poor Man's Radio Player" # Name of the application
@@ -39,11 +33,11 @@ template assertAssetNotFound(asset: string, isDir = true) =
   if not status:
     error "Assets directory/file not found: " & asset
 
-proc validateEnvironment() =
+proc validateEnvironment(appState: AppState) =
   ## Validates the application environment, ensuring necessary assets and permissions are in place.
-  let assetsDir   = getAppDir() / "assets"
-  let stationsDir = assetsDir  / "stations"
-  let configDir   = assetsDir / "config"
+  let assetsDir   = appState.assetsDir
+  let stationsDir = appState.stationsDir
+  let configDir   = appState.configDir
 
   # Ensure the assets directory exists
   assertAssetNotFound assetsDir
@@ -58,14 +52,6 @@ proc validateEnvironment() =
     checkIfCacheDirExistElseCreate()
   # Future: Add checks for required assets and write permissions if needed
 
-proc getAppConfig(): AppConfig =
-  ## Initializes and returns the application configuration.
-  result = AppConfig(
-    assetsDir: getAppDir() / "assets", # Set the assets directory path
-    stationsDir: getAppDir() / "assets" / "stations",
-    version: Version # Set the application version
-  )
-
 proc showBanner() =
   ## Displays the application banner with version and copyright information.
   styledEcho(fgCyan, AppName & " v" & Version)
@@ -76,7 +62,8 @@ proc cleanup() =
   try: illwillDeinit()
   except IllwillError: discard
 
-  state.restoreStderr()
+  if gAppState != nil:
+    gAppState.stderrState.restoreStderr()
   echo ""
   showQuotes()
   echo "Thank you for using " & AppName
@@ -101,7 +88,19 @@ proc main() =
       error "please run within terminal!"
       quit QuitFailure
 
-  state.initSuppressStderr()
+  let assetsDir   = getAppDir() / "assets"
+  let stationsDir = assetsDir  / "stations"
+  let configDir   = assetsDir / "config"
+
+  var appState = newAppState(
+    assetsDir = assetsDir,
+    stationsDir = stationsDir,
+    configDir = configDir,
+    version = Version
+  )
+  gAppState = appState
+
+  appState.stderrState.initSuppressStderr()
 
   try:
     # Register cleanup procedure to run on exit
@@ -110,12 +109,12 @@ proc main() =
 
     when not defined(simple):
       # Load theme configuration
-      let configPath = getAppDir() / "assets" / "config" / "themes.json"
-      var themeConfig = loadThemeConfig(configPath)
-      currentTheme = getCurrentTheme(themeConfig)
+      let configPath = appState.configDir / "themes.json"
+      appState.themeConfig = loadThemeConfig(configPath)
+      appState.theme = getCurrentTheme(appState.themeConfig)
 
     else:
-      currentTheme = Theme(
+      appState.theme = Theme(
         header: fgYellow,
         separator: fgGreen,
         menu: fgBlue,
@@ -130,29 +129,20 @@ proc main() =
       )
 
     # Validate the environment and initialize configuration
-    validateEnvironment()
-    let config = getAppConfig()
-    #try:
-    #  illwillInit(false)
-    #except:
-    #  discard  # Non-critical failure
+    validateEnvironment(appState)
 
-    #defer: illwillDeinit()
     # Display the application banner and hide the cursor
     showBanner()
     hideCursor()
     randomize()
 
     #init global mpv context for reuse
-    var mpvCtx = initGlobalMpv()
-    defer: mpvCtx.terminateDestroy()
+    appState.mpvCtx = initGlobalMpv()
+    defer: appState.mpvCtx.terminateDestroy()
 
     # Start the main menu with the configured assets directory
-    mpvCtx.drawMainMenu(config.stationsDir)
+    appState.drawMainMenu(appState.stationsDir)
 
-  #except Exception as e:
-    # Handle any fatal errors that occur during execution
-  #  error "Fatal error: " & e.msg
   finally:
     # Ensure cleanup is always performed
     cleanup()

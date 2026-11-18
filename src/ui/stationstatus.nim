@@ -7,8 +7,6 @@ import
 
 import terminal, asyncdispatch
 
-var currentMenuGen* = 0
-
 type
   TimeoutResult[T] = object
     timedOut: bool
@@ -27,8 +25,8 @@ proc withTimeoutAndGetVal[T](fut: Future[T], timeout: int): Future[TimeoutResult
     result.value = await fut
   return result
 
-func toStatusCodeEmoji(status: LinkStatus): (ForegroundColor, string) =
-  when not defined(noEmoji):
+func toStatusCodeEmoji(status: LinkStatus, useEmoji: bool = true): (ForegroundColor, string) =
+  if useEmoji:
     case status
     of lsValid:    (fgDefault, "🟢")
     of lsInvalid:  (fgDefault, "🔴")
@@ -41,14 +39,14 @@ func toStatusCodeEmoji(status: LinkStatus): (ForegroundColor, string) =
     of lsChecking: (fgYellow, "o")
     of lsUnknown:  (fgRed,    "?")
 
-proc drawStatusIndicator*(x, y: int, status = lsChecking, isInitial = false) =
+proc drawStatusIndicator*(x, y: int, status = lsChecking, isInitial = false, useEmoji: bool = true) =
   setCursorPos(x, y)
   let (color, symbol) =
     if isInitial:
-        when not defined(noEmoji): (fgDefault, "🟡")
-        else: (fgYellow, "o")
+      if useEmoji: (fgDefault, "🟡")
+      else: (fgYellow, "o")
     else:
-      toStatusCodeEmoji(status)
+      toStatusCodeEmoji(status, useEmoji)
   stdout.styledWrite(color, symbol)
   stdout.flushFile()
 
@@ -60,7 +58,7 @@ type
     status*:   LinkStatus
     future*:   Future[LinkStatus]
 
-proc checkAndDraw(station: StationStatus, myGen: int) {.async.} =
+proc checkAndDraw(station: StationStatus, myGen: int, appState: AppState) {.async.} =
   station.future = resolveLink(station.url) # Store future
   await sleepAsync(5)
   when not defined(asynclinktimeout):
@@ -73,26 +71,26 @@ proc checkAndDraw(station: StationStatus, myGen: int) {.async.} =
     else:                station.status = result1.value
   await sleepAsync(5)
 
-  if myGen == currentMenuGen:
-    drawStatusIndicator(station.coord[0], station.coord[1], station.status)
+  if myGen == appState.currentMenuGen:
+    drawStatusIndicator(station.coord[0], station.coord[1], station.status, useEmoji = appState.terminalSupportsEmoji)
     await sleepAsync(5)
     stdout.flushFile()
 
-proc resolveAndDisplay*(stations: seq[StationStatus]) {.async.} =
-  inc currentMenuGen
-  let thisGen = currentMenuGen
+proc resolveAndDisplay*(stations: seq[StationStatus], appState: AppState) {.async.} =
+  inc appState.currentMenuGen
+  let thisGen = appState.currentMenuGen
 
   var allChecks = newSeqOfCap[Future[void]](32)
 
   for station in stations:
-    allChecks.add(checkAndDraw(station, thisGen))
+    allChecks.add(checkAndDraw(station, thisGen, appState))
 
   await all(allChecks)
 
-proc drawMenuEmojis* =
-  for pos in emojiPositions:
-    drawStatusIndicator(pos[0], pos[1], lsChecking)
+proc drawMenuEmojis*(appState: AppState) =
+  for pos in appState.emojiPositions:
+    drawStatusIndicator(pos[0], pos[1], lsChecking, useEmoji = appState.terminalSupportsEmoji)
 
-proc initDrawMenuEmojis* =
-  for pos in emojiPositions:
-    drawStatusIndicator(pos[0], pos[1], isInitial = true)
+proc initDrawMenuEmojis*(appState: AppState) =
+  for pos in appState.emojiPositions:
+    drawStatusIndicator(pos[0], pos[1], isInitial = true, useEmoji = appState.terminalSupportsEmoji)

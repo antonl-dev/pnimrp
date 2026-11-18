@@ -33,18 +33,15 @@ when not defined(simple):
         statuscache
     ]
 
-var chooseForMe* = false # Declare as mutable global variable
-var lastStationIdx*: int = -1 # Declare a global variable to track the last station index
-
-proc chooseForMeOrChooseYourself(itemsLen: int): Key =
-  if chooseForMe:
+proc chooseForMeOrChooseYourself(appState: AppState, itemsLen: int): Key =
+  if appState.chooseForMe:
     randomize()
-    chooseForMe = false # Reset the flag after use
+    appState.chooseForMe = false # Reset the flag after use
 
     var rndIdx = rand(itemsLen - 1) # Generate random index within bounds
-    while rndIdx == lastStationIdx and itemsLen > 1: # Ensure it doesn't pick the last station again
+    while rndIdx == appState.lastStationIdx and itemsLen > 1: # Ensure it doesn't pick the last station again
       rndIdx = rand(itemsLen - 1)
-    lastStationIdx = rndIdx # Update the last station index
+    appState.lastStationIdx = rndIdx # Update the last station index
 
     # Convert the random index to a menu key (1-9, A-M)
     if rndIdx < 9:
@@ -67,13 +64,14 @@ when not defined(simple):
   template accumulateStationStatusStateFromItemsPaths(
     stations: seq[StationStatus],
     items: seq[string],
-    paths: seq[string]
+    paths: seq[string],
+    appState: AppState
   ) =
     for i in 0 ..< items.len:
       stations.add(
         StationStatus(
           name:     items[i],
-          coord:    emojiPositions[i],  # From ui.nim
+          coord:    appState.emojiPositions[i],  # From ui.nim
           url:      paths[i],             # Station URL
           status:   lsChecking         # Initial state
         )
@@ -105,7 +103,7 @@ template directoryHandlerHM(items: seq[string]) =
 
   if subItems.len != 0:
     # Navigate to subcategories with isMainMenu = false
-    ctx.handleMenu(
+    appState.handleMenu(
       items[choosenItem],
       subItems,
       subPaths,
@@ -123,7 +121,7 @@ template jsonFileHandlerHM(items: seq[string]) =
     warn("No stations available. Please check the station list.")
   else:
     # Navigate to station list with isMainMenu = false
-    ctx.handleMenu(
+    appState.handleMenu(
       items[choosenItem],
       stations.names,
       stations.urls,
@@ -133,34 +131,35 @@ template jsonFileHandlerHM(items: seq[string]) =
     )
 
 template statusCacheHandlerHM(
-    items: seq[string], handleMenuIsHandling: handleMenuIsHandling
+    items: seq[string], handleMenuIsHandling: handleMenuIsHandling, appState: AppState
 ) =
   if isHandlingJSON(handleMenuIsHandling):
     var statuscontext = StatusCache(sectionName: section)
 
     var stations = newSeqOfCap[StationStatus](32)
 
-    stations.accumulateStationStatusStateFromItemsPaths(items, paths)
-    hookCacheResolveAndDisplay(stations, statuscontext)
+    stations.accumulateStationStatusStateFromItemsPaths(items, paths, appState)
+    hookCacheResolveAndDisplay(stations, statuscontext, appState)
 
 proc handleMenu*(
-    ctx: ptr Handle,
+    appState: AppState,
     section: string,
     items: seq[string],
     paths: seq[string],
     isMainMenu: bool = false,
-    baseDir: string = getAppDir() / "assets",
+    baseDir: string = "",
     handleMenuIsHandling: handleMenuIsHandling,
 ) =
   ## Handles a generic menu for station selection or main category selection.
   ## Supports both directories and JSON files.
+  let resolvedBaseDir = if baseDir == "": appState.stationsDir else: baseDir
   while true:
     var returnToParent = false
     clear()
-    drawHeader()
+    appState.drawHeader()
 
     # Display the menu
-    drawMenu(
+    appState.drawMenu(
       section,
       items,
       isMainMenu = isMainMenu,
@@ -169,11 +168,11 @@ proc handleMenu*(
     ) # Pass isPlayerUI here
 
     when not defined(simple):
-      items.statusCacheHandlerHM(handleMenuIsHandling)
+      items.statusCacheHandlerHM(handleMenuIsHandling, appState)
 
     while true:
       try:
-        let key = chooseForMeOrChooseYourself(items.len)
+        let key = appState.chooseForMeOrChooseYourself(items.len)
         case key
         of Key.One .. Key.Nine, Key.A .. Key.M:
           let choosenItem = ordinalizeKeyForIndx()
@@ -189,25 +188,26 @@ proc handleMenu*(
             else:
               # Treat as a station URL and play directly
               let config = MenuConfig(
+                ctx: appState.mpvCtx,
                 currentSection: section,
                 currentSubsection: "",
                 stationName: items[choosenItem],
                 stationUrl: selectedPath
               )
-              ctx.playStation(config)
+              appState.playStation(config)
             break
           else:
             showInvalidChoice()
 
         of Key.N:
           if isMainMenu: # Only allow Notes in the main menu
-            showNotes()
+            appState.showNotes()
             break
           else:
             showInvalidChoice()
 
         of Key.U:
-          showHelp()
+          appState.showHelp()
           break
 
         of Key.R, Key.BackSpace:
@@ -218,7 +218,7 @@ proc handleMenu*(
             showInvalidChoice()
 
         of Key.S:
-          chooseForMe = true
+          appState.chooseForMe = true
 
         of Key.Q, Key.Escape, CtrlQ:
           showExitMessage()
@@ -237,19 +237,38 @@ proc handleMenu*(
     if returnToParent:
       break
 
-proc drawMainMenu*(ctx: ptr Handle, baseDir = getAppDir() / "assets") =
+proc handleMenu*(
+    ctx: ptr Handle,
+    section: string,
+    items: seq[string],
+    paths: seq[string],
+    isMainMenu: bool = false,
+    baseDir: string = getAppDir() / "assets",
+    handleMenuIsHandling: handleMenuIsHandling,
+) =
+  var appState = newAppState()
+  appState.mpvCtx = ctx
+  appState.handleMenu(section, items, paths, isMainMenu, baseDir, handleMenuIsHandling)
+
+proc drawMainMenu*(appState: AppState, baseDir = "") =
   ## Draws and handles the main category menu.
   const fullscreen = when not defined(release) or defined(debug): false else: true
     ## stack traces are cleared, we dont want fullscreen until not debug
   illwillInit(fullscreen)
-  let categories = loadCategories(baseDir)
-  ctx.handleMenu(
+  let dir = if baseDir == "": appState.stationsDir else: baseDir
+  let categories = loadCategories(dir)
+  appState.handleMenu(
     "Main",
     categories.names,
     categories.paths,
     isMainMenu = true,
-    baseDir = baseDir,
+    baseDir = dir,
     handleMenuIsHandling = hmIsHandlingDirectory,
   )
+
+proc drawMainMenu*(ctx: ptr Handle, baseDir = getAppDir() / "assets") =
+  var appState = newAppState(assetsDir = baseDir, stationsDir = baseDir / "stations")
+  appState.mpvCtx = ctx
+  drawMainMenu(appState, baseDir)
 
 export hideCursor, error

@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: MPL-2.0
 # player.nim
 
-import libmpv
+import libmpv, ../../utils/utilstypes
 export cE # Export the error-checking macro for external use
 
 type
@@ -17,9 +17,6 @@ const
   VolumeStep* = 5  # Step size for volume adjustments
   MinVolume* = 0   # Minimum allowed volume
   MaxVolume* = 150 # Maximum allowed volume
-
-var lastVolume* {.global.} = 100 # Default volume is 100
-var fullMediaTitle* {.global.} = ""
 
 using ctx: ptr Handle
 
@@ -153,11 +150,12 @@ proc isIdle*(ctx): bool {.raises: [PlayerError].} =
   except Exception as e:
     raise newException(PlayerError, "Failed to check idle state: " & e.msg)
 
-proc getCurrentMediaTitle*(ctx): string {.raises: [].} =
+proc getCurrentMediaTitle*(ctx; appState: AppState = nil): string {.raises: [].} =
   ## Retrieves the current media title.
   ##
   ## Args:
   ##   ctx: Player handle
+  ##   appState: Optional AppState to store title
   ##
   ## Returns:
   ##   Current media title or an empty string if none
@@ -167,7 +165,8 @@ proc getCurrentMediaTitle*(ctx): string {.raises: [].} =
 
     # Convert the cstring to a Nim string immediately to ensure GC safety
     result = if title != nil: $title else: ""
-    fullMediaTitle = result
+    if appState != nil:
+      appState.fullMediaTitle = result
 
     # Free the cstring allocated by libmpv
     if title != nil:
@@ -206,7 +205,7 @@ proc getMediaInfo*(ctx): MediaInfo {.raises: [PlayerError].} =
   except Exception as e:
     raise newException(PlayerError, "Failed to get media info: " & e.msg)
 
-proc setVolumeOfBellRelativeToMainCtx*(ctx) =
+proc setVolumeOfBellRelativeToMainCtx*(ctx; lastVolume = 100) =
   #set 1.5 times the last vol
   var newVolume = cstring $(float(lastVolume) * 1.5)
   cE ctx.setOptionString("volume", newVolume)
@@ -214,11 +213,12 @@ proc setVolumeOfBellRelativeToMainCtx*(ctx) =
     #by having the cost of string conversions, we are offloading the dirty work
     #to libmpv, which is very robust
 
-template volume*(inc = true) =
+template volume*(appState: AppState, inc = true) =
   if inc: state.volume = min(state.volume + VolumeStep, MaxVolume)
   else:   state.volume = max(state.volume - VolumeStep, MinVolume)
-  lastVolume = state.volume
-  cE ctx.setProperty("volume", fmtInt64, addr state.volume)
+  appState.lastVolume = state.volume
+  var vol64 = int64(state.volume)
+  cE ctx.setProperty("volume", fmtInt64, addr vol64)
 
 func getFileFormat*(ctx): string =
   # Query the `file-format` property
@@ -230,8 +230,8 @@ func getFileFormat*(ctx): string =
   else:
     result = "unknown" # Fallback if the property is not available
 
-template incVolume*() = volume(inc = true)
-template decVolume*() = volume(inc = false)
+template incVolume*(appState: AppState) = volume(appState, inc = true)
+template decVolume*(appState: AppState) = volume(appState, inc = false)
 
 export
   Handle, create, initialize,

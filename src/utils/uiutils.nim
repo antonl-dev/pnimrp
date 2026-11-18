@@ -20,21 +20,25 @@ func getSymbol*(status: PlayerStatus, useEmoji: bool): string =
     of StatusPaused:       "||"
     of StatusPausedMuted:  "||[X]"
 
-var terminalSupportsEmoji* =
+const terminalSupportsEmoji* =
   when defined(noEmoji): false
   else: true
 
-proc currentStatusEmoji*(status: PlayerStatus): string =
-  return getSymbol(status, terminalSupportsEmoji)
+proc currentStatusEmoji*(status: PlayerStatus, useEmoji: bool = terminalSupportsEmoji): string =
+  return getSymbol(status, useEmoji)
 
 proc error*(message: string) =
   styledEcho(fgRed, "Error: ", message)
   quit(QuitFailure)
 
-proc updateTermWidth* =
+proc updateTermWidth*(appState: AppState = nil): int {.discardable.} =
   let newWidth = terminalWidth()
-  if newWidth != termWidth:
-    termWidth = newWidth
+  if appState != nil:
+    if abs(newWidth - appState.lastTermWidth) >= 5 or appState.termWidth == 0:
+      appState.termWidth = newWidth
+      appState.lastTermWidth = newWidth
+    return appState.termWidth
+  return newWidth
 
 proc clear* =
   eraseScreen()
@@ -55,16 +59,16 @@ proc showInvalidChoice*(message = DefaultErrorMsg) =
   cursorUp(5)
   stdout.flushFile()
 
-proc centerText*(text: string, width: int = termWidth): string =
+proc centerText*(text: string, width: int = terminalWidth()): string =
   let padding = (width - text.len) div 2
   result = " ".repeat(max(0, padding)) & text
 
-proc truncateName*(name: string, maxLength: int): string =
-  if termWidth <= MinTerminalWidth or name.len > maxLength:
-    name[0 ..< maxLength - 3] #& "..."
+proc truncateName*(name: string, maxLength: int, width: int = terminalWidth()): string =
+  if width <= MinTerminalWidth or name.len > maxLength:
+    name[0 ..< max(0, maxLength - 3)] #& "..."
   else: name
 
-proc calculateColumnLayout*(options: MenuOptions): (int, seq[int], int) =
+proc calculateColumnLayout*(options: MenuOptions, width: int = terminalWidth()): (int, seq[int], int) =
   const minColumns = 2
   const maxColumns = 3
   var numColumns = maxColumns
@@ -86,7 +90,7 @@ proc calculateColumnLayout*(options: MenuOptions): (int, seq[int], int) =
   #switch to 2 columns if:
   #1.terminal width is less than minimum required for 3 columns, or
   #2.longest item is more than 1/4.5 of the terminal width
-  if termWidth < minWidthFor3Columns or maxItemLength > int(float(termWidth) / 4.5):
+  if width < minWidthFor3Columns or maxItemLength > int(float(width) / 4.5):
     numColumns = minColumns
   else:
     numColumns = maxColumns # otherwise, use 3 columns
@@ -124,7 +128,7 @@ proc calculateColumnLayout*(options: MenuOptions): (int, seq[int], int) =
 
   while spacing >= minSpacing:
     let totalWidthWithSpacing = totalWidth + spacing * (numColumns - 1)
-    if totalWidthWithSpacing <= termWidth:
+    if totalWidthWithSpacing <= width:
       break # We have enough space with the current spacing
     spacing -= 1 # Reduce spacing and try again
 
@@ -134,7 +138,7 @@ proc calculateColumnLayout*(options: MenuOptions): (int, seq[int], int) =
     var maxAllowedLength: int
     for i in 0 ..< maxColumnLengths.len:
       # *Assign* to maxAllowedLength inside the loop.
-      maxAllowedLength = (termWidth div numColumns - spacing) - 3 # Bias
+      maxAllowedLength = (width div numColumns - spacing) - 3 # Bias
       if maxColumnLengths[i] > maxAllowedLength:
         maxColumnLengths[i] = maxAllowedLength
 

@@ -5,7 +5,7 @@ import
   ../utils/utils,
   ../audio/mpv/player
 
-proc appendToFileReUsable(filen: string, config: MenuConfig, isLike: bool) =
+proc appendToFileReUsable(filen: string, config: MenuConfig, isLike: bool, appState: AppState) =
   try:
     let file = open(filen, fmAppend)
     defer: file.close()
@@ -17,7 +17,7 @@ proc appendToFileReUsable(filen: string, config: MenuConfig, isLike: bool) =
         getClockStr() &  " | "  &
         config.currentSection   & " | " &
         config.stationName      & " | " &
-      fullMediaTitle
+      appState.fullMediaTitle
     )
     if isLike:
       cursorDown 5
@@ -32,8 +32,8 @@ proc appendToFileReUsable(filen: string, config: MenuConfig, isLike: bool) =
   finally:
     stdout.flushFile()
 
-template appendToLikedSongs*(config: MenuConfig) =
-  appendToFileReUsable("likedSongs.txt", config, isLike = true)
+template appendToLikedSongs*(appState: AppState, config: MenuConfig) =
+  appendToFileReUsable("likedSongs.txt", config, isLike = true, appState)
 
-template appendToHistory*(config: MenuConfig) =
-  appendToFileReUsable("history.txt", config, isLike = false)
+template appendToHistory*(appState: AppState, config: MenuConfig) =
+  appendToFileReUsable("history.txt", config, isLike = false, appState)

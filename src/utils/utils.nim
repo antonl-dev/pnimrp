@@ -42,15 +42,15 @@ proc validateLengthStationName*(result: seq[string], filePath: string, maxLength
         sleep(400) # Pause for 400ms after displaying the warning
         warnCount += 1
 
-proc checkIfTooLongMagic*(): int =
-  termWidth - "  Now Playing: ".len - 6
+proc checkIfTooLongMagic*(width: int = terminalWidth()): int =
+  width - "  Now Playing: ".len - 6
 
-proc checkIfTooLongForUI*(str: string): bool =
-  str.len > checkIfTooLongMagic()
+proc checkIfTooLongForUI*(str: string, width: int = terminalWidth()): bool =
+  str.len > checkIfTooLongMagic(width)
 
-proc truncateMe*(str: string): string =
-  if str.checkIfTooLongForUI():
-    result = str.substr(0, checkIfTooLongMagic()) & "..."
+proc truncateMe*(str: string, width: int = terminalWidth()): string =
+  if str.checkIfTooLongForUI(width):
+    result = str.substr(0, checkIfTooLongMagic(width)) & "..."
   else: return str
     #1.65 good factor to stop nowplaying overflow, inc 1.65 if does
 
@@ -59,10 +59,11 @@ proc initCheckingStationNotice* =
   stdout.styledWrite fgYellow, "Checking stations... Please Wait"
   stdout.flushFile()
 
-proc finishCheckingStationNotice* =
+proc finishCheckingStationNotice*(appState: AppState = nil) =
   setCursorPos(0, terminalHeight() - 5)
   eraseLine()
-  lastMenuSeparatorY = 0
+  if appState != nil:
+    appState.lastMenuSeparatorY = 0
   stdout.flushFile()
 
 proc cleanupPlayer*(ctx: ptr Handle) =
@@ -88,6 +89,7 @@ export #uiutils
 
 #export all internal within utils namespace
 export #utilstypes
+  AppState, newAppState,
   QuoteData,
 
   UIError, JSONParseError, FileNotFoundError,
@@ -107,21 +109,8 @@ export #utilstypes
   AnimationFrame,
   PlayerStatus,
 
-  termWidth,
-  lastMenuSeparatorY,
-
   AsciiFrames,
   EmojiFrames,
-
-  animationFrame,
-  lastAnimationUpdate,
-
-  currentTheme,
-
-  scrollOffset,
-  lastWidth,
-  startingX,
-  scrollCounter,
 
   MenuChars,
   AppName,
@@ -135,6 +124,4 @@ export #utilstypes
 when not defined(simple):
   export #utilstypes
     ThemeConfig,
-    globalMetadata,
-    emojiPositions,
     StatusCache

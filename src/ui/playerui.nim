@@ -61,14 +61,12 @@ func getPerCycleSleepTimeFade(vol: int): int =
 template tryToPlayAgain(url: string) =
   ctx.allocateJobMpv(url)
 
-proc playStation*(ctx: ptr Handle, config: MenuConfig) =
+proc playStation*(appState: AppState, config: MenuConfig) =
   ## Plays a radio station and handles user input for playback control.
-  #try:
+  let ctx = config.ctx
   if config.stationUrl == "":
     editBadFileHint(config)
     return
-  #defer: illwillDeinit()
-  #illwillInit(false)
 
   # Validate the link
   try:
@@ -76,7 +74,7 @@ proc playStation*(ctx: ptr Handle, config: MenuConfig) =
     if not validateLink(config.stationUrl).isValid:
       editBadFileHint(config)
       return
-    finishCheckingStationNotice()
+    finishCheckingStationNotice(appState)
   except Exception:
     editBadFileHint(config)
     return
@@ -84,7 +82,7 @@ proc playStation*(ctx: ptr Handle, config: MenuConfig) =
   var state = PlayerState(
     isPaused: false,
     isMuted: false,
-    volume: lastVolume
+    volume: appState.lastVolume
   ) # Use lastVolume
   var isObserving = false
   var coreIdleCounter: uint8
@@ -110,10 +108,10 @@ proc playStation*(ctx: ptr Handle, config: MenuConfig) =
     ctx.setVolumeMpv(0)
 
   # Draw the initial player UI
-  drawPlayerUI(config.stationName, "Loading...", currentStatusEmoji(currentStatus(state)), state.volume)
-  showFooter(isPlayerUI = true)
+  appState.drawPlayerUI(config.stationName, "Loading...", currentStatusEmoji(currentStatus(state), appState.terminalSupportsEmoji), state.volume)
+  appState.showFooter(isPlayerUI = true)
   when defined(simple):
-    fullTitle = fullTitle.truncateMe()
+    fullTitle = fullTitle.truncateMe(appState.termWidth)
 
   while true:
     if not state.isPaused:
@@ -126,14 +124,15 @@ proc playStation*(ctx: ptr Handle, config: MenuConfig) =
       isObserving = true
 
     if event.eventID in {IDEventPropertyChange}:
-      state.currentSong = ctx.getCurrentMediaTitle()
+      state.currentSong = ctx.getCurrentMediaTitle(appState)
       if fullTitle != state.currentSong:
-        config.appendToHistory()
+        appState.appendToHistory(config)
       fullTitle = state.currentSong # Assign to fullTitle
-      updateCurrentSongPlayerUI(state.currentSong)
+      appState.fullMediaTitle = fullTitle
+      appState.updateCurrentSongPlayerUI(state.currentSong)
       setCursorXPos 0
       when not defined(simple):
-        globalMetadata = updateMetadataUI(config, ctx, state)
+        appState.globalMetadata = updateMetadataUI(config, ctx, state)
 
     if event.eventID in {IDFileLoaded}:
       wasTheStreamPlayingForSomeTime = true
@@ -149,7 +148,7 @@ proc playStation*(ctx: ptr Handle, config: MenuConfig) =
       finishedLoading = true
     else:
       if not finishedLoading:
-        spinnerState.spinLoadingSpinnerOnce()
+        spinnerState.spinLoadingSpinnerOnce(appState)
 
     when not defined(simple):
       # Increment the animation counter every 25ms (getKeyWithTimeout interval)
@@ -157,15 +156,15 @@ proc playStation*(ctx: ptr Handle, config: MenuConfig) =
 
       # Check if it's time to update the animation (1350ms / 50ms = 54 iterations)
       if animationCounter == 27:
-        updateAnimationOnly(currentStatusEmoji(currentStatus(state)), state.currentSong, animationCounter)
+        appState.updateAnimationOnly(currentStatusEmoji(currentStatus(state), appState.terminalSupportsEmoji), state.currentSong, animationCounter)
         animationCounter = 0 # Reset the counter
 
 
         # Scrolling Logic
       if scrollCounter == 11:
-        if state.currentSong.checkIfTooLongForUI():
-          scrollTextOnce(fullTitle, scrollOffset, termWidth, startingX) # Corrected call
-          if fullTitle.len > termWidth - startingX:
+        if state.currentSong.checkIfTooLongForUI(appState.termWidth):
+          scrollTextOnce(fullTitle, scrollOffset, appState.termWidth, appState.startingX) # Corrected call
+          if fullTitle.len > appState.termWidth - appState.startingX:
             scrollOffset += 1
           scrollCounter = 0
       else:
@@ -208,20 +207,20 @@ proc playStation*(ctx: ptr Handle, config: MenuConfig) =
       of Key.P, Key.Space:
         state.isPaused = not state.isPaused
         ctx.pause(state.isPaused)
-        updatePlayMutedStatePlayerUI(currentStatusEmoji(currentStatus(state)))
+        appState.updatePlayMutedStatePlayerUI(currentStatusEmoji(currentStatus(state), appState.terminalSupportsEmoji))
 
       of Key.M:
         state.isMuted = not state.isMuted
         ctx.mute(state.isMuted)
-        updatePlayMutedStatePlayerUI(currentStatusEmoji(currentStatus(state)))
+        appState.updatePlayMutedStatePlayerUI(currentStatusEmoji(currentStatus(state), appState.terminalSupportsEmoji))
 
       of Key.Slash, Key.Plus:
-        incVolume()
-        updateVolumePlayerUI(state.volume)
+        incVolume(appState)
+        appState.updateVolumePlayerUI(state.volume)
 
       of Key.Asterisk, Key.Minus:
-        decVolume()
-        updateVolumePlayerUI(state.volume)
+        decVolume(appState)
+        appState.updateVolumePlayerUI(state.volume)
 
       of Key.R, Key.BackSpace:
         if not state.isPaused:
@@ -248,7 +247,7 @@ proc playStation*(ctx: ptr Handle, config: MenuConfig) =
 
       of Key.L: # New key binding for "Like" action
         if state.currentSong != "":
-          appendToLikedSongs(config)
+          appState.appendToLikedSongs(config)
         else:
           warn("song field is currently empty")
 
@@ -267,6 +266,11 @@ proc playStation*(ctx: ptr Handle, config: MenuConfig) =
     ctx.resume()
   if state.isMuted:
     ctx.unmute()
+
+proc playStation*(ctx: ptr Handle, config: MenuConfig) =
+  var appState = newAppState()
+  appState.mpvCtx = ctx
+  playStation(appState, config)
 
 #except Exception:
   #  let fileHint = if config.currentSubsection != "": config.currentSubsection else: config.currentSection

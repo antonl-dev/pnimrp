@@ -125,30 +125,30 @@ proc readFromExistingStatusCache*(stations; statuscontext): JsonNode =
 
 type CacheDoesntMatchParentJsonError = object of CatchableError
 
-proc waitForProcessButSpin(fut: Future[void]) =
+proc waitForProcessButSpin(fut: Future[void], appState: AppState) =
   var spinner: int
   let startTime = getTime()
   
   try:
     while not fut.finished and (getTime() - startTime).inSeconds < 10:
-      spinner.spinLoadingSpinnerOnce((termWidth - 3,3))
+      spinner.spinLoadingSpinnerOnce(appState, (appState.termWidth - 3, 3))
       poll()
 
   except ValueError:
     discard
 
   finally:
-    setCursorPos(termWidth - 3,3)
+    setCursorPos(appState.termWidth - 3, 3)
     stdout.write("   ")
 
-template waitForResolveNewStatusAndSave =
+proc waitForResolveNewStatusAndSave(stations: seq[StationStatus], statuscontext: StatusCache, appState: AppState) =
   initCheckingStationNotice()
   when defined(asynccheckspinner):
-    let checkFut = resolveAndDisplay(stations)
-    waitForProcessButSpin(checkFut)
+    let checkFut = resolveAndDisplay(stations, appState)
+    waitForProcessButSpin(checkFut, appState)
   else:
-    waitFor resolveAndDisplay(stations)
-  finishCheckingStationNotice()
+    waitFor resolveAndDisplay(stations, appState)
+  finishCheckingStationNotice(appState)
   saveStatusCacheToJson(stations, statuscontext)
 
 proc handleApplytoCacheError(e: ref Exception; stations; statuscontext): bool =
@@ -164,31 +164,31 @@ proc handleApplytoCacheError(e: ref Exception; stations; statuscontext): bool =
   removeOldCacheForJson(statuscontext)
   return false
 
-proc applyLinkStatusFromCacheToState(stations; stationsList: JsonNode; statuscontext): bool =
+proc applyLinkStatusFromCacheToState(stations; stationsList: JsonNode; statuscontext; appState: AppState): bool =
   var i: uint8
   try:
     for key, value in stationsList.pairs:
       if key != stations[i].name:
         raise newException(CacheDoesntMatchParentJsonError, "")
       stations[i].status = boolToLinkStatus value.getInt
-      drawStatusIndicator(stations[i].coord[0], stations[i].coord[1], stations[i].status)
+      drawStatusIndicator(stations[i].coord[0], stations[i].coord[1], stations[i].status, useEmoji = appState.terminalSupportsEmoji)
       i += 1
     return true
   except Exception as e:
     return e.handleApplytoCacheError(stations, statuscontext)
 
-proc hookCacheResolveAndDisplay*(stations; statuscontext) =
-  inc currentMenuGen
+proc hookCacheResolveAndDisplay*(stations; statuscontext; appState: AppState) =
+  inc appState.currentMenuGen
   when defined(statuscache):
     if not checkIfCacheAlreadyExistAndIsValid(stations, statuscontext):
-      waitForResolveNewStatusAndSave()
+      waitForResolveNewStatusAndSave(stations, statuscontext, appState)
     else:
       let cacheStatusStationList = readFromExistingStatusCache(stations, statuscontext)
-      if not stations.applyLinkStatusFromCacheToState(cacheStatusStationList, statuscontext):
-        waitForResolveNewStatusAndSave()
+      if not stations.applyLinkStatusFromCacheToState(cacheStatusStationList, statuscontext, appState):
+        waitForResolveNewStatusAndSave(stations, statuscontext, appState)
   else:
     when defined(asynccheckspinner):
-      let checkFut = resolveAndDisplay(stations)
-      waitForProcessButSpin(checkFut)
+      let checkFut = resolveAndDisplay(stations, appState)
+      waitForProcessButSpin(checkFut, appState)
     else:
-      waitFor resolveAndDisplay(stations)
+      waitFor resolveAndDisplay(stations, appState)

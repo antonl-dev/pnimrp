@@ -4,15 +4,15 @@ import ../utils/utils
 
 import strutils, terminal, illwill
 
-proc clearLineForScroll(start: int, len: int, indentLevel: int = 0) =
+proc clearLineForScroll(start: int, len: int, width: int = terminalWidth(), indentLevel: int = 0) =
   ## Clears a specific portion of the line for scrolling.
 
   # Ensure start is within bounds
-  if start >= 0 and start < termWidth:
+  if start >= 0 and start < width:
     setCursorPos(start, 2)
 
     # Ensure we don't clear beyond the terminal width
-    let clearLen = min(len, termWidth - start)
+    let clearLen = min(len, width - start)
 
     if clearLen > 0:
       stdout.write(" ".repeat(clearLen))
@@ -48,12 +48,20 @@ proc scrollTextOnce*(
   let clearStart = xStart
 
   # Ensure visibleChunk length does not exceed terminal width
-  let clearLen = min(visibleChunk.len, termWidth - clearStart)
+  let clearLen = min(visibleChunk.len, width - clearStart)
 
   # Clear only the portion where the text will be displayed
-  clearLineForScroll(clearStart, clearLen, indentLevel + 1)
+  clearLineForScroll(clearStart, clearLen, width, indentLevel + 1)
 
   # Position cursor and write the text
   setCursorPos(clearStart, 2)
   stdout.styledWrite(fgCyan, visibleChunk)
   stdout.flushFile()
+
+proc scrollTextOnce*(
+    appState: AppState,
+    text: string,
+    offset, xStart: int,
+    indentLevel: int = 0
+) =
+  scrollTextOnce(text, offset, appState.termWidth, xStart, indentLevel)
