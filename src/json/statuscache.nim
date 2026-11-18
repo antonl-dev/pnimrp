@@ -6,7 +6,8 @@ import
     times, terminal, strutils,
 
     ../utils/utils,
-    ../ui/[menuui, illwill, stationstatus]
+    ../vendor/illwill,
+    ../ui/[menuui, stationstatus]
 
 #[spec
     {

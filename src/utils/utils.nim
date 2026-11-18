@@ -8,7 +8,7 @@ import
         player,
         ],
 
-    ../ui/illwill,
+    ../vendor/illwill,
 
     utilstypes,
     uiutils,

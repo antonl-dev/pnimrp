@@ -5,9 +5,9 @@ import
     os, terminal, std/exitprocs, random,
 
     src/[
-      menu, ui/illwill, ui/hidestderr, ui/menuui,
-      utils/utils,
-      audio/mpv/player,
+        menu, vendor/illwill, ui/hidestderr, ui/menuui,
+        utils/utils,
+        audio/mpv/player,
     ]
 
 when not defined(simple):

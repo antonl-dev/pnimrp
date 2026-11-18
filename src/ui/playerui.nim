@@ -4,7 +4,7 @@ import
     tables, os
 
 import
-    illwill, playeruiutils, menuui,
+    ../vendor/illwill, playeruiutils, menuui,
 
     ../audio/mpv/[
         player

@@ -2,7 +2,7 @@
 # scroll.nim
 import ../utils/utils
 
-import strutils, terminal, illwill
+import strutils, terminal, ../vendor/illwill
 
 proc clearLineForScroll(start: int; len: int; width: int = terminalWidth(); indentLevel: int = 0) =
     ## Clears a specific portion of the line for scrolling.

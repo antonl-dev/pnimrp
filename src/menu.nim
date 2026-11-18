@@ -8,10 +8,10 @@ import
 
 
 import
+    vendor/illwill,
     ui/[
-      illwill,
-      playerui,
-      menuui,
+        playerui,
+        menuui,
     ],
 
     utils/[
