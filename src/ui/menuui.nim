@@ -301,41 +301,22 @@ proc drawHeader*(appState: AppState, section: string) =
     say(AppNameShort & " > " & section, fgGreen)
     drawSeperatorUI(xpos = -1, '-', width = appState.termWidth)
 
-proc showHelp*(appState: AppState) =
-    ## Displays instructions on how to use the app.
-    clear()
-
-    appState.drawHeader()
-    say("Welcome to " & AppName & "!", fgYellow)
-    say("Here's how to use the app:", fgGreen)
-    say("1. Use the number keys (1-9) or letters (A-Z) to select a station.", fgBlue)
-    say("2. In the player UI, use the following keys:", fgBlue)
-    say("   - [P] Pause/Play", fgBlue)
-    say("   - [-/+] Adjust Volume", fgBlue)
-    say("   - [R] Return to the previous menu", fgBlue)
-    say("   - [Q] Quit the application", fgBlue)
-    say("3. Press [N] in the main menu to view notes.", fgBlue)
-    say("4. Press [U] in the main menu to view this help screen.", fgBlue)
-    say("=".repeat(appState.termWidth), fgGreen, xOffset = 0)
-    say("Press any key to return to the main menu.", fgYellow)
-    discard getch()
-
-proc showNotes*(appState: AppState) =
+proc showInfoDialog*(appState: AppState, title, content: string) =
+    ## Displays a formatted info/notes dialog with consistent theme, borders, and controls.
+    let lines = content.strip.splitLines()
+    let lineToDraw = max(8, lines.len + 5)
     while true:
         var shouldReturn = false
         appState.drawMenu(
-          "Notes",
-          """PNimRP Copyright (C) 2021, 2022, 2024–2025, 2026 antonl-dev
-This program comes with ABSOLUTELY NO WARRANTY
-This is free software, and you are welcome to redistribute
-under certain conditions.""",
-          showNowPlaying = false
+            title,
+            content,
+            showNowPlaying = false
         )
-        appState.showFooter(lineToDraw = 9, isMainMenu = true)
+        appState.showFooter(lineToDraw = lineToDraw, isMainMenu = false)
 
         while true:
             case getch():
-                of 'r', 'R':
+                of 'r', 'R', '\x1b', '\b', '\x7f':
                     shouldReturn = true
                     break
                 of 'q', 'Q':
@@ -345,6 +326,26 @@ under certain conditions.""",
 
         if shouldReturn:
             break
+
+proc showHelp*(appState: AppState) =
+    ## Displays instructions on how to use the app.
+    const helpContent = """1. Number keys (1-9) or letters (A-Z): select station / category
+2. Player controls:
+   [P] Pause/Play      [-/+] Adjust Volume
+   [R] Return to menu  [Q] Quit application
+   [L] Like song (save to liked list)
+3. Main menu:
+   [N] Notes           [U] Help screen
+   [S] I'm Feeling Lucky (random station)"""
+    appState.showInfoDialog("Help", helpContent)
+
+proc showNotes*(appState: AppState) =
+    ## Displays copyright and license notes.
+    const notesContent = """PNimRP Copyright (C) 2021, 2022, 2024–2025, 2026 antonl-dev
+This program comes with ABSOLUTELY NO WARRANTY
+This is free software, and you are welcome to redistribute
+under certain conditions."""
+    appState.showInfoDialog("Notes", notesContent)
 
 proc exit*(ctx: ptr Handle, isPaused: bool) =
     showExitMessage()
