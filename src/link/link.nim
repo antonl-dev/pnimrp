@@ -1,15 +1,12 @@
 # SPDX-License-Identifier: MPL-2.0
 # link.nim
 
-import linkbase
-
 import net
+import linkbase
+export linkbase
 
-#when not defined(simple):
-#  import linkadvanced
-
-proc validateLinkSimpleSocket(link: string,
-        timeout: int = 2000): LinkValidationResult =
+proc validateLink*(link: string, timeout: int = 2000): LinkValidationResult =
+    ## Synchronously verifies socket connectivity to the target URL.
     let finalLink = normalizeUrl(link)
 
     try:
@@ -20,17 +17,11 @@ proc validateLinkSimpleSocket(link: string,
         socket.close()
 
         result = LinkValidationResult(
-          isValid: true,
-          error: "",
-          protocol: protocol,
-          domain: domain,
-          port: port
+            isValid: true,
+            error: "",
+            protocol: protocol,
+            domain: domain,
+            port: port
         )
     except Exception as e:
         result = handleLinkCheckError(e, timeout)
-
-template validateLink*(url: string; timeout = 2000): LinkValidationResult =
-    #when defined(simple):
-        validateLinkSimpleSocket(url, timeout)
-    #else:
-    #  validateLinkWithContentTypeCheck(url, timeout)
