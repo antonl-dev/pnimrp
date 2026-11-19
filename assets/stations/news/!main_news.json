@@ -1,0 +1,20 @@
+{
+  "stations": {
+    "WGLT News": "https://26373.live.streamtheworld.com/WGLT_NIAAC.aac",
+    "Newstalk 106-108": "https://edgex.audioxi.com/NT",
+    "WKSU News": "https://stream.wksu.org/wksu1.mp3.128",
+    "R France FranceInfo": "https://icecast.radiofrance.fr/franceinfo-midfi.mp3",
+    "InfoWars": "http://stream.alexjones.media/alexjonesshow",
+    "R Newark": "https://n02-eu3.rcs.revma.com/5wamde34h5uvv?rj-ttl=5&rj-tok=AAABofUlWqgAacudenhLCtqkVQ",
+    "CNN": "https://tunein.cdnstream1.com/3519_96.aac",
+    "Al Jazeera English": "https://live-hls-audio-web-aje.getaj.net/VOICE-AJE/01.m3u8",
+    "Deutsche Welle R": "https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/stream05/streamPlaylist.m3u8",
+    "C-SPAN Radio": "https://29320.live.streamtheworld.com:443/CSPANRADIOAAC.aac",
+    "RFE/RL Radio Farda": "http://n10.radiojar.com/cp13r2cpn3quv?rj-ttl=5&rj-tok=AAABofUlkSUAzJwahbXL6iLjKg",
+    "RFI Afrique": "http://rfiafrique64k.ice.infomaniak.ch/rfiafrique-64.mp3",
+    "Вести FM": "http://icecast.vgtrk.cdnvideo.ru/vestifm",
+    "Радио «Комсомольская П": "http://kpradio.hostingradio.ru:8000/russia.radiokp128.mp3",
+    "Rai Radio 1": "http://icecdn-19d24861e90342cc8decb03c24c8a419.msvdn.net/icecastRelay/S18493106/rCMKqdMFKPBB/icecast",
+    "Радио Маяк": "http://icecast.vgtrk.cdnvideo.ru/mayakfm_mp3_192kbps"
+  }
+}

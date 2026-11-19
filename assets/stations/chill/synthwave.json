@@ -1,0 +1,20 @@
+{
+  "stations": {
+    "DnB&EDM": "https://edmdnb.com:448/radio/8000/radio.mp3",
+    "Synthradio": "http://77.51.212.205:8005/live192",
+    "NEU RADIO": "https://nr9.newradio.it/proxy/ebaruffa?mp=/stream",
+    "Nightride FM Chillsynt": "https://stream.nightride.fm/chillsynth.mp3",
+    "Sanctuary Radio": "https://patmos.cdnstream.com/proxy/sanctua1?mp=/stream2",
+    "Laut.fm Vaporwave": "http://vaporwave.stream.laut.fm/vaporwave",
+    "PANORAMA80": "http://panorama80.stream.laut.fm/panorama80",
+    "PetShopBoys": "http://petshopboys.stream.laut.fm/petshopboys?t302=2026-11-19_19-37-34&uuid=7b868887-3461-8563-646a-862c92770a4e",
+    "Night Drive Radio – Sy": "https://a5.asurahosting.com:7920/radio.mp3",
+    "Nightride FM": "https://stream.nightride.fm/nightride.mp3",
+    "XRaydio 1 – Your Kalei": "https://xraydio.ddns.net/live",
+    "Palmera Blanca radio -": "https://daystream.palmerablanca.com/daystream-128.mp3",
+    "Luxury Lounge Radio -": "http://188.40.109.114:8000/ices2",
+    "R Paweł": "https://s3.slotex.pl:7024/stream/1/",
+    "Nightride FM Datawave": "https://stream.nightride.fm/datawave.mp3",
+    "Yumi Co. Radio": "https://yumicoradio.net/stream_aac64"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "stations": {
+    "R Cumbia 90s": "https://emiteradio.com/proxy/cumbia90s?mp=/stream",
+    "R Gigante Bolivia": "https://cloudstream2032.conectarhosting.com:7311/;",
+    "Barranquilla Estereo": "http://radio.yaservers.com:8197/;stream.mp3",
+    "R Huancayo": "https://cloud9.ldwebstudios.net:7000/;",
+    "La tukka Ec": "http://grupomundodigital.com:8673/live",
+    "Fm Cumbiambera": "https://streaming1.locucionar.com/proxy/fmcumbiambera?mp=/stream",
+    "Cumbias Inmortales Cor": "http://stream-291.surfernetwork.com/a1r491n45qzuv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJhMXI0OTFuNDVxenV2IiwiaG9zdCI6InN0cmVhbS0yOTEuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJ3OG45UFNFbVJrR3liRDNVUHJoQ2hnIiwiaWF0IjoxNzk1MTEzODk3LCJleHAiOjE3OTUxMTM5NTd9.eIjdJMEznfvVh3Dd-aTyTwIUJ5UFy-sxV6MMWpvH0C0",
+    "Cumbia Total": "https://18373.live.streamtheworld.com:443/ACIR40_S01AAC.aac",
+    "Mega St☆r Colombia": "http://stream-284.surfernetwork.com/h9x7hs6aqs8uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJoOXg3aHM2YXFzOHV2IiwiaG9zdCI6InN0cmVhbS0yODQuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJTNWRxUC1TSlNCR3ZWMG9zbXlKYUp3IiwiaWF0IjoxNzk1MTEzOTAxLCJleHAiOjE3OTUxMTM5NjF9.-qtbkxe_79BQoJ29cHBHqwcdkwuToMyRtsUEXfeuzK0",
+    "Viejoteca y algo más": "https://stream-290.surfernetwork.com/mtfnuz2day8uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJtdGZudXoyZGF5OHV2IiwiaG9zdCI6InN0cmVhbS0yOTAuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJNYVh6X1F3QVJZNnQ1cEplOU1rUE5nIiwiaWF0IjoxNzk1MTEzOTA1LCJleHAiOjE3OTUxMTM5NjV9.AJSHa3n69uaY_emSsjwq3RVq6DnEZjbnuAJkEnKrL_0",
+    "La Main Street": "https://radiolatina.info/9930/stream",
+    "R Cumbia Mix": "https://us-b4-p-e-pb13-audio.cdn.mdstrm.com/live-audio-aw/6598b6ab95a235085823b24f?aid=658ddcc0b2c7835d48fee06d&pid=vjRA8Ay0KSuXibC29igPz8ELc91jBork&sid=haPvqdF2J4vbyFx1jcSOKOUxj9FL9Whv&uid=fs2M6qceI3LOLfU8ilICcDzzVPN9o8Uf&es=us-b4-p-e-pb13-audio.cdn.mdstrm.com&ote=1795200309341&ot=PZiAYhwxSHk0OoHHNCQ5Qw&proto=https&pz=us&cP=126000&awCollectionId=658ddcc0b2c7835d48fee06d&liveId=6598b6ab95a235085823b24f&listenerId=fs2M6qceI3LOLfU8ilICcDzzVPN9o8Uf",
+    "Cumbia - La Musica Que": "http://stream-291.surfernetwork.com/9y6n2h9v2ehvv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiI5eTZuMmg5djJlaHZ2IiwiaG9zdCI6InN0cmVhbS0yOTEuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJKZ1VtY1lxZVRTLVNpUTJPVVBwS1RRIiwiaWF0IjoxNzk1MTEzOTEzLCJleHAiOjE3OTUxMTM5NzN9.MijT-p_d_79G0tyBGA0OrXOksRFhAF0aY9Wxu1Tt2iw",
+    "La 961 - Suprema estac": "https://dattavolt.com/8150/stream",
+    "Mega St☆r Peru": "http://stream-288.surfernetwork.com/m0gb9v7aqs8uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJtMGdiOXY3YXFzOHV2IiwiaG9zdCI6InN0cmVhbS0yODguc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJHWl9WNEI5NVFMdUlHSnBGeURZZFVnIiwiaWF0IjoxNzk1MTEzOTE2LCJleHAiOjE3OTUxMTM5NzZ9.nhk8h7KblhaGwv0BvKO7kNsG65ZutO1RGLzr0qsBuAA",
+    "R San Rafael 92.5 FM": "https://guri.tepuyserver.net:7098/stream"
+  }
+}

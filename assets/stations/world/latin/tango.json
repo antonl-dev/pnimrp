@@ -1,0 +1,16 @@
+{
+  "stations": {
+    "Tango Pasión Radio": "http://nr11.newradio.it:9180/stream",
+    "Tango Copenhagen Radio": "https://tangocopenhagen.stream.laut.fm/tangocopenhagen?t302=2021-01-15_18-47-40&uuid=64db9a91-4a6e-4bc8-ba24-26a2fa7f24d0",
+    "R Art - Tango": "http://air.radioart.com/fTango.mp3",
+    "Tango Nuevo": "http://tango-nuevo.stream.laut.fm/tango-nuevo?t302=2026-11-17_00-53-44&uuid=7067ca1a-9973-4828-27e1-d44924d3b26a",
+    "Argentine Tango Radio": "https://ais-edge94-nyc04.cdnstream.com/2202_128.mp3",
+    "R Tango": "https://stream-284.surfernetwork.com/uxxf2xaxdzzuv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJ1eHhmMnhheGR6enV2IiwiaG9zdCI6InN0cmVhbS0yODQuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJxejRXZHFfN1RCaUlTalp4Ym5kOHV3IiwiaWF0IjoxNzk1MTE0MTcwLCJleHAiOjE3OTUxMTQyMzB9.74wkTSEDahddlfP-Ca2HUfbO2D6BG5xbWv_EQUhsaMo",
+    "Tango Berlin": "https://tango.stream.laut.fm/tango",
+    "R Santa Milonga - Tang": "http://stream-175.surfernetwork.com/h1bp8fqy3tzuv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJoMWJwOGZxeTN0enV2IiwiaG9zdCI6InN0cmVhbS0xNzUuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJ6czMyNDZsc1JnR2ktaFZ2TXpMWlpRIiwiaWF0IjoxNzk1MTE0MTc0LCJleHAiOjE3OTUxMTQyMzR9.yAwLSESHqpcuYb1Xj7i4LVLcSlHbqD8ABg8bSxdZz_c&rj-ttl=5&rj-tok=AAABeSjJiZ8AxMCynkXvfjbXzA",
+    "radcap Tango": "http://79.120.39.202:8002/tango",
+    "Tango Copenhagen": "https://tangocopenhagen.stream.laut.fm/tangocopenhagen",
+    "R Tango Uno": "https://radiotangouno-online.pl/radio/8000/radio.mp3",
+    "Tangoparabailar": "http://tangoparabailar.stream.laut.fm/tangoparabailar?uuid=f162f9c4-4fbe-29f4-e01f-c1edfaafb020&t302=2026-11-19_19-49-38"
+  }
+}

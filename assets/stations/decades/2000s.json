@@ -1,0 +1,20 @@
+{
+  "stations": {
+    "Retro Rádió": "https://icast.connectmedia.hu/5001/live.mp3",
+    "- 0 N - 2000s on Radio": "https://0n-2000s.radionetz.de/0n-2000s.mp3",
+    "- 0 N - Greatest Hits": "https://0n-greatesthits.radionetz.de/0n-greatesthits.mp3",
+    "SomaFM Groove Salad Cl": "https://ice4.somafm.com/gsclassic-128-mp3",
+    "R Seefunk": "https://seefunk.streamabc.net/137-seefunkbo-mp3-128-7130502?listenerid=fe83386c4b3069157d59a516b1254dda",
+    "Best Of Techno": "http://best-of-techno.stream.laut.fm/best-of-techno?t302=2026-11-19_19-35-25&uuid=f479d626-3edb-8014-3638-b2462d5cc907",
+    "NIUS": "http://nius.stream49.radiohost.de/live_mp3-192?ref=radiobrowser&upd-meta=1&upd-scheme=http&_art=dD0xNzk1MTEzNjI3JmQ9YjI0ZmE3YWMwZWM2YzI5MTViODQ",
+    "iHeart2000s Radio": "http://n1aa-e2.revma.ihrhls.com/zc6850/hls.m3u8?rj-ttl=5&rj-tok=AAABofUg0K0ADDTx552EW-uueQ",
+    "Heart Dance": "https://media-ssl.musicradio.com/HeartDance",
+    "Tipik à l'ancienne": "http://redbeemedia.streamabc.net/redbm-tipikalancienne-mp3-128-6843814?sABC=6nss4175%230%23p5549n47p4p5199r236op6r02281377q%23eo&aw_0_1st.playerid=rb&amsparams=playerid:rb;skey:1795113333",
+    "Chili Radio Thailand": "https://stream.chiliradio.app/chiliclassics",
+    "Rádio Studio Flashback": "https://stream-283.surfernetwork.com/6gv76f1xruquv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiI2Z3Y3NmYxeHJ1cXV2IiwiaG9zdCI6InN0cmVhbS0yODMuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJSbDhXV2poY1FFUzVWeGJWSkpYamtRIiwiaWF0IjoxNzk1MTEzMzM0LCJleHAiOjE3OTUxMTMzOTR9.6l9AsJUYX3cQlbCSzSgFlAlRXkPEfxSyDZVYiBWmeaA",
+    "Energy NRJ Bulgaria 00": "http://play.global.audio/energy-00s.aac",
+    "- 1 A - 2000er von 1A": "https://1a-2000er.radionetz.de/1a-2000er.mp3",
+    "COOLFM 2000-es évek": "https://mediagw.e-tiger.net/stream/zc03",
+    "Danubius Radio": "http://stream.danubiusradio.hu:8091/danubius_HiFi"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "stations": {
+    "R Paradise Main Mix": "http://stream-uk1.radioparadise.com/aac-320",
+    "TMM 1": "https://listen-msmn.sharp-stream.com/nme1.mp3",
+    "SomaFM Indie Pop Rocks": "https://ice5.somafm.com/indiepop-128-aac",
+    "R Paradise Rock Mix 32": "http://stream.radioparadise.com/rock-320",
+    "R Paradise Mellow Mix": "http://stream.radioparadise.com/mellow-320",
+    "R Paradise Main Mix 12": "http://stream.radioparadise.com/aac-128",
+    "Indie X FM": "http://kathy.torontocast.com:2690/stream",
+    "R Paradise Rock Mix FL": "https://stream.radioparadise.com/rock-flac",
+    "80s Forever - We Keep": "https://premium.shoutcastsolutions.com/radio/8050/256.mp3",
+    "R Paradise Main Mix FL": "https://stream.radioparadise.com/flac",
+    "R Paradise World/Etc M": "https://stream.radioparadise.com/world-etc-320",
+    "NEU RADIO": "https://nr9.newradio.it/proxy/ebaruffa?mp=/stream",
+    "RNE Radio 3": "https://rtvelivestream.rtve.es/rtvesec/rne/rne_r3_main.m3u8",
+    "R Sherwood": "http://radiosherwood.ice.infomaniak.ch/radiosherwood-96.mp3",
+    "R Paradise Rock Mix 12": "http://stream.radioparadise.com/rock-128",
+    "R Paradise Main Mix 32": "http://stream.radioparadise.com/aac-320"
+  }
+}

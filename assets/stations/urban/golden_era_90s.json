@@ -1,0 +1,20 @@
+{
+  "stations": {
+    "# RdMix DJSET 70s 80s": "https://cast1.torontocast.com:4560/stream",
+    "181.fm Old School HipH": "http://listen.181fm.com/181-oldschool_128k.mp3",
+    "FluxFM - BoomFM Classi": "http://fluxfm.streamabc.net/flx-boomfmclassics-mp3-320-4725180?sABC=6nsop3o1%230%236q8s7o7o3p7411o9n0871834qs5r90so%23nhqvb&aw_0_1st.playerid=audio&amsparams=playerid:audio;skey:1794884529",
+    "Astounded Old School R": "https://astounded.stream.laut.fm/astounded?uuid=37e84c28-78ac-f5cb-d4b3-7b2a15619611&t302=2026-11-19_19-38-35",
+    "Funk the Planet": "https://das-edge13-live365-dal02.cdnstream.com/a01484",
+    "Guarida Hip Hop": "https://stream-176.surfernetwork.com/ukum8z9cmvduv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJ1a3VtOHo5Y212ZHV2IiwiaG9zdCI6InN0cmVhbS0xNzYuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiI0c3pqVl9ua1J6cXlQUnZVZjNEdW1RIiwiaWF0IjoxNzk1MTEzNTIwLCJleHAiOjE3OTUxMTM1ODB9.n52U7FAAkSdCc7V0Er75YFxySofqro8c2ymeP-43G8s",
+    "West Coast – G-Funk &": "https://r.bgp.rodeo/listen/west_coast/radio.mp3",
+    "Deejay One Two One Two": "https://StreamCdnB2-4c4b867c89244861ac216426883d1ad0.msvdn.net/webradio/deejayonetwoonetwo/playlist.m3u8",
+    "R Sto": "http://s3.slotex.pl:7278/stream",
+    "Fly Nation Radio": "http://n24a-e2.revma.ihrhls.com/zc6732/hls.m3u8?rj-ttl=5&rj-tok=AAABofUjyqAA1FruwMp-P-c4tA",
+    "Hot 102 Milwaukee, WI": "https://das-edge11-live365-dal03.cdnstream.com/a88336",
+    "Flava": "https://23203.live.streamtheworld.com:443/NZME_08AAC.aac",
+    "Rise Radio 365": "https://das-edge62-live365-dal03.cdnstream.com/a87815",
+    "Hip Hop Muzic Hub": "https://c11.radioboss.fm:8187/stream",
+    "WRRF-LP 97.5 \"The Reew": "https://das-edge63-live365-dal03.cdnstream.com/a79615",
+    "Q96 The Beat": "https://c17.radioboss.fm:8381/stream"
+  }
+}

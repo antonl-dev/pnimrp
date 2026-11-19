@@ -1,0 +1,20 @@
+{
+  "stations": {
+    "SomaFM Groove Salad": "https://ice5.somafm.com/groovesalad-128-mp3",
+    "R Meuh": "http://radiomeuh.ice.infomaniak.ch/radiomeuh-128.mp3",
+    "Rádio Disco Funk BR": "http://streaming12.hstbr.net:8084/live",
+    "70s 80s Disco Funk Mod": "https://discofunk.streamingmedia.it/usa",
+    "B5 aktuell": "http://d121.rndfnk.com/ard/br/br24/live/mp3/128/stream.mp3?cid=01FBPVVJDPGF0BJ5TAJ8Z7JSX9&sid=3MKyTyRN4JF3xDfAJV3HzUF8NKI&token=8M-A417kZW9CnF_PsZTuug5-AJ8fm1oHISRunWJH--8&tvf=rz8WGuyZ6RhkMTIxLnJuZGZuay5jb20",
+    "Ibiza Global Radio": "http://cdn-peer031.streaming-pro.com:8024/ibizaglobalradio.mp3",
+    "RMC Disco Funk": "http://edge.radiomontecarlo.net/rmcweb025",
+    "BBC Radio 6 Music": "http://as-hls-ww-live.akamaized.net/pool_81827798/live/ww/bbc_6music/bbc_6music.isml/bbc_6music-audio%3d320000.norewind.m3u8",
+    "Alternative Radio": "https://listen.radioking.com/radio/182263/stream/224140",
+    "- 0 N - 60s on Radio": "https://0n-60s.radionetz.de/0n-60s.mp3",
+    "1.FM - Ambient Psychil": "http://strm112.1.fm/ambientpsy_mobile_mp3",
+    "FUNKY RADIO - Only Fun": "https://funkyradio.streamingmedia.it/audio.aac",
+    "54 Funk Soul Dance": "http://54-funk-soul-dance.stream.laut.fm/54-funk-soul-dance",
+    "FIP Groove": "http://icecast.radiofrance.fr/fipgroove-hifi.aac",
+    "B4B Radio DISCO FUNK": "https://eu10.fastcast4u.com:8120/",
+    "The Funky Channel": "http://cast3.my-control-panel.com:8170/stream"
+  }
+}

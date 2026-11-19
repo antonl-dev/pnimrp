@@ -1,0 +1,17 @@
+{
+  "stations": {
+    "R Art - Flamenco": "http://air.radioart.com/fFlamenco.mp3",
+    "R Sevillanas": "http://radio.wesped.com:8000/stream",
+    "Onda Sevilla Radio": "https://streaming2.elitecomunicacion.es:8630/stream?type=.mp3",
+    "Energía Flamenca": "https://axarquia.emisiononline.es/radio/8020/radio.mp3",
+    "R Unión Catalunya": "http://srv0435.lcinternet.com:9522/stream",
+    "Flamenco FM": "https://sonic.mediatelekom.net/8534/;",
+    "Deluxe Radio - Flamenc": "https://stream-288.surfernetwork.com/z9fm6v2d6ehvv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJ6OWZtNnYyZDZlaHZ2IiwiaG9zdCI6InN0cmVhbS0yODguc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJxTG1GNGxad1RVS2owOVVWemhVY1B3IiwiaWF0IjoxNzk1MTEzOTMyLCJleHAiOjE3OTUxMTM5OTJ9.appzM-OKiVv8f_d_vOGRxIUksVij7eGdDNRwYHeetww",
+    "Hotmix Spain": "https://streaming.hotmixradio.com/hotmix-spain-en-mp3?provider=radiobrowser",
+    "Onda Mencía Radio": "https://streaming12.elitecomunicacion.es:8146/stream",
+    "Flamenco Barcelona": "https://stream-289.surfernetwork.com/ya41fhze22quv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJ5YTQxZmh6ZTIycXV2IiwiaG9zdCI6InN0cmVhbS0yODkuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJFV2t1Q0xMU1E2Q2VUSnBURHppYmh3IiwiaWF0IjoxNzk1MTEzOTM4LCJleHAiOjE3OTUxMTM5OTh9._Gcv7JHF_O02dE2NgOJ_8fjINvmj_ORlfxJNaBGbxss",
+    "R Cehel Albuñol": "http://topradio.one:8054/stream",
+    "FRONTERA RADIO": "https://relay.stream.enacast-cloud.com:30284/fronteraradioHD.mp3",
+    "R Dikela (AAC+ Móvil)": "https://dikela.org/radio_mobile"
+  }
+}

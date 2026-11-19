@@ -1,0 +1,20 @@
+{
+  "stations": {
+    "Dance Wave! | MP3": "http://stream1.dancewave.online:8080/dance.mp3",
+    "DFM Дискач 90-х": "https://dfm-disc90.hostingradio.ru/disc9096.aacp",
+    "DFM RUSSIAN DANCE": "https://dfm-dfmrusdance.hostingradio.ru/dfmrusdance96.aacp?0.9987259013359274",
+    "Dance Wave Retro! | MP": "http://stream1.dancewave.online:8080/retrodance.mp3",
+    "Intense Radio - We lov": "https://secure.live-streams.nl/main",
+    "EuroDance 90 radio": "https://stream-eurodance90.fr/radio/8000/128.mp3?1627933323",
+    "Ibiza Global Radio": "http://cdn-peer022.streaming-pro.com:8024/ibizaglobalradio.mp3",
+    "Chocolate FM": "http://streaming5.elitecomunicacion.es:8082/live.mp3",
+    "1000 HITS 80s": "http://c2.auracast.net:8048/stream",
+    "Sunshine Live - Die 90": "http://sunsl.streamabc.net/sunsl-90er-mp3-192-9697679?sABC=6nss409o%230%23p5549n47p4p5199r236op6r02281377q%23fgernz.fhafuvar-yvir.qr&aw_0_1st.playerid=stream.sunshine-live.de&amsparams=playerid:stream.sunshine-live.de;skey:1795113115",
+    "TMM 1": "https://listen-msmn.sharp-stream.com/nme1.mp3",
+    "DiscoverTranceRadio": "http://paris.discovertrance.com:8006//",
+    "Sunshine Live - Techno": "http://sunsl.streamabc.net/sunsl-techno-mp3-192-4912904?sABC=6nss409r%230%23p5549n47p4p5199r236op6r02281377q%23fgernz.fhafuvar-yvir.qr&aw_0_1st.playerid=stream.sunshine-live.de&amsparams=playerid:stream.sunshine-live.de;skey:1795113118",
+    "Sunshine Live": "http://sunsl.streamabc.net/sunsl-sslsimulcast-mp3-192-4434053?sABC=6nss409s%230%23p5549n47p4p5199r236op6r02281377q%23fgernz.fhafuvar-yvir.qr&aw_0_1st.playerid=stream.sunshine-live.de&amsparams=playerid:stream.sunshine-live.de;skey:1795113119",
+    "ORBITAL": "http://centova.radios.pt:8401/;listen.pls",
+    "Mixadance FM": "https://stream.mixadance.fm/mixadance"
+  }
+}

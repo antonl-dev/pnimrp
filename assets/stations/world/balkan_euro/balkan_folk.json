@@ -1,0 +1,26 @@
+{
+  "stations": {
+    "BN R": "https://stream.radiobn.net/",
+    "R Veselina": "https://bss1.neterra.tv/veselina/veselina.m3u8",
+    "BG R": "https://stream80.metacast.eu:8000/bgradio_low.ogg",
+    "R Veseljak Posavje": "https://live.ognjisce.si/Veseljak",
+    "CMC R": "https://radio-stream.cmc.com.hr:9011/stream",
+    "Big R Folk": "https://domacica.bigportal.ba:8080/folk",
+    "Narodni R Kalman Saraj": "http://stream.leftor.com:8004/stream",
+    "R D Plus": "https://radiodplus.radioca.st/xstream",
+    "R Ultra": "http://88.80.96.25:3060/;",
+    "R Dukagjini": "https://s2.voscast.com:8825/radiodukagjini",
+    "R Banovina": "https://audio.alter-media.hr:9998/;",
+    "R Magic": "http://stream.iradio.pro:8034/;",
+    "R Bet Fratello": "http://cast1.asurahosting.com:8748/stream",
+    "R DaS": "http://cast2.name.ba:8095/;",
+    "Mag R": "https://radio.elmag.me/mag.mp3",
+    "R Studio M": "https://a4.asurahosting.com:7090/studiom.aac",
+    "radcap": "http://213.141.131.10:8002/chalga",
+    "Hrvatski R Karlovac": "http://s8.iqstreaming.com:8002/;",
+    "R 105 Bombarder": "https://rrdns-megasistema.webnow.com.br/radio105.aac",
+    "R Aleksandar Makedonsk": "https://s2.free-shoutcast.com/stream/18138",
+    "Antena R": "https://radio.tnt.ba/radio/8020/live",
+    "R Glas Drine Studio On": "https://stream.master-dizajn.com/8030/stream"
+  }
+}

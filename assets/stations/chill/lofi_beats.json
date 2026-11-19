@@ -1,0 +1,20 @@
+{
+  "stations": {
+    "france info (lofi)": "http://icecast.radiofrance.fr/franceinfo-lofi.mp3",
+    "FLUX FM ChillHop – Chi": "http://fluxfm.streamabc.net/flx-chillhop-mp3-320-1595440?sABC=6nss419p%230%23p5549n47p4p5199r236op6r02281377q%23&aw_0_1st.playerid=&amsparams=playerid:;skey:1795113372",
+    "Lofi 24/7": "http://usa9.fastcast4u.com/proxy/jamz?mp=/1",
+    "Chillofi radio": "https://azc.rdstream-5677.dez.ovh/listen/chillofi/radio.mp3",
+    "Chillofi Radio: relax": "https://azc.rdstream-5677.dez.ovh/listen/chillofi/radio.mp3",
+    "MoE Lofi": "http://stream-283.surfernetwork.com/3u1qndyk8rhvv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiIzdTFxbmR5azhyaHZ2IiwiaG9zdCI6InN0cmVhbS0yODMuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiI3UXhKSUVNTlEtcVNIcGVmV2pTd21nIiwiaWF0IjoxNzk1MTEzMzc5LCJleHAiOjE3OTUxMTM0Mzl9.lPwpvHj9ezmdwFjmvEJNhmyTsoRT3pWU2PKCk-9x1YY",
+    "REYFM -#LOFI": "https://reyfm.stream37.radiohost.de/reyfm-lofi_mp3-320?upd-meta=1&upd-scheme=https&_art=dD0xNzk1MTEzNjgxJmQ9ZjAzZjk4NzFjYWM3MjZkNDhkMmY",
+    "I Love Music - I Love": "https://ilm.stream12.radiohost.de/ilm_ilovechillhop_mp3-192?upd-meta&upd-scheme=https&_art=dD0xNzk0OTA2MDEzJmQ9YWU3ZmNmN2RjNTlhMjE2ODdlNWM",
+    "FluxFM Chillhop – Chil": "https://fluxfm.streamabc.net/flx-chillhop-mp3-320-1595440?sABC=6nss41n9%230%23p5549n47p4p5199r236op6r02281377q%23fgernzf.syhksz.qr&aw_0_1st.playerid=streams.fluxfm.de&amsparams=playerid:streams.fluxfm.de;skey:1795113385",
+    "NIA Radio Lo-Fi": "https://radio.nia.nc/radio/8020/lofi-hq-stream.aac",
+    "R Record Lo-Fi": "https://radiorecord.hostingradio.ru/lofi96.aacp",
+    "R Digital Malayali": "https://radio.digitalmalayali.in/listen/stream/radio.mp3",
+    "ChillHop радио": "http://media-the.musicradio.com/ChillMP3",
+    "FluxFM - ChillHop": "http://fluxfm.streamabc.net/flx-chillhop-mp3-320-1595440?sABC=6nss41o3%230%23p5549n47p4p5199r236op6r02281377q%23fgernzf.syhksz.qr&aw_0_1st.playerid=streams.fluxfm.de&amsparams=playerid:streams.fluxfm.de;skey:1795113395",
+    "ISEKOI Radio | Chill Z": "https://public.isekoi-radio.com/listen/chill/radio.mp3",
+    "radcap Lo-Fi [1]": "http://79.111.14.76:8002/lo-fi"
+  }
+}

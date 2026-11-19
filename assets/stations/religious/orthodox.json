@@ -1,15 +1,15 @@
 {
   "stations": {
-    "Radio Caprice - Orthodox": "http://79.111.14.76:9127/",
-    "RS I.M. Argolidos 105.2": "http://eco.onestreaming.com:8556/",
+    "radcap Orthodox": "http://79.111.14.76:9127/",
+    "RS Argolidos 105.2": "http://eco.onestreaming.com:8556/",
     "Agios Oikoumenios 102": "http://s5.onweb.gr:8508/",
-    "Monachiki Diakonia 87.5": "http://eco.onestreaming.com:8019/;stream.mp3",
+    "M Diakonia 87.5": "http://eco.onestreaming.com:8019/;stream.mp3",
     "Pavleios Logos 90.2": "http://eco.onestreaming.com:8548/;",
     "orthodoxiya.org": "http://s5.viastreaming.net:7040/;",
     "Alitheia FM 96.3": "http://sc2.streamwithq.com:8070/",
     "Ancient Faith Radio": "https://ancientfaith.streamguys1.com/talk",
     "OCR Rudder 24": "http://radio.myocn.net:8080/stream",
     "Orthodox-Chants.ru": "http://orthodox-chants.ru:8000/128kb",
-    "Orthodox-Chants.ru[DATA]": "http://orthodox-chants.ru:8000/64kb"
+    "Orthodox-Chants DATA": "http://orthodox-chants.ru:8000/64kb"
   }
 }

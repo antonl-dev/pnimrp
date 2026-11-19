@@ -1,0 +1,20 @@
+{
+  "stations": {
+    "Blu Radio, señal nacio": "http://26513.live.streamtheworld.com/BLURADIO_SC",
+    "W Radio Ciudad de Méxi": "http://26443.live.streamtheworld.com:3690/W_RADIOAAC_SC",
+    "Hot FM 105": "http://172.93.237.106:8000/listen.mp3",
+    "R Marca Barcelona": "http://radioweb.radiomarcabarcelona.com:9000/stream",
+    "RMC Info Talk Sport": "https://audio.bfmtv.com/rmcradio_128.mp3?aw_0_1st.playerId=RMC_audio_web&aggregator=RMC_audio_web",
+    "R Marca Madrid": "https://27823.live.streamtheworld.com:443/RADIOMARCA_NACIONAL_SC",
+    "BBC Radio 5 Live": "http://as-hls-ww-live.akamaized.net/pool_89021708/live/ww/bbc_radio_five_live/bbc_radio_five_live.isml/bbc_radio_five_live-audio%3d128000.norewind.m3u8",
+    "CBN São Paulo": "https://27583.live.streamtheworld.com:443/CBN_SPAAC.aac",
+    "R ABC Cardinal 730 AM": "http://sc.abc.com.py:8000/stream",
+    "Stereo Ceiba 99.9 - La": "http://26653.live.streamtheworld.com/RADIO_CEIBAAAC_SC",
+    "RPP Mundial (Perú)": "https://us-b4-p-e-cg11-audio.cdn.mdstrm.com/live-audio-aw/5faee885eb830d06cf22ed4a/playlist.m3u8?listeningSessionID=636caa560fe65225_1006885_YNhDxhXb__0000001B3Ny&downloadSessionID=0&aid=5faaeb72f92d7b07dfe10181&dnt=true&uid=4KOWgzZ9nfekeotUYauzmeKrOQfRCQma&sid=LhXvvJVKZUrLvqSvYiI4DFZ2YiVMf0Uw&pid=GhVrREycHyvqzg9XezY4IhgwwgiPzsgQ&ref=audioplayer.pe&es=us-b4-p-e-cg11-audio.cdn.mdstrm.com&ote=1669158810445&ot=-57RkzEDB4oSQczBsPKIMw&proto=https&pz=us&cP=128000&awCollectionId=5faaeb72f92d7b07dfe10181&aw_0_1st.playerId=audioplayer_web&liveId=5faee885eb830d06cf22ed4a&referer=https%3A%2F%2Faudioplayer.pe%2F&propertyName=audioplayer_web&propertyType=web-app&propertyVersion=v0.0.199",
+    "Al Jazeera - English": "https://live-hls-audio-web-aje.getaj.net/VOICE-AJE/01.m3u8",
+    "Amharic Live Sport የኳስ": "https://stream-280.surfernetwork.com/bqtruhn4q98uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJicXRydWhuNHE5OHV2IiwiaG9zdCI6InN0cmVhbS0yODAuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJ4VzBxUF9HQVQ2V2FOUXZDc3ZyRHdBIiwiaWF0IjoxNzk1MTEzNzA3LCJleHAiOjE3OTUxMTM3Njd9.GQLlxVF8Yna0FlOtv3_Eg34x-iSjRbfFIVQHR-rfKYo",
+    "RAC1 +1": "https://25543.live.streamtheworld.com:443/RAC_MES_1.mp3",
+    "BandNews FM": "https://24283.live.streamtheworld.com:443/BANDNEWSFM_SPAAC_SC",
+    "ΕΡΑσπορ": "https://radiostreaming.ert.gr/ert-erasport"
+  }
+}

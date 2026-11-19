@@ -1,0 +1,20 @@
+{
+  "stations": {
+    "France Info": "http://icecast.radiofrance.fr/franceinfo-hifi.aac",
+    "RFI-Afrique": "http://rfiafrique96k.ice.infomaniak.ch/rfiafrique-96k.mp3",
+    "France Culture": "http://icecast.radiofrance.fr/franceculture-hifi.aac",
+    "Rai Radio 1": "http://icecdn-19d24861e90342cc8decb03c24c8a419.msvdn.net/icecastRelay/S18493106/rCMKqdMFKPBB/icecast",
+    "Heart 80s": "https://media-ssl.musicradio.com/Heart80sMP3",
+    "NPR 24 Hour Program St": "http://npr-ice.streamguys1.com/live.mp3",
+    "Rai Radio 3": "http://icecdn-19d24861e90342cc8decb03c24c8a419.msvdn.net/icecastRelay/S56630579/yEbkcBtIoSwd/icecast",
+    "France Musique": "http://icecast.radiofrance.fr/francemusique-midfi.mp3",
+    "Gold": "https://media-ssl.musicradio.com/GoldMP3",
+    "Smooth Chill": "https://media-ssl.musicradio.com/ChillMP3",
+    "Heart Dance": "https://media-ssl.musicradio.com/HeartDanceMP3",
+    "R Eins": "http://f131.rndfnk.com/ard/rbb/radioeins/live/mp3/128/stream.mp3?cid=01FC1WH12KJ93TCQPDSE2E5PZ9&sid=3MKyhSy2pI65FHVW4hcUJN4TMzd&token=S7tTw8vyeVMNVZFBxhl9nbvMjmvV6GkVAFUhL4U0VGs&tvf=NVUFAwWa6RhmMTMxLnJuZGZuay5jb20",
+    "Heart 90s": "https://media-ssl.musicradio.com/Heart90sMP3",
+    "Petőfi Rádió": "http://mr-stream.mediaconnect.hu/4737/mr2.aac",
+    "FIP Jazz": "http://icecast.radiofrance.fr/fipjazz-hifi.aac",
+    "ČRo Radiožurnál": "http://icecast8.play.cz/cro1-128.mp3"
+  }
+}

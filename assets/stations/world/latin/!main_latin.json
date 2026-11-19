@@ -1,0 +1,20 @@
+{
+  "stations": {
+    "Chocolate FM": "http://streaming5.elitecomunicacion.es:8082/live.mp3",
+    "Latina Salsa": "http://latinasalsa.ice.infomaniak.ch/latinasalsa.mp3",
+    "Los 40 Dance": "http://25703.live.streamtheworld.com:80/LOS40_DANCE_SC",
+    "Los 40 Principales Méx": "http://15693.live.streamtheworld.com/LOS40_MEXICO_SC",
+    "Chocolate FM [calidad": "http://streaming5.elitecomunicacion.es:8082/live32.aac",
+    "Latina Reggaeton": "http://latinareggaeton.ice.infomaniak.ch/latinareggaeton.mp3",
+    "1.FM - Cafe Radio": "http://strm112.1.fm/caferadio_mobile_mp3",
+    "Top Latino": "http://online.radiodifusion.net:8020/stream",
+    "Cuban Flow Radio": "http://nap.casthost.net:9194/stream.mp3",
+    "R Cumbia 90s": "https://emiteradio.com/proxy/cumbia90s?mp=/stream",
+    "Candela Estéreo Bogotá": "http://24483.live.streamtheworld.com/CANDELAESTEREO_SC",
+    "El Fonógrafo, Música l": "https://27063.live.streamtheworld.com:443/XEJP_AM_SC",
+    "R Bachata": "http://perseus.shoutca.st:8312/;stream/1",
+    "Caracol Radio (Bogotá)": "https://26643.live.streamtheworld.com:443/CARACOL_RADIOAAC.aac",
+    "Latina": "http://start-latina.ice.infomaniak.ch/start-latina-high.mp3",
+    "Clásica 100.3 Cochabam": "http://radios.istbolivia.com:9976/;"
+  }
+}
