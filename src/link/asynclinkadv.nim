@@ -54,7 +54,7 @@ proc asyncLinkCheckTolerantWithContentType*(url: string;
 
             when defined(ssl):
                 if isHttps:
-                    let sslCtx = newContext(verifyMode = CVerifyNone)
+                    let sslCtx = newContext(verifyMode = CVerifyNone, cipherList = "ALL:@SECLEVEL=1")
                     sslCtx.wrapConnectedSocket(sock, handshakeAsClient, u.hostname)
             else:
                 if isHttps:
