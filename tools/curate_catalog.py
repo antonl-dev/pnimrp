@@ -276,6 +276,113 @@ GENRE_SPECS = {
             ]
         }
     },
+    "electronic": {
+        "dir": "assets/stations/electronic",
+        "files": {
+            "!main_edm.json": [
+                {"tag": "edm", "order": "votes", "reverse": "true"},
+                {"tag": "electronic", "order": "votes", "reverse": "true"},
+                {"tag": "dance", "order": "votes", "reverse": "true"}
+            ],
+            "house.json": [
+                {"tag": "house", "order": "votes", "reverse": "true"},
+                {"tag": "deep house", "order": "votes", "reverse": "true"},
+                {"tag": "tech house", "order": "votes", "reverse": "true"}
+            ],
+            "techno.json": [
+                {"tag": "techno", "order": "votes", "reverse": "true"},
+                {"tag": "minimal techno", "order": "votes", "reverse": "true"}
+            ],
+            "trance.json": [
+                {"tag": "trance", "order": "votes", "reverse": "true"},
+                {"tag": "psytrance", "order": "votes", "reverse": "true"},
+                {"tag": "vocal trance", "order": "votes", "reverse": "true"}
+            ],
+            "drumandbass.json": [
+                {"tag": "drum and bass", "order": "votes", "reverse": "true"},
+                {"tag": "dnb", "order": "votes", "reverse": "true"},
+                {"tag": "jungle", "order": "votes", "reverse": "true"}
+            ],
+            "dubstep.json": [
+                {"tag": "dubstep", "order": "votes", "reverse": "true"},
+                {"tag": "riddim", "order": "votes", "reverse": "true"}
+            ],
+            "ambient.json": [
+                {"tag": "ambient", "order": "votes", "reverse": "true"},
+                {"tag": "drone ambient", "order": "votes", "reverse": "true"},
+                {"name": "Drone Zone", "order": "votes", "reverse": "true"}
+            ],
+            "downtempo.json": [
+                {"tag": "downtempo", "order": "votes", "reverse": "true"},
+                {"tag": "trip hop", "order": "votes", "reverse": "true"}
+            ],
+            "synth.json": [
+                {"tag": "synthwave", "order": "votes", "reverse": "true"},
+                {"tag": "darksynth", "order": "votes", "reverse": "true"},
+                {"tag": "spacesynth", "order": "votes", "reverse": "true"}
+            ],
+            "chiptune.json": [
+                {"tag": "chiptune", "order": "votes", "reverse": "true"},
+                {"tag": "8-bit", "order": "votes", "reverse": "true"},
+                {"tag": "bitpop", "order": "votes", "reverse": "true"}
+            ],
+            "breakbeat.json": [
+                {"tag": "breakbeat", "order": "votes", "reverse": "true"},
+                {"tag": "big beat", "order": "votes", "reverse": "true"}
+            ],
+            "disco.json": [
+                {"tag": "disco", "order": "votes", "reverse": "true"},
+                {"tag": "nu-disco", "order": "votes", "reverse": "true"},
+                {"tag": "italo disco", "order": "votes", "reverse": "true"}
+            ],
+            "garage.json": [
+                {"tag": "uk garage", "order": "votes", "reverse": "true"},
+                {"tag": "future garage", "order": "votes", "reverse": "true"}
+            ],
+            "hardstyle.json": [
+                {"tag": "hardstyle", "order": "votes", "reverse": "true"},
+                {"tag": "hardcore", "order": "votes", "reverse": "true"}
+            ],
+            "idm.json": [
+                {"tag": "idm", "order": "votes", "reverse": "true"},
+                {"tag": "glitch", "order": "votes", "reverse": "true"}
+            ],
+            "electrohouse.json": [
+                {"tag": "electro house", "order": "votes", "reverse": "true"},
+                {"tag": "club dance", "order": "votes", "reverse": "true"}
+            ]
+        }
+    },
+    "religious": {
+        "dir": "assets/stations/religious",
+        "files": {
+            "!main_religious.json": [
+                {"tag": "religious", "order": "votes", "reverse": "true"},
+                {"tag": "christian", "order": "votes", "reverse": "true"}
+            ],
+            "gospel.json": [
+                {"tag": "gospel", "order": "votes", "reverse": "true"},
+                {"tag": "black gospel", "order": "votes", "reverse": "true"},
+                {"tag": "southern gospel", "order": "votes", "reverse": "true"}
+            ],
+            "catholic.json": [
+                {"tag": "catholic", "order": "votes", "reverse": "true"},
+                {"name": "Vatican", "order": "votes", "reverse": "true"}
+            ],
+            "orthodox.json": [
+                {"tag": "orthodox", "order": "votes", "reverse": "true"},
+                {"tag": "byzantine", "order": "votes", "reverse": "true"}
+            ],
+            "islamic.json": [
+                {"tag": "islamic", "order": "votes", "reverse": "true"},
+                {"tag": "quran", "order": "votes", "reverse": "true"}
+            ],
+            "jewish.json": [
+                {"tag": "jewish", "order": "votes", "reverse": "true"},
+                {"name": "Jewish", "order": "votes", "reverse": "true"}
+            ]
+        }
+    },
     "jazz": {
         "dir": "assets/stations/jazz",
         "files": {
@@ -622,15 +729,89 @@ GENRE_SPECS = {
                 {"name": "ESPN Radio", "order": "votes", "reverse": "true"}
             ]
         }
+    },
+    "soma": {
+        "dir": "assets/stations/soma",
+        "files": {
+            "soma1.json": [
+                {"name": "SomaFM", "order": "votes", "reverse": "true"},
+                {"tag": "somafm", "order": "votes", "reverse": "true"}
+            ],
+            "soma2.json": [
+                {"name": "SomaFM", "order": "votes", "reverse": "true"},
+                {"tag": "somafm", "order": "votes", "reverse": "true"}
+            ],
+            "soma3.json": [
+                {"name": "SomaFM", "order": "votes", "reverse": "true"},
+                {"tag": "somafm", "order": "votes", "reverse": "true"}
+            ]
+        }
+    },
+    "fm181": {
+        "dir": "assets/stations/fm181",
+        "files": {
+            "80s_decade.json": [
+                {"name": "181.fm", "tag": "80s", "order": "votes", "reverse": "true"},
+                {"name": "181.fm 80", "order": "votes", "reverse": "true"}
+            ],
+            "90s_decade.json": [
+                {"name": "181.fm", "tag": "90s", "order": "votes", "reverse": "true"},
+                {"name": "181.fm 90", "order": "votes", "reverse": "true"}
+            ],
+            "christmas.json": [
+                {"name": "181.fm", "tag": "christmas", "order": "votes", "reverse": "true"},
+                {"name": "Christmas", "order": "votes", "reverse": "true"}
+            ],
+            "classical.json": [
+                {"name": "181.fm", "tag": "classical", "order": "votes", "reverse": "true"},
+                {"name": "181.fm Classical", "order": "votes", "reverse": "true"}
+            ],
+            "comedy.json": [
+                {"name": "181.fm", "tag": "comedy", "order": "votes", "reverse": "true"}
+            ],
+            "country.json": [
+                {"name": "181.fm", "tag": "country", "order": "votes", "reverse": "true"},
+                {"name": "181.fm Country", "order": "votes", "reverse": "true"}
+            ],
+            "dance.json": [
+                {"name": "181.fm", "tag": "dance", "order": "votes", "reverse": "true"},
+                {"name": "181.fm Dance", "order": "votes", "reverse": "true"}
+            ],
+            "easy_listening.json": [
+                {"name": "181.fm", "tag": "easy listening", "order": "votes", "reverse": "true"},
+                {"name": "181.fm Chilled", "order": "votes", "reverse": "true"}
+            ],
+            "oldies.json": [
+                {"name": "181.fm", "tag": "oldies", "order": "votes", "reverse": "true"},
+                {"name": "181.fm Classic Hits", "order": "votes", "reverse": "true"}
+            ],
+            "pop.json": [
+                {"name": "181.fm", "tag": "pop", "order": "votes", "reverse": "true"},
+                {"name": "181.fm Power", "order": "votes", "reverse": "true"}
+            ],
+            "rock.json": [
+                {"name": "181.fm", "tag": "rock", "order": "votes", "reverse": "true"},
+                {"name": "181.fm Buzz", "order": "votes", "reverse": "true"}
+            ],
+            "soul.json": [
+                {"name": "181.fm", "tag": "soul", "order": "votes", "reverse": "true"},
+                {"name": "181.fm R&B", "order": "votes", "reverse": "true"}
+            ],
+            "urban.json": [
+                {"name": "181.fm", "tag": "urban", "order": "votes", "reverse": "true"},
+                {"name": "181.fm Hip Hop", "order": "votes", "reverse": "true"},
+                {"name": "181.fm Jamz", "order": "votes", "reverse": "true"}
+            ]
+        }
     }
 }
 
-def curate_world(base_dir: str):
+def curate_world(stations_dir: str):
     print("\n=======================================================")
     print(" Curating & Enriching WORLD directory")
     print("=======================================================")
     
-    world_base = os.path.join(base_dir, "assets/stations/world")
+    world_base = os.path.join(stations_dir, "world")
     
     # 1. Harvest existing stations to preserve user's hand-crafted work
     existing_world = {}
@@ -727,9 +908,9 @@ def curate_world(base_dir: str):
     pipes = curate_category(load_json(os.path.join(celtic_dir, "scottish_bagpipes.json")), [{"tag": "bagpipes", "order": "votes", "reverse": "true"}], target_count=10)
     save_json(os.path.join(celtic_dir, "scottish_bagpipes.json"), pipes)
 
-def run_genre(genre_key: str, base_dir: str):
+def run_genre(genre_key: str, stations_dir: str):
     if genre_key == "world":
-        curate_world(base_dir)
+        curate_world(stations_dir)
         return
         
     if genre_key not in GENRE_SPECS:
@@ -737,7 +918,8 @@ def run_genre(genre_key: str, base_dir: str):
         return
         
     spec = GENRE_SPECS[genre_key]
-    target_dir = os.path.join(base_dir, spec["dir"])
+    subdir = os.path.basename(spec.get("dir", genre_key))
+    target_dir = os.path.join(stations_dir, subdir)
     print(f"\n=======================================================")
     print(f" Processing Genre: {genre_key.upper()} -> {target_dir}")
     print(f"=======================================================")
@@ -750,25 +932,174 @@ def run_genre(genre_key: str, base_dir: str):
         stations = curate_category(src_stations, queries, target_count=16, max_count=22)
         save_json(file_path, stations)
 
-def main():
-    base = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-    args = sys.argv[1:]
+def audit_catalog(stations_dir: str) -> bool:
+    print("\n=======================================================")
+    print(f" Catalog Audit: {stations_dir}")
+    print("=======================================================")
     
+    total_files = 0
+    total_stations = 0
+    name_violations = []
+    count_violations = []
+    json_errors = []
+    genre_counts = {}
+    
+    for root, dirs, files in os.walk(stations_dir):
+        if "deadStation" in root:
+            continue
+        rel_dir = os.path.relpath(root, stations_dir)
+        genre = rel_dir.split(os.sep)[0]
+        if genre == ".":
+            genre = "root"
+            
+        for f in sorted(files):
+            if not f.endswith(".json"):
+                continue
+            total_files += 1
+            fpath = os.path.join(root, f)
+            rel_file = os.path.relpath(fpath, stations_dir)
+            try:
+                with open(fpath, "r", encoding="utf-8") as fp:
+                    data = json.load(fp)
+            except Exception as e:
+                json_errors.append((rel_file, str(e)))
+                continue
+                
+            stations = data.get("stations", {})
+            st_len = len(stations)
+            total_stations += st_len
+            genre_counts[genre] = genre_counts.get(genre, 0) + st_len
+            
+            if st_len > 22:
+                count_violations.append((rel_file, st_len))
+                
+            for name, url in stations.items():
+                if len(name) > 22:
+                    name_violations.append((rel_file, name, len(name)))
+                    
+    print(f"\nAudit Summary:")
+    print(f"  Total JSON files:    {total_files}")
+    print(f"  Total Live stations: {total_stations}")
+    print(f"\nGenre Breakdown:")
+    for g, count in sorted(genre_counts.items()):
+        print(f"  - {g:<16}: {count} stations")
+        
+    print("\nValidation Results:")
+    has_issues = False
+    if json_errors:
+        has_issues = True
+        print(f"  [FAIL] {len(json_errors)} JSON syntax error(s):")
+        for f, err in json_errors:
+            print(f"    * {f}: {err}")
+    else:
+        print("  [PASS] 0 JSON syntax errors")
+        
+    if count_violations:
+        has_issues = True
+        print(f"  [FAIL] {len(count_violations)} file(s) exceed 22 stations limit:")
+        for f, count in count_violations:
+            print(f"    * {f}: {count} stations (max 22)")
+    else:
+        print("  [PASS] 0 station count violations (all <= 22 stations)")
+        
+    if name_violations:
+        has_issues = True
+        print(f"  [FAIL] {len(name_violations)} station name(s) exceed 22 chars:")
+        for f, name, l in name_violations[:10]:
+            print(f"    * [{f}] '{name}' ({l} chars)")
+        if len(name_violations) > 10:
+            print(f"    ... and {len(name_violations) - 10} more")
+    else:
+        print("  [PASS] 0 station name length violations (all <= 22 chars)")
+        
+    if not has_issues:
+        print("\nAll constraints PASSED: catalog is 100% compliant with pnimrp UI constraints!\n")
+    return not has_issues
+
+def search_stations(query: str, limit: int = 10):
+    print(f"\n[Search] Querying Radio-Browser for '{query}'...")
+    results = query_radio_browser({"name": query, "limit": limit * 2, "order": "votes", "reverse": "true"})
+    if not results:
+        results = query_radio_browser({"tag": query, "limit": limit * 2, "order": "votes", "reverse": "true"})
+    
+    if not results:
+        print(f"  No stations found matching '{query}'.")
+        return
+        
+    print(f"Found {len(results)} candidate(s). Preflighting streams...\n")
+    print(f"{'Clean Name (<=22)':<24} | {'Status':<6} | {'Bitrate':<7} | Stream URL")
+    print("-" * 80)
+    count = 0
+    for item in results:
+        if count >= limit:
+            break
+        raw_name = item.get("name", "").strip()
+        url = item.get("url_resolved") or item.get("url")
+        bitrate = item.get("bitrate", 0)
+        clean_n = clean_station_name(raw_name)
+        ok, final_url = verify_stream(url, timeout=2.5)
+        status_str = "OK" if ok else "DEAD"
+        if ok:
+            print(f"{clean_n:<24} | {status_str:<6} | {bitrate:<7} | {final_url or url}")
+            count += 1
+    print()
+
+def resolve_stations_dir(custom_path: str = None) -> str:
+    repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+    if not custom_path:
+        return os.path.join(repo_root, "assets", "stations")
+    
+    p = os.path.abspath(custom_path)
+    if os.path.basename(p) == "stations":
+        return p
+    if os.path.isdir(os.path.join(p, "stations")):
+        return os.path.join(p, "stations")
+    if os.path.isdir(os.path.join(p, "assets", "stations")):
+        return os.path.join(p, "assets", "stations")
+    return p
+
+def main():
+    import argparse
     all_keys = list(GENRE_SPECS.keys()) + ["world"]
     
-    if not args or "-h" in args or "--help" in args:
-        print("Usage: python3 tools/curate_catalog.py [genre1 genre2 ... | all]")
-        print("\nAvailable genres:")
-        for g in all_keys:
-            print(f"  - {g}")
+    parser = argparse.ArgumentParser(
+        description="Poor Man's Radio Player (pnimrp) Catalog Curation Engine",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="Available genres:\n  " + "\n  ".join(f"- {k}" for k in all_keys) + "\n\nExamples:\n"
+               "  python3 tools/curate_catalog.py jazz\n"
+               "  python3 tools/curate_catalog.py soma fm181\n"
+               "  python3 tools/curate_catalog.py --dir assets/stations pop rock\n"
+               "  python3 tools/curate_catalog.py --audit\n"
+               "  python3 tools/curate_catalog.py --search \"lofi\"\n"
+               "  python3 tools/curate_catalog.py all\n"
+    )
+    parser.add_argument("genres", nargs="*", help="Genres to curate (e.g. jazz, pop, rock, soma, fm181, world, all)")
+    parser.add_argument("--dir", "-d", dest="custom_dir", default=None, help="Custom stations or assets directory (defaults to repo assets/stations)")
+    parser.add_argument("--list", "-l", action="store_true", help="List all available genres and exit")
+    parser.add_argument("--audit", "-a", action="store_true", help="Audit catalog for pnimrp UI constraints (<=22 stations, <=22 name chars, valid JSON)")
+    parser.add_argument("--search", "-s", dest="search_query", default=None, help="Search Radio-Browser for stations by name/tag and test live stream")
+    
+    args = parser.parse_args()
+    
+    stations_dir = resolve_stations_dir(args.custom_dir)
+    
+    if args.audit:
+        ok = audit_catalog(stations_dir)
+        sys.exit(0 if ok else 1)
+        
+    if args.search_query:
+        search_stations(args.search_query)
         sys.exit(0)
         
-    if "all" in args:
-        for g in all_keys:
-            run_genre(g, base)
-    else:
-        for g in args:
-            run_genre(g.lower(), base)
+    if args.list or not args.genres:
+        parser.print_help()
+        sys.exit(0)
+        
+    print(f"[Engine] Target stations directory: {stations_dir}")
+    
+    targets = all_keys if "all" in [g.lower() for g in args.genres] else [g.lower() for g in args.genres]
+    for g in targets:
+        run_genre(g, stations_dir)
 
 if __name__ == "__main__":
     main()
