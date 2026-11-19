@@ -66,7 +66,8 @@ const validPlaylistTypesList* = [
     "application/m3u8",
     "video/x-ms-asf",
     "text/m3u",
-    "text/m3u8"
+    "text/m3u8",
+    "application/dash+xml"
 ]
 
 const validRawStreamTypesList* = [
@@ -88,7 +89,8 @@ func cleanContentType*(contentType: string): string =
 
 func isPlaylistUrl*(url: string): bool =
     let path = parseUri(url).path.toLowerAscii()
-    return path.endsWith(".m3u8") or path.endsWith(".m3u") or path.endsWith(".pls")
+    return path.endsWith(".m3u8") or path.endsWith(".m3u") or path.endsWith(".pls") or
+        path.endsWith(".mpd") or path.endsWith(".asx") or path.endsWith(".xspf")
 
 func isValidRawStreamContentType*(contentType: string): bool =
     let normalized = cleanContentType(contentType)
