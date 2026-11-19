@@ -1,0 +1,20 @@
+{
+  "stations": {
+    "#joint radio Blues Roc": "https://betelgeuse.nucast.co.uk/stream/jrn-blues",
+    "181.fm Front Porch": "http://listen.181fm.com/181-frontporch_128k.mp3",
+    "Heartland Bluegrass Go": "https://us2.maindigitalstream.com/ssl/7739",
+    "R Free Americana [64kb": "http://janus.cdnstream.com:5140/live",
+    "Folk Alley FreshGrass": "https://freshgrass.streamguys1.com/ss1-128mp3",
+    "Allegheny Mountain Rad": "http://amber.streamguys.com:5750/",
+    "Ichtys Radio": "http://server33109.streamplus.de/;?type=http&nocache=100024",
+    "Abiding Radio - Bluegr": "https://streams.abidingradio.com/bluegrass",
+    "radcap Bluegrass": "http://79.111.14.76:8002/bluegrass",
+    "WVPB 88.5 \"West Virgin": "https://wvpublic.streamguys1.com/wvpb256k.aac",
+    "WIGN - 1550 AM Bluegra": "https://mountain.radioca.st/stream",
+    "The Bluegrass Jamboree": "https://the-bluegrass-jamboree.radiocult.fm/stream",
+    "American Roots Radio": "https://stream.americanrootsradio.com:3035/stream",
+    "KWYG - Wyoming Gospel": "https://stationplaylist.com:7110/listen.aac",
+    "WNRV The Ridge AM 990/": "http://stream.wnrvbluegrassradio.com/live-mp3",
+    "WGCS 91.1 \"The Globe\"": "http://icecast.goshen.edu:8000/wgcs-128vbr"
+  }
+}

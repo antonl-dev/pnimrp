@@ -1,0 +1,20 @@
+{
+  "stations": {
+    "SomaFM Metal Detector": "https://ice5.somafm.com/metal-128-aac",
+    "Exclusive Radio – Blac": "https://streaming.exclusive.radio/er/blacksabbath/icecast.audio",
+    "Gritty Rock Radio": "https://listen.radioking.com/radio/10713/stream/224413",
+    "radcap Funeral Doom Me": "http://79.120.77.11:8000/funeraldoom",
+    "radcap Athmospheric Do": "http://213.141.131.10:8002/atmosphericdoom",
+    "radcap Stoner Rock": "http://79.111.119.111:8000/stonerrock?type=.mp3",
+    "R BOB! Stoner Rock": "https://regiocast.streamabc.net/regc-bobstonerrock-mp3-192-1306307?sABC=6nss3n9q%230%23p5549n47p4p5199r236op6r02281377q%23fgernzf.enqvbobo.qr&aw_0_1st.playerid=streams.radiobob.de&amsparams=playerid:streams.radiobob.de;skey:1795111581",
+    "laut.fm - Shamanic Tun": "http://shamanictunes.stream.laut.fm/shamanic_tunes?t302=2026-11-19_19-06-22&uuid=8b444c86-5eaa-62b6-b8d6-2a4ede551e37",
+    "Stone Prog": "http://stone-prog.stream.laut.fm/stone-prog?t302=2026-11-19_19-06-23&uuid=eff850ac-8da6-5003-1804-02fd04b9fbfe",
+    "RadCap - Gothic Doom M": "http://79.120.39.202:8004/gothdoommet",
+    "XRaydio 3 – Your Rock": "https://xraydio.ddns.net/xraydio3",
+    "Aircooled": "http://aircooled.stream.laut.fm/aircooled?t302=2026-11-19_19-06-26&uuid=2f546572-b535-cded-8fec-7a80ecfa7aed",
+    "RadCap - Death Doom Me": "http://79.120.39.202:8004/deathdoom",
+    "RadCap - Doom Metal": "http://79.111.14.76:8004/doom",
+    "RadCap - Black Doom Me": "http://79.120.77.11:8002/blackdoom",
+    "RadioNarcan": "https://radionarcan.stream.laut.fm/radionarcan"
+  }
+}

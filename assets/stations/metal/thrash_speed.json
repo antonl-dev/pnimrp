@@ -1,0 +1,20 @@
+{
+  "stations": {
+    "ChroniX Radio Metalcor": "http://usa17.fastcast4u.com:5508/stream",
+    "Rock Antenne Heavy Met": "https://s8-webradio.rockantenne.de/heavy-metal/stream/aacp",
+    "Thrashking Radio": "http://thrashking.stream.laut.fm/thrashking",
+    "Best Of Rock.FM Metall": "https://radio21.streamabc.net/radio21-singersongwriter-mp3-256-5927370?sABC=6nss3n71%230%23p5549n47p4p5199r236op6r02281377q%23orfgbsebpx.sz&aw_0_1st.playerid=bestofrock.fm&amsparams=playerid:bestofrock.fm;skey:1795111537",
+    "DrGnu - Death Metal": "http://regiocast.streamabc.net/regc-radiobobdeathmetal8709679-mp3-192-6241857?sABC=6nss3n74%230%23p5549n47p4p5199r236op6r02281377q%23zrqvncynlre&aw_0_1st.playerid=mediaplayer&amsparams=playerid:mediaplayer;skey:1795111540",
+    "DJ 666 Geordieblackcor": "http://dj666geordieblackcore.stream.laut.fm/dj666geordieblackcore?t302=2026-11-17_05-04-44&uuid=ce4525b6-89cc-a164-eb2a-ffc844f878a5",
+    "R todamax": "http://todamax.stream.laut.fm/todamax?t302=2026-11-19_19-05-41&uuid=b13a9ebe-7853-ac48-3fbf-2ff09ea9759f",
+    "The Pit | NTS": "https://audio-edge-kk8xx.blr.d.radiomast.io/d0877da6-0037-4f67-86d7-3ecbc86e362c",
+    "R Caprice": "http://79.120.77.11:8000/thrashmetal",
+    "R Metal On: The Thrash": "https://radiometalon.com/listen/radio_metal_on_the_thrasher/radio.mp3",
+    "RadCap - Crossover Thr": "http://213.141.131.10:8004/crossoverthrash",
+    "RadCap - Thrash Metal": "http://79.120.77.11:8002/thrashmetal",
+    "MaximusRockFM": "https://maximusrockfm.stream.laut.fm/maximusrockfm?uuid=621363bb-db54-2a20-8d33-56fac5cbfcf6&t302=2026-11-19_19-05-48",
+    "Hotmix Metal": "https://streaming.hotmixradio.com/hotmix-metal-en-mp3?provider=radiobrowser",
+    "R Diabolus": "https://dunkelhost.com:7800/isdn",
+    "[GTA IV] Liberty City": "https://audio.gtaradio.net/4/hardcore"
+  }
+}

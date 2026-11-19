@@ -1,0 +1,20 @@
+{
+  "stations": {
+    "Calm Radio - Solo Pian": "http://streams.calmradio.com:1228/",
+    "Jazz Radio Piano Jazz": "http://jzr-piano.ice.infomaniak.ch/jzr-piano.mp3",
+    "R Art - Solo Piano": "http://live.radioart.com/fSolo_piano.mp3",
+    "R Art - Relaxing": "http://air.radioart.com/fRelaxing.mp3",
+    "R Art - Piano for Slee": "http://air.radioart.com/fPiano_for_sleep.mp3",
+    "radcap Piano": "http://79.120.77.11:8002/piano",
+    "R Art - Piano & Guitar": "http://air-tunein.radioart.com/fPiano_and_guitar.mp3",
+    "100% ACID JAZZ": "https://mpc1.mediacp.eu:8356/stream",
+    "radcap Piano Jazz / St": "http://79.111.119.111:8002/pianojazz",
+    "Relaxing Piano": "http://relaxing-piano.stream.laut.fm/relaxing-piano?uuid=c6e28963-9c02-6535-6368-d03b2c74c6a8&t302=2026-11-19_19-00-48",
+    "Amapiano FM": "https://stream-281.surfernetwork.com/xs6zeac1ts8uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJ4czZ6ZWFjMXRzOHV2IiwiaG9zdCI6InN0cmVhbS0yODEuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJEenVHel92Y1JXMmlXZTdQX1BVdG1BIiwiaWF0IjoxNzk1MTEyMzI4LCJleHAiOjE3OTUxMTIzODh9.nkGU_zO5uKfTlW76Wq2sy55ikGKN4cgxejWEvAT5C80",
+    "R Art - Ambient Piano": "http://air.radioart.com/fAmbient_piano.mp3",
+    "Laut.FM Chillharmonie": "https://chillharmonie.stream.laut.fm/chillharmonie",
+    "Whisperings: Solo Pian": "https://pianosolo.streamguys1.com/pianosolo48.aac",
+    "The River Of Calm": "https://listen.radioking.com/radio/49831/stream/86743",
+    "R Art - Chopin": "http://air.radioart.com/fChopin.mp3"
+  }
+}

@@ -1,17 +1,20 @@
 {
   "stations": {
     "100hitz Country Hitz": "https://pureplay.cdnstream1.com/6030_128.mp3",
-    "Absolutely CountryHits": "185.33.22.15:7800",
-    "Country Music 24": "countrymusic24.powerstream.de:9000",
     "HPR Traditional": "https://us2.maindigitalstream.com/ssl/7713",
     "HPR Todays Cls": "https://us2.maindigitalstream.com/ssl/7735",
-    "Big R Radio Country Gold": "https://bigrradio.cdnstream1.com/5195_48",
+    "Big R Radio Country Go": "https://bigrradio.cdnstream1.com/5195_48",
     "Americana Boogie R": "https://26343.live.streamtheworld.com/SAM07AAC204.mp3",
     "Country Radio Swiss": "https://countryradioswitzerland.ice.infomaniak.ch/crs-128.mp3",
     "650 AM WSM (Nashville)": "http://stream01048.westreamradio.com/wsm-am-mp3",
-    "The Ranch FM": "https://live.amperwave.net/direct/alphacorporate-kkusfmmp3-ibc4",
+    "The Ranch FM": "https://prod-3-238-128-197.amperwave.net/alphacorporate-kkusfmmp3-ibc4?session-id=79eb5fd01a10098aa17cd047c988eb02",
     "Bluegrass Country": "https://ice24.securenetsystems.net/WAMU",
     "Country Roads Radio": "http://server-24.stream-server.nl/stream/CrossroadsCountryRadio/stream",
-    "KC Americana Radio 94.7": "https://stream.radio.co/sda3008cc9/listen"
+    ".977 Country": "http://15113.live.streamtheworld.com:3690/977_COUNTRY_SC",
+    "R Caroline": "http://78.129.202.200:8040/;",
+    "181.fm Highway 181": "https://listen.181fm.com/181-highway_128k.mp3",
+    "Country Radio": "http://icecast2.play.cz:8000/country128aac",
+    "1.FM - Classic Country": "http://strm112.1.fm/ccountry_mobile_mp3",
+    "181.fm Kickin' Country": "https://listen.181fm.com/181-kickincountry_128k.mp3"
   }
 }

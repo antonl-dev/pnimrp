@@ -1,11 +1,20 @@
 {
   "stations": {
     "radcap AvantGarde": "http://79.111.119.111:8000/avantgardejazz",
-    "Adroit Jazz Underground": "https://icecast.walmradio.com:8443/jazz_opus",
-    "After Hours DE": "https://stream.laut.fm/after-hours",
+    "Adroit Jazz Undergroun": "https://icecast.walmradio.com:8443/jazz_opus",
     "Fango Radio": "https://pantano.ovh:8444/pantano",
-    "In Between DE": "https://stream.laut.fm/inbetween",
+    "In Between DE": "https://inbetween.stream.laut.fm/inbetween?t302=2026-11-19_18-51-16&uuid=404a4814-33c3-368f-4587-b6ef9a1b7fc3",
     "radcap Cls Avantgarde": "http://213.141.131.10:8002/classavant",
-    "Freakout DE": "https://stream.laut.fm/freakout"
+    "Freakout DE": "https://freakout.stream.laut.fm/freakout?uuid=4d6f1854-761d-8e5e-5b10-82a45a148835&t302=2026-11-19_18-51-19",
+    "SomaFM Sonic Universe": "https://ice5.somafm.com/sonicuniverse-128-mp3",
+    "100% ACID JAZZ": "https://mpc1.mediacp.eu:8356/stream",
+    "Suite Jazz Radio": "https://jenny.torontocast.com:2000/stream/suitejazzradio",
+    "Rockserwis.fm": "http://stream9.nadaje.com:8002/live",
+    "Avant-Garde Jazz/Free": "http://79.111.119.111:8004/avantgardejazz",
+    "radcap Free Jazz": "http://79.111.14.76:8002/freejazz",
+    "Classical avant-garde": "http://213.141.131.10:8004/classavant",
+    "CZ X-Rated": "http://streams.greenhost.nl:8080/concertzenderlive",
+    "Experimental/Avant-gar": "http://79.111.119.111:8004/experimentalmusic",
+    "Path through the Fores": "http://paththroughtheforest.stream.laut.fm/path_through_the_forest?t302=2026-11-17_02-32-03&uuid=3a96286a-2b25-f613-c045-b51fb751bd6f"
   }
 }

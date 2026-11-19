@@ -1,0 +1,20 @@
+{
+  "stations": {
+    "SomaFM Metal Detector": "https://ice5.somafm.com/metal-128-aac",
+    "1.FM - Gorilla FM Radi": "http://strm112.1.fm/gorillafm_mobile_mp3",
+    "The Prog Rock Machine": "https://theproganrockmachine.out.airtime.pro/theproganrockmachine_b",
+    "BDPST ROCK Rádió": "http://s2.audiostream.hu:8091/bdpstrock_FLAC",
+    "R BOB Progressive Rock": "https://regiocast.streamabc.net/regc-radiobobprogrock1964104-mp3-192-1423777?sABC=6nss39r2%230%23p5549n47p4p5199r236op6r02281377q%23&aw_0_1st.playerid=&amsparams=playerid:;skey:1795111394",
+    "The Musical Box Radio": "http://albireo.shoutca.st:9740/stream",
+    "DrGnu - Prog Rock Clas": "http://regiocast.streamabc.net/regc-radiobobprogrock1964104-mp3-192-1423777?sABC=6nss39r5%230%23p5549n47p4p5199r236op6r02281377q%23zrqvncynlre&aw_0_1st.playerid=mediaplayer&amsparams=playerid:mediaplayer;skey:1795111397",
+    "Morow Prog Rock Radio": "http://stream.fr.morow.com:8080/morow_med.mp3",
+    "radcap Neo-progressive": "http://79.111.119.111:8002/neoprogrock",
+    "ISKC Rock Radio": "http://mediaserv68.live-streams.nl:8012/RockRadio",
+    "Prog Frog": "http://eagle.streemlion.com:4040/stream",
+    "Rockserwis.fm": "http://stream9.nadaje.com:8002/live",
+    "RMF Rock Progresywny": "http://195.150.20.8/ROCKPROGRESYWNY",
+    "Rock FM 96.9": "https://az10.yesstreaming.net:8060/radio.mp3",
+    "Exclusively Genesis": "https://2.mystreaming.net/er/genesis/icecast.audio",
+    "ProgressiveMusic": "http://progressivemusic.stream.laut.fm/progressivemusic?t302=2026-11-19_19-03-26&uuid=32080c5a-1d2c-5ee2-79b4-94558f0bec03"
+  }
+}

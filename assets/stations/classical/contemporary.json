@@ -1,0 +1,16 @@
+{
+  "stations": {
+    "Fluid Radio": "http://uk4-vn.webcast-server.net:9270/",
+    "radcap Modern Classica": "http://79.120.39.202:8002/modernclassical",
+    "radcap Contemporary Cl": "http://79.111.119.111:8002/contclass",
+    "WQXR \"Q2 Stream\" New Y": "https://q2stream.wqxr.org/q2.aac",
+    "6forty Radio": "http://radio.6forty.com:8000/6forty",
+    "#1 Splash Classical": "https://ais-sa2.cdnstream1.com/2208_128.mp3",
+    "Pi ano FLAC+meta": "http://stream.p-node.org/piano",
+    "NTS Radio Sheet Music": "https://audio-edge-kk8xx.blr.d.radiomast.io/976b6107-859e-4bc5-8d63-d6992431c414",
+    "Friends of 'CSB": "https://s20.myradiostream.com:18792/listen.mp3",
+    "CAMP Radio": "https://listen.camp/campradio.ogg",
+    "16Bit.FM I.D.E.A.": "http://16bitfm.com:8000/idea_mp3_192",
+    "105.1 Millenium Bella": "https://stream.promomedios.com:8006/stream"
+  }
+}

@@ -1,13 +1,20 @@
 {
   "stations": {
     "Miled Music Latin Jazz": "https://miledmusic7-cybertec.radioca.st/stream",
-    "Salsa Son Timba Stream": "http://cast1.my-control-panel.com:7313/autodj",
-    "Spinner Latin Jazz": "https://live.radiospinner.com/latin-jazz-64",
-    "radcap Latin Jazz": "79.111.119.111:8002/latinjazz",
     "Hear Me Latin Jazz": "https://radio.hearme.fm:9350/stream",
-    "Big Radio Latin Jazz Latino": "https://bigrradio.cdnstream1.com/5224_128",
+    "Big Radio Latin Jazz L": "https://bigrradio.cdnstream1.com/5224_128",
     "Jazz Radio Latin FR": "https://jazz-wr09.ice.infomaniak.ch/jazz-wr09-64.aac",
-    "Radio Art Latin Jazz": "https://live.radioart.com/fLatin_jazz.mp3",
-    "WCUF HD2 Latin Jazz": "https://peridot.streamguys.com:7830/WUCF-HD2"
+    "R Art Latin Jazz": "https://live.radioart.com/fLatin_jazz.mp3",
+    "WCUF HD2 Latin Jazz": "https://peridot.streamguys.com:7830/WUCF-HD2",
+    "Jazz Radio Latin Jazz": "http://jazz-wr09.ice.infomaniak.ch/jazz-wr09-128.mp3",
+    "RMC Marine": "http://edge.radiomontecarlo.net/rmcweb010",
+    "radcap Bossa Nova": "http://79.111.14.76:8002/bossanova",
+    "100% ACID JAZZ": "https://mpc1.mediacp.eu:8356/stream",
+    "Suite Jazz Radio": "https://jenny.torontocast.com:2000/stream/suitejazzradio",
+    "Qfm": "http://51.255.235.165:5092/;",
+    "R Monte Carlo - Bossa": "https://mc-mcbossa.hostingradio.ru/mcbossa96.aacp?listening-from-radio-garden=1645969315",
+    "R Art - Bossa Nova": "http://air-tunein.radioart.com/fBosa_nova.mp3",
+    "radcap Latin / Afro-Cu": "http://79.111.119.111:8002/latinjazz",
+    "Klassik Radio - Brazil": "http://klassikr.streamabc.net/klr-brazil-mp3-128-2052435?sABC=6nss375o%230%23p5549n47p4p5199r236op6r02281377q%23&aw_0_1st.playerid=&amsparams=playerid:;skey:1795110747"
   }
 }

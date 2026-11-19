@@ -1,0 +1,20 @@
+{
+  "stations": {
+    "Venice Classic IT": "https://uk2.streamingpulse.com/ssl/vcr1",
+    "WKSU 3 Cls": "https://live.ideastream.org/wksu3.128.mp3",
+    "Ancient FM": "https://mediaserv73.live-streams.nl:18058/stream",
+    "The Organ Experience": "http://play2.organlive.com:7006/320",
+    "Mondello MRG Cls": "https://str3.openstream.co/1032",
+    "Musik Klassic": "https://klassikr.streamabc.net/klr-krdnational-aac-128-3888428",
+    "WQXR NY": "https://iheart.wnyc.org/wqxr-tunein",
+    "KUSC (LA)": "https://16603.live.streamtheworld.com:443/KUSCAAC96.aac",
+    "KING FM (Seattle)": "https://classicalking.streamguys1.com/king-fm-aac-iheart",
+    "R France Musique Class": "https://icecast.radiofrance.fr/francemusiqueeasyclassique-midfi.mp3",
+    "WALM 2 HD": "https://icecast.walmradio.com:8443/walm2",
+    "parsa": "http://parsa.icdndhcp.com:18000/stream",
+    "Your Classical - Relax": "http://relax.stream.publicradio.org/relax.mp3",
+    "caltexmusic": "http://n12.radiojar.com/cp13r2cpn3quv?rj-ttl=5&rj-tok=AAABofUQZ40A0Q4b4nS4m6-JEg",
+    "اذاعة القرآن الكريم": "http://n13.radiojar.com/0tpy1h0kxtzuv?rj-ttl=5&rj-tok=AAABofUQeBQA-bcYj6hz8Bc3qg",
+    "Rai Radio 3": "http://icecdn-19d24861e90342cc8decb03c24c8a419.msvdn.net/icecastRelay/S56630579/yEbkcBtIoSwd/icecast"
+  }
+}

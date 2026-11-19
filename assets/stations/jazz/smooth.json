@@ -1,19 +1,20 @@
 {
   "stations": {
-    "SmoothJazz Global Radio": "https://smoothjazz.cdnstream1.com/2585_128.mp3",
+    "SmoothJazz Global Radi": "https://smoothjazz.cdnstream1.com/2585_128.mp3",
     "Cool Jazz Florida": "https://vip2.fastcast4u.com/proxy/cjfla?mp=/stream",
     "Smooth Lounge Radio": "https://smoothjazz.cdnstream1.com/2586_128.mp3",
     "1.fm SAX4LOVE": "https://strm112.1.fm/sax4ever_mobile_mp3",
     "1.FM Smooth Jazz": "https://strm112.1.fm/smoothjazz_mobile_mp3",
-    "smoothjazzatl.com": "https://crystalout.surfernetwork.com:8001/WJZA-AM_MP3",
     "Smooth Jazz 102.7": "http://216.245.218.194:8986/stream",
-    "Smooth Jazz Florida": "https://streaming.live365.com/a57422",
-    "Smooth Jazz Tepic MX": "https://playerservices.streamtheworld.com/api/livestream-redirect/ACIR22_S01AAC.aac",
+    "Smooth Jazz Florida": "https://das-edge62-live365-dal03.cdnstream.com/a57422",
+    "Smooth Jazz Tepic MX": "https://16643.live.streamtheworld.com:443/ACIR22_S01AAC.aac",
     "Smooth Jazz Tampa Bay": "http://server.webnetradio.net:5250/;",
-    "Smooth Jazz Worldwide": "https://stream.laut.fm/smoothjazzbuzz",
-    "Smooth Jazz 247": "https://streaming.live365.com/b75154_128mp3",
+    "Smooth Jazz 247": "https://ais-edge90-dal03.cdnstream.com/b75154_128mp3",
     "Smooth Jazz Deluxe CA": "https://cast1.torontocast.com:4490/;",
-    "SJazz Instrumental Peru": "https://stream.zeno.fm/00rt0rdm7k8uv",
-    "smoothjazz.com.pl": "https://bcast.vigormultimedia.com:48888/sjcompl64aac"
+    "SJazz Instrumental Per": "https://stream-287.surfernetwork.com/00rt0rdm7k8uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiIwMHJ0MHJkbTdrOHV2IiwiaG9zdCI6InN0cmVhbS0yODcuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJ0M3JNbXh1NVR5VzlwTDN1OXo5LWlnIiwiaWF0IjoxNzk1MTEyMDU5LCJleHAiOjE3OTUxMTIxMTl9.RG6dPFALiQJhhiYnqg_9IoU2kFRbb1VCRRqEWV6P8T0",
+    "smoothjazz.com.pl": "https://bcast.vigormultimedia.com:48888/sjcompl64aac",
+    "101 SMOOTH JAZZ": "http://jking.cdnstream1.com/b22139_128mp3",
+    "Antena 1 São Paulo, SP": "http://antena1.newradio.it/stream?ext=.mp3",
+    ".977 Smooth Jazz": "http://29319.live.streamtheworld.com/977_SMOOJAZZ_SC"
   }
 }

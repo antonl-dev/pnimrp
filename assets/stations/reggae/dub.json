@@ -1,0 +1,20 @@
+{
+  "stations": {
+    "ElectroDanceWorld Radi": "http://stream-178.surfernetwork.com/s70bvdgqks8uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJzNzBidmRncWtzOHV2IiwiaG9zdCI6InN0cmVhbS0xNzguc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJkRzFsbXFaUFFINlhBVTI0UnFuTjdBIiwiaWF0IjoxNzk1MTExNjcwLCJleHAiOjE3OTUxMTE3MzB9.CYG3JtXmSZrh_yXyOQu9zR11kvlKSuX11fyxk_m4V1M",
+    "PulseEDM Dance Music R": "http://pulseedm.cdnstream1.com:8124/1373_128",
+    "Minimal Mix Radio": "http://orion.shoutca.st:8750/",
+    "King Dub Radio": "http://london-dedicated.myautodj.com:8862/stream",
+    "Rastapuls Reggae Music": "http://radio.rastapuls.com:8000/rastapuls",
+    "Psyndora Chillout": "http://cast.magicstreams.gr:9125/stream",
+    "HouseTime.FM": "https://listener3.aachd.tb-group.fm:443/ht-hd.aac",
+    "radcap Dub Techno [2]": "http://79.120.39.202:8000/dubtechno",
+    "HardBase.FM": "http://listener1.mp3.tb-group.fm:80/hb.mp3",
+    "DnB&EDM": "https://edmdnb.com:448/radio/8000/radio.mp3",
+    "Reggae.fr": "https://listen.radioking.com/radio/50473/stream/87415",
+    "Anima Amoris Dub Techn": "http://amoris.sknt.ru/dubtechnomix.mp3",
+    "Best Of Techno": "http://best-of-techno.stream.laut.fm/best-of-techno?t302=2026-11-19_19-08-04&uuid=f04a12ca-300f-9d2a-a6f5-a967c1f23c4b",
+    "SomaFM Dub Step Beyond": "https://ice5.somafm.com/dubstep-128-mp3",
+    "dinamo.fm locodyno": "http://channels.dinamo.fm/locodyno-mp3",
+    "NEU RADIO": "https://nr9.newradio.it/proxy/ebaruffa?mp=/stream"
+  }
+}

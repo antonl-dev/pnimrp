@@ -1,0 +1,20 @@
+{
+  "stations": {
+    "181.fm Highway 181": "https://listen.181fm.com/181-highway_128k.mp3",
+    "1.FM - Classic Country": "http://strm112.1.fm/ccountry_mobile_mp3",
+    "Today's Hot Country": "http://ice.stream101.com:9016/stream",
+    "laut.fm Sound": "http://sound.stream.laut.fm/sound?t302=2026-11-19_19-09-33&uuid=67bf0bc8-cd00-734b-2827-f6d4a9136208",
+    "Best Net Radio - Count": "http://bigrradio.cdnstream1.com/5158_128?listenerid=43889c39c8ecf4f87725056b0d737597&cb=179032.mp3",
+    "The Outlaw": "http://ice24.securenetsystems.net/OUTLAW",
+    "Big R Radio - Country": "http://bigrradio.cdnstream1.com/5195_128",
+    "Music City Roadhouse": "http://das-edge93-live365-dal05.cdnstream.com/a73754",
+    "Allzic Radio Country": "http://allzic32.ice.infomaniak.ch/allzic32.mp3",
+    "Ocean Beach Radio": "http://ophanim.net:7130/;",
+    "Exclusively Dolly Part": "https://streaming.exclusive.radio/er/dollyparton/icecast.audio",
+    "Retro Country 890": "http://198.251.74.226:8050/radio.mp3",
+    "99.3 WCON My Country": "http://ice10.securenetsystems.net/WCON",
+    "KKXA \"KXA 1520\" & 101.": "http://www.ophanim.net:9410/stream",
+    "ER Willie Nelson": "http://streaming.exclusive.radio/er/willienelson/icecast.audio",
+    "CKDQ \"910 CFCW\"  Drumh": "http://newcap.leanstream.co/CKDQAM"
+  }
+}

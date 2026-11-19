@@ -1,10 +1,20 @@
 {
   "stations": {
-    "WBGO Jazz 88.3": "https://wbgo.streamguys1.com/wbgo128",
-    "Jazz24": "https://prod-54-162-2-81.amperwave.net/ppm-jazz24aac256-ibc1",
     "WWOZ 90.7 FM": "https://wwoz-sc.streamguys1.com/wwoz-hi.mp3",
-    "ABC Jazz (AUS)": "https://mediaserviceslive.akamaized.net/hls/live/2038319/abcjazz/masterhq.m3u8",
+    "ABC Jazz (AUS)": "https://streaming.abc-cdn.net.au/audio/hls/abcjazz.m3u8",
     "Jazz.FM91 (Canada)": "https://jazzfm91.streamb.live/SB00009",
-    "The Jazz Groove": "aac-64.streamthejazzgroove.com/"
+    "Classic Vinyl HD": "https://icecast.walmradio.com:8443/classic",
+    "101 SMOOTH JAZZ": "http://jking.cdnstream1.com/b22139_128mp3",
+    "Classic Vinyl HD Opus": "https://icecast.walmradio.com:8443/classic_opus",
+    "Anon.FM": "https://icecast.anon.fm/radio",
+    "SomaFM Secret Agent": "https://ice6.somafm.com/secretagent-128-mp3",
+    "Antena 1 São Paulo, SP": "http://antena1.newradio.it/stream?ext=.mp3",
+    "France Musique": "http://icecast.radiofrance.fr/francemusique-midfi.mp3",
+    ".977 Smooth Jazz": "http://29319.live.streamtheworld.com/977_SMOOJAZZ_SC",
+    "Jazz Lounge": "http://eu8.fastcast4u.com:5068/;",
+    "Jazz London Radio": "http://radio.canstream.co.uk:8075/live.mp3",
+    "FIP Jazz": "http://icecast.radiofrance.fr/fipjazz-hifi.aac",
+    "Jazz Radio Only Women": "http://jazz-wr16.ice.infomaniak.ch/jazz-wr16-128.mp3",
+    "101 SMOOTH JAZZ MELLOW": "http://ais-edge90-dal03.cdnstream.com/b48071_128mp3"
   }
 }

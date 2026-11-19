@@ -1,0 +1,20 @@
+{
+  "stations": {
+    "CZ Baroque": "http://streams.greenhost.nl:8080/barok",
+    "1.FM - Otto's Baroque": "http://strm112.1.fm/baroque_mobile_mp3",
+    "CZ Oude Muziek": "http://streams.greenhost.nl:8080/oudemuziek",
+    "Klassik Radio - Barock": "http://klassikr.streamabc.net/klassikr-barock-mp3-192-7751777?sABC=6nss3920%230%23p5549n47p4p5199r236op6r02281377q%23&aw_0_1st.playerid=&amsparams=playerid:;skey:1795111200",
+    "1.fm Otto's Baroque mu": "http://strm112.1.fm/baroque_mobile_aac",
+    "Calm Radio - Violin": "http://streams.calmradio.com:4528/stream",
+    "Exclusively Bee Gees": "https://streaming.exclusive.radio/er/beegees/icecast.audio",
+    "Sunday Baroque": "http://wshu.streamguys.org/wshu-baroque",
+    "Calm Radio - Flute": "http://streams.calmradio.com:4828/;",
+    "Klassikradio - Barock": "http://klassikr.streamabc.net/klassikr-barock-mp3-192-7751777?sABC=6nss3928%230%23p5549n47p4p5199r236op6r02281377q%23jjj.xynffvxenqvb.qr&aw_0_1st.playerid=www.klassikradio.de&amsparams=playerid:www.klassikradio.de;skey:1795111208",
+    "Calm Radio - Chamber M": "http://streams.calmradio.com:7528/stream",
+    "Calm Radio - Symphony": "http://streams.calmradio.com:1028/stream",
+    "R Art - J.S.Bach": "http://live.radioart.com/fBach.mp3",
+    "France Musique : La Ba": "http://icecast.radiofrance.fr/francemusiquebaroque-hifi.aac",
+    "Positively Baroque": "http://play.organlive.com:7002/128",
+    "R Art - Baroque": "http://air.radioart.com/fBaroque.mp3"
+  }
+}

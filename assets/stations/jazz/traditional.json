@@ -1,9 +1,9 @@
 {
   "stations": {
-    "PubDomain Cls Jazz": "relay.publicdomainradio.org/jazz_swing.mp3",
-    "WSKG Classic Jazz": "https://wskg.streamguys1.com/wskg-classic-jazz",
     "WKWF": "https://sh.fl-us.audio-stream.com/proxy/rconne02?mp=/stream",
-    "ClassicJazzCA": "https://c25.radioboss.fm:8176/stream",
-    "TraxxFM": "https://traxx014.ice.infomaniak.ch/traxx014-low.mp3 "
+    "TraxxFM": "https://traxx014.ice.infomaniak.ch/traxx014-low.mp3",
+    "radcap Dixieland": "http://79.120.39.202:8002/dixieland",
+    "Exclusively Louis Arms": "https://nl4.mystreaming.net/er/louisarmstrong/icecast.audio",
+    "Dixieland Oasis": "http://149.28.117.85/listen/dixieland_oasis_radio/radio.mp3"
   }
 }

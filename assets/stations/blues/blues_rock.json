@@ -1,0 +1,20 @@
+{
+  "stations": {
+    "# RdMix Classic Rock 7": "https://cast1.torontocast.com:4610/stream",
+    "70 80 90 Vibrazioni Ro": "https://maggie.torontocast.com:2020/stream/vibrazionirockradio",
+    "JR Radio": "https://stream-175.surfernetwork.com/pdkt234k698uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJwZGt0MjM0azY5OHV2IiwiaG9zdCI6InN0cmVhbS0xNzUuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJMSHV5UGxKSlRSZTh2NjYxOXMtYkRRIiwiaWF0IjoxNzk1MTEyMTcyLCJleHAiOjE3OTUxMTIyMzJ9.BRcCcLbd6w3oy-_t3FM_PB9yGzrHLZ6s988NJC1f6Fg",
+    "Virgin Radio Rockstar": "https://icy.unitedradio.it/VirginSpecialEvent.mp3",
+    "Gritty Rock Radio": "https://listen.radioking.com/radio/10713/stream/224413",
+    "Alive - Live Music Rad": "http://alive.stream.laut.fm/alive?uuid=0b8b1e41-2a5c-45e0-3ac9-8ad336613186&t302=2026-11-19_18-58-44",
+    "Pinguin Blues": "http://18213.live.streamtheworld.com/SP_R2406394_SC",
+    "Exclusively Dire Strai": "https://2.mystreaming.net/er/direstraits/icecast.audio",
+    "DrGnu - Prog Rock Clas": "http://regiocast.streamabc.net/regc-radiobobprogrock1964104-mp3-192-1423777?sABC=6nss38q8%230%23p5549n47p4p5199r236op6r02281377q%23zrqvncynlre&aw_0_1st.playerid=mediaplayer&amsparams=playerid:mediaplayer;skey:1795111128",
+    "Exclusively Fleetwood": "https://streaming.exclusive.radio/er/fleetwoodmac/icecast.audio",
+    "Exclusively Santana": "https://streaming.exclusive.radio/er/santana/icecast.audio",
+    "R Eure du Blues": "http://euredublues.ddns.net:8000/euredublues.ogg",
+    "OUI FM BLUES'N'ROCK": "https://ouifmbluesnrock.ice.infomaniak.ch/ouifmbluesnrock-128.mp3",
+    "Music City Roadhouse": "http://das-edge93-live365-dal05.cdnstream.com/a73754",
+    "#joint radio Blues Roc": "https://betelgeuse.nucast.co.uk/stream/jrn-blues",
+    "Ocean Beach Radio": "http://ophanim.net:7130/;"
+  }
+}

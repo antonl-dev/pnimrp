@@ -1,11 +1,20 @@
 {
   "stations": {
     "181.fm Fusion Jazz": "https://listen.181fm.com/181-fusionjazz_128k.mp3",
-    "181.fm Fusion Jazz -data": "https://listen.181fm.com/181-fusionjazz_64k.aac",
-    "Dons Art DE": "https://stream.laut.fm/donsart",
+    "181.fm Fusion Jazz -da": "https://listen.181fm.com/181-fusionjazz_64k.aac",
+    "Dons Art DE": "https://donsart.stream.laut.fm/donsart?uuid=315a6bf4-728b-311b-2b9a-642442b368ec&t302=2026-11-19_18-51-38",
     "Jazz Radio Jazz Fusion": "https://jazz-radio-fusion.ice.infomaniak.ch/jazz-radio-fusion.mp3",
-    "Radio Art Fusion GR": "https://live.radioart.com/fFusion.mp3",
+    "R Art Fusion GR": "https://live.radioart.com/fFusion.mp3",
     "radcap Jazz Fusion": "http://79.111.119.111:8002/jazzfusion",
-    "Fusion Jazz Alpes FR": "https://jazz-radio-fusion.ice.infomaniak.ch/jazz-radio-fusion.mp3"
+    "Fusion Jazz Alpes FR": "https://jazz-radio-fusion.ice.infomaniak.ch/jazz-radio-fusion.mp3",
+    "4Drive Jazz": "http://radio.streemlion.com:1150/stream",
+    "RMC Nights Story": "http://edge.radiomontecarlo.net/rmcweb012",
+    "EROTICA LOUNGE": "https://stream-281.surfernetwork.com/89asra0sfa0uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiI4OWFzcmEwc2ZhMHV2IiwiaG9zdCI6InN0cmVhbS0yODEuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJna01aNkhKMFI5cTRvbVJhMjNxOTlRIiwiaWF0IjoxNzk1MTEyMDE0LCJleHAiOjE3OTUxMTIwNzR9.j46sNVit5SOwfNbSAShgj2wy6eYmbfTUR7XuJ0_q-R4",
+    "100% ACID JAZZ": "https://mpc1.mediacp.eu:8356/stream",
+    "Suite Jazz Radio": "https://jenny.torontocast.com:2000/stream/suitejazzradio",
+    "Exclusively Santana": "https://streaming.exclusive.radio/er/santana/icecast.audio",
+    "SMOOTH JAZZ DELUXE": "https://cast1.torontocast.com:4490/;?type=http&nocache=1745925758",
+    "The Jazz Groove (East)": "http://audio-edge-kk8xx.blr.d.radiomast.io/8a384ff3-6fd1-4e5d-b47d-0cbefeffe8d7",
+    "Just Music Radio": "https://radiostream.neotel.mk/justmusicradio"
   }
 }

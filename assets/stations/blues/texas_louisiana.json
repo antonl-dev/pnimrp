@@ -1,0 +1,15 @@
+{
+  "stations": {
+    "Louisiana/Swamp/New Or": "http://213.141.131.10:8004/louisianablues",
+    "Texas Blues - Radio Ca": "http://79.111.14.76:8004/texasblues",
+    "Texas Rebel Radio": "https://ice41.securenetsystems.net/KNAF?playSessionID=6CC4A665-B891-1B7E-1922BD6BD5D4109F",
+    "Zydeco / Cajun / Creol": "http://213.141.131.10:8002/zydeco",
+    "radcap Texas Blues": "http://79.111.14.76:8002/texasblues",
+    "Texas Blues": "http://79.111.14.76:8000/texasblues",
+    "KSLO 105.3 The Home Of": "https://ice6.securenetsystems.net/KSLO",
+    "KKYL 94.3 \"Kyle Radio\"": "https://ice26.securenetsystems.net/KKYL",
+    "WKSH-LP 97.7 \"Da Heat\"": "https://listen.radioking.com/radio/706364/stream/771806",
+    "KPPM 93.5 Lake Charles": "https://ice3.securenetsystems.net/KPPM",
+    "WNOG 104.1 New Orleans": "https://wnog1041.com/proxywnog.php"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "stations": {
+    "Klassik Radio - Opera": "http://klassikr.streamabc.net/klr-opera-mp3-128-2609490?sABC=6nss3963%230%23p5549n47p4p5199r236op6r02281377q%23jjj.xynffvxenqvb.qr&aw_0_1st.playerid=www.klassikradio.de&amsparams=playerid:www.klassikradio.de;skey:1795111267",
+    "1.FM - Otto's Opera Ho": "http://strm112.1.fm/opera_mobile_mp3",
+    "WQXR New York Public R": "http://opera-stream.wqxr.org/operavore-tunein",
+    "DrGnu - Symphonic Meta": "http://regiocast.streamabc.net/regc-radiobobsymphmetal4646931-mp3-192-2318934?sABC=6nss3967%230%23p5549n47p4p5199r236op6r02281377q%23zrqvncynlre&aw_0_1st.playerid=mediaplayer&amsparams=playerid:mediaplayer;skey:1795111271",
+    "radcap Opera": "http://79.120.39.202:8000/opera",
+    "France Musique Opéra": "https://icecast.radiofrance.fr/francemusiqueopera-hifi.aac",
+    "Classicnl Opera": "https://stream.classic.nl/classicnl-opera.mp3",
+    "WNYC Operavore": "http://opera-stream.wqxr.org/operavore.aac",
+    "Klassik Radio - Pure V": "http://klassikr.streamabc.net/klr-opera-mp3-128-2609490?sABC=6nss3970%230%23p5549n47p4p5199r236op6r02281377q%23&aw_0_1st.playerid=&amsparams=playerid:;skey:1795111280",
+    "BBC Radio 3": "http://as-hls-ww-live.akamaized.net/pool_23461179/live/ww/bbc_radio_three/bbc_radio_three.isml/bbc_radio_three-audio=320000.norewind.m3u8",
+    "Classical Radio - Verd": "https://drive.uber.radio/uber/crverdi/icecast.audio",
+    "OperaRadio-MRG.Fm": "http://listen.mrg.fm:8110/;",
+    "听·越剧": "https://lhttp.qtfm.cn/live/20500178/64k.mp3",
+    "上海戏剧曲艺广播": "https://lhttp.qingting.fm/live/269/64k.mp3",
+    "苏州戏曲广播": "http://lhttp.qingting.fm/live/20211622/64k.mp3",
+    "naxi radio - classical": "http://naxidigital-classic128.streaming.rs:8030/;stream.nsv"
+  }
+}

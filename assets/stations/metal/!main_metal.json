@@ -1,0 +1,20 @@
+{
+  "stations": {
+    "Idobi Howl": "https://idobi-live-a.cdnstream1.com/10724_128.mp3?/",
+    "STAR FM From Hell": "https://starfm.streamabc.net/30-fromhell-mp3-192-7408486",
+    "Aardschok": "https://streams.pinguinradio.com/Aardschok192.mp3",
+    "Big R Radio": "https://bigrradio.cdnstream1.com/5186_128",
+    "Braingell Radio": "https://s6.reliastream.com/proxy/braingel?mp=/stream",
+    "Metal Express Radio": "http://s39.myradiostream.com:11590/listen.m4a",
+    "Doom Metal Front Radio": "http://79.120.77.11:8002/blackdoom",
+    "Big R Radio - 80s Meta": "http://bigrradio.cdnstream1.com/5186_128",
+    "Hard Rock Heaven": "http://hydra.cdnstream.com/1521_128",
+    "La Grosse Radio Métal": "http://hd.lagrosseradio.info/lagrosseradio-metal-192.mp3",
+    "ChroniX Radio Metalcor": "http://usa17.fastcast4u.com:5508/stream",
+    "Best Of Rock.FM Altern": "https://radio21.streamabc.net/radio21-alternativerock-mp3-256-9941142?sABC=6nss3n62%230%23p5549n47p4p5199r236op6r02281377q%23orfgbsebpx.sz&aw_0_1st.playerid=bestofrock.fm&amsparams=playerid:bestofrock.fm;skey:1795111522",
+    "metal rock radio": "https://kathy.torontocast.com:2800/;",
+    "1.FM - High Voltage Ra": "http://strm112.1.fm/highvoltage_mobile_mp3",
+    "SomaFM Metal Detector": "https://ice5.somafm.com/metal-128-aac",
+    "Exclusively Iron Maide": "https://streaming.exclusive.radio/er/ironmaiden/icecast.audio"
+  }
+}

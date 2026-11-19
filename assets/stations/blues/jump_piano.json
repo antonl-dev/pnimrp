@@ -1,0 +1,16 @@
+{
+  "stations": {
+    "Jump Blues - Caprice R": "http://213.141.131.10:8000/jumpblues",
+    "Too Much Too Soon Radi": "http://das-edge93-live365-dal05.cdnstream.com/a15209",
+    "MixStream Radio - Boog": "https://radio.mixstream.nl/boogie.mp3",
+    "Rockin' Rhythm & Blues": "http://s6.voscast.com:11632/live",
+    "70s 80s Disco Funk Mod": "https://discofunk.streamingmedia.it/usa",
+    "70 80 Disco Funk Moder": "https://discofunk.streamingmedia.it/play",
+    "radcap Piano Blues / B": "http://79.111.14.76:8002/pianoblues",
+    "70s 80s DiscoFunk Mode": "http://my.streamingmedia.it:8020/play",
+    "Americana Boogie Radio": "http://us2.internet-radio.com:8416/",
+    "R Boogie Woogie": "http://radioboogie-woogie.stream.laut.fm/radio_boogie-woogie?t302=2026-11-19_19-16-42&uuid=ac53d2f9-a078-c95d-a2a2-8e8acc4d5742",
+    "dubplate.fm Urban Boog": "https://sc2.dubplate.fm/radio/8010/urbanboogie/uhifi",
+    "CLASSIC HITS RADIO 70": "https://radiopanther.radiolebowski.com/play"
+  }
+}

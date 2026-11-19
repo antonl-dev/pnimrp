@@ -1,0 +1,13 @@
+{
+  "stations": {
+    "laut.fm Sound": "http://sound.stream.laut.fm/sound?uuid=6ef61a66-73f1-acbc-5552-8643d85b5668&t302=2026-11-19_18-58-13",
+    "Country/folk blues - R": "http://79.120.77.11:8004/countryblues",
+    "A MISSISSIPPI BLUES": "https://cast1.torontocast.com:4450/;?type=http&nocache=1745625391",
+    "R Eure du Blues": "http://euredublues.ddns.net:8000/euredublues.ogg",
+    "#joint radio Blues Roc": "https://betelgeuse.nucast.co.uk/stream/jrn-blues",
+    "Ocean Beach Radio": "http://ophanim.net:7130/;",
+    "BluesRadio (MRG.fm)": "http://listen.mrg.fm:8188/stream",
+    "Exclusively Muddy Wate": "https://2.mystreaming.net/er/muddywaters/icecast.audio",
+    "Classic Country": "http://das-edge27-sa23-lax02.cdnstream.com/1071_64"
+  }
+}

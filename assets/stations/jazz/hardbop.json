@@ -1,0 +1,11 @@
+{
+  "stations": {
+    "radcap Hard Bop": "http://79.111.14.76:8002/hardbop",
+    "CZ Hard Bop": "http://streams.greenhost.nl:8080/hardbop",
+    "radcap Hard Bob": "http://79.111.14.76:8000/hardbop",
+    "Adroit Jazz Undergroun": "https://icecast.walmradio.com:8443/jazz",
+    "Exclusively Herbie Han": "https://2.mystreaming.net/er/herbiehancock/icecast.audio",
+    "Exclusively Ella Fitzg": "https://2.mystreaming.net/er/ellafitzgerald/icecast.audio",
+    "laut.fm jradio": "http://jradio.stream.laut.fm/jradio?uuid=f2c4cbbb-e820-0d25-ef0b-f0e932911870&t302=2026-11-19_18-51-09"
+  }
+}
