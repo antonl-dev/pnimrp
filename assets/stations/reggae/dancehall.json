@@ -1,20 +1,14 @@
 {
   "stations": {
-    "R Huancayo": "https://cloud9.ldwebstudios.net:7000/;",
-    "PONdENDS.COM": "http://s7.voscast.com:7000/",
-    "Rastapuls Reggae Music": "http://radio.rastapuls.com:8000/rastapuls",
-    "Urbano 106 - 105.9 FM": "https://usa18.fastcast4u.com/proxy/rmoohhrw?mp=/1",
-    "ghetto vibes radio": "https://listen.radioking.com/radio/499417/stream/556609",
-    "UbuntuFM": "https://streaming.coollective.nl:8443/UbuntuFM",
-    "LABR Love a Brother Ra": "http://23.81.33.82:24914/stream",
-    "Nam Radio Local": "https://music-station.live/radio/8010/radio.mp3",
-    "Zip FM 103 FM": "https://stream-286.surfernetwork.com/c0ytcn43vxquv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJjMHl0Y240M3Z4cXV2IiwiaG9zdCI6InN0cmVhbS0yODYuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJnTE9sbndwTVMyeWdVLXFmUEtMbnpnIiwiaWF0IjoxNzk1MjAzOTE2LCJleHAiOjE3OTUyMDM5NzZ9.VoEp43bqNjCpZShvdrdDzz6kZAJbAcQ6_N4JYiTzanY",
-    "- 0 N - Reggae on Radi": "https://0n-reggae.radionetz.de/0n-reggae.aac",
-    "Cavo Paradiso": "http://s5.onweb.gr:8488/",
-    "Galaxy FM 100.2 FM ZZi": "https://stream-285.surfernetwork.com/ahtmyttw5mftv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJhaHRteXR0dzVtZnR2IiwiaG9zdCI6InN0cmVhbS0yODUuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJGYkxUOS1KZFFHeWFPa0F5RUtZd3p3IiwiaWF0IjoxNzk1MjAzOTE2LCJleHAiOjE3OTUyMDM5NzZ9.h6CW12GEL7CaATb5NNK1hw9hRn88ggj5Ht2Pk6aLH0s",
-    "Caribbean Power Jam Ra": "http://auds1.intacs.com/caribbeanpowerjamradio",
-    "WAVE RADIO 89.8 Hosseg": "https://s34.myradiostream.com/:12340/listen.mp3?nocache=1795203916",
     "🕺 Générations Dancehal": "https://generations-dancehall.ice.infomaniak.ch/generations-dancehall.aac",
-    "Fly Foot Selecta": "https://manager5.streamradio.fr:1185/stream"
+    "PONdENDS.COM": "http://s7.voscast.com:7000/",
+    "ghetto vibes radio": "https://listen.radioking.com/radio/499417/stream/556609",
+    "Rastapuls Reggae Music": "http://radio.rastapuls.com:8000/rastapuls",
+    "Jahfari": "http://jahfari.stream.laut.fm/jahfari",
+    "- 0 N - Reggae on Radi": "https://0n-reggae.radionetz.de/0n-reggae.aac",
+    "Caribbean Power Jam Ra": "http://auds1.intacs.com/caribbeanpowerjamradio",
+    "LABR Love a Brother Ra": "http://23.81.33.82:24914/stream",
+    "Fly Foot Selecta": "https://manager5.streamradio.fr:1185/stream",
+    "Zip FM 103 FM": "https://stream-286.surfernetwork.com/c0ytcn43vxquv"
   }
 }

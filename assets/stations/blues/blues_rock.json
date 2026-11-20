@@ -1,38 +1,20 @@
 {
   "stations": {
-    "# RdMix Classic Rock 7": "https://cast1.torontocast.com:4610/stream",
-    "70 80 90 Vibrazioni Ro": "https://maggie.torontocast.com:2020/stream/vibrazionirockradio",
-    "JR Radio": "http://stream-175.surfernetwork.com/pdkt234k698uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJwZGt0MjM0azY5OHV2IiwiaG9zdCI6InN0cmVhbS0xNzUuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJJUDZFUXQxQ1RCaVZDTjVzaDZuamNnIiwiaWF0IjoxNzk1MjAzODAyLCJleHAiOjE3OTUyMDM4NjJ9.jfwJ8Wwee6H4n70ySHE9JsypOwA-h05lvpr-lSsJPfY",
-    "Virgin Radio Rockstar": "http://icy.unitedradio.it/um1028.mp3",
-    "Gritty Rock Radio": "https://listen.radioking.com/radio/10713/stream/21674",
-    "Alive - Live Music Rad": "http://alive.stream.laut.fm/alive?t302=2026-11-20_20-43-21&uuid=e2d4e8db-6f03-1197-8533-16fffbf1bb16",
-    "Pinguin Blues": "http://18303.live.streamtheworld.com/SP_R2406394_SC",
-    "Exclusively Dire Strai": "https://streaming.exclusive.radio/er/rorygallagher/icecast.audio",
-    "DrGnu - Prog Rock Clas": "http://regiocast.streamabc.net/regc-radiobobprogrock1964104-mp3-192-1423777?sABC=6nss38q8%230%23p5549n47p4p5199r236op6r02281377q%23zrqvncynlre&aw_0_1st.playerid=mediaplayer&amsparams=playerid:mediaplayer;skey:1795111128",
-    "R Eure du Blues": "http://euredublues.ddns.net:8000/euredublues.ogg",
     "OUI FM BLUES'N'ROCK": "https://ouifmbluesnrock.ice.infomaniak.ch/ouifmbluesnrock-128.mp3",
-    "Music City Roadhouse": "http://das-edge93-live365-dal05.cdnstream.com/a73754",
+    "Ella Radio - Blues Roc": "https://ella.stream46.radiohost.de/ella-blues-rock_mp3-192?ref=radio-browser",
+    "Exclusively Rory Galla": "https://streaming.exclusive.radio/er/rorygallagher/icecast.audio",
+    "Exclusively Allman Bro": "https://streaming.exclusive.radio/er/allmanbrothers/icecast.audio",
+    "Exclusively Eric Clapt": "https://streaming.exclusive.radio/er/ericclapton/icecast.audio",
+    "Exclusively Stevie Ray": "https://streaming.exclusive.radio/er/stevierayvaughan/icecast.audio",
+    "Exclusively Dire Strai": "https://streaming.exclusive.radio/er/direstraits/icecast.audio",
     "#joint radio Blues Roc": "https://betelgeuse.nucast.co.uk/stream/jrn-blues",
-    "Ocean Beach Radio": "http://ophanim.net:7130/;",
-    "ROCK ANTENNE BLUES ROC": "https://s1-webradio.rockantenne.de/hair-metal/stream/mp3",
-    "R 100,7": "http://100komma7.stream38.radiohost.de/100komma7-100komma7_mp3-128?addradio&agend=true&upd-meta=1&upd-scheme=http&_art=dD0xNzk1MjA0MTA0JmQ9YzA5M2E0YmEzZDQ2MDdmMzM2YmY",
-    "Totally Radio - Rock": {
-      "default": "http://28863.live.streamtheworld.com:80/T_RAD_ROCK_S01.mp3",
-      "streams": [
-        {
-          "url": "http://28863.live.streamtheworld.com:80/T_RAD_ROCK_S01.mp3",
-          "bitrate": 128
-        },
-        {
-          "url": "http://23163.live.streamtheworld.com:80/T_RAD_ROCK_S01AAC.aac",
-          "bitrate": 64
-        }
-      ]
-    },
     "BluesRadio (MRG.fm)": "http://listen.mrg.fm:8188/stream",
-    "Ella Radio - Blues Roc": "https://ella.stream44.radiohost.de/ella-blues-rock_mp3-192?ref=radio-browser&upd-meta=1&upd-scheme=https&_art=dD0xNzk1MjA0MTA1JmQ9ZjUwNDU4YTk4NjM4MjVkNmUzMjE",
-    "laut.fm Soundmania": "http://soundmania.stream.laut.fm/soundmania?uuid=0ec9f3cf-bf38-274a-bc53-82d65d7a6831&t302=2026-11-20_20-43-24",
+    "R Eure du Blues": "http://euredublues.ddns.net:8000/euredublues.ogg",
+    "Gritty Rock Radio": "https://listen.radioking.com/radio/10713/stream/224413",
+    "Pinguin Blues": "http://18303.live.streamtheworld.com/SP_R2406394_SC",
     "Dixie Rebel": "https://servidor36.brlogic.com:8572/live",
-    "[laut.fm] Freakquency": "http://freakquency.stream.laut.fm/freakquency"
+    "laut.fm Soundmania": "http://soundmania.stream.laut.fm/soundmania",
+    "Ocean Beach Radio": "http://ophanim.net:7130/;",
+    "radcap Blues Rock": "http://79.120.39.202:8000/bluesrock"
   }
 }

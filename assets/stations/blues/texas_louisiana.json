@@ -9,6 +9,8 @@
     "KSLO 105.3 The Home Of": "https://ice6.securenetsystems.net/KSLO",
     "KNHS 93.1 Lafayette, L": "https://ice42.securenetsystems.net:80/VIKINGS",
     "KPPM 93.5 Lake Charles": "https://ice3.securenetsystems.net/KPPM",
-    "WNOG 104.1 New Orleans": "https://wnog1041.com/proxywnog.php"
+    "WNOG 104.1 New Orleans": "https://wnog1041.com/proxywnog.php",
+    "radcap Texas Blues": "http://79.111.14.76:8002/texasblues",
+    "Texas Blues": "http://79.111.14.76:8000/texasblues"
   }
 }

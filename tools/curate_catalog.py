@@ -148,6 +148,99 @@ GENERIC_SLUGS = {
     "stream", "live", "radio", "listen", "autodj", "broadcast", "1", "2", "3", "audio", "online", "main", "hq"
 }
 
+GENRE_NEGATIVE_TAGS: Dict[str, List[str]] = {
+    "blues_rock": [
+        "death metal", "prog rock", "progressive rock", "metalcore", "hair metal",
+        "edm", "techno", "house", "trance", "hip hop", "rap", "eurodance",
+        "talk", "news", "luxembourg", "disco", "pop rock", "italiana"
+    ],
+    "dancehall": [
+        "techno", "trance", "house", "edm", "hypertechno", "eurodance",
+        "ambient", "charts", "mashup", "deep house", "heavy metal", "rock",
+        "classical", "talk", "news", "peru", "huancayo", "surf"
+    ],
+    "ambient_drone": [
+        "hard rock", "metal", "techno", "trance", "edm", "hip hop", "dance",
+        "pop rock", "punk", "talk", "news"
+    ],
+    "dub": [
+        "dubstep", "house", "techno", "trance", "pop", "rock", "metal",
+        "hair metal", "talk"
+    ],
+    "roots": [
+        "techno", "house", "edm", "pop", "metal", "talk", "news"
+    ],
+    "death_black": [
+        "pop", "dance", "edm", "hip hop", "r&b", "country", "reggae", "disco", "talk"
+    ],
+    "thrash_speed": [
+        "pop", "dance", "edm", "hip hop", "r&b", "country", "reggae", "disco", "talk"
+    ],
+    "doom_sludge": [
+        "pop", "dance", "edm", "hip hop", "r&b", "country", "synthwave", "disco"
+    ],
+    "delta_acoustic": [
+        "heavy metal", "hard rock", "techno", "edm", "dance", "synth", "pop"
+    ],
+    "chicago_electric": [
+        "death metal", "techno", "edm", "dance", "pop", "talk"
+    ]
+}
+
+def score_purity(item: Dict, target_keywords: List[str], genre_key: str = "") -> float:
+    name = (item.get("name") or "").lower()
+    raw_tags = (item.get("tags") or "").lower()
+    tags = [t.strip() for t in raw_tags.split(",") if t.strip()]
+    votes = item.get("votes", 0)
+    country = (item.get("countrycode") or "").upper()
+    
+    # Negative tags check
+    negs = GENRE_NEGATIVE_TAGS.get(genre_key, [])
+    for neg in negs:
+        if neg in tags or neg in name:
+            return -999.0
+            
+    # Tag spam check (> 20 tags is tag soup spammer)
+    if len(tags) > 20:
+        return -500.0
+        
+    score = 0.0
+    
+    # 1. Name match bonus (very strong signal)
+    for kw in target_keywords:
+        if kw in name:
+            score += 60.0
+            break
+            
+    # 2. Tag position bonus
+    if tags:
+        for kw in target_keywords:
+            if kw == tags[0]:
+                score += 40.0
+                break
+            elif len(tags) > 1 and kw == tags[1]:
+                score += 25.0
+                break
+            elif kw in tags:
+                score += 15.0
+                break
+                
+    # 3. RadCap format-strict bonus
+    if name.startswith("radcap ") or name.startswith("radio caprice"):
+        score += 50.0
+        
+    # 4. Regional authenticity (e.g. Jamaica for dancehall)
+    if genre_key == "dancehall" and country == "JM":
+        score += 25.0
+        
+    # 5. Tag count penalty (stations with > 10 tags get penalized for dilution)
+    if len(tags) > 10:
+        score -= (len(tags) - 10) * 3.0
+        
+    # 6. Capped vote bonus (votes only act as tie-breakers between pure stations)
+    score += min(votes, 50) * 0.2
+    return score
+
 def extract_mountpoint(url: str) -> str:
     path = url.split("?")[0].rstrip("/")
     seg = path.split("/")[-1]
@@ -175,7 +268,8 @@ def curate_category(
     existing_stations: Optional[Dict[str, Any]],
     queries: List[Dict[str, str]],
     target_count: int = 16,
-    max_count: int = 22
+    max_count: int = 22,
+    subgenre_key: str = ""
 ) -> Dict[str, Any]:
     station_streams: Dict[str, List[Dict[str, Any]]] = {}
     key_to_name: Dict[str, str] = {}
@@ -188,6 +282,10 @@ def curate_category(
         for name, val in existing_stations.items():
             if any(bad in name.lower() for bad in EXCLUDE_NAME_KEYWORDS):
                 continue
+            if subgenre_key and subgenre_key in GENRE_NEGATIVE_TAGS:
+                negs = GENRE_NEGATIVE_TAGS[subgenre_key]
+                if any(neg in name.lower() for neg in negs):
+                    continue
             clean_n = clean_station_name(name)
             match_k = get_station_match_key(clean_n)
             
@@ -286,9 +384,19 @@ def curate_category(
 
     # 2. Query Radio-Browser to discover additional bitrates and new stations
     if queries:
+        target_keywords = set()
+        for q in queries:
+            if "tag" in q:
+                target_keywords.add(q["tag"].lower())
+            if "name" in q:
+                target_keywords.add(q["name"].lower())
+        if subgenre_key:
+            target_keywords.add(subgenre_key.replace("_", " "))
+        target_keywords_list = list(target_keywords)
+
         candidates = []
         for q in queries:
-            res = query_radio_browser(q, limit=50)
+            res = query_radio_browser(q, limit=60)
             for item in res:
                 url = item.get("url_resolved") or item.get("url")
                 if not url or url.lower() in seen_urls:
@@ -296,16 +404,19 @@ def curate_category(
                 name = item.get("name", "").strip()
                 if any(bad in name.lower() for bad in EXCLUDE_NAME_KEYWORDS):
                     continue
+                purity = score_purity(item, target_keywords_list, subgenre_key)
+                if purity <= 0:
+                    continue
                 votes = item.get("votes", 0)
                 bitrate = item.get("bitrate", 0)
                 codec = (item.get("codec") or "").lower()
                 region = (item.get("countrycode") or "").upper()
-                candidates.append((votes, bitrate, name, url, codec, region))
+                candidates.append((purity, votes, bitrate, name, url, codec, region))
 
         candidates.sort(key=lambda x: (x[0], x[1]), reverse=True)
         
         to_check = []
-        for votes, bitrate, raw_name, url, codec, region in candidates:
+        for purity, votes, bitrate, raw_name, url, codec, region in candidates:
             if url.lower() in seen_urls:
                 continue
             clean_n = clean_station_name(raw_name)
@@ -1115,8 +1226,9 @@ def run_genre(genre_key: str, stations_dir: str):
     for filename, queries in spec["files"].items():
         file_path = os.path.join(target_dir, filename)
         src_stations = load_json(file_path)
-        print(f"  * Curating {genre_key}/{filename} ...")
-        stations = curate_category(src_stations, queries, target_count=16, max_count=22)
+        sub_key = filename.replace(".json", "").lstrip("!")
+        print(f"  * Curating {genre_key}/{filename} (purity: {sub_key}) ...")
+        stations = curate_category(src_stations, queries, target_count=16, max_count=22, subgenre_key=sub_key)
         save_json(file_path, stations)
 
 def audit_catalog(stations_dir: str) -> bool:
