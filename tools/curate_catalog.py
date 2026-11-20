@@ -22,6 +22,7 @@ import sys
 import time
 import socket
 from typing import Dict, List, Tuple, Optional
+from concurrent.futures import ThreadPoolExecutor
 
 MIRRORS = [
     "https://de1.api.radio-browser.info",
@@ -132,46 +133,77 @@ def curate_category(
     stations: Dict[str, str] = {}
     seen_urls = set()
     
+    # 1. Parallel preflight of existing stations
     if existing_stations:
+        valid_items = []
         for name, url in existing_stations.items():
             if any(bad in name.lower() for bad in EXCLUDE_NAME_KEYWORDS):
                 continue
             clean_n = clean_station_name(name)
-            ok, final_url = verify_stream(url, timeout=3.5)
-            if ok:
-                stations[clean_n] = final_url or url
-                seen_urls.add((final_url or url).lower())
-
-    candidates = []
-    for q in queries:
-        res = query_radio_browser(q, limit=40)
-        for item in res:
-            url = item.get("url_resolved") or item.get("url")
-            if not url or url.lower() in seen_urls:
-                continue
-            name = item.get("name", "").strip()
-            if any(bad in name.lower() for bad in EXCLUDE_NAME_KEYWORDS):
-                continue
-            votes = item.get("votes", 0)
-            bitrate = item.get("bitrate", 0)
-            candidates.append((votes, bitrate, name, url))
-
-    candidates.sort(key=lambda x: (x[0], x[1]), reverse=True)
-    
-    for votes, bitrate, raw_name, url in candidates:
-        if len(stations) >= target_count:
-            break
-        if url.lower() in seen_urls:
-            continue
+            valid_items.append((clean_n, url))
             
-        clean_n = clean_station_name(raw_name)
-        if clean_n in stations:
-            continue
-            
-        ok, final_url = verify_stream(url, timeout=3.5)
-        if ok:
-            stations[clean_n] = final_url or url
-            seen_urls.add((final_url or url).lower())
+        with ThreadPoolExecutor(max_workers=8) as executor:
+            futures = [
+                (clean_n, url, executor.submit(verify_stream, url, 3.5))
+                for clean_n, url in valid_items
+            ]
+            for clean_n, url, fut in futures:
+                try:
+                    ok, final_url = fut.result()
+                    if ok:
+                        u = final_url or url
+                        if u.lower() not in seen_urls and clean_n not in stations:
+                            stations[clean_n] = u
+                            seen_urls.add(u.lower())
+                except Exception:
+                    pass
+
+    # 2. Only fetch from Radio-Browser if more stations needed
+    if len(stations) < target_count and queries:
+        candidates = []
+        for q in queries:
+            res = query_radio_browser(q, limit=40)
+            for item in res:
+                url = item.get("url_resolved") or item.get("url")
+                if not url or url.lower() in seen_urls:
+                    continue
+                name = item.get("name", "").strip()
+                if any(bad in name.lower() for bad in EXCLUDE_NAME_KEYWORDS):
+                    continue
+                votes = item.get("votes", 0)
+                bitrate = item.get("bitrate", 0)
+                candidates.append((votes, bitrate, name, url))
+
+        candidates.sort(key=lambda x: (x[0], x[1]), reverse=True)
+        
+        to_check = []
+        for votes, bitrate, raw_name, url in candidates:
+            if url.lower() in seen_urls:
+                continue
+            clean_n = clean_station_name(raw_name)
+            if clean_n in stations:
+                continue
+            to_check.append((clean_n, url))
+            if len(to_check) >= (target_count - len(stations)) * 2:
+                break
+                
+        with ThreadPoolExecutor(max_workers=8) as executor:
+            cand_futures = [
+                (clean_n, url, executor.submit(verify_stream, url, 3.5))
+                for clean_n, url in to_check
+            ]
+            for clean_n, url, fut in cand_futures:
+                if len(stations) >= target_count:
+                    break
+                try:
+                    ok, final_url = fut.result()
+                    if ok:
+                        u = final_url or url
+                        if u.lower() not in seen_urls and clean_n not in stations:
+                            stations[clean_n] = u
+                            seen_urls.add(u.lower())
+                except Exception:
+                    pass
             
     if len(stations) > max_count:
         stations = dict(list(stations.items())[:max_count])
