@@ -27,6 +27,36 @@
     "80s Forever - We Keep": "https://premium.shoutcastsolutions.com/radio/8050/256.mp3",
     "Easy FM 972": "https://n02.radiojar.com/cthtwxk5yvduv.mp3?rj-ttl=5&rj-tok=AAABofp8jKoAWcSr0dgLFh3utQ",
     "R ROKS New Rock": "https://online.radioroks.ua/RadioROKS_NewRock_HD",
-    "The Independent FM": "https://listen.radioking.com/radio/293701/stream/340084"
+    "The Independent FM": "https://listen.radioking.com/radio/293701/stream/340084",
+    "Radio Paradise Rock": {
+      "default": "https://stream.radioparadise.com/rock-flac",
+      "streams": [
+        {
+          "url": "https://stream.radioparadise.com/rock-flac",
+          "bitrate": 999
+        },
+        {
+          "url": "https://stream.radioparadise.com/rock-320",
+          "bitrate": 320
+        },
+        {
+          "url": "https://stream.radioparadise.com/rock-mp3-128",
+          "bitrate": 128
+        }
+      ]
+    },
+    "FIP Rock": {
+      "default": "https://icecast.radiofrance.fr/fiprock-hifi.aac",
+      "streams": [
+        {
+          "url": "https://icecast.radiofrance.fr/fiprock-hifi.aac",
+          "bitrate": 192
+        },
+        {
+          "url": "https://icecast.radiofrance.fr/fiprock-midfi.mp3",
+          "bitrate": 128
+        }
+      ]
+    }
   }
 }

@@ -26,6 +26,19 @@
     "ElectroDanceWorld Radi": "http://stream-178.surfernetwork.com/s70bvdgqks8uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJzNzBidmRncWtzOHV2IiwiaG9zdCI6InN0cmVhbS0xNzguc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJEeWZTYWZ2S1NzZUJxMlo2X0F1em13IiwiaWF0IjoxNzk1MjAzNDY3LCJleHAiOjE3OTUyMDM1Mjd9.hmp9IQ5BAxqqL4P4T6TIu8lkq1kby6_U-6DOYkpLKOI",
     "R Record Hardstyle": "https://radiorecord.hostingradio.ru/teo96.aacp",
     "Hardcore Radio": "http://shoutcast1.hardcoreradio.nl/",
-    "Crucial Velocity Radio": "http://ais-sa2.cdnstream1.com/1369_128"
+    "Crucial Velocity Radio": "http://ais-sa2.cdnstream1.com/1369_128",
+    "FIP Electro": {
+      "default": "https://icecast.radiofrance.fr/fipelectro-hifi.aac",
+      "streams": [
+        {
+          "url": "https://icecast.radiofrance.fr/fipelectro-hifi.aac",
+          "bitrate": 192
+        },
+        {
+          "url": "https://icecast.radiofrance.fr/fipelectro-midfi.mp3",
+          "bitrate": 128
+        }
+      ]
+    }
   }
 }

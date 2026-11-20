@@ -1,0 +1,134 @@
+{
+  "stations": {
+    "FIP (National)": {
+      "default": "https://icecast.radiofrance.fr/fip-hifi.aac",
+      "streams": [
+        {
+          "url": "https://icecast.radiofrance.fr/fip-hifi.aac",
+          "bitrate": 192
+        },
+        {
+          "url": "https://icecast.radiofrance.fr/fip-midfi.mp3",
+          "bitrate": 128
+        }
+      ]
+    },
+    "FIP Rock": {
+      "default": "https://icecast.radiofrance.fr/fiprock-hifi.aac",
+      "streams": [
+        {
+          "url": "https://icecast.radiofrance.fr/fiprock-hifi.aac",
+          "bitrate": 192
+        },
+        {
+          "url": "https://icecast.radiofrance.fr/fiprock-midfi.mp3",
+          "bitrate": 128
+        }
+      ]
+    },
+    "FIP Jazz": {
+      "default": "https://icecast.radiofrance.fr/fipjazz-hifi.aac",
+      "streams": [
+        {
+          "url": "https://icecast.radiofrance.fr/fipjazz-hifi.aac",
+          "bitrate": 192
+        },
+        {
+          "url": "https://icecast.radiofrance.fr/fipjazz-midfi.mp3",
+          "bitrate": 128
+        }
+      ]
+    },
+    "FIP Electro": {
+      "default": "https://icecast.radiofrance.fr/fipelectro-hifi.aac",
+      "streams": [
+        {
+          "url": "https://icecast.radiofrance.fr/fipelectro-hifi.aac",
+          "bitrate": 192
+        },
+        {
+          "url": "https://icecast.radiofrance.fr/fipelectro-midfi.mp3",
+          "bitrate": 128
+        }
+      ]
+    },
+    "FIP Groove": {
+      "default": "https://icecast.radiofrance.fr/fipgroove-hifi.aac",
+      "streams": [
+        {
+          "url": "https://icecast.radiofrance.fr/fipgroove-hifi.aac",
+          "bitrate": 192
+        },
+        {
+          "url": "https://icecast.radiofrance.fr/fipgroove-midfi.mp3",
+          "bitrate": 128
+        }
+      ]
+    },
+    "FIP World": {
+      "default": "https://icecast.radiofrance.fr/fipworld-hifi.aac",
+      "streams": [
+        {
+          "url": "https://icecast.radiofrance.fr/fipworld-hifi.aac",
+          "bitrate": 192
+        },
+        {
+          "url": "https://icecast.radiofrance.fr/fipworld-midfi.mp3",
+          "bitrate": 128
+        }
+      ]
+    },
+    "FIP Reggae": {
+      "default": "https://icecast.radiofrance.fr/fipreggae-hifi.aac",
+      "streams": [
+        {
+          "url": "https://icecast.radiofrance.fr/fipreggae-hifi.aac",
+          "bitrate": 192
+        },
+        {
+          "url": "https://icecast.radiofrance.fr/fipreggae-midfi.mp3",
+          "bitrate": 128
+        }
+      ]
+    },
+    "FIP Pop": {
+      "default": "https://icecast.radiofrance.fr/fippop-hifi.aac",
+      "streams": [
+        {
+          "url": "https://icecast.radiofrance.fr/fippop-hifi.aac",
+          "bitrate": 192
+        },
+        {
+          "url": "https://icecast.radiofrance.fr/fippop-midfi.mp3",
+          "bitrate": 128
+        }
+      ]
+    },
+    "FIP Metal": {
+      "default": "https://icecast.radiofrance.fr/fipmetal-hifi.aac",
+      "streams": [
+        {
+          "url": "https://icecast.radiofrance.fr/fipmetal-hifi.aac",
+          "bitrate": 192
+        },
+        {
+          "url": "https://icecast.radiofrance.fr/fipmetal-midfi.mp3",
+          "bitrate": 128
+        }
+      ]
+    },
+    "FIP Nouveautes": {
+      "default": "https://icecast.radiofrance.fr/fipnouveautes-hifi.aac",
+      "streams": [
+        {
+          "url": "https://icecast.radiofrance.fr/fipnouveautes-hifi.aac",
+          "bitrate": 192
+        },
+        {
+          "url": "https://icecast.radiofrance.fr/fipnouveautes-midfi.mp3",
+          "bitrate": 128
+        }
+      ]
+    }
+  }
+}

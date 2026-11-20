@@ -14,6 +14,40 @@
     "Радио Монте Карло - Me": "https://mc-meditation.hostingradio.ru/meditation96.aacp",
     "Seven Rays - 7rays": "https://7rays.stream.laut.fm/7rays",
     "NATURE RADIO SLEEP": "https://az1.mediacp.eu/listen/natureradiosleep/radio.mp3",
-    "VIP-Radios - Healing M": "http://178.32.111.41:8039/stream-128kmp3-HealingMusic"
+    "VIP-Radios - Healing M": "http://178.32.111.41:8039/stream-128kmp3-HealingMusic",
+    "Radio Paradise Main": {
+      "default": "https://stream.radioparadise.com/flac",
+      "streams": [
+        {
+          "url": "https://stream.radioparadise.com/flac",
+          "bitrate": 999
+        },
+        {
+          "url": "https://stream.radioparadise.com/aac-320",
+          "bitrate": 320
+        },
+        {
+          "url": "https://stream.radioparadise.com/mp3-128",
+          "bitrate": 128
+        }
+      ]
+    },
+    "Radio Paradise Mellow": {
+      "default": "https://stream.radioparadise.com/mellow-flac",
+      "streams": [
+        {
+          "url": "https://stream.radioparadise.com/mellow-flac",
+          "bitrate": 999
+        },
+        {
+          "url": "https://stream.radioparadise.com/mellow-320",
+          "bitrate": 320
+        },
+        {
+          "url": "https://stream.radioparadise.com/mellow-mp3-128",
+          "bitrate": 128
+        }
+      ]
+    }
   }
 }

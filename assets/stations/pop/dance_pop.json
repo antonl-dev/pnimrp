@@ -27,6 +27,36 @@
     "Sunshine Live - Techno": "http://sunsl.streamabc.net/sunsl-techno-mp3-192-4912904?sABC=6nss409r%230%23p5549n47p4p5199r236op6r02281377q%23fgernz.fhafuvar-yvir.qr&aw_0_1st.playerid=stream.sunshine-live.de&amsparams=playerid:stream.sunshine-live.de;skey:1795113118",
     "Sunshine Live": "http://sunsl.streamabc.net/sunsl-sslsimulcast-mp3-192-4434053?sABC=6nss409s%230%23p5549n47p4p5199r236op6r02281377q%23fgernz.fhafuvar-yvir.qr&aw_0_1st.playerid=stream.sunshine-live.de&amsparams=playerid:stream.sunshine-live.de;skey:1795113119",
     "ORBITAL": "http://centova.radios.pt:8401/;listen.pls",
-    "Mixadance FM": "https://stream.mixadance.fm/mixadance"
+    "Mixadance FM": "https://stream.mixadance.fm/mixadance",
+    "Energy 98": {
+      "default": "https://listen.181fm.com/181-energy98_128k.mp3",
+      "streams": [
+        {
+          "url": "https://listen.181fm.com/181-energy98_128k.mp3",
+          "bitrate": 128
+        },
+        {
+          "url": "https://listen.181fm.com/181-energy98_64k.aac",
+          "bitrate": 64
+        }
+      ]
+    },
+    "Classic Energy": {
+      "default": "https://listen.181fm.com/181-classicenergy_128k.mp3",
+      "streams": [
+        {
+          "url": "https://listen.181fm.com/181-classicenergy_128k.mp3",
+          "bitrate": 128
+        },
+        {
+          "url": "https://listen.181fm.com/181-classicenergy_64k.aac",
+          "bitrate": 64
+        }
+      ]
+    },
+    "Chilled Out": "https://listen.181fm.com/181-chilled_128k.mp3",
+    "Energy 93": "https://listen.181fm.com/181-energy93_128k.mp3",
+    "Studio 181": "https://listen.181fm.com/181-ball_128k.mp3",
+    "The Vibe of Vegas": "https://listen.181fm.com/181-vibe_128k.mp3"
   }
 }

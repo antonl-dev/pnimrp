@@ -11,6 +11,20 @@
     "Friends of 'CSB": "https://s20.myradiostream.com:18792/listen.mp3",
     "CAMP Radio": "https://listen.camp/campradio.ogg",
     "16Bit.FM I.D.E.A.": "http://16bitfm.com:8000/idea_mp3_192",
-    "105.1 Millenium Bella": "https://stream.promomedios.com:8006/stream"
+    "105.1 Millenium Bella": "https://stream.promomedios.com:8006/stream",
+    "Classical Music": "https://listen.181fm.com/181-classical_128k.mp3",
+    "181.fm Classical Guita": {
+      "default": "http://listen.181fm.com/181-classicalguitar_128k.mp3",
+      "streams": [
+        {
+          "url": "http://listen.181fm.com/181-classicalguitar_128k.mp3",
+          "bitrate": 128
+        },
+        {
+          "url": "http://listen.livestreamingservice.com/181-classicalguitar_64k.aac",
+          "bitrate": 64
+        }
+      ]
+    }
   }
 }

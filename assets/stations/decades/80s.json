@@ -43,6 +43,24 @@
     "KISS FM 100.6": "http://live.radiokiss.gr/kissfm1006hq.mp3",
     "Oxygen The 80s Hits": "https://oxygenmusic.hu:8443/oxygenthe80shits",
     ".977 80s": "http://29318.live.streamtheworld.com/977_80_SC",
-    "Retro Rádió": "https://icast.connectmedia.hu/5001/live.mp3"
+    "Retro Rádió": "https://icast.connectmedia.hu/5001/live.mp3",
+    "Awesome 80's": "https://listen.181fm.com/181-awesome80s_128k.mp3",
+    "Lite 80's": "https://listen.181fm.com/181-lite80s_128k.mp3",
+    "80's Country": "https://listen.181fm.com/181-80scountry_128k.mp3",
+    "80's Lite RnB": "https://listen.181fm.com/181-80sliternb_128k.mp3",
+    "80's RnB": {
+      "default": "https://listen.181fm.com/181-80srnb_128k.mp3",
+      "streams": [
+        {
+          "url": "https://listen.181fm.com/181-80srnb_128k.mp3",
+          "bitrate": 128
+        },
+        {
+          "url": "http://listen.livestreamingservice.com/181-80srnb_64k.aac",
+          "bitrate": 64
+        }
+      ]
+    },
+    "80's Hairband": "https://listen.181fm.com/181-hairband_128k.mp3"
   }
 }

@@ -447,6 +447,10 @@ GENRE_SPECS = {
                 {"tag": "acoustic pop", "order": "votes", "reverse": "true"},
                 {"tag": "singer-songwriter", "order": "votes", "reverse": "true"},
                 {"tag": "coffeehouse", "order": "votes", "reverse": "true"}
+            ],
+            "fm_hits.json": [
+                {"tag": "hits", "order": "votes", "reverse": "true"},
+                {"tag": "top40", "order": "votes", "reverse": "true"}
             ]
         }
     },
@@ -490,6 +494,9 @@ GENRE_SPECS = {
                 {"tag": "grunge", "order": "votes", "reverse": "true"},
                 {"tag": "90s rock", "order": "votes", "reverse": "true"},
                 {"tag": "90s alternative", "order": "votes", "reverse": "true"}
+            ],
+            "classic_rock.json": [
+                {"tag": "classic rock", "order": "votes", "reverse": "true"}
             ]
         }
     },
@@ -887,6 +894,10 @@ GENRE_SPECS = {
                 {"tag": "soundscapes", "order": "votes", "reverse": "true"},
                 {"tag": "nature sounds", "order": "votes", "reverse": "true"},
                 {"tag": "meditation", "order": "votes", "reverse": "true"}
+            ],
+            "easy_listening.json": [
+                {"tag": "easy listening", "order": "votes", "reverse": "true"},
+                {"tag": "lounge", "order": "votes", "reverse": "true"}
             ]
         }
     },
@@ -964,60 +975,19 @@ GENRE_SPECS = {
             ]
         }
     },
-    "fm181": {
-        "dir": "assets/stations/fm181",
+    "radioparadise": {
+        "dir": "assets/stations/radioparadise",
         "files": {
-            "80s_decade.json": [
-                {"name": "181.fm", "tag": "80s", "order": "votes", "reverse": "true"},
-                {"name": "181.fm 80", "order": "votes", "reverse": "true"}
-            ],
-            "90s_decade.json": [
-                {"name": "181.fm", "tag": "90s", "order": "votes", "reverse": "true"},
-                {"name": "181.fm 90", "order": "votes", "reverse": "true"}
-            ],
-            "christmas.json": [
-                {"name": "181.fm", "tag": "christmas", "order": "votes", "reverse": "true"},
-                {"name": "Christmas", "order": "votes", "reverse": "true"}
-            ],
-            "classical.json": [
-                {"name": "181.fm", "tag": "classical", "order": "votes", "reverse": "true"},
-                {"name": "181.fm Classical", "order": "votes", "reverse": "true"}
-            ],
-            "comedy.json": [
-                {"name": "181.fm", "tag": "comedy", "order": "votes", "reverse": "true"}
-            ],
-            "country.json": [
-                {"name": "181.fm", "tag": "country", "order": "votes", "reverse": "true"},
-                {"name": "181.fm Country", "order": "votes", "reverse": "true"}
-            ],
-            "dance.json": [
-                {"name": "181.fm", "tag": "dance", "order": "votes", "reverse": "true"},
-                {"name": "181.fm Dance", "order": "votes", "reverse": "true"}
-            ],
-            "easy_listening.json": [
-                {"name": "181.fm", "tag": "easy listening", "order": "votes", "reverse": "true"},
-                {"name": "181.fm Chilled", "order": "votes", "reverse": "true"}
-            ],
-            "oldies.json": [
-                {"name": "181.fm", "tag": "oldies", "order": "votes", "reverse": "true"},
-                {"name": "181.fm Classic Hits", "order": "votes", "reverse": "true"}
-            ],
-            "pop.json": [
-                {"name": "181.fm", "tag": "pop", "order": "votes", "reverse": "true"},
-                {"name": "181.fm Power", "order": "votes", "reverse": "true"}
-            ],
-            "rock.json": [
-                {"name": "181.fm", "tag": "rock", "order": "votes", "reverse": "true"},
-                {"name": "181.fm Buzz", "order": "votes", "reverse": "true"}
-            ],
-            "soul.json": [
-                {"name": "181.fm", "tag": "soul", "order": "votes", "reverse": "true"},
-                {"name": "181.fm R&B", "order": "votes", "reverse": "true"}
-            ],
-            "urban.json": [
-                {"name": "181.fm", "tag": "urban", "order": "votes", "reverse": "true"},
-                {"name": "181.fm Hip Hop", "order": "votes", "reverse": "true"},
-                {"name": "181.fm Jamz", "order": "votes", "reverse": "true"}
+            "radioparadise.json": [
+                {"name": "Radio Paradise", "order": "votes", "reverse": "true"}
+            ]
+        }
+    },
+    "fip": {
+        "dir": "assets/stations/fip",
+        "files": {
+            "fip.json": [
+                {"name": "FIP", "order": "votes", "reverse": "true"}
             ]
         }
     }

@@ -1,0 +1,72 @@
+{
+  "stations": {
+    "Radio Paradise Main": {
+      "default": "https://stream.radioparadise.com/flac",
+      "streams": [
+        {
+          "url": "https://stream.radioparadise.com/flac",
+          "bitrate": 999
+        },
+        {
+          "url": "https://stream.radioparadise.com/aac-320",
+          "bitrate": 320
+        },
+        {
+          "url": "https://stream.radioparadise.com/mp3-128",
+          "bitrate": 128
+        }
+      ]
+    },
+    "Radio Paradise Mellow": {
+      "default": "https://stream.radioparadise.com/mellow-flac",
+      "streams": [
+        {
+          "url": "https://stream.radioparadise.com/mellow-flac",
+          "bitrate": 999
+        },
+        {
+          "url": "https://stream.radioparadise.com/mellow-320",
+          "bitrate": 320
+        },
+        {
+          "url": "https://stream.radioparadise.com/mellow-mp3-128",
+          "bitrate": 128
+        }
+      ]
+    },
+    "Radio Paradise Rock": {
+      "default": "https://stream.radioparadise.com/rock-flac",
+      "streams": [
+        {
+          "url": "https://stream.radioparadise.com/rock-flac",
+          "bitrate": 999
+        },
+        {
+          "url": "https://stream.radioparadise.com/rock-320",
+          "bitrate": 320
+        },
+        {
+          "url": "https://stream.radioparadise.com/rock-mp3-128",
+          "bitrate": 128
+        }
+      ]
+    },
+    "Radio Paradise World": {
+      "default": "https://stream.radioparadise.com/world-flac",
+      "streams": [
+        {
+          "url": "https://stream.radioparadise.com/world-flac",
+          "bitrate": 999
+        },
+        {
+          "url": "https://stream.radioparadise.com/world-320",
+          "bitrate": 320
+        },
+        {
+          "url": "https://stream.radioparadise.com/world-mp3-128",
+          "bitrate": 128
+        }
+      ]
+    }
+  }
+}

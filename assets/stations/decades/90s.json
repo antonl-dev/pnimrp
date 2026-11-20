@@ -15,6 +15,12 @@
     "Retro Rádió": "https://icast.connectmedia.hu/5001/live.mp3",
     "Rádio Disco Funk BR": "http://streaming12.hstbr.net:8084/live",
     "Sláger FM": "http://92.61.114.159:7812/slagerfm256.mp3",
-    "Nostalgie New York": "http://c32.radioboss.fm:8139/stream"
+    "Nostalgie New York": "http://c32.radioboss.fm:8139/stream",
+    "Lite 90's": "https://listen.181fm.com/181-lite90s_128k.mp3",
+    "90's Lite RnB": "https://listen.181fm.com/181-90sliternb_128k.mp3",
+    "90's Alternative": "https://listen.181fm.com/181-90salt_128k.mp3",
+    "90's RnB": "https://listen.181fm.com/181-90srnb_128k.mp3",
+    "Star 90's": "https://listen.181fm.com/181-star90s_128k.mp3",
+    "90's Country": "https://listen.181fm.com/181-90scountry_128k.mp3"
   }
 }

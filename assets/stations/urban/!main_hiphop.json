@@ -15,6 +15,23 @@
     "94.7": "http://19983.live.streamtheworld.com/FM947AAC_SC",
     "RMF Hip Hop": "http://195.150.20.8/HIPHOP",
     "deutschrap": "http://deutschrap.stream.laut.fm/deutschrap?t302=2026-11-17_01-43-15&uuid=b7a90f57-096e-c72f-c979-46c88e0a448a",
-    "BBC Radio 6 Music": "http://as-hls-ww-live.akamaized.net/pool_81827798/live/ww/bbc_6music/bbc_6music.isml/bbc_6music-audio%3d320000.norewind.m3u8"
+    "BBC Radio 6 Music": "http://as-hls-ww-live.akamaized.net/pool_81827798/live/ww/bbc_6music/bbc_6music.isml/bbc_6music-audio%3d320000.norewind.m3u8",
+    "Jammin 181": "https://listen.181fm.com/181-jammin_128k.mp3",
+    "80's RnB": {
+      "default": "https://listen.181fm.com/181-80srnb_128k.mp3",
+      "streams": [
+        {
+          "url": "https://listen.181fm.com/181-80srnb_128k.mp3",
+          "bitrate": 128
+        },
+        {
+          "url": "http://listen.livestreamingservice.com/181-80srnb_64k.aac",
+          "bitrate": 64
+        }
+      ]
+    },
+    "80's Lite RnB": "https://listen.181fm.com/181-80sliternb_128k.mp3",
+    "Old School HipHop/RnB": "https://listen.181fm.com/181-oldschool_128k.mp3",
+    "181.FM 90s R&B": "http://listen.livestreamingservice.com/181-90srnb_128k.mp3"
   }
 }
