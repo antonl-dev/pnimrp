@@ -1,10 +1,10 @@
 {
   "stations": {
     "All India Radio AIR Pu": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio138/chunklist.m3u8",
-    "Jesus Alive Radio": "https://stream-284.surfernetwork.com/qyb8s75nsceuv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJxeWI4czc1bnNjZXV2IiwiaG9zdCI6InN0cmVhbS0yODQuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJpR3Qzb1UyNFNsbVdyVWJ3X3VpMkpnIiwiaWF0IjoxNzk1MTE5NjA0LCJleHAiOjE3OTUxMTk2NjR9.NLzk4p5ZBqVQ_Ylq5gUXn0vTQZSt2c-y7Lpj83pcxwk",
+    "Jesus Alive Radio": "http://stream-284.surfernetwork.com/qyb8s75nsceuv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJxeWI4czc1bnNjZXV2IiwiaG9zdCI6InN0cmVhbS0yODQuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJtbTJpNEtfalJZT0M2bFZ3QUhYdVh3IiwiaWF0IjoxNzk1MjA0MzgyLCJleHAiOjE3OTUyMDQ0NDJ9.EkCBiosjdaXXmSeo3awVobV0AUFW3htQWQaFgsEmV9E",
     "BBC Asian Network": "http://as-hls-ww-live.akamaized.net/pool_22108647/live/ww/bbc_asian_network/bbc_asian_network.isml/bbc_asian_network-audio%3d128000.norewind.m3u8",
-    "Harman Radio Australia": "http://harmanradio.net:8000/main_48.mp3",
-    "R Central 24": "http://138.201.52.248:8459/stream",
+    "Harman Radio Australia": "http://harmanradio.net:8000/channel1_HQ.mp3",
+    "R Central 24": "http://philae.shoutca.st:8459/",
     "MyRadio 580am": "http://ais-sa1.streamon.fm/7681_64k.mp3",
     "R Chann Pardesi": "http://mehramedia.com:8021/;",
     "SHER E PUNJAB AM 600": "https://ais-sa1.streamon.fm/7676_48k.aac",
@@ -13,6 +13,9 @@
     "Raaj FM": "http://live.canstream.co.uk:8000/raajfm.mp3",
     "Akash Radio (London)": "http://radio.canstream.co.uk:8161/stream",
     "R Panj": "http://s3.voscast.com:11264/stream",
-    "Akash Radio (Leeds)": "http://c2.radioboss.fm:8276/stream"
+    "RED FM": "https://ice24.securenetsystems.net/CKYE?playSessionID=FEC6C3A5-AAAF-839F-F4F9CC684849AEA6",
+    "RADIO PANJABI": "https://s20.reliastream.com/stream/8134",
+    "Oye Radio": "https://stream.oye.radio/listen/oye_radio/radio.mp3",
+    "Translation of the Qur": "https://serverkw.quran-uni.com:8140/;"
   }
 }

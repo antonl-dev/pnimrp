@@ -1,20 +1,39 @@
 {
   "stations": {
     "Power 181 (Top 40)": "https://listen.181fm.com/181-power_128k.mp3",
-    "Power 181 [E]": "https://listen.181fm.com/181-powerexplicit_128k.mp3",
-    "The Office": "https://listen.181fm.com/181-office_128k.mp3",
+    "The Office": {
+      "default": "https://listen.181fm.com/181-office_128k.mp3",
+      "streams": [
+        {
+          "url": "https://listen.181fm.com/181-office_128k.mp3",
+          "bitrate": 128
+        },
+        {
+          "url": "http://listen.livestreamingservice.com/181-office_64k.aac",
+          "bitrate": 64
+        }
+      ]
+    },
     "The Mix": "https://listen.181fm.com/181-themix_128k.mp3",
-    "The Point": "https://listen.181fm.com/181-thepoint_128k.mp3",
+    "The Point": {
+      "default": "https://listen.181fm.com/181-thepoint_128k.mp3",
+      "streams": [
+        {
+          "url": "https://listen.181fm.com/181-thepoint_128k.mp3",
+          "bitrate": 128
+        },
+        {
+          "url": "http://listen.livestreamingservice.com/181-thepoint_64k.aac",
+          "bitrate": 64
+        }
+      ]
+    },
     "OldSchl HipHop/RnB": "https://listen.181fm.com/181-oldschool_128k.mp3",
     "Smooth AC": "https://listen.181fm.com/181-smoothac_128k.mp3",
     "UK top 40": "https://listen.181fm.com/181-uktop40_128k.mp3",
     "The Heart (Love)": "https://listen.181fm.com/181-heart_128k.mp3",
     "Vibe of Vegas": "https://listen.181fm.com/181-vibe_128k.mp3",
     "181.fm Kickin' Country": "https://listen.181fm.com/181-kickincountry_128k.mp3",
-    "181.fm The Mix": "http://listen.181fm.com/181-themix_128k.mp3",
-    "181.fm UK top 40": "http://listen.181fm.com/181-uktop40_128k.mp3",
-    "181.fm The Office": "http://listen.181fm.com/181-office_128k.mp3",
-    "181.fm The Vibe of Veg": "http://listen.181fm.com/181-vibe_128k.mp3",
-    "181.FM The Office": "http://listen.livestreamingservice.com/181-office_64k.aac"
+    "181.fm Party 181": "http://listen.181fm.com/181-party_128k.mp3"
   }
 }

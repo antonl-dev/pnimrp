@@ -4,17 +4,15 @@
     "Flower Power Radio": "https://nl1.streamingpulse.com/ssl/flowerpowerradio",
     "Oldies 104": "https://edge3.peta.live365.net/b09584_128mp3",
     "Oldiesradio RGR": "https://media1.hostin.cc/rgr-classic-hits.mp3",
-    "Vinylgodis": "https://s6.autopo.st/proxy/helgqkdg?mp=/stream",
-    "Gold 905 SG": "https://22423.mc.tritondigital.com:443/OMNY_TESTDEMO_P/media-session/da4439ce-e47e-4d5c-bc08-8d3524e414d9/d/clips/7740012e-e1bd-4f85-81c4-a7f50047134a/216a4118-2176-4cc4-bfd4-a80e009dc9f7/42dd8f12-a7bb-45a4-ba8e-b4d600a44ebf/audio/direct/t1790851214/Melisten_3rd_Party_Stream_Trailer_2_English_15s_V2.mp3?t=1790851214",
+    "Gold 905 SG": "https://22423.mc.tritondigital.com:443/OMNY_TESTDEMO_P/media-session/49f24e41-e751-4345-ad44-3c7ff864770f/d/clips/7740012e-e1bd-4f85-81c4-a7f50047134a/216a4118-2176-4cc4-bfd4-a80e009dc9f7/42dd8f12-a7bb-45a4-ba8e-b4d600a44ebf/audio/direct/t1790851214/Melisten_3rd_Party_Stream_Trailer_2_English_15s_V2.mp3?t=1790851214",
     "1.FM 50s60s": "https://strm112.1.fm/60s_70s_mobile_mp3",
     "Happy Oldies 93.7": "https://maggie.torontocast.com:8024/stream",
     "Happy Days IT": "http://ks29703.kimsufi.com:8110/;",
     "Classic Vinyl HD": "https://icecast.walmradio.com:8443/classic",
     "Classic Vinyl HD Opus": "https://icecast.walmradio.com:8443/classic_opus",
     "1000 HITS 80s": "http://c2.auracast.net:8048/stream",
-    "Gold": "https://media-ssl.musicradio.com/GoldMP3",
-    "РЕТРО ХИТ - RETRO HIT": "http://retro.volna.top/Retro",
-    ".977 Oldies": "http://29318.live.streamtheworld.com:3690/977_OLDIES_SC",
+    "Gold": "http://media-ice.musicradio.com/GoldMP3",
+    "РЕТРО ХИТ - RETRO HIT": "https://efir.retrofm.md:8000/retro",
     "R Armisa": "https://onair.armisa.it/listen/armisa/radio.mp3"
   }
 }

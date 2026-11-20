@@ -2,7 +2,6 @@
   "stations": {
     "Nightride.FM": "https://stream.nightride.fm/nightride.mp3",
     "Synthwave Radio": "https://stream.synthwaveradio.eu/listen/synthwaveradio.eu/radio.mp3",
-    "AU Digital Radio": "http://abm22.com.au:8000/CONTAINER17",
     "80s New Wave Radio": "https://puma.streemlion.com:2910/stream",
     "Hiraeth DE": "https://hiraeth.stream.laut.fm/hiraeth?uuid=743ad5e5-59f2-16bd-f401-60af17bcd893&t302=2026-11-19_21-10-20",
     "SynthWaveCityFM.com": "https://synthwave-rex.radioca.st/stream",
@@ -11,10 +10,16 @@
     "DM Radio": "http://radio.rikt.ru:8000/radio-dm-3",
     "radcap Dark Synth": "http://213.141.131.10:8002/darksynth",
     "radcap Spacesynth": "http://79.120.39.202:8002/spacesynth",
-    "Nightride FM - Spacesy": "https://stream.nightride.fm/spacesynth.mp3",
     "DnB&EDM": "https://edmdnb.com:448/radio/8000/radio.mp3",
-    "Nightride FM - Darksyn": "https://stream.nightride.fm/darksynth.mp3",
     "NEU RADIO": "https://nr9.newradio.it/proxy/ebaruffa?mp=/stream",
-    "Laut.fm Vaporwave": "http://vaporwave.stream.laut.fm/vaporwave"
+    "Laut.fm Vaporwave": "http://vaporwave.stream.laut.fm/vaporwave",
+    "Nightride FM - Horrors": "https://stream.nightride.fm/horrorsynth.mp3",
+    "PANORAMA80": "http://panorama80.stream.laut.fm/panorama80",
+    "Rekt Network": "https://stream.rekt.network/rekt.ogg",
+    "PetShopBoys": "http://petshopboys.stream.laut.fm/petshopboys?uuid=cb4c3d84-0f91-e19a-b160-8b41ff7528f5&t302=2026-11-20_20-36-46",
+    "Night Drive Radio – Sy": "https://a5.asurahosting.com:7920/radio.mp3",
+    "XRaydio 1 – Your Kalei": "https://xraydio.ddns.net/live",
+    "Palmera Blanca radio -": "https://daystream.palmerablanca.com/daystream-128.mp3",
+    "Luxury Lounge Radio -": "http://188.40.109.114:8000/ices2"
   }
 }

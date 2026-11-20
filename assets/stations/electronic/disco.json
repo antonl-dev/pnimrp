@@ -2,19 +2,25 @@
   "stations": {
     "101.ru": "https://srv01.gpmradio.ru/stream/pro/aac/64/1",
     "Sunshine Radio": "http://stream.sunshinefm.hu:8100/sunshine",
-    "0N": "https://0n-disco.radionetz.de/0n-disco.aac",
+    "0N": "https://0n-disco.radionetz.de/0n-disco.mp3",
     "Blast FM Radio": "https://45.33.5.23:8000/;",
     "DiscoRhythmn AUTODJ": "http://kiyi.radioca.st:8108/autodj",
     "FlashDiscoDance": "http://stm1.ifantasy.com.br:21764/;",
     "Italo Radio": "http://danceradio1.shoutcaststream.com:8102/;",
     "radcap Disco": "http://79.120.77.11:8002/disco",
     "radcap NuDisco": "http://79.111.119.111:8004/nudisco",
-    "1.fm Disco": "https://strm112.1.fm/disco_128",
     "1000 HITS 80s": "http://c2.auracast.net:8048/stream",
     "Rádio Disco Funk BR": "http://streaming12.hstbr.net:8084/live",
     "70s 80s Disco Funk Mod": "https://discofunk.streamingmedia.it/usa",
     "Nostalgie New York": "http://c32.radioboss.fm:8139/stream",
     "RMF 80s Disco": "http://195.150.20.9/80SDISCO",
-    "1000 Discohits": "http://1000discohits.stream.laut.fm/1000discohits?uuid=dbeb1095-d215-290c-fa28-f28dea3b2c2f&t302=2026-11-19_21-11-00"
+    "1000 Discohits": "http://1000discohits.stream.laut.fm/1000discohits?uuid=30bffe8c-f7ec-5bd9-4346-9e1565d9f260&t302=2026-11-20_20-37-24",
+    "1.FM - Disco Ball 70's": "http://strm112.1.fm/disco_mobile_mp3",
+    "RMC Disco Funk": "http://edge.radiomontecarlo.net/rmcweb025",
+    "Magic Disco Radio": "http://188.165.11.30:4420/live.mp3",
+    "SuperDj Radio": "http://stream.diazol.hu:35150/autodj",
+    "FUNKY RADIO - Only Fun": "https://funkyradio.streamingmedia.it/audio.aac",
+    "54 Funk Soul Dance": "http://54-funk-soul-dance.stream.laut.fm/54-funk-soul-dance",
+    "B4B Radio DISCO FUNK": "https://eu10.fastcast4u.com:8120/"
   }
 }

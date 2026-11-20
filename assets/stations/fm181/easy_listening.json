@@ -2,7 +2,19 @@
   "stations": {
     "True Blues": "https://listen.181fm.com/181-blues_128k.mp3",
     "Jazz Mix": "https://listen.181fm.com/181-jazzmix_128k.mp3",
-    "The Breeze": "https://listen.181fm.com/181-breeze_128k.mp3",
+    "The Breeze": {
+      "default": "https://listen.181fm.com/181-breeze_128k.mp3",
+      "streams": [
+        {
+          "url": "https://listen.181fm.com/181-breeze_128k.mp3",
+          "bitrate": 128
+        },
+        {
+          "url": "http://listen.livestreamingservice.com/181-breeze_64k.aac",
+          "bitrate": 64
+        }
+      ]
+    },
     "Classical Guitar": "https://listen.181fm.com/181-classicalguitar_128k.mp3",
     "Classical Jazz": "https://listen.181fm.com/181-classicaljazz_128k.mp3",
     "Vocal Jazz": "https://listen.181fm.com/181-vocals_128k.mp3",
@@ -12,8 +24,6 @@
     "Acid Jazz": "https://listen.181fm.com/181-acidjazz_128k.mp3",
     "181.fm Chilled Out": "http://listen.181fm.com/181-chilled_128k.mp3",
     "181.fm Smooth AC": "https://listen.181fm.com/181-smoothac_128k.mp3",
-    "181.fm The Breeze": "http://listen.181fm.com/181-breeze_128k.mp3",
-    "181.fm Classical Guita": "http://listen.livestreamingservice.com:8020/",
-    "181.FM The Breeze": "http://listen.livestreamingservice.com/181-breeze_64k.aac"
+    "181.fm Classical Guita": "http://listen.livestreamingservice.com:8020/"
   }
 }

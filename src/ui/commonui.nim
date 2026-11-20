@@ -5,7 +5,7 @@ func getFooterOptions*(isMainMenu, isPlayerUI: bool): string =
         if isMainMenu:
       "[Q] Quit | [N] Notes | [U] Help | [S] ImFeelingLucky"
     elif isPlayerUI:
-      "[Q] Quit | [R] Return | [P] Pause | [-/+] Vol | [E] EQ | [L] Like"
+      "[Q] Quit | [R] Return | [P] Pause | [-/+] Vol | [E] EQ | [B] Bitrate | [L] Like"
     else:
       "[Q] Quit | [R] Return | [U] Help | [S] ImFeelingLucky"
 

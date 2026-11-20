@@ -1,20 +1,25 @@
 {
   "stations": {
     "R France Mouv": "https://listen.radioking.com/radio/255529/stream/300106",
-    "Z100 (NY)": "https://cloud.revma.ihrhls.com/zc1469?rj-org=n44a-e2&rj-ttl=5&rj-tok=AAABofV1BiUAG_iSRSnV16fujw",
-    "102.7 KIIS FM (LA)": "https://cloud.revma.ihrhls.com/zc185?rj-org=n14a-e2&rj-ttl=5&rj-tok=AAABofV1BrAAVrgNNQFJsPHgTA",
+    "Z100 (NY)": "https://cloud.revma.ihrhls.com/zc1469?rj-org=n1ba-e2&rj-ttl=5&rj-tok=AAABofp66TgAr5TdWiutzbqbUg",
+    "102.7 KIIS FM (LA)": "https://cloud.revma.ihrhls.com/zc185?rj-org=n29a-e2&rj-ttl=5&rj-tok=AAABofp66TQAyNfJ3UcIvnln7g",
     "NRJ FR": "https://streaming.nrjaudio.fm/oumvmk8fnozc?origine=redirection_https_nrj",
     "RDS - R Dimensione Suo": "https://stream.rds.radio/audio/rds.stream_aac64/playlist.m3u8",
     "RTL 102.5": "https://streamcdnf31-dd782ed59e2a4e86aabf6fc508674b59.msvdn.net/live/S97044836/tbbP8T1ZRPBL/playlist_audio.m3u8",
     "R Kiss Kiss": "https://ice08k.fluidstream.net/KissKiss.aac",
-    "RMF FM": "https://rs101-krk.rmfstream.pl/RMFFM48",
+    "RMF FM": "http://195.150.20.9/RMFFM48",
     "Schwarzwald R": "https://edge19.streamonkey.net/fho-schwarzwaldradiolive",
-    "Big FM": "https://audiotainment-sw.streamabc.net/atsw-bigfmberlin-mp3-128-6209157?sABC=6nss4074%230%23p5549n47p4p5199r236op6r02281377q%23&aw_0_1st.playerid=&amsparams=playerid:;skey:1795113076",
     "RTL R": "https://rtlberlin.streamabc.net/rtlb-rtldenational-mp3-128-2770113?sABC=6nss4076%230%23p5549n47p4p5199r236op6r02281377q%23&aw_0_1st.playerid=&amsparams=playerid:;skey:1795113078",
     "R Globo": "https://globo.newradio.it/globorm128",
     "Slam": "https://29023.live.streamtheworld.com:443/SLAM_AAC.aac",
     "РАДИО ВАНЯ": "https://icecast-radiovanya.cdnvideo.ru/radiovanya",
-    "Радио Русские Песни": "http://listen.rusongs.ru/ru-mp3-128",
-    ".977 Hitz": "http://14123.live.streamtheworld.com/977_HITS_SC"
+    ".977 Hitz": "http://14123.live.streamtheworld.com/977_HITS_SC",
+    "R Navahang": "https://navairan.com/;stream.nsv",
+    "R Caroline": "http://78.129.202.200:8040/;",
+    "EuroDance 90 radio": "https://stream-eurodance90.fr/radio/8000/128.mp3?1627933323",
+    "Capital FM London": "http://media-ice.musicradio.com/CapitalMP3",
+    "Радио Шансон - Radio S": "http://chanson.hostingradio.ru:8041/chanson256.mp3",
+    "Heart 80s": "https://media-ssl.musicradio.com/Heart80sMP3",
+    "Hits 1 Algérie": "https://radio12.pro-fhi.net/listen/whmnrlow/stream"
   }
 }

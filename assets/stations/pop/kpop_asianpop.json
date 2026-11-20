@@ -1,20 +1,20 @@
 {
   "stations": {
-    "Exclusively BTS": "https://streaming.exclusive.radio/er/bts/icecast.audio",
+    "Exclusively BTS": "https://streaming.exclusive.radio/er/kpop/icecast.audio",
     "juka radio kpop": "https://juka-kpop.stream.laut.fm/juka-kpop?t302=2021-04-01_09-03-35&uuid=6aa06ca0-9a01-407d-91af-155d24c5c405",
-    "- 0 N - K-Pop on Radio": "https://0n-kpop.radionetz.de/0n-kpop.aac",
+    "- 0 N - K-Pop on Radio": "https://0n-kpop.radionetz.de/0n-kpop.mp3",
     "Generacion Kpop": "http://stream9.mexiserver.com:8242/stream",
     "SBS PopAsia": "https://sbs-ice.streamguys1.com/sbs-popasia-sbs-web",
-    "REYFM - #kpop": "https://reyfm.stream37.radiohost.de/reyfm-original_mp3-320?upd-meta=1&upd-scheme=https&_art=dD0xNzk1MTEzNDQ1JmQ9YmY1MWY5ZWIzM2I4MjdjMGM2ZGY",
+    "REYFM - #kpop": "https://reyfm.stream37.radiohost.de/reyfm-original_mp3-320?upd-meta=1&upd-scheme=https&_art=dD0xNzk1MjAzNDczJmQ9NDZmNTI4N2VmMTYxZTFlMzllOTA",
     "J1 GOLD": "https://jenny.torontocast.com:2000/stream/J1GOLD",
-    "R Anime Nexus": "http://radio.animenexus.mx:8000/animenexus",
-    "LISTEN.moe Jpop (Opus)": "https://listen.moe/opus",
-    "Only Hits K-Pop": "https://stream-03.surfernetwork.com/3ixq20p2e7zuv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiIzaXhxMjBwMmU3enV2IiwiaG9zdCI6InN0cmVhbS0wMy5zdXJmZXJuZXR3b3JrLmNvbSIsInJ0dGwiOjUsImp0aSI6Ik9LMEFGNkZ4UTUtSFpycjFGUVFJZkEiLCJpYXQiOjE3OTUxMTg4NjIsImV4cCI6MTc5NTExODkyMn0.KQ34LAhO4EvbPrlp9Vjy3NpE4nusgWpTBzZxz-CFF1A",
-    "J-Pop Sakura": "https://quincy.torontocast.com:2070/stream.mp3",
+    "R Anime Nexus": "https://cast.animenexusla.com/radio/8000/animenexus",
+    "LISTEN.moe Jpop": "https://listen.moe/opus",
+    "Only Hits K-Pop": "https://stream-04.surfernetwork.com/3ixq20p2e7zuv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiIzaXhxMjBwMmU3enV2IiwiaG9zdCI6InN0cmVhbS0wNC5zdXJmZXJuZXR3b3JrLmNvbSIsInJ0dGwiOjUsImp0aSI6IkxkWi1lNFpSUkotRnVrQWJRcVNhRnciLCJpYXQiOjE3OTUyMDMxNzMsImV4cCI6MTc5NTIwMzIzM30.4uQhPMgYFEN_geMXzahrN9ZQ8L9_bJoELI46aA0zy4s",
+    "J-Pop Sakura": "http://quincy.torontocast.com:2070/stream.mp3",
     "ADBT Radio": "http://217.79.181.61:8000/;",
-    "Asian World Radio Lati": "https://stream-176.surfernetwork.com/37hmxgfgzs8uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiIzN2hteGdmZ3pzOHV2IiwiaG9zdCI6InN0cmVhbS0xNzYuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJqNy14V3JvblIzNktGYUs3b1RWU0N3IiwiaWF0IjoxNzk1MTE4ODYxLCJleHAiOjE3OTUxMTg5MjF9.osn-QA78enZbELUveyZaQ5Yx7xSoDVUjZIVdI85XPeI",
-    "Only Hits Japan": "https://stream-02.surfernetwork.com/ou3fnv6okatuv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJvdTNmbnY2b2thdHV2IiwiaG9zdCI6InN0cmVhbS0wMi5zdXJmZXJuZXR3b3JrLmNvbSIsInJ0dGwiOjUsImp0aSI6IlFtYVlENDRrU1hpZnNuVzlFc2p5alEiLCJpYXQiOjE3OTUxMTg4NjIsImV4cCI6MTc5NTExODkyMn0.wysYQ8ojAVlpiiLcN5Fwcw4_ux4RCG1bdAtGYoKbACA",
-    "J-Pop Powerplay": "http://kathy.torontocast.com:3560/",
+    "Asian World Radio Lati": "http://stream-176.surfernetwork.com/37hmxgfgzs8uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiIzN2hteGdmZ3pzOHV2IiwiaG9zdCI6InN0cmVhbS0xNzYuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJDQVlPQkRFdFNZeVZDdDB2ZDlXWDJ3IiwiaWF0IjoxNzk1MjAzMTcxLCJleHAiOjE3OTUyMDMyMzF9.HH3vaA1AYx1roS81CTwRwEqdpHxl6Y7o4jnMwzAqeaw",
+    "Only Hits Japan": "https://stream-01.surfernetwork.com/ou3fnv6okatuv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJvdTNmbnY2b2thdHV2IiwiaG9zdCI6InN0cmVhbS0wMS5zdXJmZXJuZXR3b3JrLmNvbSIsInJ0dGwiOjUsImp0aSI6IlJJTF9BX3R0U01xSFZUNnVfTk5WN3ciLCJpYXQiOjE3OTUyMDMxNzQsImV4cCI6MTc5NTIwMzIzNH0.VZhWG1boqjQSlO8OLAXjUdqlr-JiSXQw9ndHE79RHFc",
+    "J-Pop Powerplay": "https://kathy.torontocast.com:3560/stream/1/",
     "Listen.moe Kpop": "https://listen.moe/kpop/fallback"
   }
 }

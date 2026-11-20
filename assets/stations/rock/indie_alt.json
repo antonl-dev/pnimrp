@@ -1,20 +1,32 @@
 {
   "stations": {
-    "TMM 1": "https://listen-msmn.sharp-stream.com/nme1.mp3",
-    "SomaFM Indie Pop Rocks": "https://ice5.somafm.com/indiepop-128-aac",
+    "TMM 1": "https://listen-msmn.sharp-stream.com/nme1high.mp3",
+    "SomaFM Indie Pop Rocks": {
+      "default": "https://ice5.somafm.com/indiepop-128-aac",
+      "streams": [
+        {
+          "url": "https://ice5.somafm.com/indiepop-128-aac",
+          "bitrate": 128
+        },
+        {
+          "url": "https://ice5.somafm.com/indiepop-64-aac",
+          "bitrate": 64
+        }
+      ]
+    },
     "Best Of Rock.FM Altern": "https://radio21.streamabc.net/radio21-alternativerock-mp3-256-9941142?sABC=6nss39p5%230%23p5549n47p4p5199r236op6r02281377q%23orfgbsebpx.sz&aw_0_1st.playerid=bestofrock.fm&amsparams=playerid:bestofrock.fm;skey:1795111365",
     "1.FM - High Voltage Ra": "http://strm112.1.fm/highvoltage_mobile_mp3",
     "1.FM - Alternative Roc": "http://strm112.1.fm/x_mobile_mp3",
     "# RdMix Classic Rock 7": "https://cast1.torontocast.com:4610/stream",
     "1.FM - Gorilla FM Radi": "http://strm112.1.fm/gorillafm_mobile_mp3",
     "GDS.FM": "http://gdsfm.out.airtime.pro:8000/gdsfm_a",
-    "Radioacktiva (Bogotá)": "https://26513.live.streamtheworld.com:443/RADIO_ACTIVAAAC.aac",
-    "Indie X FM": "http://kathy.torontocast.com:2690/stream",
+    "Radioacktiva (Bogotá)": "https://23243.live.streamtheworld.com:443/RADIO_ACTIVAAAC.aac",
+    "Indie X FM": "https://kathy.torontocast.com:2695/stream",
     "naxi radio - rock": "http://naxidigital-rock128.streaming.rs:8180/;stream.nsv",
-    "RADIO CAROLINA cl": "https://stream-285.surfernetwork.com/sri2de2qdlivv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJzcmkyZGUycWRsaXZ2IiwiaG9zdCI6InN0cmVhbS0yODUuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiItTGQtSzJ0YVJxLW90Zzh3ZjNlSzhBIiwiaWF0IjoxNzk1MTE4ODc3LCJleHAiOjE3OTUxMTg5Mzd9.IxCFIPmBSGlipOulgpJMuNmPcO5Ccd_eAXlKYT69XtI",
+    "RADIO CAROLINA cl": "http://stream-285.surfernetwork.com/sri2de2qdlivv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJzcmkyZGUycWRsaXZ2IiwiaG9zdCI6InN0cmVhbS0yODUuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJpWmFIUVNwVlRJQ2stZTRoQTdtV3lBIiwiaWF0IjoxNzk1MjAzMjM4LCJleHAiOjE3OTUyMDMyOTh9.y4V8LT-T9eoIhV9hNdqxLuw3_3PvX8bxtf_81g0o-QU",
     "80s Forever - We Keep": "https://premium.shoutcastsolutions.com/radio/8050/256.mp3",
-    "Easy FM 972": "https://n0d.radiojar.com/cthtwxk5yvduv.mp3?rj-ttl=5&rj-tok=AAABofV1ga0Aw_7oHe-zJFLBKw",
-    "R ROKS New Rock": "http://online.radioroks.ua/RadioROKS_NewRock_HD",
+    "Easy FM 972": "https://n02.radiojar.com/cthtwxk5yvduv.mp3?rj-ttl=5&rj-tok=AAABofp8jKoAWcSr0dgLFh3utQ",
+    "R ROKS New Rock": "https://online.radioroks.ua/RadioROKS_NewRock_HD",
     "The Independent FM": "https://listen.radioking.com/radio/293701/stream/340084"
   }
 }

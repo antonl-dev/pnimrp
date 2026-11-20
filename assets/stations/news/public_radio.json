@@ -6,15 +6,21 @@
     "Rai Radio 1": "http://icecdn-19d24861e90342cc8decb03c24c8a419.msvdn.net/icecastRelay/S18493106/rCMKqdMFKPBB/icecast",
     "Heart 80s": "https://media-ssl.musicradio.com/Heart80sMP3",
     "NPR 24 Hour Program St": "http://npr-ice.streamguys1.com/live.mp3",
-    "Rai Radio 3": "http://icecdn-19d24861e90342cc8decb03c24c8a419.msvdn.net/icecastRelay/S56630579/yEbkcBtIoSwd/icecast",
-    "France Musique": "http://icecast.radiofrance.fr/francemusique-midfi.mp3",
+    "France Musique": "http://icecast.radiofrance.fr/francemusique-hifi.aac",
     "Gold": "https://media-ssl.musicradio.com/GoldMP3",
     "Smooth Chill": "https://media-ssl.musicradio.com/ChillMP3",
     "Heart Dance": "https://media-ssl.musicradio.com/HeartDanceMP3",
-    "R Eins": "http://f131.rndfnk.com/ard/rbb/radioeins/live/mp3/128/stream.mp3?cid=01FC1WH12KJ93TCQPDSE2E5PZ9&sid=3MKyhSy2pI65FHVW4hcUJN4TMzd&token=S7tTw8vyeVMNVZFBxhl9nbvMjmvV6GkVAFUhL4U0VGs&tvf=NVUFAwWa6RhmMTMxLnJuZGZuay5jb20",
+    "R Eins": "http://f131.rndfnk.com/ard/rbb/radioeins/live/mp3/128/stream.mp3?cid=01FC1WH12KJ93TCQPDSE2E5PZ9&sid=3MNw9yKOVFahn8Iwq0AKP9ypwuR&token=niJ72DliNBAqYYqd5c1pL5DXlZ8MfriFoF5UGZJUNx8&tvf=KAIMJ1fs6RhmMTMxLnJuZGZuay5jb20",
     "Heart 90s": "https://media-ssl.musicradio.com/Heart90sMP3",
     "Petőfi Rádió": "http://mr-stream.mediaconnect.hu/4737/mr2.aac",
     "FIP Jazz": "http://icecast.radiofrance.fr/fipjazz-hifi.aac",
-    "ČRo Radiožurnál": "http://icecast8.play.cz/cro1-128.mp3"
+    "ČRo Radiožurnál": "http://icecast8.play.cz/cro1-128.mp3",
+    "B5 aktuell": "http://d131.rndfnk.com/ard/br/br24/live/mp3/128/stream.mp3?cid=01FBPVVJDPGF0BJ5TAJ8Z7JSX9&sid=3MNwAmV1Sx6PgqbEgM9HHBBmsPV&token=XCwZK_AniF7ex9I1DLNfMQ_LgEZl0UajKbmwgKfDWqI&tvf=3UDBdVjs6RhkMTMxLnJuZGZuay5jb20",
+    "Heart UK": "http://media-ice.musicradio.com/HeartUKMP3",
+    "Val 202": "http://mp3.rtvslo.si/val202",
+    "Rai Isoradio": "http://icecdn-19d24861e90342cc8decb03c24c8a419.msvdn.net/icecastRelay/S3822289/9T4F68Q3TT4m/icecast",
+    "# RdMix Classic Rock 7": "https://cast1.torontocast.com:4610/stream",
+    "FIP Reggae": "http://icecast.radiofrance.fr/fipreggae-hifi.aac",
+    "ABC Radio National AAC": "http://abc.streamguys1.com/live/rnnsw/icecast.audio"
   }
 }

@@ -17,6 +17,7 @@ import urllib.parse
 import ssl
 import json
 import os
+import re
 import shutil
 import sys
 import time
@@ -92,6 +93,11 @@ def verify_stream(url: str, timeout: float = 3.5) -> Tuple[bool, str]:
 def clean_station_name(raw_name: str, max_len: int = 22) -> str:
     name = raw_name.strip()
     
+    # Strip bitrate and codec suffixes in brackets/parentheses or at end
+    name = re.sub(r'\s*[\(\[]\s*\d*\s*k?(?:bps)?\s*(?:mp3|aac|aacp|aac\+|ogg|flac|opus)?\s*[\)\]]', '', name, flags=re.IGNORECASE)
+    name = re.sub(r'\s*-\s*\d+\s*k?(?:bps)?\s*(?:mp3|aac|aacp|aac\+|ogg|flac|opus)?$', '', name, flags=re.IGNORECASE)
+    name = re.sub(r'\s+\d+k\b', '', name, flags=re.IGNORECASE)
+    
     for suffix in [
         "[128k]", "(128k)", "[64k]", "(64k)", "[320k]", "(320k)",
         "(AAC)", "[AAC]", "(MP3)", "[MP3]", " - MP3", " - AAC", " 128k", " 320k"
@@ -124,45 +130,165 @@ def clean_station_name(raw_name: str, max_len: int = 22) -> str:
         name = name.split("(")[0].strip()
     return name
 
+def get_station_match_key(name: str) -> str:
+    n = name.lower()
+    n = re.sub(r'[\(\[].*?[\)\]]', '', n)
+    for prefix in [
+        "radio caprice - ", "radio caprice: ", "radio caprice ", "radcap ",
+        "181.fm - ", "181.fm ", "181fm ", "somafm - ", "somafm ",
+        "concertzender - ", "concertzender ", "cz ",
+        "radio ", "r. ", "r "
+    ]:
+        if n.startswith(prefix):
+            n = n[len(prefix):]
+            break
+    return re.sub(r'[^a-z0-9]', '', n)
+
+GENERIC_SLUGS = {
+    "stream", "live", "radio", "listen", "autodj", "broadcast", "1", "2", "3", "audio", "online", "main", "hq"
+}
+
+def extract_mountpoint(url: str) -> str:
+    path = url.split("?")[0].rstrip("/")
+    seg = path.split("/")[-1]
+    seg = re.sub(r"\.(?:mp3|aac|aacp|ogg|opus|flac|m3u8|pls)$", "", seg, flags=re.IGNORECASE)
+    seg = re.sub(r"[-_]\d+k?$", "", seg, flags=re.IGNORECASE)
+    seg = re.sub(r"[-_]\d+[-_](?:mp3|aac|aacp|ogg|opus|flac)$", "", seg, flags=re.IGNORECASE)
+    seg = seg.lower()
+    return seg if (len(seg) >= 4 and seg not in GENERIC_SLUGS) else ""
+
+def infer_bitrate_codec(name: str, url: str) -> Tuple[int, str]:
+    text = (name + " " + url).lower()
+    bitrate = 0
+    for br in [320, 256, 192, 160, 128, 96, 64, 48, 32]:
+        if f"{br}k" in text or f"-{br}-" in text or f"_{br}_" in text or f"_{br}k" in text or f"/{br}" in text or f"-{br}." in text or f"/{br}." in text or f"-{br}-" in text:
+            bitrate = br
+            break
+    codec = ""
+    for cod in ["aacp", "aac", "opus", "ogg", "flac", "mp3"]:
+        if cod in text:
+            codec = cod
+            break
+    return bitrate, codec
+
 def curate_category(
-    existing_stations: Optional[Dict[str, str]],
+    existing_stations: Optional[Dict[str, Any]],
     queries: List[Dict[str, str]],
     target_count: int = 16,
     max_count: int = 22
-) -> Dict[str, str]:
-    stations: Dict[str, str] = {}
+) -> Dict[str, Any]:
+    station_streams: Dict[str, List[Dict[str, Any]]] = {}
+    key_to_name: Dict[str, str] = {}
+    slug_to_name: Dict[str, str] = {}
     seen_urls = set()
     
     # 1. Parallel preflight of existing stations
     if existing_stations:
         valid_items = []
-        for name, url in existing_stations.items():
+        for name, val in existing_stations.items():
             if any(bad in name.lower() for bad in EXCLUDE_NAME_KEYWORDS):
                 continue
             clean_n = clean_station_name(name)
-            valid_items.append((clean_n, url))
+            match_k = get_station_match_key(clean_n)
+            
+            # Determine target_name by match_k or stream slug
+            target_name = ""
+            if match_k in key_to_name:
+                target_name = key_to_name[match_k]
+            
+            if isinstance(val, str):
+                slug = extract_mountpoint(val)
+                if not target_name and slug and slug in slug_to_name:
+                    target_name = slug_to_name[slug]
+                if not target_name:
+                    target_name = clean_n
+                    key_to_name[match_k] = target_name
+                    station_streams[target_name] = []
+                if slug:
+                    slug_to_name[slug] = target_name
+                br, cod = infer_bitrate_codec(name, val)
+                valid_items.append((target_name, match_k, slug, val, br, cod, ""))
+            elif isinstance(val, dict):
+                streams = val.get("streams", [])
+                if not streams:
+                    def_u = val.get("default") or val.get("url") or ""
+                    if def_u:
+                        slug = extract_mountpoint(def_u)
+                        if not target_name and slug and slug in slug_to_name:
+                            target_name = slug_to_name[slug]
+                        if not target_name:
+                            target_name = clean_n
+                            key_to_name[match_k] = target_name
+                            station_streams[target_name] = []
+                        if slug:
+                            slug_to_name[slug] = target_name
+                        br, cod = infer_bitrate_codec(name, def_u)
+                        valid_items.append((target_name, match_k, slug, def_u, br, cod, ""))
+                else:
+                    first_u = ""
+                    for s in streams:
+                        u = s.get("url", "") if isinstance(s, dict) else (s if isinstance(s, str) else "")
+                        if u:
+                            first_u = u
+                            break
+                    slug = extract_mountpoint(first_u) if first_u else ""
+                    if not target_name and slug and slug in slug_to_name:
+                        target_name = slug_to_name[slug]
+                    if not target_name:
+                        target_name = clean_n
+                        key_to_name[match_k] = target_name
+                        station_streams[target_name] = []
+                    if slug:
+                        slug_to_name[slug] = target_name
+                    for s in streams:
+                        if isinstance(s, dict) and s.get("url"):
+                            s_url = s["url"]
+                            s_br = s.get("bitrate", 0)
+                            s_cod = s.get("codec", "")
+                            s_reg = s.get("region", "")
+                            s_slug = extract_mountpoint(s_url)
+                            if s_slug:
+                                slug_to_name[s_slug] = target_name
+                            if s_br == 0:
+                                inf_br, inf_cod = infer_bitrate_codec(name, s_url)
+                                s_br = inf_br
+                                if not s_cod: s_cod = inf_cod
+                            valid_items.append((target_name, match_k, s_slug, s_url, s_br, s_cod, s_reg))
+                        elif isinstance(s, str):
+                            s_slug = extract_mountpoint(s)
+                            if s_slug:
+                                slug_to_name[s_slug] = target_name
+                            br, cod = infer_bitrate_codec(name, s)
+                            valid_items.append((target_name, match_k, s_slug, s, br, cod, ""))
             
         with ThreadPoolExecutor(max_workers=8) as executor:
             futures = [
-                (clean_n, url, executor.submit(verify_stream, url, 3.5))
-                for clean_n, url in valid_items
+                (target_name, match_k, slug, url, br, cod, reg, executor.submit(verify_stream, url, 3.5))
+                for target_name, match_k, slug, url, br, cod, reg in valid_items
             ]
-            for clean_n, url, fut in futures:
+            for target_name, match_k, slug, url, br, cod, reg, fut in futures:
                 try:
                     ok, final_url = fut.result()
                     if ok:
                         u = final_url or url
-                        if u.lower() not in seen_urls and clean_n not in stations:
-                            stations[clean_n] = u
+                        if u.lower() not in seen_urls:
                             seen_urls.add(u.lower())
+                            if target_name not in station_streams:
+                                station_streams[target_name] = []
+                            station_streams[target_name].append({
+                                "url": u,
+                                "bitrate": br,
+                                "codec": cod,
+                                "region": reg
+                            })
                 except Exception:
                     pass
 
-    # 2. Only fetch from Radio-Browser if more stations needed
-    if len(stations) < target_count and queries:
+    # 2. Query Radio-Browser to discover additional bitrates and new stations
+    if queries:
         candidates = []
         for q in queries:
-            res = query_radio_browser(q, limit=40)
+            res = query_radio_browser(q, limit=50)
             for item in res:
                 url = item.get("url_resolved") or item.get("url")
                 if not url or url.lower() in seen_urls:
@@ -172,52 +298,111 @@ def curate_category(
                     continue
                 votes = item.get("votes", 0)
                 bitrate = item.get("bitrate", 0)
-                candidates.append((votes, bitrate, name, url))
+                codec = (item.get("codec") or "").lower()
+                region = (item.get("countrycode") or "").upper()
+                candidates.append((votes, bitrate, name, url, codec, region))
 
         candidates.sort(key=lambda x: (x[0], x[1]), reverse=True)
         
         to_check = []
-        for votes, bitrate, raw_name, url in candidates:
+        for votes, bitrate, raw_name, url, codec, region in candidates:
             if url.lower() in seen_urls:
                 continue
             clean_n = clean_station_name(raw_name)
-            if clean_n in stations:
-                continue
-            to_check.append((clean_n, url))
-            if len(to_check) >= (target_count - len(stations)) * 2:
+            match_k = get_station_match_key(clean_n)
+            
+            if match_k in key_to_name:
+                target_name = key_to_name[match_k]
+                if bitrate <= 0:
+                    inf_br, _ = infer_bitrate_codec(raw_name, url)
+                    if inf_br <= 0:
+                        continue
+                    bitrate = inf_br
+                if len(station_streams.get(target_name, [])) >= 4:
+                    continue
+            else:
+                if len(station_streams) >= target_count:
+                    continue
+                target_name = clean_n
+                
+            to_check.append((target_name, match_k, url, bitrate, codec, region))
+            if len(to_check) >= 40:
                 break
                 
         with ThreadPoolExecutor(max_workers=8) as executor:
             cand_futures = [
-                (clean_n, url, executor.submit(verify_stream, url, 3.5))
-                for clean_n, url in to_check
+                (target_name, match_k, url, br, cod, reg, executor.submit(verify_stream, url, 3.5))
+                for target_name, match_k, url, br, cod, reg in to_check
             ]
-            for clean_n, url, fut in cand_futures:
-                if len(stations) >= target_count:
-                    break
+            for target_name, match_k, url, br, cod, reg, fut in cand_futures:
                 try:
                     ok, final_url = fut.result()
                     if ok:
                         u = final_url or url
-                        if u.lower() not in seen_urls and clean_n not in stations:
-                            stations[clean_n] = u
+                        if u.lower() not in seen_urls:
                             seen_urls.add(u.lower())
+                            if target_name not in station_streams:
+                                if len(station_streams) < max_count:
+                                    station_streams[target_name] = []
+                                    key_to_name[match_k] = target_name
+                                else:
+                                    continue
+                            if len(station_streams[target_name]) < 4:
+                                station_streams[target_name].append({
+                                    "url": u,
+                                    "bitrate": br,
+                                    "codec": cod,
+                                    "region": reg
+                                })
                 except Exception:
                     pass
             
-    if len(stations) > max_count:
-        stations = dict(list(stations.items())[:max_count])
+    stations: Dict[str, Any] = {}
+    for name, s_list in list(station_streams.items())[:max_count]:
+        if not s_list:
+            continue
+        seen_base_urls = set()
+        bitrate_map: Dict[int, str] = {}
+        default_url = s_list[0]["url"]
+        
+        for s in s_list:
+            full_u = s.get("url", "")
+            if not full_u:
+                continue
+            base_u = full_u.split("?")[0].lower().rstrip("/")
+            if base_u in seen_base_urls:
+                continue
+            seen_base_urls.add(base_u)
+            
+            br = s.get("bitrate", 0)
+            if br <= 0:
+                inf_br, _ = infer_bitrate_codec(name, full_u)
+                br = inf_br
+                
+            if br > 0 and br not in bitrate_map:
+                bitrate_map[br] = full_u
+                
+        if len(bitrate_map) >= 2:
+            sorted_bitrates = sorted(bitrate_map.keys(), reverse=True)
+            stations[name] = {
+                "default": bitrate_map[sorted_bitrates[0]],
+                "streams": [{"url": bitrate_map[b], "bitrate": b} for b in sorted_bitrates]
+            }
+        elif len(bitrate_map) == 1:
+            stations[name] = list(bitrate_map.values())[0]
+        else:
+            stations[name] = default_url
         
     return stations
 
-def save_json(path: str, stations: Dict[str, str]):
+def save_json(path: str, stations: Dict[str, Any]):
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w", encoding="utf-8") as fp:
         json.dump({"stations": stations}, fp, indent=2, ensure_ascii=False)
         fp.write("\n")
     print(f"  [OK] Saved {len(stations)} stations to {path}")
 
-def load_json(path: str) -> Dict[str, str]:
+def load_json(path: str) -> Dict[str, Any]:
     if os.path.exists(path):
         try:
             with open(path, "r", encoding="utf-8") as fp:
@@ -1090,6 +1275,84 @@ def resolve_stations_dir(custom_path: str = None) -> str:
         return os.path.join(p, "assets", "stations")
     return p
 
+def clean_catalog(stations_dir: str):
+    print(f"\n[Cleanup] Cleaning, pruning duplicates, and stripping codec/region from: {stations_dir}")
+    total_cleaned = 0
+    multi_count = 0
+    single_count = 0
+    
+    for root, dirs, files in os.walk(stations_dir):
+        if "deadStation" in root:
+            continue
+        for f in sorted(files):
+            if not f.endswith(".json"):
+                continue
+            path = os.path.join(root, f)
+            try:
+                with open(path, "r", encoding="utf-8") as fp:
+                    data = json.load(fp)
+            except Exception:
+                continue
+            stations = data.get("stations", {})
+            cleaned = {}
+            for name, val in stations.items():
+                if isinstance(val, dict):
+                    streams = val.get("streams", [])
+                    seen_base_urls = set()
+                    bitrate_map: Dict[int, str] = {}
+                    default_url = val.get("default") or (streams[0].get("url") if streams and isinstance(streams[0], dict) else "")
+                    
+                    for s in streams:
+                        if isinstance(s, dict):
+                            full_u = s.get("url", "")
+                            br = s.get("bitrate", 0)
+                        elif isinstance(s, str):
+                            full_u = s
+                            br = 0
+                        else:
+                            continue
+                        if not full_u:
+                            continue
+                        # Deduplicate by base audio path (ignoring query params)
+                        base_u = full_u.split("?")[0].lower().rstrip("/")
+                        if base_u in seen_base_urls:
+                            continue
+                        seen_base_urls.add(base_u)
+                        
+                        # Infer bitrate from URL/name if 0
+                        if br <= 0:
+                            inf_br, _ = infer_bitrate_codec(name, full_u)
+                            br = inf_br
+                            
+                        if br > 0 and br not in bitrate_map:
+                            bitrate_map[br] = full_u
+                            
+                    if len(bitrate_map) >= 2:
+                        sorted_bitrates = sorted(bitrate_map.keys(), reverse=True)
+                        cleaned[name] = {
+                            "default": bitrate_map[sorted_bitrates[0]],
+                            "streams": [{"url": bitrate_map[b], "bitrate": b} for b in sorted_bitrates]
+                        }
+                        multi_count += 1
+                    elif len(bitrate_map) == 1:
+                        cleaned[name] = list(bitrate_map.values())[0]
+                        single_count += 1
+                    else:
+                        cleaned[name] = default_url or (streams[0].get("url") if streams and isinstance(streams[0], dict) else "")
+                        single_count += 1
+                else:
+                    cleaned[name] = val
+                    single_count += 1
+                    
+            with open(path, "w", encoding="utf-8") as fp:
+                json.dump({"stations": cleaned}, fp, indent=2, ensure_ascii=False)
+                fp.write("\n")
+            total_cleaned += 1
+            
+    print(f"  [OK] Successfully cleaned {total_cleaned} JSON files.")
+    print(f"  [OK] Multi-bitrate stations: {multi_count}")
+    print(f"  [OK] Single-stream stations: {single_count}\n")
+
 def main():
     import argparse
     all_keys = list(GENRE_SPECS.keys()) + ["world"]
@@ -1102,6 +1365,7 @@ def main():
                "  python3 tools/curate_catalog.py soma fm181\n"
                "  python3 tools/curate_catalog.py --dir assets/stations pop rock\n"
                "  python3 tools/curate_catalog.py --audit\n"
+               "  python3 tools/curate_catalog.py --clean\n"
                "  python3 tools/curate_catalog.py --search \"lofi\"\n"
                "  python3 tools/curate_catalog.py all\n"
     )
@@ -1109,12 +1373,17 @@ def main():
     parser.add_argument("--dir", "-d", dest="custom_dir", default=None, help="Custom stations or assets directory (defaults to repo assets/stations)")
     parser.add_argument("--list", "-l", action="store_true", help="List all available genres and exit")
     parser.add_argument("--audit", "-a", action="store_true", help="Audit catalog for pnimrp UI constraints (<=22 stations, <=22 name chars, valid JSON)")
+    parser.add_argument("--clean", "-c", action="store_true", help="Clean all station JSONs: prune duplicates/0k bitrates, strip codec/region, flatten 1-stream stations")
     parser.add_argument("--search", "-s", dest="search_query", default=None, help="Search Radio-Browser for stations by name/tag and test live stream")
     
     args = parser.parse_args()
     
     stations_dir = resolve_stations_dir(args.custom_dir)
     
+    if args.clean:
+        clean_catalog(stations_dir)
+        sys.exit(0)
+        
     if args.audit:
         ok = audit_catalog(stations_dir)
         sys.exit(0 if ok else 1)

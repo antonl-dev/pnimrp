@@ -7,7 +7,6 @@
     "Braingell Radio": "https://s6.reliastream.com/proxy/braingel?mp=/stream",
     "Metal Express Radio": "http://s39.myradiostream.com:11590/listen.m4a",
     "Doom Metal Front Radio": "http://79.120.77.11:8002/blackdoom",
-    "Big R Radio - 80s Meta": "http://bigrradio.cdnstream1.com/5186_128",
     "Hard Rock Heaven": "http://hydra.cdnstream.com/1521_128",
     "La Grosse Radio Métal": "http://hd.lagrosseradio.info/lagrosseradio-metal-192.mp3",
     "ChroniX Radio Metalcor": "http://usa17.fastcast4u.com:5508/stream",
@@ -15,6 +14,13 @@
     "metal rock radio": "https://kathy.torontocast.com:2800/;",
     "1.FM - High Voltage Ra": "http://strm112.1.fm/highvoltage_mobile_mp3",
     "SomaFM Metal Detector": "https://ice5.somafm.com/metal-128-aac",
-    "Exclusively Iron Maide": "https://streaming.exclusive.radio/er/ironmaiden/icecast.audio"
+    "Exclusively Iron Maide": "https://streaming.exclusive.radio/er/blacksabbath/icecast.audio",
+    "Radiónica": "http://shoutcast.rtvc.gov.co:8010/;",
+    "RADIO BOB! BOBs Metal": "http://regiocast.streamabc.net/regc-radiobobmetal3070164-mp3-192-5354778?sABC=6o00n2s8%230%23o0qn71011p1s9n4n031ps6437nns5702%23fgernzf.enqvbobo.qr&aw_0_1st.playerid=streams.radiobob.de&amsparams=playerid:streams.radiobob.de;skey:1795203832",
+    "Megarock Radio": "https://stream3.megarockradio.net:80/",
+    "181.fm 80's HairBand": "https://listen.181fm.com/181-hairband_128k.mp3",
+    "Rock Antenne Heavy Met": "https://s6-webradio.rockantenne.de/heavy-metal",
+    "BBC Radio 6 Music": "http://as-hls-ww-live.akamaized.net/pool_81827798/live/ww/bbc_6music/bbc_6music.isml/bbc_6music-audio%3d320000.norewind.m3u8",
+    "ROCKANTENNE Heavy Meta": "http://s6-webradio.rockantenne.de/heavy-metal.aac"
   }
 }

@@ -7,14 +7,20 @@
     "Megarock Radio": "https://stream3.megarockradio.net:80/",
     "# RdMix Classic Rock 7": "https://cast1.torontocast.com:4610/stream",
     "181.fm The Rock!": "https://listen.181fm.com/181-hardrock_128k.mp3",
-    "Exclusively Guns N’ Ro": "https://streaming.exclusive.radio/er/gunsnroses/icecast.audio",
+    "Exclusively Guns N’ Ro": "https://streaming.exclusive.radio/er-app/ledzeppelinhits/icecast.audio",
     "# 100 GREATEST HEAVY M": "https://cast1.torontocast.com:4660/stream",
-    "Rajshahi FM": "https://stream-179.surfernetwork.com/nxfshdayjrdvv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJueGZzaGRheWpyZHZ2IiwiaG9zdCI6InN0cmVhbS0xNzkuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJVX3ZCRjdmNlMwaWlxMFV4LUVvSkJRIiwiaWF0IjoxNzk1MTE4OTAxLCJleHAiOjE3OTUxMTg5NjF9.LbVAGzIeldEGnjhqCEoOkqr4ho8d_QpEWPpHnfFWcrs",
-    "Exclusively Foo Fighte": "https://streaming.exclusive.radio/er/foofighters/icecast.audio",
+    "Rajshahi FM": "https://stream-179.surfernetwork.com/nxfshdayjrdvv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJueGZzaGRheWpyZHZ2IiwiaG9zdCI6InN0cmVhbS0xNzkuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJuV25KdEFTYlNVNjFsdUF6aF9NZFF3IiwiaWF0IjoxNzk1MjAzMjgxLCJleHAiOjE3OTUyMDMzNDF9.C7tlQrWCHVQqJamFsnmoaiJGHzDZWiPQW9Ww1T3dOpU",
     "Crucial Velocity Radio": "http://ais-sa2.cdnstream1.com/1369_128",
-    "Virgin Radio Rockstar": "https://icy.unitedradio.it/VirginSpecialEvent.mp3",
+    "Virgin Radio Rockstar": "http://icy.unitedradio.it/um1028.mp3",
     "Tangra Mega Rock": "http://stream-bg-01.radiotangra.com:8000/Tangra-high",
-    "88.6 Hard Rock": "https://edge71.streamonkey.net/radio886-hardrock/stream/mp3",
-    "Free FM Rock Bombay": "http://tachyon.shoutca.st:8298/"
+    "88.6 Hard Rock": "https://edge61.streamonkey.net/radio886-hardrock/stream/mp3",
+    "Free FM Rock Bombay": "http://tachyon.shoutca.st:8298/",
+    "Power FM - Rock FM": "http://s39.myradiostream.com:11590/listen/;.mp3",
+    "Best Of Rock.FM AC DC": "https://radio21.streamabc.net/radio21-acdc-mp3-256-4489368?sABC=6o00n0q2%230%23o0qn71011p1s9n4n031ps6437nns5702%23orfgbsebpx.sz&aw_0_1st.playerid=bestofrock.fm&amsparams=playerid:bestofrock.fm;skey:1795203282",
+    "Nu Metal Radio": "http://n1fa-e2.revma.ihrhls.com/zc9483/hls.m3u8?rj-ttl=5&rj-tok=AAABofp9W1oAJhx9LqJEzu-2vA",
+    "PureRock.US - America'": "http://rosetta.shoutca.st:8524/",
+    "radcap Hard Rock": "http://79.120.77.11:8000/hardrock",
+    "Rock Antenne - Melodic": "http://s6-webradio.rockantenne.de/melodic-rock",
+    "Blown": "http://ais-sa2.cdnstream1.com/1370_128"
   }
 }

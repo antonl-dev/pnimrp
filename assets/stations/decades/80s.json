@@ -1,13 +1,41 @@
 {
   "stations": {
     "Big R Radio - 80s Meta": "http://bigrradio.cdnstream1.com/5186_128",
-    "Heart 80s": "https://media-ssl.musicradio.com/Heart80sMP3",
+    "Heart 80s": "http://media-ice.musicradio.com/Heart80sMP3",
     "100% Radio 80": "http://100radio-80.ice.infomaniak.ch/100radio-80-128.mp3",
     "Hard Rock Heaven": "http://hydra.cdnstream.com/1521_128",
     "LOVE RADIO Only Love S": "http://shoutcast3.streamingmedia.it:3162/",
-    "SomaFM Underground 80s": "https://ice6.somafm.com/u80s-128-mp3",
+    "SomaFM Underground 80s": {
+      "default": "https://ice4.somafm.com/u80s-256-mp3",
+      "streams": [
+        {
+          "url": "https://ice4.somafm.com/u80s-256-mp3",
+          "bitrate": 256
+        },
+        {
+          "url": "https://ice6.somafm.com/u80s-128-mp3",
+          "bitrate": 128
+        },
+        {
+          "url": "https://ice4.somafm.com/u80s-32-aac",
+          "bitrate": 32
+        }
+      ]
+    },
     "1000 HITS 80s": "http://c2.auracast.net:8048/stream",
-    "SomaFM PopTron": "https://ice6.somafm.com/poptron-128-mp3",
+    "SomaFM PopTron": {
+      "default": "https://ice6.somafm.com/poptron-128-mp3",
+      "streams": [
+        {
+          "url": "https://ice6.somafm.com/poptron-128-mp3",
+          "bitrate": 128
+        },
+        {
+          "url": "https://ice4.somafm.com/poptron-32-aac",
+          "bitrate": 32
+        }
+      ]
+    },
     "Chante France 80's": "https://chantefrance80s.ice.infomaniak.ch/chantefrance80s-128.mp3",
     "R 80": "https://sphera.fluidstream.eu/radio80.mp3",
     "Virgin Radio Rock '80": "http://icy.unitedradio.it/VirginRock80.mp3",

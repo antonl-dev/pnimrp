@@ -7,7 +7,7 @@ when defined(useJsmn):
 
     import ../json/jsmn
 
-    proc loadStationJSMN*(filePath: string): tuple[names, urls: seq[string]] =
+    proc loadStationJSMN*(filePath: string): tuple[names, urls: seq[string], streams: seq[seq[StreamInfo]]] =
         var tokens = parseJson(readFile(filePath), autoResize = true)
         # Helper proc to get string value from token
         proc getString(jsonStr: string, token: JsmnToken): string =
@@ -27,7 +27,7 @@ when defined(useJsmn):
         # Iterate through stations object
         let stationsToken = tokens[stationsTokenIndex]
         var childIndex = stationsTokenIndex + 1
-        result = (names: newSeq[string](), urls: newSeq[string]())
+        result = (names: newSeq[string](), urls: newSeq[string](), streams: newSeq[seq[StreamInfo]]())
 
         var pairsCount = 0
         var countCap: uint8
@@ -51,6 +51,7 @@ when defined(useJsmn):
             let normalizedUrl = normalizeUrl(stationUrl)
             result.names.add(stationName)
             result.urls.add(normalizedUrl)
+            result.streams.add(@[StreamInfo(url: normalizedUrl, bitrate: 0, codec: "", region: "")])
             inc pairsCount
             inc countCap
 

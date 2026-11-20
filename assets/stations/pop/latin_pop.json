@@ -1,20 +1,26 @@
 {
   "stations": {
     "Chocolate FM": "http://streaming5.elitecomunicacion.es:8082/live.mp3",
-    "Los 40 Principales Méx": "http://15693.live.streamtheworld.com/LOS40_MEXICO_SC",
+    "Los 40 Principales Méx": "https://18063.live.streamtheworld.com:443/LOS40_MEXICO_SC",
     "Chocolate FM [calidad": "http://streaming5.elitecomunicacion.es:8082/live32.aac",
     "Cuban Flow Radio": "http://nap.casthost.net:9194/stream.mp3",
     "El Fonógrafo, Música l": "https://27063.live.streamtheworld.com:443/XEJP_AM_SC",
     "XHEXA \"Exa FM\" 104.9 F": "http://18303.live.streamtheworld.com/XHEXA_SC",
-    "CubanFlow Radio": "http://nap.casthost.net:9194/",
     "Loca FM Urban": "http://locafm02.we4stream.com:8015/live",
     "Chocolate FM HD": "http://streaming5.elitecomunicacion.es:8030/live.mp3",
     "La Mejor FM 98.9": "http://158.69.219.162:8024/stream",
-    "LOS40 Colombia": "https://27363.live.streamtheworld.com:443/LOS40_COLOMBIAAAC.aac",
+    "LOS40 Colombia": "https://24493.live.streamtheworld.com:443/LOS40_COLOMBIAAAC.aac",
     "FM Globo 93.3": "http://158.69.219.162:8026/stream",
     "El Fonógrafo - 690 AM": "https://15723.live.streamtheworld.com:443/XEN_AM_SC",
     "YXY 105.7": "http://158.69.200.1:8020/stream",
-    "Exa FM Guatemala": "https://stream-285.surfernetwork.com/czdkk32qduhvv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJjemRrazMycWR1aHZ2IiwiaG9zdCI6InN0cmVhbS0yODUuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiI0VE9qSF9PSVFXLV9DYkdNMDhld2VRIiwiaWF0IjoxNzk1MTE4ODY2LCJleHAiOjE3OTUxMTg5MjZ9.vratiN6J76L_kmIvANWSVmNd3DBcgOqoBNHZ1O_-y_c",
-    "Exa FM El Salvador": "http://158.69.219.162:8028/"
+    "Exa FM Guatemala": "https://stream-285.surfernetwork.com/czdkk32qduhvv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJjemRrazMycWR1aHZ2IiwiaG9zdCI6InN0cmVhbS0yODUuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJVd1BrbEw1MlJrbTdnTUZneHVmRFZRIiwiaWF0IjoxNzk1MjAzMTg0LCJleHAiOjE3OTUyMDMyNDR9.midJ1zbb4JHkcGe-qm53EUDKYr3NJFC6LWWHzeDajUQ",
+    "Exa FM El Salvador": "http://158.69.219.162:8028/",
+    "Los 40 Principales Chi": "http://24503.live.streamtheworld.com/LOS40_CHILE_SC",
+    "Ritmo 96.5 FM": "https://stream-291.surfernetwork.com/y0br5ck4ququv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJ5MGJyNWNrNHF1cXV2IiwiaG9zdCI6InN0cmVhbS0yOTEuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJDYXd6ZnJQUFFTNmxsVF9WdFg1RUJ3IiwiaWF0IjoxNzk1MjAzMTg1LCJleHAiOjE3OTUyMDMyNDV9.S0L8SQ9cQGxZLCti7XZX3VOIA26h_V05xTDZKg9Z4JA",
+    "XHGLX \"Exa FM\" 91.7 FM": "http://18213.live.streamtheworld.com/XHGLX_SC",
+    "LOS40 Chile": "https://27363.live.streamtheworld.com:443/LOS40_CHILEAAC.aac",
+    "Stereo 100, Quetzalten": "https://sh1.radioonlinehd.com:8056/stream?type=.mp3",
+    "Exclusively Shakira": "https://streaming.exclusive.radio/er/shakira/icecast.audio",
+    "Romántica (Delicias) -": "http://sigmaradio.stream:9000/index"
   }
 }

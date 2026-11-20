@@ -2,19 +2,37 @@
   "stations": {
     "TechnoBase.FM": "https://listener1.aach.tb-group.fm/tb-high.aac",
     "R Techno Zagreb": "http://mercury.reliastream.com:8085/stream.mp3",
-    "Sunshine Live Techno": "https://sunsl.streamabc.net/sunsl-techno-mp3-128-2432010?sABC=6nss5764%230%23p5549n47p4p5199r236op6r02281377q%23&aw_0_1st.playerid=&amsparams=playerid:;skey:1795118948",
+    "Sunshine Live Techno": {
+      "default": "http://sunsl.streamabc.net/sunsl-techno-mp3-192-4912904?sABC=6o00n105%230%23o0qn71011p1s9n4n031ps6437nns5702%23fgernz.fhafuvar-yvir.qr&aw_0_1st.playerid=stream.sunshine-live.de&amsparams=playerid:stream.sunshine-live.de;skey:1795203333",
+      "streams": [
+        {
+          "url": "http://sunsl.streamabc.net/sunsl-techno-mp3-192-4912904?sABC=6o00n105%230%23o0qn71011p1s9n4n031ps6437nns5702%23fgernz.fhafuvar-yvir.qr&aw_0_1st.playerid=stream.sunshine-live.de&amsparams=playerid:stream.sunshine-live.de;skey:1795203333",
+          "bitrate": 192
+        },
+        {
+          "url": "https://sunsl.streamabc.net/sunsl-techno-mp3-128-2432010?sABC=6nss5764%230%23p5549n47p4p5199r236op6r02281377q%23&aw_0_1st.playerid=&amsparams=playerid:;skey:1795118948",
+          "bitrate": 128
+        }
+      ]
+    },
     "1.FM Techno": "https://strm112.1.fm/deeptech_mobile_mp3",
     "Techno Paradize": "https://techno-paradize.stream.laut.fm/techno-paradize?uuid=f4463a63-16ce-2a94-5cde-a4fa5126e911&t302=2026-11-19_21-09-07",
     "MABU Beatz Techno": "https://audio.mabu-beatz-radio.com:8003/techno",
     "313 FM": "http://icecast.313.fm:8000/burst.ogg",
-    "radcap Techno": "http://79.120.77.11:8002/techno",
     "TOPspinning30": "https://27913.live.streamtheworld.com:443/TOPSPINNINGAAC_48.aac",
     "Intense Radio - We lov": "https://secure.live-streams.nl/main",
-    "TranceBase.FM - AAC HD": "http://listener1.aachd.tb-group.fm:80/trb-hd.aac",
+    "TranceBase.FM - AAC HD": "http://listener3.aachd.tb-group.fm:80/trb-hd.aac",
     "1.FM - Deep House Radi": "http://strm112.1.fm/deephouse_mobile_mp3",
-    "1.FM - Deep Techno & D": "http://strm112.1.fm/deeptech_mobile_mp3",
     "90s90s Techno HQ": "http://regiocast.streamabc.net/regc-90s90stechno2195701-mp3-192-2408420?sABC=6nss5768%230%23p5549n47p4p5199r236op6r02281377q%23enqvbqr&aw_0_1st.playerid=radiode&amsparams=playerid:radiode;skey:1795118952",
     "Techno.FM": "http://stream.techno.fm/radio.mp3",
-    "ElectroDanceWorld Radi": "http://stream-178.surfernetwork.com/s70bvdgqks8uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJzNzBidmRncWtzOHV2IiwiaG9zdCI6InN0cmVhbS0xNzguc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJraDBsVk1QRlNTcUdnZDJsZGNKU2VBIiwiaWF0IjoxNzk1MTE4OTUyLCJleHAiOjE3OTUxMTkwMTJ9.Tskng0DHyQAuHIrq13rtNSuafXPx6FPgUMDzFPszTYI"
+    "ElectroDanceWorld Radi": "http://stream-178.surfernetwork.com/s70bvdgqks8uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJzNzBidmRncWtzOHV2IiwiaG9zdCI6InN0cmVhbS0xNzguc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJkU0JIVWdzeFQzeUpvaUdIR2Y2OGJBIiwiaWF0IjoxNzk1MjAzMzMyLCJleHAiOjE3OTUyMDMzOTJ9.F19afsprHDcCIO8p5-Y_uLLUVGIsJzTY16wCNwLhja0",
+    "Ibiza Global Radio": "http://cdn-peer021.streaming-pro.com:8024/ibizaglobalradio.mp3",
+    "PulseEDM Dance Music R": "http://pulseedm.cdnstream1.com:8124/1373_128",
+    "Sunshine Live - Festiv": "http://sunsl.streamabc.net/sunsl-festival-mp3-192-5217832?sABC=6o00n105%230%23o0qn71011p1s9n4n031ps6437nns5702%23fgernz.fhafuvar-yvir.qr&aw_0_1st.playerid=stream.sunshine-live.de&amsparams=playerid:stream.sunshine-live.de;skey:1795203333",
+    "Minimal Mix Radio": "http://orion.shoutca.st:8750/",
+    "BBC Radio 6 Music": "http://as-hls-ww-live.akamaized.net/pool_81827798/live/ww/bbc_6music/bbc_6music.isml/bbc_6music-audio%3d320000.norewind.m3u8",
+    "Hardcore Radio": "http://shoutcast1.hardcoreradio.nl/",
+    "Deep Radio": "http://22343.live.streamtheworld.com:80/DEEP_RADIO.mp3",
+    "Laut.fm Housebomb": "http://housebomb-fn.stream.laut.fm/housebomb-fn?t302=2018-02-10_16-10-52&uuid=bff87322-9a02-49f3-9ac6-a2c1457286dc"
   }
 }

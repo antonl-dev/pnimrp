@@ -1,6 +1,18 @@
 {
   "stations": {
-    "SomaFM cliqhopIDM": "https://ice1.somafm.com/cliqhop-128-mp3",
+    "SomaFM cliqhopIDM": {
+      "default": "https://ice6.somafm.com/cliqhop-256-mp3",
+      "streams": [
+        {
+          "url": "https://ice6.somafm.com/cliqhop-256-mp3",
+          "bitrate": 256
+        },
+        {
+          "url": "https://ice1.somafm.com/cliqhop-128-mp3",
+          "bitrate": 128
+        }
+      ]
+    },
     "Systrum Ambient": "https://systrum.net:8443/SSR1",
     "radioFunk": "https://icecast.westerfunk.net/radiofunk.mp3",
     "Anima Amoris IDM": "https://amoris.sknt.ru/idm.mp3",
@@ -8,13 +20,35 @@
     "Soma GrooveSaladCls": "https://ice5.somafm.com/gsclassic-128-mp3",
     "radcap IDM Ambient": "http://213.141.131.10:8002/idmambient",
     "radcap IDM": "http://79.111.14.76:8004/idm",
-    "SomaFM CliqHop IDM": "https://ice5.somafm.com/cliqhop-128-mp3",
     "dinamo.fm smog": "http://channels.dinamo.fm/smog-mp3",
-    "radcap Glitch / Glitch": "http://79.111.14.76:8002/glitch",
-    "FluxFM - Eclectic Elec": "http://fluxfm.streamabc.net/flx-fluxfmberlin-mp3-320-3394445?sABC=6nss57s8%231%23cynl.z3%23nhqvb&aw_0_1st.playerid=audio&amsparams=playerid:audio;skey:1795119096",
-    "Elektronisch Querbeat": "http://elektronischquerbeat.stream.laut.fm/elektronisch_querbeat?uuid=b851cd31-504f-7865-2d7c-4e661592d7eb&t302=2026-11-19_21-11-36",
+    "radcap Glitch / Glitch": "http://79.111.14.76:8000/glitch",
+    "FluxFM - Eclectic Elec": {
+      "default": "http://fluxfm.streamabc.net/flx-fluxfmberlin-mp3-320-3394445?sABC=6nss57s8%231%23cynl.z3%23nhqvb&aw_0_1st.playerid=audio&amsparams=playerid:audio;skey:1795119096",
+      "streams": [
+        {
+          "url": "http://fluxfm.streamabc.net/flx-fluxfmberlin-mp3-320-3394445?sABC=6nss57s8%231%23cynl.z3%23nhqvb&aw_0_1st.playerid=audio&amsparams=playerid:audio;skey:1795119096",
+          "bitrate": 320
+        },
+        {
+          "url": "http://fluxfm.streamabc.net/flx-fluxfmberlin-mp3-128-5859035?sABC=6o00n196%231%23cynl.z3%23nhqvb&aw_0_1st.playerid=audio&amsparams=playerid:audio;skey:1795203478",
+          "bitrate": 128
+        },
+        {
+          "url": "http://fluxfm.streamabc.net/flx-fluxfmberlin-aacplus-64-6698635?sABC=6o00n196%231%23cynl.z3%23nhqvb&aw_0_1st.playerid=audio&amsparams=playerid:audio;skey:1795203478",
+          "bitrate": 64
+        }
+      ]
+    },
+    "Elektronisch Querbeat": "http://elektronischquerbeat.stream.laut.fm/elektronisch_querbeat?uuid=379d4955-1e22-33d5-5806-d19774613d1c&t302=2026-11-20_20-37-57",
     "Verdure Station": "http://air.verdure.net:8881/stream",
     "radcap Breakcore": "http://79.111.119.111:8004/breakcore",
-    "Dirty Radio for Underw": "https://live.dirty.radio/stream/"
+    "Dirty Radio for Underw": "https://live.dirty.radio/stream/",
+    "ГУСЬ.Мидтемпо": "https://stream1.radiogoose.ru/listen/midtempo/play",
+    "Nightride FM Datawave": "https://stream.nightride.fm/datawave.mp3",
+    "Ibiza Sonica | Sonica": "https://n03.radiojar.com/vt992kyru72vv?rj-ttl=5&rj-tok=AAABofqAaLYAN552oUdjkW0QVQ",
+    "here4ears": "http://82.64.164.43:8000/stream",
+    "CAMP Radio": "https://listen.camp/campradio.ogg",
+    "EXCLUSIVE LAUT.FM": "http://exclusive.stream.laut.fm/exclusive?t302=2026-11-20_20-37-59&uuid=e5f0e7fc-72af-88d8-8df3-a397fc12282d",
+    "Rundfunkautist": "https://rundfunkautist.stream.laut.fm/rundfunkautist?t302=2026-11-17_08-57-41&uuid=bf5b9bd5-2534-b0e6-95a6-d21d4969e5c2"
   }
 }

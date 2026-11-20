@@ -2,7 +2,7 @@
   "stations": {
     "2000 FM - RnB & Hip-Ho": "http://bigrradio.cdnstream1.com/5105_128",
     "Hot 108 JAMZ": "http://sc.hot108.com:4000/",
-    "Uganda DJs": "https://stream-283.surfernetwork.com/muzrp86994zuv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJtdXpycDg2OTk0enV2IiwiaG9zdCI6InN0cmVhbS0yODMuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJCdm1tNDNNc1NsS3lUWWoyUlpKTElRIiwiaWF0IjoxNzk1MTE5NDUxLCJleHAiOjE3OTUxMTk1MTF9.s0BW128rXNhYhKC94RINaSHJKAQYy2GWXE-vRo4DyQ4",
+    "Uganda DJs": "https://stream-283.surfernetwork.com/muzrp86994zuv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJtdXpycDg2OTk0enV2IiwiaG9zdCI6InN0cmVhbS0yODMuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJQWWFWRDhLUFFjNjB0WW5mbUFZUUFBIiwiaWF0IjoxNzk1MjA0MTU2LCJleHAiOjE3OTUyMDQyMTZ9._KBlMbXJ5bQyWmR4nQRhTLPcZf5z6M4BuInyNJy_mmw",
     "R 105 - HipHop & RnB": "http://icy.unitedradio.it/105HipHopRnB.mp3",
     "BBC Radio 6 Music": "http://as-hls-ww-live.akamaized.net/pool_81827798/live/ww/bbc_6music/bbc_6music.isml/bbc_6music-audio%3d320000.norewind.m3u8",
     "FUNKY RADIO - Only Fun": "https://funkyradio.streamingmedia.it/audio.aac",
@@ -10,10 +10,17 @@
     ".977 Jamz": "http://26343.live.streamtheworld.com:3690/977_JAMZ_SC",
     "Virgin Radio Romania": "https://astreaming.edi.ro:8443/VirginRadio_aac",
     "Motown Radio": "http://94.23.159.187:9990/;",
-    "MajorFM": "https://stream-178.surfernetwork.com/pkza99xshkhvv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJwa3phOTl4c2hraHZ2IiwiaG9zdCI6InN0cmVhbS0xNzguc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJNQ0tUVFNRTlRLT1dOTGdTOEg1RTlRIiwiaWF0IjoxNzk1MTE5NDUyLCJleHAiOjE3OTUxMTk1MTJ9.S2tP36P1a0YwKKcVKqIVrloKWVkCiNB3XNesvENxz_c",
+    "MajorFM": "http://stream-178.surfernetwork.com/pkza99xshkhvv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJwa3phOTl4c2hraHZ2IiwiaG9zdCI6InN0cmVhbS0xNzguc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJYdUxLX29oelJvR01FXzBMOWtoSXNBIiwiaWF0IjoxNzk1MjA0MTU2LCJleHAiOjE3OTUyMDQyMTZ9.KOjpPk6pB4nf5z-RhhE-Iecaw8hnIUL9AA0q62227qk",
     "The Funky Channel": "http://cast3.my-control-panel.com:8170/stream",
-    "Rap Lbeldi Maroc - Hip": "https://stream-178.surfernetwork.com/ivdufrl7q0quv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJpdmR1ZnJsN3EwcXV2IiwiaG9zdCI6InN0cmVhbS0xNzguc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJsaGY0YWxiTVNPNnVmZGxTR2x4bDV3IiwiaWF0IjoxNzk1MTE5NDUyLCJleHAiOjE3OTUxMTk1MTJ9.7Qtrb5eMdWmEL2m3-LmlhInJUwO6X2Se7s2Ua0Mc7Io",
+    "Rap Lbeldi Maroc - Hip": "https://stream-178.surfernetwork.com/ivdufrl7q0quv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJpdmR1ZnJsN3EwcXV2IiwiaG9zdCI6InN0cmVhbS0xNzguc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJyc3VvQkNWUVFWT1poRi1XT1F1cGVnIiwiaWF0IjoxNzk1MjA0MTU2LCJleHAiOjE3OTUyMDQyMTZ9.gSJBhb3eFwUS9nFzWDGrnW3MOql-nI7DbdhNYzzrud8",
     "Gangstaville Radio": "http://stream.radio.co/s1cffd7347/listen",
-    "Urbano 106 - 105.9 FM": "https://usa18.fastcast4u.com/proxy/rmoohhrw?mp=/1"
+    "Urbano 106 - 105.9 FM": "https://usa18.fastcast4u.com/proxy/rmoohhrw?mp=/1",
+    "Jam FM - Black Label": "http://rtlberlin.streamabc.net/rtlb-jamfmblack-mp3-128-6608256?sABC=6o00n43r%230%23o0qn71011p1s9n4n031ps6437nns5702%23enqvb-oebjfre.vasb&aw_0_1st.playerid=radio-browser.info&amsparams=playerid:radio-browser.info;skey:1795204158",
+    "Base FM": "https://icast.connectmedia.hu/5401/live.mp3",
+    "90s90s Black & RnB HQ": "http://regiocast.streamabc.net/regc-90s90srnb9791660-mp3-192-2459421?sABC=6o00n43r%230%23o0qn71011p1s9n4n031ps6437nns5702%23&aw_0_1st.playerid=&amsparams=playerid:;skey:1795204158",
+    "Exclusively George Mic": "https://streaming.exclusive.radio/er/georgemichael/icecast.audio",
+    "1.FM - Slow Jamz Radio": "http://strm112.1.fm/slowjamz_mobile_mp3",
+    "181.fm True R&B": "https://listen.181fm.com/181-rnb_128k.mp3",
+    "Caribbean KISS FM 105.": "http://auds2.intacs.com/caribbeankissfm"
   }
 }

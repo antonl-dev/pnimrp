@@ -1,7 +1,19 @@
 {
   "stations": {
     "Alpha Boys School Radi": "http://alphaboys-live.streamguys1.com/alphaboys.mp3",
-    "SomaFM Heavyweight Reg": "https://ice5.somafm.com/reggae-256-mp3",
+    "SomaFM Heavyweight Reg": {
+      "default": "https://ice5.somafm.com/reggae-256-mp3",
+      "streams": [
+        {
+          "url": "https://ice5.somafm.com/reggae-256-mp3",
+          "bitrate": 256
+        },
+        {
+          "url": "https://ice6.somafm.com/reggae-32-aac",
+          "bitrate": 32
+        }
+      ]
+    },
     "Bob's Ska Radio": "http://51.255.235.165:5528/stream",
     "BBC Radio 6 Music": "http://as-hls-ww-live.akamaized.net/pool_81827798/live/ww/bbc_6music/bbc_6music.isml/bbc_6music-audio%3d320000.norewind.m3u8",
     "Weymouth Rocks": "http://cast1.asurahosting.com:8621/med",
@@ -10,11 +22,17 @@
     "Ska World": "http://skaworld.stream.laut.fm/skaworld?ref=radiode",
     "punkrockers-radio": "https://stream.punkrockers-radio.de:8443/prr.mp3",
     "R SAR - Studencka Agen": "https://stream.radiosar.pl/hdmain.mp3",
-    "Laut.FM Skafari": "http://skafari.stream.laut.fm/skafari?t302=2026-11-19_19-08-51&uuid=366cc818-7d13-ade1-e779-1dc397c8f7e6",
-    "Punkrockers Radio": "http://stream.punkrockers-radio.de:8000/mp3",
+    "Laut.FM Skafari": "http://skafari.stream.laut.fm/skafari?t302=2026-11-20_20-45-22&uuid=e72d8c4a-e757-7f98-f437-602a5fe022f2",
     "R Bob Ska Stream": "https://regiocast.streamabc.net/regc-radiobobska6892150-mp3-192-1651077",
     "Tonic Ska Radio": "https://eu10.fastcast4u.com/tonicska",
     "R Posušje": "http://136.243.144.93:9994/",
-    "CJDJ 102.1 \"Rock 102\"": "http://rawlco.leanstream.co/CJDJFM-MP3"
+    "CJDJ 102.1 \"Rock 102\"": "http://rawlco.leanstream.co/CJDJFM-MP3",
+    "R Danielka": "http://s3.slotex.pl:7088/",
+    "CJWW \"Country 600\" Sas": "http://18003.live.streamtheworld.com/CJWWAMAAC_SC",
+    "Boot Boy Radio": "https://streaming04.liveboxstream.uk/proxy/dwain?mp=/stream",
+    "R As": "http://185.102.239.216:8000/;",
+    "Ska Punk / Core / Two": "http://79.111.119.111:8000/skapunk",
+    "R Elka Miedziowe": "https://rs102-krk.rmfstream.pl/audioxi_elka_glogow",
+    "Rocksteady / Lovers Ro": "http://79.120.39.202:8000/rocksteady"
   }
 }

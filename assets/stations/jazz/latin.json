@@ -3,18 +3,36 @@
     "Miled Music Latin Jazz": "https://miledmusic7-cybertec.radioca.st/stream",
     "Hear Me Latin Jazz": "https://radio.hearme.fm:9350/stream",
     "Big Radio Latin Jazz L": "https://bigrradio.cdnstream1.com/5224_128",
-    "Jazz Radio Latin FR": "https://jazz-wr09.ice.infomaniak.ch/jazz-wr09-64.aac",
-    "R Art Latin Jazz": "https://live.radioart.com/fLatin_jazz.mp3",
+    "Jazz Radio Latin FR": {
+      "default": "http://jazz-wr09.ice.infomaniak.ch/jazz-wr09-128.mp3",
+      "streams": [
+        {
+          "url": "http://jazz-wr09.ice.infomaniak.ch/jazz-wr09-128.mp3",
+          "bitrate": 128
+        },
+        {
+          "url": "https://jazz-wr09.ice.infomaniak.ch/jazz-wr09-64.aac",
+          "bitrate": 64
+        }
+      ]
+    },
+    "R Art Latin Jazz": "http://air.radioart.com/fLatin_jazz.mp3",
     "WCUF HD2 Latin Jazz": "https://peridot.streamguys.com:7830/WUCF-HD2",
-    "Jazz Radio Latin Jazz": "http://jazz-wr09.ice.infomaniak.ch/jazz-wr09-128.mp3",
     "RMC Marine": "http://edge.radiomontecarlo.net/rmcweb010",
     "radcap Bossa Nova": "http://79.111.14.76:8002/bossanova",
     "100% ACID JAZZ": "https://mpc1.mediacp.eu:8356/stream",
     "Suite Jazz Radio": "https://jenny.torontocast.com:2000/stream/suitejazzradio",
     "Qfm": "http://51.255.235.165:5092/;",
-    "R Monte Carlo - Bossa": "https://mc-mcbossa.hostingradio.ru/mcbossa96.aacp?listening-from-radio-garden=1645969315",
+    "R Monte Carlo - Bossa": "https://mc-mcbossa.hostingradio.ru/mcbossa96.aacp",
     "R Art - Bossa Nova": "http://air-tunein.radioart.com/fBosa_nova.mp3",
     "radcap Latin / Afro-Cu": "http://79.111.119.111:8002/latinjazz",
-    "Klassik Radio - Brazil": "http://klassikr.streamabc.net/klr-brazil-mp3-128-2052435?sABC=6nss375o%230%23p5549n47p4p5199r236op6r02281377q%23&aw_0_1st.playerid=&amsparams=playerid:;skey:1795110747"
+    "Klassik Radio - Brazil": "http://klassikr.streamabc.net/klr-brazil-mp3-128-2052435?sABC=6nss375o%230%23p5549n47p4p5199r236op6r02281377q%23&aw_0_1st.playerid=&amsparams=playerid:;skey:1795110747",
+    "Digital Jazz": "http://stm01.virtualcast.com.br:8190/live",
+    "Onda Latina": "http://ondalatina.stream.laut.fm/ondalatina?uuid=2ee4ac5c-a283-d07a-aaa6-1c081f6fc4e7&t302=2026-11-20_20-40-31",
+    "AshiyaRadio〜アシヤ・ラヂヲ〜": "https://s3.radio.co/sc8d895604/listen",
+    "R Art - Smooth Bossa N": "https://live.radioart.com/fSmooth_bossa_nova.mp3",
+    "Allzic Radio Brazil": "http://allzic19.ice.infomaniak.ch/allzic19.mp3",
+    "Exclusively Diana Kral": "https://nl4.mystreaming.net/er/dianakrall/icecast.audio",
+    "#1 Splash Jazz": "https://ais-sa2.cdnstream1.com/2346_128.mp3"
   }
 }

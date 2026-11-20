@@ -11,10 +11,54 @@
     "SF in SF": "https://ice.somafm.com/sfinsf-128-mp3",
     "The In-Sound": "https://ice.somafm.com/insound-128-mp3",
     "Mission Control": "https://ice.somafm.com/missioncontrol-128-mp3",
-    "SF 10-33": "https://ice.somafm.com/sf1033-128-mp3",
-    "SomaFM Groove Salad": "https://ice5.somafm.com/groovesalad-128-mp3",
-    "SomaFM Secret Agent": "https://ice6.somafm.com/secretagent-128-mp3",
-    "SomaFM Underground 80s": "https://ice6.somafm.com/u80s-128-mp3",
+    "SF 10": "https://ice.somafm.com/sf1033-128-mp3",
+    "SomaFM Groove Salad": {
+      "default": "https://ice5.somafm.com/groovesalad-128-aac",
+      "streams": [
+        {
+          "url": "https://ice5.somafm.com/groovesalad-128-aac",
+          "bitrate": 128
+        },
+        {
+          "url": "https://ice5.somafm.com/groovesalad-64-aac",
+          "bitrate": 64
+        }
+      ]
+    },
+    "SomaFM Secret Agent": {
+      "default": "https://ice6.somafm.com/secretagent-128-mp3",
+      "streams": [
+        {
+          "url": "https://ice6.somafm.com/secretagent-128-mp3",
+          "bitrate": 128
+        },
+        {
+          "url": "https://ice5.somafm.com/secretagent-64-aac",
+          "bitrate": 64
+        },
+        {
+          "url": "https://ice5.somafm.com/secretagent-32-aac",
+          "bitrate": 32
+        }
+      ]
+    },
+    "SomaFM Underground 80s": {
+      "default": "https://ice4.somafm.com/u80s-256-mp3",
+      "streams": [
+        {
+          "url": "https://ice4.somafm.com/u80s-256-mp3",
+          "bitrate": 256
+        },
+        {
+          "url": "https://ice6.somafm.com/u80s-128-mp3",
+          "bitrate": 128
+        },
+        {
+          "url": "https://ice4.somafm.com/u80s-32-aac",
+          "bitrate": 32
+        }
+      ]
+    },
     "SomaFM Space Station S": "https://ice4.somafm.com/spacestation-128-aac"
   }
 }

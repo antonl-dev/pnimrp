@@ -4,20 +4,44 @@
     "R Art Ambient": "https://air.radioart.com/fAmbient.mp3",
     "1.FM SPA": "https://strm112.1.fm/spa_mobile_mp3",
     "mrg AmbientRadio.net": "https://str3.openstream.co/1808",
-    "Positively Ambient": "https://streaming.positivity.radio/pr/positranquil/icecast.audio",
+    "Positively Ambient": "https://streaming.positivity.radio/pr/sleeprelax/icecast.audio",
     "Ambi Nature Radio": "https://nature-rex.radioca.st/stream",
     "Ambient Zone Radio": "https://dronezone-mynoise.radioca.st/stream",
-    "SomaFM Deep Space One": "https://ice2.somafm.com/deepspaceone-64-aac",
+    "SomaFM Deep Space One": {
+      "default": "https://ice2.somafm.com/deepspaceone-64-aac",
+      "streams": [
+        {
+          "url": "https://ice2.somafm.com/deepspaceone-64-aac",
+          "bitrate": 64
+        },
+        {
+          "url": "https://ice5.somafm.com/deepspaceone-32-aac",
+          "bitrate": 32
+        }
+      ]
+    },
     "Ambient Radio org": "https://uk2.internet-radio.com/proxy/ambientradio/stream",
-    "Dinamo FM Sleep": "https://channels.dinamo.fm/sleep-aac",
+    "Dinamo FM Sleep": "http://channels.dinamo.fm/sleep-mp3",
     "Frisky Radio Chill": "https://chill.friskyradio.com/frisky_aac_low",
     "Hirschmilch Chillout": "https://hirschmilch.de:7001/chillout.mp3",
     "Loca FM Ambient": "https://s02.fjperezdj.com:8036/live",
-    "myNoise Drone Zone": "https://dronezone-mynoise.radioca.st/live",
+    "myNoise Drone Zone": "http://dronezone-mynoise.radioca.st/stream",
     "myNoise Siren Songs": "https://sirensongs-mynoise.radioca.st/live",
     "OM Radio": "http://188.138.251.192:8002/;",
     "radcap Drone Ambient": "http://79.111.119.111:8000/droneambient",
-    "Sleep Radio": "https://cast4.my-control-panel.com/proxy/sleeprad/stream?1721309187745",
-    "SpaceStation SomaFM": "https://ice2.somafm.com/spacestation-64-aac"
+    "Sleep Radio": "http://65.109.81.84:9851/stream",
+    "SpaceStation SomaFM": {
+      "default": "https://ice4.somafm.com/spacestation-128-aac",
+      "streams": [
+        {
+          "url": "https://ice4.somafm.com/spacestation-128-aac",
+          "bitrate": 128
+        },
+        {
+          "url": "https://ice2.somafm.com/spacestation-64-aac",
+          "bitrate": 64
+        }
+      ]
+    }
   }
 }

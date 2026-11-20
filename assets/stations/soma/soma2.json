@@ -4,14 +4,62 @@
     "Sonic Universe": "https://ice.somafm.com/sonicuniverse-128-mp3",
     "Bossa Beyond": "https://ice.somafm.com/bossa-128-mp3",
     "Suburbs of Goa": "https://ice.somafm.com/suburbsofgoa-128-mp3",
-    "Heavyweight Reggae": "https://ice.somafm.com/reggae-128-mp3",
+    "Heavyweight Reggae": {
+      "default": "https://ice5.somafm.com/reggae-256-mp3",
+      "streams": [
+        {
+          "url": "https://ice5.somafm.com/reggae-256-mp3",
+          "bitrate": 320
+        },
+        {
+          "url": "https://ice.somafm.com/reggae-128-mp3",
+          "bitrate": 128
+        }
+      ]
+    },
     "The Dark Zone": "https://ice.somafm.com/darkzone-128-mp3",
     "Illinois Street Lounge": "https://ice.somafm.com/illstreet-128-mp3",
-    "Seven Inch Soul": "https://ice.somafm.com/7soul-128-mp3",
-    "cliqhop idm": "https://ice.somafm.com/cliqhop-128-mp3",
+    "Seven Inch Soul": {
+      "default": "https://ice4.somafm.com/7soul-128-mp3",
+      "streams": [
+        {
+          "url": "https://ice4.somafm.com/7soul-128-mp3",
+          "bitrate": 160
+        },
+        {
+          "url": "https://ice.somafm.com/7soul-128-mp3",
+          "bitrate": 128
+        }
+      ]
+    },
+    "cliqhop idm": {
+      "default": "https://ice6.somafm.com/cliqhop-256-mp3",
+      "streams": [
+        {
+          "url": "https://ice6.somafm.com/cliqhop-256-mp3",
+          "bitrate": 256
+        },
+        {
+          "url": "https://ice.somafm.com/cliqhop-128-mp3",
+          "bitrate": 128
+        }
+      ]
+    },
     "Vaporwaves": "https://ice.somafm.com/vaporwaves-128-mp3",
     "Fluid": "https://ice.somafm.com/fluid-128-mp3",
-    "DubStep Beyond": "https://ice.somafm.com/dubstep-128-mp3",
+    "DubStep Beyond": {
+      "default": "https://ice4.somafm.com/dubstep-256-mp3",
+      "streams": [
+        {
+          "url": "https://ice4.somafm.com/dubstep-256-mp3",
+          "bitrate": 256
+        },
+        {
+          "url": "https://ice.somafm.com/dubstep-128-mp3",
+          "bitrate": 128
+        }
+      ]
+    },
     "Digitalis": "https://ice.somafm.com/digitalis-128-mp3",
     "Metal Detector": "https://ice.somafm.com/metal-128-mp3",
     "Tiki Time": "https://ice.somafm.com/tikitime-128-mp3",

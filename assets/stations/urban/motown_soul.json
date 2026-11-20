@@ -1,12 +1,12 @@
 {
   "stations": {
-    "Uganda DJs": "https://stream-283.surfernetwork.com/muzrp86994zuv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJtdXpycDg2OTk0enV2IiwiaG9zdCI6InN0cmVhbS0yODMuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJxeHdMeGtVRVNDQ2k0Nno0a0J0NTRRIiwiaWF0IjoxNzk1MTE5NDQ2LCJleHAiOjE3OTUxMTk1MDZ9.jx9t1c1gFY5FGQsHHcQPUxWB3DsMXMeNsIpLfujeYI8",
+    "Uganda DJs": "https://stream-283.surfernetwork.com/muzrp86994zuv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJtdXpycDg2OTk0enV2IiwiaG9zdCI6InN0cmVhbS0yODMuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJpTnFodXZMQlF3UzlYaGJRT3k3ckhRIiwiaWF0IjoxNzk1MjA0MTM4LCJleHAiOjE3OTUyMDQxOTh9.eROCQOUc2d-U2rzcS2T8nLV5ssht6ZSWdGH92SVXi4s",
     "SomaFM Fluid": "https://ice6.somafm.com/fluid-128-mp3",
     "Jazz Radio Soul": "http://jazz-wr10.ice.infomaniak.ch/jazz-wr10-128.mp3",
     "# RdMix Classic Rock 7": "https://cast1.torontocast.com:4610/stream",
     "BBC Radio 6 Music": "http://as-hls-ww-live.akamaized.net/pool_81827798/live/ww/bbc_6music/bbc_6music.isml/bbc_6music-audio%3d320000.norewind.m3u8",
     "Alternative Radio": "https://listen.radioking.com/radio/182263/stream/224140",
-    "- 0 N - 60s on Radio": "https://0n-60s.radionetz.de/0n-60s.mp3",
+    "- 0 N - 60s on Radio": "https://0n-60s.radionetz.de/0n-60s.aac",
     "the wave - relaxing ra": "http://rtlberlin.streamabc.net/rtlb-thewave-mp3-128-3525376?sABC=6nss424p%230%23p5549n47p4p5199r236op6r02281377q%23enqvb-oebjfre.vasb&aw_0_1st.playerid=radio-browser.info&amsparams=playerid:radio-browser.info;skey:1795113548",
     "FUNKY RADIO - Only Fun": "https://funkyradio.streamingmedia.it/audio.aac",
     "54 Funk Soul Dance": "http://54-funk-soul-dance.stream.laut.fm/54-funk-soul-dance",

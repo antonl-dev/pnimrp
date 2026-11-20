@@ -1,13 +1,11 @@
 {
   "stations": {
     "Aplus Beat": "https://s.aplus.fm/aplus_beat_128",
-    "Bad Beat Radio AUTODJ": "https://misato.ru-hoster.com:8061/badbeatradio_autodj",
     "FreakBeats Tekno IT": "https://sv1.uk.mystreamserver.com:8042/;",
     "radcap BreakBeat": "http://79.120.39.202:8000/breakbeat",
     "Mundo Break": "https://streaming01.radiosenlinea.com.ar:10880/;",
     "AUDigitalNet Jungle BB": "http://abm22.com.au:8000/CONTAINER39",
     "101.ru": "https://srv11.gpmradio.ru:8443/stream/pro/aac/64/4",
-    "radcap": "http://79.120.39.202:8002/breakbeat",
     "NEU RADIO": "https://nr9.newradio.it/proxy/ebaruffa?mp=/stream",
     "UK Bass Radio": "https://s2.ssl-stream.com/listen/uk_bass_radio/stream",
     "674FM": "http://audio.674.fm/stream",
@@ -15,6 +13,13 @@
     "Luxfunk Blackmix": "https://luxfunkbroadcast.com/proxy/luxfunkblackmix/stream",
     "BadBeatRadio": "http://misato.ru-hoster.com:8061/badbeatradio",
     "Energy 1058": "http://tachyon.shoutca.st:8590/stream",
-    "bigFM Slow Jamz": "https://audiotainment-sw.streamabc.net/atsw-2000er-mp3-128-7974655?sABC=6nss57pr%230%23p5549n47p4p5199r236op6r02281377q%23enqvboebjfre&aw_0_1st.playerid=radiobrowser&amsparams=playerid:radiobrowser;skey:1795119054"
+    "bigFM Slow Jamz": "https://audiotainment-sw.streamabc.net/atsw-2000er-mp3-128-7974655?sABC=6nss57pr%230%23p5549n47p4p5199r236op6r02281377q%23enqvboebjfre&aw_0_1st.playerid=radiobrowser&amsparams=playerid:radiobrowser;skey:1795119054",
+    "Renegade Radio": "http://149.255.60.195:8085/stream",
+    "R Raheem": "https://radioraheem.out.airtime.pro/radioraheem_a",
+    "Young Radio": "http://178.32.138.88:8050/;stream.mp3",
+    "https://truskoolbreakz": "http://ec2.yesstreaming.net:4450/stream",
+    "R Joystick | laut.fm/j": "http://joy.stream.laut.fm/joy?uuid=2d5a4334-d487-7f18-aac0-7d7167310993&t302=2026-11-20_20-37-12",
+    "Australian Digital Rad": "http://abm22.com.au:8000/CONTAINER7",
+    "Underground Bass": "https://listen.undergroundbass.com:8804/stream"
   }
 }

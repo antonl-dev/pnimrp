@@ -128,43 +128,62 @@ proc handlePlayerKeyInput*(
     key: Key,
     state: var PlayerState,
     appState: AppState,
-    config: MenuConfig
+    config: var MenuConfig
 ): bool =
     ## Dispatches user keyboard controls. Returns true if playback should stop/return.
     result = false
+    let curStreamBadge = if config.streams.len > 0:
+        formatStreamBadge(config.streams[config.currentStreamIdx], config.currentStreamIdx, config.streams.len)
+    else: ""
+
     case key:
     of Key.P, Key.Space:
         state.isPaused = not state.isPaused
         ctx.pause(state.isPaused)
         appState.updatePlayMutedStatePlayerUI(currentStatusEmoji(
-                currentStatus(state), appState.terminalSupportsEmoji), state.volume)
+                currentStatus(state), appState.terminalSupportsEmoji), state.volume, streamBadge = curStreamBadge)
 
     of Key.M:
         state.isMuted = not state.isMuted
         ctx.mute(state.isMuted)
         appState.updatePlayMutedStatePlayerUI(currentStatusEmoji(
-                currentStatus(state), appState.terminalSupportsEmoji), state.volume)
+                currentStatus(state), appState.terminalSupportsEmoji), state.volume, streamBadge = curStreamBadge)
 
     of Key.Slash, Key.Plus:
         state.volume = min(state.volume + VolumeStep, MaxVolume)
         appState.lastVolume = state.volume
         ctx.setVolume(state.volume)
         appState.updateVolumePlayerUI(state.volume, currentStatusEmoji(
-                currentStatus(state), appState.terminalSupportsEmoji))
+                currentStatus(state), appState.terminalSupportsEmoji), streamBadge = curStreamBadge)
 
     of Key.Asterisk, Key.Minus:
         state.volume = max(state.volume - VolumeStep, MinVolume)
         appState.lastVolume = state.volume
         ctx.setVolume(state.volume)
         appState.updateVolumePlayerUI(state.volume, currentStatusEmoji(
-                currentStatus(state), appState.terminalSupportsEmoji))
+                currentStatus(state), appState.terminalSupportsEmoji), streamBadge = curStreamBadge)
 
     of Key.E:
         if appState != nil and appState.equalizerConfig.presets.len > 0:
             let nextPreset = appState.equalizerConfig.cycleNextPreset()
             ctx.applyEqualizer(nextPreset)
             let statusEmoji = currentStatusEmoji(currentStatus(state), appState.terminalSupportsEmoji)
-            appState.drawStatusAndVolumePlayerUI(statusEmoji, state.volume, nextPreset.name)
+            appState.drawStatusAndVolumePlayerUI(statusEmoji, state.volume, nextPreset.name, curStreamBadge)
+
+    of Key.B:
+        if config.streams.len > 1:
+            config.currentStreamIdx = (config.currentStreamIdx + 1) mod config.streams.len
+            let nextStream = config.streams[config.currentStreamIdx]
+            config.stationUrl = nextStream.url
+            ctx.allocateJob(config.stationUrl)
+            if appState != nil and appState.equalizerConfig.enabled:
+                let activePreset = appState.equalizerConfig.getActivePreset()
+                ctx.applyEqualizer(activePreset)
+
+            let newBadge = formatStreamBadge(nextStream, config.currentStreamIdx, config.streams.len)
+            let statusEmoji = currentStatusEmoji(currentStatus(state), appState.terminalSupportsEmoji)
+            let eqName = if appState != nil: appState.equalizerConfig.getActivePreset().name else: "Flat"
+            appState.drawStatusAndVolumePlayerUI(statusEmoji, state.volume, eqName, newBadge)
 
     of Key.R, Key.BackSpace:
         when defined(volumeFade):
@@ -268,8 +287,9 @@ proc tickPlayerUIFrame*(
 
 proc playStation*(appState: AppState, config: MenuConfig) =
     ## Plays a radio station and handles user input for playback control.
-    let ctx = config.ctx
-    if not appState.validateStationPreflight(config):
+    var playConfig = config
+    let ctx = playConfig.ctx
+    if not appState.validateStationPreflight(playConfig):
         return
 
     var state = PlayerState(
@@ -290,7 +310,7 @@ proc playStation*(appState: AppState, config: MenuConfig) =
         var scrollCounter: int = 0
         var animationCounter: int = 0
 
-    ctx.allocateJob(config.stationUrl)
+    ctx.allocateJob(playConfig.stationUrl)
 
     if appState != nil and appState.equalizerConfig.enabled:
         let activePreset = appState.equalizerConfig.getActivePreset()
@@ -300,8 +320,15 @@ proc playStation*(appState: AppState, config: MenuConfig) =
         ctx.setVolume(0)
 
     # Draw the initial player UI
-    appState.drawPlayerUI(config.stationName, "Loading...", currentStatusEmoji(
+    let initBadge = if playConfig.streams.len > 0:
+        formatStreamBadge(playConfig.streams[playConfig.currentStreamIdx], playConfig.currentStreamIdx, playConfig.streams.len)
+    else: ""
+
+    appState.drawPlayerUI(playConfig.stationName, "Loading...", currentStatusEmoji(
             currentStatus(state), appState.terminalSupportsEmoji), state.volume)
+    if initBadge.len > 0:
+        appState.drawStatusAndVolumePlayerUI(currentStatusEmoji(
+                currentStatus(state), appState.terminalSupportsEmoji), state.volume, streamBadge = initBadge)
     appState.showFooter(isPlayerUI = true)
     when defined(simple):
         fullTitle = fullTitle.truncateMe(appState.termWidth)
@@ -311,7 +338,7 @@ proc playStation*(appState: AppState, config: MenuConfig) =
         if not state.isPaused:
             audioEvent = ctx.pollAudioEvent(mpvEventLoopTimeout)
 
-        ctx.handlePlayerAudioEvent(audioEvent, state, config, appState,
+        ctx.handlePlayerAudioEvent(audioEvent, state, playConfig, appState,
                 fullTitle, wasTheStreamPlayingForSomeTime, finishedLoading)
 
         if not finishedLoading and audioEvent != aevFileLoaded:
@@ -323,7 +350,7 @@ proc playStation*(appState: AppState, config: MenuConfig) =
 
         # Periodic checks
         if coreIdleCounter >= CheckIdleInterval:
-            if handleIdleAndDisconnection(ctx, audioEvent, config,
+            if handleIdleAndDisconnection(ctx, audioEvent, playConfig,
                     wasTheStreamPlayingForSomeTime, streamInterruptRetryCount,
                     playlistFirstPass):
                 break
@@ -332,7 +359,7 @@ proc playStation*(appState: AppState, config: MenuConfig) =
 
         # Handle user input
         let key = getKeyWithTimeout(KeyTimeout)
-        if ctx.handlePlayerKeyInput(key, state, appState, config):
+        if ctx.handlePlayerKeyInput(key, state, appState, playConfig):
             break
 
     if state.isPaused: # reset states for globalCtx if user returned with P/M

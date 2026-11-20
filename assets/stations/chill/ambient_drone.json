@@ -4,14 +4,33 @@
     "SomaFM Groove Salad": "https://ice5.somafm.com/groovesalad-128-mp3",
     "SomaFM Secret Agent": "https://ice6.somafm.com/secretagent-128-mp3",
     "SomaFM Space Station S": "https://ice4.somafm.com/spacestation-128-aac",
-    "Total instrumental": "http://total-instrumental.stream.laut.fm/total-instrumental?t302=2026-11-19_19-36-44&uuid=00c2cf88-b934-4a34-2ecf-c1ef106b4f2b",
-    "Enigmatic 3 - Magnetic": "http://radio.enigmatic.su:8050/radio",
-    "SomaFM Drone Zone": "https://ice5.somafm.com/dronezone-128-mp3",
+    "Total instrumental": "http://total-instrumental.stream.laut.fm/total-instrumental?t302=2026-11-20_20-47-58&uuid=5e614428-54fd-aeff-595d-fd14999c809a",
+    "SomaFM Drone Zone": {
+      "default": "https://ice4.somafm.com/dronezone-256-mp3",
+      "streams": [
+        {
+          "url": "https://ice4.somafm.com/dronezone-256-mp3",
+          "bitrate": 256
+        },
+        {
+          "url": "https://ice5.somafm.com/dronezone-128-mp3",
+          "bitrate": 128
+        },
+        {
+          "url": "https://ice5.somafm.com/dronezone-64-aac",
+          "bitrate": 64
+        },
+        {
+          "url": "https://ice5.somafm.com/dronezone-32-aac",
+          "bitrate": 32
+        }
+      ]
+    },
     "Ambient Modern": "http://radio.stereoscenic.com/mod-h",
     "Nature Radio Rain": "https://maggie.torontocast.com:2020/stream/natureradiorain",
     "SomaFM Deep Space One": "https://ice5.somafm.com/deepspaceone-32-aac",
     "R Art - Meditation": "http://air-tunein.radioart.com/fMeditation.mp3",
-    "雨声轻音乐": "https://stream-179.surfernetwork.com/689zc32y4x8uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiI2ODl6YzMyeTR4OHV2IiwiaG9zdCI6InN0cmVhbS0xNzkuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJZY0d4cVM4T1JndXNyaWRoZkRrcktBIiwiaWF0IjoxNzk1MTE5NDE5LCJleHAiOjE3OTUxMTk0Nzl9.NooCsSiEI3IRJRun6BgRtak4aJEGIIwI43kfydmK96A",
+    "雨声轻音乐": "https://stream-179.surfernetwork.com/689zc32y4x8uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiI2ODl6YzMyeTR4OHV2IiwiaG9zdCI6InN0cmVhbS0xNzkuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJ0dEJQV29POFJheUJDLVRwRndDYVVBIiwiaWF0IjoxNzk1MjA0MDc4LCJleHAiOjE3OTUyMDQxMzh9.oUM681OUo5hCv6mZ66JZY4R3xT2MS6nMlsTAOe3woYc",
     "Costa del Mar - Zen": "http://stream.cdm-zen.com:8004/stream-mp3-Zen",
     "Deep Radio": "http://22343.live.streamtheworld.com:80/DEEP_RADIO.mp3",
     "MyNoise Pure Nature": "https://purenature-mynoise.radioca.st/stream",

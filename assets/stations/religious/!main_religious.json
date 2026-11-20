@@ -5,7 +5,6 @@
     "Jewish Music Stream": "http://stream2.jewishmusicstream.com:10000/stream",
     "WALM 2 HD": "https://icecast.walmradio.com:8443/walm2",
     "R Mojdeh": "http://ic2326.c1261.fast-serv.com/rm128",
-    "R Mojdeh - Iranian Far": "https://ic2326.c1261.fastserv.com/rm128",
     "R Maria": "http://dreamsiteradiocp.com:8092/;",
     "RADIO MARIA TOGO": "http://dreamsiteradiocp.com:8050/stream",
     "RADIO MARIA RWANDA": "http://dreamsiteradiocp.com:8044/stream",
@@ -14,7 +13,14 @@
     "R María El Salvador 10": "http://dreamsiteradiocp.com:8098/stream",
     "DWG Radio Bumese": "http://server32349.streamplus.de/;?type=http&#038;nocache=227",
     "RADIO MARIA BURUNDI": "http://dreamsiteradiocp.com:8058/stream",
-    "Nigerian Gospel Music": "http://stream-283.surfernetwork.com/3fmqr74a7f8uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiIzZm1xcjc0YTdmOHV2IiwiaG9zdCI6InN0cmVhbS0yODMuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJaSXpjb1FPcFFXNnZEQWc4NHV4UWZRIiwiaWF0IjoxNzk1MTE5MTE1LCJleHAiOjE3OTUxMTkxNzV9.t1LLZi5qbvljdyOQLtU4Z-7UoYnAFaLsnIZbHEWtooI",
-    "R Sholawat": "https://stream-177.surfernetwork.com/us5bsznu3rptv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJ1czVic3pudTNycHR2IiwiaG9zdCI6InN0cmVhbS0xNzcuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJmenNJdHVuWlQ5TzBOMnFtRWV0bzFnIiwiaWF0IjoxNzk1MTE5MTE2LCJleHAiOjE3OTUxMTkxNzZ9.YoNJ5Tle1zG7N5DXHgiKOOpMMSVSynrCYnKU74Z9yJ0"
+    "Nigerian Gospel Music": "http://stream-283.surfernetwork.com/3fmqr74a7f8uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiIzZm1xcjc0YTdmOHV2IiwiaG9zdCI6InN0cmVhbS0yODMuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJUU3VrcWVtdFJYUzdWbDc2SUdjV29RIiwiaWF0IjoxNzk1MjAzNTAxLCJleHAiOjE3OTUyMDM1NjF9.T4I4uMNDsD93sW2imx3CmY1IEZjK1G3-MQ4v01SESQE",
+    "R Sholawat": "https://stream-177.surfernetwork.com/us5bsznu3rptv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJ1czVic3pudTNycHR2IiwiaG9zdCI6InN0cmVhbS0xNzcuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJvY1M1RXppOVJqZXJMQUYwUi1hN1JBIiwiaWF0IjoxNzk1MjAzNTAyLCJleHAiOjE3OTUyMDM1NjJ9.b6uSrv9ktFC5khsuPna5XtTqdXkcNdsHkAYJ8VIp03c",
+    "Christian Power Praise": "https://listen.christianrock.net/stream/13/",
+    "RADIO MARIA FRANCE": "http://dreamsiteradiocp2.com:8110/stream",
+    "Gospel FM Jamaica": "https://stream-280.surfernetwork.com/zpksre88rm0uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJ6cGtzcmU4OHJtMHV2IiwiaG9zdCI6InN0cmVhbS0yODAuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJCaktEOUNCSFI5VzE2QndUVjVHd1BBIiwiaWF0IjoxNzk1MjAzNTAyLCJleHAiOjE3OTUyMDM1NjJ9.Egc7ErlbF8-E2yZzXm18aLf9kjbjRWX7fwAEcA35hCQ",
+    "Ethiopian Orthodox Chu": "https://stream-283.surfernetwork.com/pfaho9uockwuv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJwZmFobzl1b2Nrd3V2IiwiaG9zdCI6InN0cmVhbS0yODMuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJZd2w2YlNrVVRaR1cxQ3lLWEVwUEVBIiwiaWF0IjoxNzk1MjAzNTAyLCJleHAiOjE3OTUyMDM1NjJ9.hsv2dSV1ZGXrNOs9VOuSIRwwI9di2hqob_l0nXGUT5Y",
+    "Christian Talk FM": "http://n10.radiojar.com/cm4by4kt2ceuv?rj-ttl=5&rj-tok=AAABofqAuJ8Aa0UfrkHBrOYEHA",
+    "Christian Rock Dot Net": "https://listen.christianrock.net/stream/11/",
+    "R Bautista": "https://s2.radio.co/s3a7dc3d82/listen"
   }
 }

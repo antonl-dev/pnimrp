@@ -1,20 +1,20 @@
 {
   "stations": {
     "CZ Oude Muziek": "http://streams.greenhost.nl:8080/oudemuziek",
-    "- 0 N - Gothic on Radi": "https://0n-gothic.radionetz.de/0n-gothic.mp3",
+    "- 0 N - Gothic on Radi": "https://0n-gothic.radionetz.de/0n-gothic.aac",
     "radcap Medieval Music": "http://213.141.131.10:8000/medieval",
     "radcap Medieval Folk": "http://213.141.131.10:8004/medievalfolk",
-    "RADIO BOB! BOBs Mittel": "http://regiocast.streamabc.net/regc-radiobobmittelalter7445036-mp3-192-8025500?sABC=6nss3984%230%23p5549n47p4p5199r236op6r02281377q%23fgernzf.enqvbobo.qr&aw_0_1st.playerid=streams.radiobob.de&amsparams=playerid:streams.radiobob.de;skey:1795111300",
-    "laut.fm Schwarze Szene": "http://schwarzeszene.stream.laut.fm/schwarzeszene?uuid=b96681a7-3f96-2914-afdd-1e65de102e11&t302=2026-11-19_19-01-41",
-    "Mittelalterserver": "http://mittelalterserver.stream.laut.fm/mittelalterserver?t302=2026-11-19_19-01-42&uuid=0ae64a59-dcf0-ef58-46b3-a07e3c1a3644",
+    "RADIO BOB! BOBs Mittel": "http://regiocast.streamabc.net/regc-radiobobmittelalter7445036-mp3-192-8025500?sABC=6o00n2o6%230%23o0qn71011p1s9n4n031ps6437nns5702%23fgernzf.enqvbobo.qr&aw_0_1st.playerid=streams.radiobob.de&amsparams=playerid:streams.radiobob.de;skey:1795203766",
+    "laut.fm Schwarze Szene": "http://schwarzeszene.stream.laut.fm/schwarzeszene?uuid=dcbb8b15-0abf-58b0-62c4-158bf2f09d1e&t302=2026-11-20_20-42-45",
+    "Mittelalterserver": "http://mittelalterserver.stream.laut.fm/mittelalterserver?t302=2026-11-20_20-42-45&uuid=d24cad06-3589-55f1-bb6f-44c464fe91c9",
     "Narrenwut": "http://mittelalter-net.stream.laut.fm/mittelalter-net",
-    "Monacensis": "http://monacensis.stream.laut.fm/monacensis?uuid=7e1ba6fd-1315-5cb2-2c9a-6e575aaea3fe&t302=2026-11-19_19-01-45",
+    "Monacensis": "http://monacensis.stream.laut.fm/monacensis?t302=2026-11-20_20-42-45&uuid=16f05b17-81a1-0b90-aaa4-10d13190e482",
     "CRB - Boston Early Mus": "https://wgbh-live.streamguys1.com/BostonEarlyMusic-8112-aac",
-    "R Rabenwind": "http://rabenwind.stream.laut.fm/rabenwind?uuid=85f58fd0-7afa-d5a1-547b-070575557c74&t302=2026-11-19_19-01-48",
+    "R Rabenwind": "http://rabenwind.stream.laut.fm/rabenwind?uuid=722b1c85-3364-65c9-64c1-8bd54cc0583b&t302=2026-11-20_20-42-45",
     "Toutes les couleurs du": "https://my2.radiolize.com/radio/8100/radio.mp3",
     "105'5 Spreeradio - Wel": "https://rtlberlin.streamabc.net/rtlb-wellness-aacplus-64-2835105?sABC=6752ns14%230%23724nsr480r9ps6r95pqn750064rp0o5r%23&aw_0_1st.playerid=&amsparams=playerid:;skey:1733472020",
-    "radcap Slavonic [2]": "http://213.141.131.10:8004/slavonicneofolk",
+    "radcap Slavonic": "http://213.141.131.10:8004/slavonicneofolk",
     "Explorers Emporium Rad": "https://listen.radioking.com/radio/155740/stream/196375?",
-    "Black Planet": "http://promofabrikamerica.stream.laut.fm/promofabrikamerica?t302=2026-11-19_19-01-54&uuid=00af0018-7269-e49b-2a52-1daa6f0beacf"
+    "Black Planet": "http://promofabrikamerica.stream.laut.fm/promofabrikamerica?uuid=da51c170-32e3-a212-60db-b9eb7821adaf&t302=2026-11-20_20-42-45"
   }
 }

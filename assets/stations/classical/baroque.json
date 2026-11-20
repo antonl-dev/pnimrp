@@ -1,20 +1,50 @@
 {
   "stations": {
     "CZ Baroque": "http://streams.greenhost.nl:8080/barok",
-    "1.FM - Otto's Baroque": "http://strm112.1.fm/baroque_mobile_mp3",
+    "1.FM - Otto's Baroque": "https://strm112.1.fm/baroque_mobile_mp3?utm_source=chatgpt.com",
     "CZ Oude Muziek": "http://streams.greenhost.nl:8080/oudemuziek",
     "Klassik Radio - Barock": "http://klassikr.streamabc.net/klassikr-barock-mp3-192-7751777?sABC=6nss3920%230%23p5549n47p4p5199r236op6r02281377q%23&aw_0_1st.playerid=&amsparams=playerid:;skey:1795111200",
     "1.fm Otto's Baroque mu": "http://strm112.1.fm/baroque_mobile_aac",
     "Calm Radio - Violin": "http://streams.calmradio.com:4528/stream",
-    "Exclusively Bee Gees": "https://streaming.exclusive.radio/er/beegees/icecast.audio",
+    "Exclusively Bee Gees": "http://2.mystreaming.net/er/katebush/icecast.audio",
     "Sunday Baroque": "http://wshu.streamguys.org/wshu-baroque",
     "Calm Radio - Flute": "http://streams.calmradio.com:4828/;",
-    "Klassikradio - Barock": "http://klassikr.streamabc.net/klassikr-barock-mp3-192-7751777?sABC=6nss3928%230%23p5549n47p4p5199r236op6r02281377q%23jjj.xynffvxenqvb.qr&aw_0_1st.playerid=www.klassikradio.de&amsparams=playerid:www.klassikradio.de;skey:1795111208",
     "Calm Radio - Chamber M": "http://streams.calmradio.com:7528/stream",
     "Calm Radio - Symphony": "http://streams.calmradio.com:1028/stream",
     "R Art - J.S.Bach": "http://live.radioart.com/fBach.mp3",
-    "France Musique : La Ba": "http://icecast.radiofrance.fr/francemusiquebaroque-hifi.aac",
-    "Positively Baroque": "http://play.organlive.com:7002/128",
-    "R Art - Baroque": "http://air.radioart.com/fBaroque.mp3"
+    "France Musique : La Ba": "https://icecast.radiofrance.fr/francemusiquebaroque-hifi.aac?id=radiofrance",
+    "Positively Baroque": {
+      "default": "https://play2.organlive.com:7020/320",
+      "streams": [
+        {
+          "url": "https://play2.organlive.com:7020/320",
+          "bitrate": 320
+        },
+        {
+          "url": "http://play.organlive.com:7002/128",
+          "bitrate": 128
+        }
+      ]
+    },
+    "R Art - Baroque": "http://air.radioart.com/fBaroque.mp3",
+    "Baroque Sonatas Radio": "http://baroquesonatasradio.stream.laut.fm/baroque_sonatas_radio?t302=2026-11-20_20-41-50&uuid=54e508a8-a059-75a6-64c2-f224dcd1000d",
+    "radcap Chamber / Baroq": "http://79.111.14.76:8002/chamberpop",
+    "MPR Classical 24/7": "https://cms.stream.publicradio.org/cms.mp3",
+    "Best of Bach": {
+      "default": "http://klassikr.streamabc.net/klassikr-purebach-mp3-192-5022412?sABC=6o00n281%230%23o0qn71011p1s9n4n031ps6437nns5702%23&aw_0_1st.playerid=&amsparams=playerid:;skey:1795203713",
+      "streams": [
+        {
+          "url": "http://klassikr.streamabc.net/klassikr-purebach-mp3-192-5022412?sABC=6o00n281%230%23o0qn71011p1s9n4n031ps6437nns5702%23&aw_0_1st.playerid=&amsparams=playerid:;skey:1795203713",
+          "bitrate": 192
+        },
+        {
+          "url": "http://klassikr.streamabc.net/klr-purebach-aacplus-64-7413950?sABC=6o00n27s%230%23o0qn71011p1s9n4n031ps6437nns5702%23&aw_0_1st.playerid=&amsparams=playerid:;skey:1795203711",
+          "bitrate": 64
+        }
+      ]
+    },
+    "Cyberspazio Radio": "http://37.156.244.223:8000/stream",
+    "Malvern Radio Internat": "https://cast2.asurahosting.com/proxy/radiomalvernint/stream",
+    "radio caprice": "http://79.111.14.76:8000/baroque"
   }
 }

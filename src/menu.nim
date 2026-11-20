@@ -16,6 +16,7 @@ import
 
     utils/[
       utils,
+      utilstypes,
       jsonutils
     ],
 
@@ -127,6 +128,7 @@ template jsonFileHandlerHM(items: seq[string]) =
           items[choosenItem],
           stations.names,
           stations.urls,
+          stations.streams,
           isMainMenu = false,
           baseDir = baseDir,
           handleMenuIsHandling = hmIsHandlingJson,
@@ -149,6 +151,7 @@ proc handleMenu*(
     section: string,
     items: seq[string],
     paths: seq[string],
+    streamsList: seq[seq[StreamInfo]] = @[],
     isMainMenu: bool = false,
     baseDir: string = "",
     handleMenuIsHandling: handleMenuIsHandling,
@@ -190,12 +193,15 @@ proc handleMenu*(
 
                         else:
                             # Treat as a station URL and play directly
+                            let stStreams = if choosenItem < streamsList.len: streamsList[choosenItem] else: @[]
                             let config = MenuConfig(
                               ctx: appState.audioCtx,
                               currentSection: section,
                               currentSubsection: "",
                               stationName: items[choosenItem],
-                              stationUrl: selectedPath
+                              stationUrl: selectedPath,
+                              streams: stStreams,
+                              currentStreamIdx: 0
                             )
                             appState.playStation(config)
                         break
@@ -245,13 +251,14 @@ proc handleMenu*(
     section: string,
     items: seq[string],
     paths: seq[string],
+    streamsList: seq[seq[StreamInfo]] = @[],
     isMainMenu: bool = false,
     baseDir: string = getAppDir() / "assets",
     handleMenuIsHandling: handleMenuIsHandling,
 ) =
     var appState = newAppState()
     appState.audioCtx = ctx
-    appState.handleMenu(section, items, paths, isMainMenu, baseDir, handleMenuIsHandling)
+    appState.handleMenu(section, items, paths, streamsList, isMainMenu, baseDir, handleMenuIsHandling)
 
 when not defined(vlc):
     proc handleMenu*(
@@ -259,6 +266,7 @@ when not defined(vlc):
         section: string,
         items: seq[string],
         paths: seq[string],
+        streamsList: seq[seq[StreamInfo]] = @[],
         isMainMenu: bool = false,
         baseDir: string = getAppDir() / "assets",
         handleMenuIsHandling: handleMenuIsHandling,
@@ -266,7 +274,7 @@ when not defined(vlc):
         var appState = newAppState()
         appState.mpvCtx = ctx
         appState.audioCtx = MpvAudioContext(mpvHandle: ctx)
-        appState.handleMenu(section, items, paths, isMainMenu, baseDir, handleMenuIsHandling)
+        appState.handleMenu(section, items, paths, streamsList, isMainMenu, baseDir, handleMenuIsHandling)
 
 proc drawMainMenu*(appState: AppState, baseDir = "") =
     ## Draws and handles the main category menu.

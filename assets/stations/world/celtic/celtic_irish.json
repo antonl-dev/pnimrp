@@ -2,19 +2,41 @@
   "stations": {
     "Irish Pub Radio": "http://solid24.streamupsolutions.com:8026/stream",
     "Forest Green Radio": "http://s1.streamaudio.de:8000/forest-green",
-    "SomaFM ThistleRadio": "https://ice5.somafm.com/thistle-128-aac",
+    "SomaFM ThistleRadio": {
+      "default": "https://ice5.somafm.com/thistle-128-aac",
+      "streams": [
+        {
+          "url": "https://ice5.somafm.com/thistle-128-aac",
+          "bitrate": 128
+        },
+        {
+          "url": "https://ice4.somafm.com/thistle-64-aac",
+          "bitrate": 64
+        },
+        {
+          "url": "https://ice4.somafm.com/thistle-32-aac",
+          "bitrate": 32
+        }
+      ]
+    },
     "Celtcast": "https://caster04.streampakket.com/proxy/8982/CeltCast",
     "WFUV 90.7 Fordham Univ": "http://wfuv-onair.streamguys.org/onair-hi",
-    "celtic-rock.de": "http://celtic-rock.stream.laut.fm/celtic-rock?t302=2026-11-19_19-48-36&uuid=8514fef0-d642-32ca-80fa-ca586e7a827d",
-    "radcap Celtic": "http://79.111.14.76:8002/celtic",
-    "R del Hogar de la Bris": "https://stream-179.surfernetwork.com/4vwgvyq82k8uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiI0dndndnlxODJrOHV2IiwiaG9zdCI6InN0cmVhbS0xNzkuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJ3V1pNYTM1bVNUZTJzbHNEX1VHd3FRIiwiaWF0IjoxNzk1MTE5NjA5LCJleHAiOjE3OTUxMTk2Njl9.57Js_ETir6SxmpmqbjrfFtlGUR4Fix_WcTnCKqi1kzg",
-    "R Rabenwind": "http://rabenwind.stream.laut.fm/rabenwind?uuid=2bce0850-3b99-4337-e0fe-bcfb4870ce50&t302=2026-11-19_19-48-44",
+    "celtic-rock.de": "http://celtic-rock.stream.laut.fm/celtic-rock?uuid=2478b609-ddce-8d1c-cd71-cb443d10e657&t302=2026-11-20_20-53-19",
+    "radcap Celtic": "http://79.111.14.76:8000/celtic",
+    "R del Hogar de la Bris": "http://stream-179.surfernetwork.com/4vwgvyq82k8uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiI0dndndnlxODJrOHV2IiwiaG9zdCI6InN0cmVhbS0xNzkuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJ4bGYxc2kwUFR5S1Z5d0hzLWM0Mml3IiwiaWF0IjoxNzk1MjA0Mzk5LCJleHAiOjE3OTUyMDQ0NTl9.KP5qaCreDzQKBn-IAxP6Ix6xIMbz8RozirDANAl0jKE",
+    "R Rabenwind": "http://rabenwind.stream.laut.fm/rabenwind?uuid=673ab43e-a51f-c1ea-e407-eb4a7776a72b&t302=2026-11-20_20-53-19",
     "WUMB Celtic Journey 24": "http://wumb.streamguys1.com/wumb919cj",
     "Toutes les couleurs du": "https://my2.radiolize.com/radio/8100/radio.mp3",
     "Folk Alley Irish Strea": "http://freshgrass.streamguys1.com/irish-64aac",
-    "Celtic Music Radio": "https://uksoutha.streaming.broadcast.radio/celtic",
     "Exclusively The Dublin": "http://2.mystreaming.net/er/thedubliners/icecast.audio",
     "Folk Alley": "https://freshgrass.streamguys1.com/irish-128mp3",
-    "Exclusively Big Countr": "https://2.mystreaming.net/er/bigcountry/icecast.audio"
+    "R Art - Celtic": "http://live.radioart.com/fCeltic.mp3",
+    "khasandria": "https://khasandria.stream.laut.fm/khasandria?uuid=35b490bc-fee5-603e-ff31-a39d0154b85e&t302=2026-11-20_20-53-20",
+    "Gaia FM (New Zealand)": "https://s2.stationplaylist.com:9000/gaiafm.aac",
+    "LiveIreland": "http://lynx.prostreaming.net:8058/;",
+    "R Art - Traditional": "https://air.radioart.online/fTraditional.mp3",
+    "Donald's Radio": "https://radio.donald.cat/listen/donalds_radio/radio.mp3",
+    "Wayne Holden Music Rad": "http://s6.citrus3.com/stream/wayneholdenmusicradio",
+    "Folk57": "https://manager11.streamradio.fr:2795/stream?x=1789983354990"
   }
 }

@@ -1,10 +1,22 @@
 {
   "stations": {
-    "SomaFM Groove Salad": "https://ice5.somafm.com/groovesalad-128-mp3",
+    "SomaFM Groove Salad": {
+      "default": "https://ice5.somafm.com/groovesalad-128-mp3",
+      "streams": [
+        {
+          "url": "https://ice5.somafm.com/groovesalad-128-mp3",
+          "bitrate": 128
+        },
+        {
+          "url": "https://ice5.somafm.com/groovesalad-64-aac",
+          "bitrate": 64
+        }
+      ]
+    },
     "R Meuh": "http://radiomeuh.ice.infomaniak.ch/radiomeuh-128.mp3",
     "Rádio Disco Funk BR": "http://streaming12.hstbr.net:8084/live",
     "70s 80s Disco Funk Mod": "https://discofunk.streamingmedia.it/usa",
-    "B5 aktuell": "http://d121.rndfnk.com/ard/br/br24/live/mp3/128/stream.mp3?cid=01FBPVVJDPGF0BJ5TAJ8Z7JSX9&sid=3MKyTyRN4JF3xDfAJV3HzUF8NKI&token=8M-A417kZW9CnF_PsZTuug5-AJ8fm1oHISRunWJH--8&tvf=rz8WGuyZ6RhkMTIxLnJuZGZuay5jb20",
+    "B5 aktuell": "http://f141.rndfnk.com/ard/br/br24/live/mp3/128/stream.mp3?cid=01FBPVVJDPGF0BJ5TAJ8Z7JSX9&sid=3MNw4ViWgBkEj25fX7zMu4KcqOs&token=S6XMP4y9X6oP-gF-vBtXBCpur_dTHhy026YW-IBmJI0&tvf=8zZf1Ezs6RhmMTQxLnJuZGZuay5jb20",
     "Ibiza Global Radio": "http://cdn-peer031.streaming-pro.com:8024/ibizaglobalradio.mp3",
     "RMC Disco Funk": "http://edge.radiomontecarlo.net/rmcweb025",
     "BBC Radio 6 Music": "http://as-hls-ww-live.akamaized.net/pool_81827798/live/ww/bbc_6music/bbc_6music.isml/bbc_6music-audio%3d320000.norewind.m3u8",
@@ -13,8 +25,20 @@
     "1.FM - Ambient Psychil": "http://strm112.1.fm/ambientpsy_mobile_mp3",
     "FUNKY RADIO - Only Fun": "https://funkyradio.streamingmedia.it/audio.aac",
     "54 Funk Soul Dance": "http://54-funk-soul-dance.stream.laut.fm/54-funk-soul-dance",
-    "FIP Groove": "http://icecast.radiofrance.fr/fipgroove-hifi.aac",
-    "B4B Radio DISCO FUNK": "https://eu10.fastcast4u.com:8120/",
+    "FIP Groove": {
+      "default": "http://radio-metadata.fr:8000/fipgroove",
+      "streams": [
+        {
+          "url": "http://radio-metadata.fr:8000/fipgroove",
+          "bitrate": 192
+        },
+        {
+          "url": "https://stream.radiofrance.fr/fipgroove/fipgroove.m3u8",
+          "bitrate": 107
+        }
+      ]
+    },
+    "B4B Radio DISCO FUNK": "http://eu10.fastcast4u.com:8120/",
     "The Funky Channel": "http://cast3.my-control-panel.com:8170/stream"
   }
 }

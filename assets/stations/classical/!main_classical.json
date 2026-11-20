@@ -9,12 +9,12 @@
     "WQXR NY": "https://iheart.wnyc.org/wqxr-tunein",
     "KUSC (LA)": "https://16603.live.streamtheworld.com:443/KUSCAAC96.aac",
     "KING FM (Seattle)": "https://classicalking.streamguys1.com/king-fm-aac-iheart",
-    "R France Musique Class": "https://icecast.radiofrance.fr/francemusiqueeasyclassique-midfi.mp3",
+    "R France Musique Class": "http://icecast.radiofrance.fr/francemusiqueeasyclassique-midfi.mp3",
     "WALM 2 HD": "https://icecast.walmradio.com:8443/walm2",
     "parsa": "http://parsa.icdndhcp.com:18000/stream",
     "Your Classical - Relax": "http://relax.stream.publicradio.org/relax.mp3",
-    "caltexmusic": "http://n0a.radiojar.com/cp13r2cpn3quv?rj-ttl=5&rj-tok=AAABofV7Ec0A9W0mfphr8ytKbQ",
-    "اذاعة القرآن الكريم": "http://n02.radiojar.com/0tpy1h0kxtzuv?rj-ttl=5&rj-tok=AAABofV7HwUA4RAdP0YPbQ1mfA",
+    "caltexmusic": "http://n03.radiojar.com/cp13r2cpn3quv?rj-ttl=5&rj-tok=AAABofqDpOIA5SKyuDAfeHhXtA",
+    "اذاعة القرآن الكريم": "https://qurango.net/radio/tarateel",
     "Rai Radio 3": "http://icecdn-19d24861e90342cc8decb03c24c8a419.msvdn.net/icecastRelay/S56630579/yEbkcBtIoSwd/icecast"
   }
 }

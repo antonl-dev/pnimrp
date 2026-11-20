@@ -1,6 +1,18 @@
 {
   "stations": {
-    "Dance Wave! | MP3": "http://stream1.dancewave.online:8080/dance.mp3",
+    "Dance Wave! | MP3": {
+      "default": "http://stream1.dancewave.online:8080/dance.ogg",
+      "streams": [
+        {
+          "url": "http://stream1.dancewave.online:8080/dance.ogg",
+          "bitrate": 160
+        },
+        {
+          "url": "http://31.192.216.10/DANCE",
+          "bitrate": 64
+        }
+      ]
+    },
     "DFM Дискач 90-х": "https://dfm-disc90.hostingradio.ru/disc9096.aacp",
     "DFM RUSSIAN DANCE": "https://dfm-dfmrusdance.hostingradio.ru/dfmrusdance96.aacp?0.9987259013359274",
     "Dance Wave Retro! | MP": "http://stream1.dancewave.online:8080/retrodance.mp3",

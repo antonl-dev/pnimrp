@@ -1,20 +1,25 @@
 {
   "stations": {
     "Bombay Beats Radio": "https://strm112.1.fm/bombaybeats_mobile_mp3",
-    "Namkeen First Class": "https://stream-280.surfernetwork.com/yg1qhsbaqv5tv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJ5ZzFxaHNiYXF2NXR2IiwiaG9zdCI6InN0cmVhbS0yODAuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiIwT1VUeWhwc1IwUzI1aGFRZVRZVDNnIiwiaWF0IjoxNzk1MTE5NTkyLCJleHAiOjE3OTUxMTk2NTJ9.K4xHMFD30dRM2cOfI2U68c8c7Qv01IC5kuClVaQ5rCI",
-    "Hungama Bollywood": "https://stream-289.surfernetwork.com/143d7gty24zuv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiIxNDNkN2d0eTI0enV2IiwiaG9zdCI6InN0cmVhbS0yODkuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJNcGYyUUs0T1FReVd1bmthS052WFpnIiwiaWF0IjoxNzk1MTE5NTkyLCJleHAiOjE3OTUxMTk2NTJ9.0Z1fYbDi9M1cg_ZBOir2rFaXrhH77AGUf-XsO3cYgKI",
+    "Namkeen First Class": "https://stream-280.surfernetwork.com/yg1qhsbaqv5tv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJ5ZzFxaHNiYXF2NXR2IiwiaG9zdCI6InN0cmVhbS0yODAuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiI3VnV5VEY2T1F2LTVPWGxhby1sSWJBIiwiaWF0IjoxNzk1MjA0MzYxLCJleHAiOjE3OTUyMDQ0MjF9.r1MLY_NNnueb30cYG6iyarAZRpwhiUkI8kVqDWeXDMk",
+    "Hungama Bollywood": "https://stream-289.surfernetwork.com/143d7gty24zuv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiIxNDNkN2d0eTI0enV2IiwiaG9zdCI6InN0cmVhbS0yODkuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJ2eHNHbjBCN1FVZVJqUFpua1lQeElBIiwiaWF0IjoxNzk1MjA0MzYxLCJleHAiOjE3OTUyMDQ0MjF9.-PYYorHxXpRXFL3bZI3xceji2cQUROCQa8srBhJaBJU",
     "R Mirchi": "https://18093.live.streamtheworld.com/NJS_HIN_ESTAAC/HLS/playlist.m3u8",
     "Non Stop Hindi": "http://s5.voscast.com:8216/stream",
-    "Filmy Mirchi": "https://stream-290.surfernetwork.com/6n6ewddtad0uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiI2bjZld2RkdGFkMHV2IiwiaG9zdCI6InN0cmVhbS0yOTAuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJyMDhNZnQxRVNWUzZiNThYRkhNY0FRIiwiaWF0IjoxNzk1MTE5NTkxLCJleHAiOjE3OTUxMTk2NTF9.bnAwyJpvMkh8HeHHe-kYlyT7vdTdaX2j6PMCjD4A0Kg",
     "Fnf.Fm Hindi": "http://192.99.8.192:5032/;stream",
-    "Hits Of Bollywood": "https://stream-290.surfernetwork.com/8ty8szwpwfeuv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiI4dHk4c3p3cHdmZXV2IiwiaG9zdCI6InN0cmVhbS0yOTAuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJkbW1pUDBxclRleXpQMnNWd25ScG9nIiwiaWF0IjoxNzk1MTE5NTkxLCJleHAiOjE3OTUxMTk2NTF9.A7hLcgMWY-tWldwtnX5SZMB7JoX8tpGaNvDYLd5vBE0",
-    "MY CLUB REMIX": "https://stream-283.surfernetwork.com/u7eee0hyzp8uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJ1N2VlZTBoeXpwOHV2IiwiaG9zdCI6InN0cmVhbS0yODMuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJTcXNqRFdUdFNHTzhIUTlYUE03MUF3IiwiaWF0IjoxNzk1MTE5NTkyLCJleHAiOjE3OTUxMTk2NTJ9.Xr020RtPNPyTwD9p6rxsv6mePNDGSQM5r23Lst_LE-0",
-    "Hits Of Mohammed Rafi": "https://stream-280.surfernetwork.com/0zkr7x8ztm0uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiIwemtyN3g4enRtMHV2IiwiaG9zdCI6InN0cmVhbS0yODAuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiItV3VTYUhBMlR4S3E1aEdTWWRPQVBBIiwiaWF0IjoxNzk1MTE5NTkyLCJleHAiOjE3OTUxMTk2NTJ9.disBV8cyK5wLXXRqfcFtEjV6heKjflCmcNnxvNk6P1g",
-    "Goldy Mukesh": "https://stream-280.surfernetwork.com/t39watus1p8uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJ0Mzl3YXR1czFwOHV2IiwiaG9zdCI6InN0cmVhbS0yODAuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiI0VzhSdXhsQ1R0MkNaR25PbW5PRXF3IiwiaWF0IjoxNzk1MTE5NTk0LCJleHAiOjE3OTUxMTk2NTR9.snE6kC7i-3mVu8OpC6nRUwdhNrfSrphVlpAVqHetjs0",
-    "1.FM - Bombay Beats In": "http://strm112.1.fm/bombaybeats_mobile_mp3",
-    "Bollywood 2010's": "https://drive.uber.radio/uber/bollywood2010s/icecast.audio",
-    "R Retro Bollywood 90s": "https://stream-280.surfernetwork.com/fdgs82xkzhhvv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJmZGdzODJ4a3poaHZ2IiwiaG9zdCI6InN0cmVhbS0yODAuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJ2bFdwMWRua1RsdTJjTVdOZ3N0VDdRIiwiaWF0IjoxNzk1MTE5NTk1LCJleHAiOjE3OTUxMTk2NTV9.19pnscizT08sFlhgrnU51uti9hsjfxN1aoZvQC80dBQ",
+    "Hits Of Bollywood": "http://stream-282.surfernetwork.com/8ty8szwpwfeuv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiI4dHk4c3p3cHdmZXV2IiwiaG9zdCI6InN0cmVhbS0yODIuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJ4NnBnX1hOeVQ3aUhwUU0zSWRVclF3IiwiaWF0IjoxNzk1MjA0MzY3LCJleHAiOjE3OTUyMDQ0Mjd9.D3K9wn_H8R9dcKWpE96eHzUQEaICdErAMG0hq87rJEU",
+    "MY CLUB REMIX": "http://stream-283.surfernetwork.com/u7eee0hyzp8uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJ1N2VlZTBoeXpwOHV2IiwiaG9zdCI6InN0cmVhbS0yODMuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJQZXpZeEJSWFNhNnVEZW5Paks1S3BRIiwiaWF0IjoxNzk1MjA0MzY3LCJleHAiOjE3OTUyMDQ0Mjd9._TWWmX3WsmQ7ciFmXcKwAlSSRQ7eo0vx_6SJGQVa8IY",
+    "Hits Of Mohammed Rafi": "http://stream-291.surfernetwork.com/0zkr7x8ztm0uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiIwemtyN3g4enRtMHV2IiwiaG9zdCI6InN0cmVhbS0yOTEuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJQNDdtTFhFRVFjRzFfTW1PMGIycC13IiwiaWF0IjoxNzk1MjA0MzY3LCJleHAiOjE3OTUyMDQ0Mjd9.GtLi5AvaLlan_5P3cUzOGhFMpL3XK3Zu49E4v9ud55c",
+    "Goldy Mukesh": "https://stream-280.surfernetwork.com/t39watus1p8uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJ0Mzl3YXR1czFwOHV2IiwiaG9zdCI6InN0cmVhbS0yODAuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJNYW1BdUUtZlJkeTkzeEw3TlI3dmh3IiwiaWF0IjoxNzk1MjA0MzY5LCJleHAiOjE3OTUyMDQ0Mjl9.kUGi9wPFV6XL8zVvYwupmRkOxpodQgREgycBSz65dOs",
+    "Bollywood 2010's": "https://drive.uber.radio/uber/bollywoodmix/icecast.audio",
+    "R Retro Bollywood 90s": "https://stream-280.surfernetwork.com/fdgs82xkzhhvv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJmZGdzODJ4a3poaHZ2IiwiaG9zdCI6InN0cmVhbS0yODAuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiIwWUtMYUltaFM2cVZMa1M4NVNPcHJnIiwiaWF0IjoxNzk1MjA0MzY5LCJleHAiOjE3OTUyMDQ0Mjl9.77V_5BV3yy0GRkuZIVgEuGURCeG-k9ReibIxQEPn1co",
     "Hum FM 106.2": "https://server.mediacast4u.stream/8002/stream",
-    "Hits Of Lata Mangeshka": "http://stream-283.surfernetwork.com/g95zm67prfhvv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJnOTV6bTY3cHJmaHZ2IiwiaG9zdCI6InN0cmVhbS0yODMuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJNUG9FMjEyVlFyMlhnMUlwN3NJRjV3IiwiaWF0IjoxNzk1MTE5NTk4LCJleHAiOjE3OTUxMTk2NTh9.Dyzr5ZpRrZJUCddnrLCXkXhA_0fPhhZMWu5BglnnEG4"
+    "Hits Of Lata Mangeshka": "http://stream-290.surfernetwork.com/g95zm67prfhvv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJnOTV6bTY3cHJmaHZ2IiwiaG9zdCI6InN0cmVhbS0yOTAuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiIxQkl4cUZEblNfdWJUaGlNQ0thRzhBIiwiaWF0IjoxNzk1MjA0MzY3LCJleHAiOjE3OTUyMDQ0Mjd9.YlFxGYkXmzL7_exyfhRBX8Y3JZRAyItpVnfscFbo8Jo",
+    "HJ94.1 Boom FM Georget": "http://192.99.8.192:3630/stream",
+    "NTN Radio 89.1 Georget": "http://auds1.intacs.com/ntnradio",
+    "R Afsana": "http://us9.streamingpulse.com:7058/stream",
+    "Fm Rainbow Delhi 32 kb": "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio004/hlspbaudio00432kbps.m3u8",
+    "R SD 90.8 FM": "http://uk2.internet-radio.com:8066/stream?listening-from-radio-garden=1657423901",
+    "CINA 1650 AM Mississau": "http://ice8.securenetsystems.net/CINA",
+    "Jesus Alive Radio": "http://stream-284.surfernetwork.com/qyb8s75nsceuv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJxeWI4czc1bnNjZXV2IiwiaG9zdCI6InN0cmVhbS0yODQuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJ5UnhEenBoNlNDdWdmeXQ0S2JKWDFRIiwiaWF0IjoxNzk1MjA0MzY5LCJleHAiOjE3OTUyMDQ0Mjl9.71E2E2ULU4fTBZ6Du-_hhOKa3YbCzXDNzIfV89nh4ow"
   }
 }

@@ -1,17 +1,33 @@
 {
   "stations": {
     "ChroniX Radio Metalcor": "http://usa17.fastcast4u.com:5508/stream",
-    "SomaFM Metal Detector": "https://ice5.somafm.com/metal-128-aac",
+    "SomaFM Metal Detector": {
+      "default": "https://ice5.somafm.com/metal-128-aac",
+      "streams": [
+        {
+          "url": "https://ice5.somafm.com/metal-128-aac",
+          "bitrate": 128
+        },
+        {
+          "url": "https://ice6.somafm.com/metal-64-aac",
+          "bitrate": 80
+        },
+        {
+          "url": "https://ice5.somafm.com/metal-32-aac",
+          "bitrate": 40
+        }
+      ]
+    },
     "# 100 GREATEST HEAVY M": "https://cast1.torontocast.com:4660/stream",
     "Rock Antenne Heavy Met": "https://s1-webradio.rockantenne.de/heavy-metal/stream/aacp",
     "True Black Metal Radio": "http://trueblackmetalradio.com:666/radio",
-    "radcap Melodic Death M": "http://79.120.77.11:8002/melodicdeath",
+    "radcap Melodic Death M": "http://79.120.77.11:8000/melodicdeath",
     "Thrashking Radio": "http://thrashking.stream.laut.fm/thrashking",
     "DrGnu - Prog Rock Clas": "http://regiocast.streamabc.net/regc-radiobobprogrock1964104-mp3-192-1423777?sABC=6nss3n8q%230%23p5549n47p4p5199r236op6r02281377q%23zrqvncynlre&aw_0_1st.playerid=mediaplayer&amsparams=playerid:mediaplayer;skey:1795111565",
     "DrGnu - Death Metal": "http://regiocast.streamabc.net/regc-radiobobdeathmetal8709679-mp3-192-6241857?sABC=6nss3n8r%230%23p5549n47p4p5199r236op6r02281377q%23zrqvncynlre&aw_0_1st.playerid=mediaplayer&amsparams=playerid:mediaplayer;skey:1795111566",
-    "radcap Atmospheric/Amb": "http://79.120.39.202:8002/aabmds",
-    "radcap Brutal Death Me": "http://79.111.119.111:8000/brutaldeathmetal",
-    "radcap Gothic Black Me": "http://79.120.39.202:8000/gothblackmet",
+    "radcap Atmospheric/Amb": "http://79.120.39.202:8000/aabmds",
+    "radcap Brutal Death Me": "http://79.111.119.111:8004/brutaldeathmetal",
+    "radcap Gothic Black Me": "http://79.120.39.202:8004/gothblackmet",
     "radcap Folk Black Meta": "http://79.120.12.130:8002/folkblackmet",
     "RADIO BOB! BOBs Death": "http://regiocast.streamabc.net/regc-radiobobdeathmetal8709679-mp3-128-8354443?sABC=6nss3n91%230%23p5549n47p4p5199r236op6r02281377q%23fgernzf.enqvbobo.qr&aw_0_1st.playerid=streams.radiobob.de&amsparams=playerid:streams.radiobob.de;skey:1795111569",
     "Rock FM 105.5": "https://securestream.us/radio/8050/radio.mp3",

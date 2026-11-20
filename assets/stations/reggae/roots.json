@@ -1,10 +1,26 @@
 {
   "stations": {
-    "SomaFM Heavyweight Reg": "https://ice5.somafm.com/reggae-256-mp3",
+    "SomaFM Heavyweight Reg": {
+      "default": "https://ice5.somafm.com/reggae-256-mp3",
+      "streams": [
+        {
+          "url": "https://ice5.somafm.com/reggae-256-mp3",
+          "bitrate": 256
+        },
+        {
+          "url": "https://streaming.nrjaudio.fm/oupqm7bgddr9",
+          "bitrate": 128
+        },
+        {
+          "url": "https://ice6.somafm.com/reggae-32-aac",
+          "bitrate": 32
+        }
+      ]
+    },
     "Rastapuls Reggae Music": "http://radio.rastapuls.com:8000/rastapuls",
     "Reggae.fr": "https://listen.radioking.com/radio/50473/stream/87415",
     "ghetto vibes radio": "https://listen.radioking.com/radio/499417/stream/556609",
-    "Exclusively Dire Strai": "https://2.mystreaming.net/er/direstraits/icecast.audio",
+    "Exclusively Dire Strai": "https://2.mystreaming.net/er/theband/icecast.audio",
     "Dr. Dick’s Dub Shack": "http://streamer.radio.co/s0635c8b0d/listen?fbclid=IwAR16t5mC5UFT9Fp8pbWe0dvYn9VEI3FYJTogE5AJtUF3G1dJi38lwLgD9as",
     "RTBF Classic 21 - Regg": "https://redbeemedia.streamabc.net/redbm-c21njr-mp3-128-8138268?sABC=6nss3nr3%230%23p5549n47p4p5199r236op6r02281377q%23ei&aw_0_1st.playerid=rv&amsparams=playerid:rv;skey:1795111651",
     "sensimedia roots regga": "http://equinox.shoutca.st:9878/",
@@ -13,7 +29,7 @@
     "Allegheny Mountain Rad": "http://amber.streamguys.com:5750/",
     "UK Roots FM 2024 03": "http://138.201.198.218:8043/;",
     "Jahfari": "http://jahfari.stream.laut.fm/jahfari",
-    "KCMP Minnesota Public": "http://radioheartland.stream.publicradio.org/radioheartland.mp3",
+    "KCMP Minnesota Public": "https://radioheartland.stream.publicradio.org/radioheartland.aac",
     "WEXT \"Exit 97.7\" Amste": "http://wmht.streamguys1.com/wext1",
     "Capital Public Radio M": "http://13743.live.streamtheworld.com/KXPR_SC"
   }

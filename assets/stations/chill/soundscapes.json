@@ -2,18 +2,17 @@
   "stations": {
     "Ambient Sleeping Pill": "http://radio.stereoscenic.com/asp-h",
     "Yoga Chill": "http://178.32.111.41:8027/stream-128kmp3-YogaChill",
-    "Luxury Lounge - Late n": "http://188.40.109.122:8000/ices3",
-    "radcap Meditation Musi": "http://79.120.77.11:8002/meditation",
-    "R Nature": "https://stream-286.surfernetwork.com/3ac97ysh6f0uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiIzYWM5N3lzaDZmMHV2IiwiaG9zdCI6InN0cmVhbS0yODYuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJWa0hIblp1Q1RFMmpOT1F4OGFnOWdnIiwiaWF0IjoxNzk1MTE5NDM3LCJleHAiOjE3OTUxMTk0OTd9.Sp4DzeN_Uyd6CH6jZNEZODSDzTZvtU16DYHhCLE-_oU",
-    "radcap New Age": "http://79.120.77.11:8002/newage",
-    "Enigmatic Immersion": "http://radio.enigmatic.su:8040/radio",
+    "Luxury Lounge - Late n": "http://188.40.109.114:8000/ices3",
+    "radcap Meditation Musi": "https://www.hodlharmony.com/radio/meditation.mp3",
+    "R Nature": "https://stream-286.surfernetwork.com/3ac97ysh6f0uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiIzYWM5N3lzaDZmMHV2IiwiaG9zdCI6InN0cmVhbS0yODYuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJJNWc4bkw2TFJXRzI2NjdLdmdxTHVnIiwiaWF0IjoxNzk1MjA0MTA4LCJleHAiOjE3OTUyMDQxNjh9.RMTlnA2KmFbeV7W3Z6njnwOzLnkt42v_xyjg9T-yWJQ",
+    "radcap New Age": "http://79.120.77.11:8000/newage",
     "Klassik Radio - Healin": "http://klassikr.streamabc.net/klr-healing-mp3-128-5794140?sABC=6nss4203%230%23p5549n47p4p5199r236op6r02281377q%23&aw_0_1st.playerid=&amsparams=playerid:;skey:1795113475",
     "Sleep Radio": "http://65.109.81.84:9851/stream",
     "RPR1. - Yoga Sounds": "http://audiotainment-sw.streamabc.net/atsw-yogasounds-mp3-128-4096431?sABC=6nss4206%230%23p5549n47p4p5199r236op6r02281377q%23gjy&aw_0_1st.playerid=twl&amsparams=playerid:twl;skey:1795113478",
     "R Art - Mantras": "http://air.radioart.com/fMantras.mp3",
     "ambient.fm": "https://phoebe.streamerr.co:4140/ambient.mp3",
     "Радио Монте Карло - Me": "https://mc-meditation.hostingradio.ru/meditation96.aacp",
-    "Seven Rays - 7rays": "http://7rays.stream.laut.fm/7rays",
+    "Seven Rays - 7rays": "https://7rays.stream.laut.fm/7rays",
     "NATURE RADIO SLEEP": "https://az1.mediacp.eu/listen/natureradiosleep/radio.mp3",
     "VIP-Radios - Healing M": "http://178.32.111.41:8039/stream-128kmp3-HealingMusic"
   }

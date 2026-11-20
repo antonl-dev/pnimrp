@@ -1,7 +1,7 @@
 {
   "stations": {
     "AU Digital Network": "http://abm22.com.au:8000/CONTAINER25",
-    "radcap Electro House": "http://79.111.119.111:8002/electro",
+    "radcap Electro House": "https://stream.only1.hu/electro",
     "Electro Ralle": "https://electroralle.stream.laut.fm/electroralle?uuid=06f83c35-3b43-6a53-4098-d0b8f77d4138&t302=2026-11-19_21-11-43",
     "1.FM EDM": "https://strmreg.1.fm/edm_mobile_mp3",
     "GUS.Elektro": "https://stream4.radiogoose.ru/listen/electro/play",
@@ -16,7 +16,7 @@
     "R EDM": "https://stm16.xcast.com.br:7454/;",
     "Discoparty Kanal Club": "https://s1.slotex.pl:7432/stream/1/",
     "Erilambus": "https://erilambus.stream.laut.fm/erilambus?uuid=b6230244-e1e6-664a-3515-9f8a2f7969e3&t302=2026-11-19_21-11-46",
-    "R Flow": "https://stream-179.surfernetwork.com/5rxr1mcdcxhvv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiI1cnhyMW1jZGN4aHZ2IiwiaG9zdCI6InN0cmVhbS0xNzkuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJxeHhyMWxTNVJzcUdlUFhLVlJXanFnIiwiaWF0IjoxNzk1MTE5MTA2LCJleHAiOjE3OTUxMTkxNjZ9.g4KDeIQb8-oE-FW6kar5_RlIqGtbIoSH2SirpEdOtsc",
+    "R Flow": "http://stream-179.surfernetwork.com/5rxr1mcdcxhvv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiI1cnhyMW1jZGN4aHZ2IiwiaG9zdCI6InN0cmVhbS0xNzkuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJpVXVObDUxeFJDbVFTTG9qTmtaWUJ3IiwiaWF0IjoxNzk1MjAzNDkzLCJleHAiOjE3OTUyMDM1NTN9.D9zwbzW-KHf2wa65puInTMJdI9DnsjZhNJkAMInM_70",
     "R Sixty Four": "https://radio-sixty-four.stream.laut.fm/radio-sixty-four?uuid=af56a98c-6ed1-296b-06f9-03be9b2b08a6&t302=2026-11-19_21-11-46"
   }
 }

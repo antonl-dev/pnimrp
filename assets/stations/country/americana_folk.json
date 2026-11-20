@@ -5,16 +5,22 @@
     "R Banovina": "http://stream1.radio-banovina.hr:8008/;",
     "R Armisa": "https://onair.armisa.it/listen/armisa/radio.mp3",
     "Radyo Şiran": "https://live.radyositesihazir.com/8078/stream",
-    "FM 100 Pakistan": "http://162.244.80.118:4900/;stream.mp3",
-    "Uttorbango Betar": "https://stream-179.surfernetwork.com/spqbxkqxdf9uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJzcHFieGtxeGRmOXV2IiwiaG9zdCI6InN0cmVhbS0xNzkuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJSMDIybkJxRlFCS2xwckhNTUVscG5nIiwiaWF0IjoxNzk1MTE5MzU4LCJleHAiOjE3OTUxMTk0MTh9.g0HeSrcsLy2ni40xCQJwD-VD3yKCkeI-jYV_UM9WpeY",
+    "FM 100 Pakistan": "http://cmr-hosting.com:8500/;stream.mp3",
+    "Uttorbango Betar": "https://stream-179.surfernetwork.com/spqbxkqxdf9uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJzcHFieGtxeGRmOXV2IiwiaG9zdCI6InN0cmVhbS0xNzkuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJ1U3ZodDAxYVROZVBSYlZSWEt1NUpBIiwiaWF0IjoxNzk1MjAzOTY3LCJleHAiOjE3OTUyMDQwMjd9.pQ_E6Fd6z2SI7M5O0F3svVWRHhhOr6JbSpQxtazsURA",
     "La Kalle": "http://24363.live.streamtheworld.com/LA_KALLE_SC",
     "Ankara Havalari": "http://37.247.98.8/stream/30/;",
     "El Fonógrafo, Música l": "https://27063.live.streamtheworld.com:443/XEJP_AM_SC",
     "Yurd FM": "https://icecast.livetv.az/yurdfm",
     "Rádio Amália": "http://centova.radio.com.pt:9496/;",
     "R Gigante Bolivia": "https://cloudstream2032.conectarhosting.com:7311/;",
-    "Radyo Voyage": "http://voyagewmp.radyotvonline.com/;stream.mp3",
     "R Veseljak": "http://185.97.52.63/Veseljak",
-    "Dankó Rádió": "http://mr-stream.mediaconnect.hu/4747/mr7.aac"
+    "Dankó Rádió": "http://mr-stream.mediaconnect.hu/4747/mr7.aac",
+    "Exclusively The Beatle": "http://streaming.exclusive.radio/er/beatles/icecast.audio",
+    "Turku Radyo": "http://radyo.turkuradyo.net:4591/turkuradyo",
+    "R BN": "https://stream.radiobn.net/;.mp3",
+    "Alternative Radio": "https://listen.radioking.com/radio/182263/stream/224140",
+    "El Fonógrafo - 690 AM": "https://15723.live.streamtheworld.com:443/XEN_AM_SC",
+    "R stubica": "http://radiostubica.hc.hr:7006/stream",
+    "Hereti FM": "http://iis.ge:8000/hereti.mp3"
   }
 }

@@ -5,9 +5,20 @@
     "Puls Radio": "http://puls-radio.ru:8000/puls",
     "Puls Radio Club": "https://str3.openstream.co/2138",
     "Puls Radio Trance": "https://sc5.gergosnet.com/pulstranceHD.mp3",
-    "House Nation": "https://streaming.radio.co/s06bd9d805/listen",
     "DnB Radio": "https://source.dnbradio.com/stream/300/;",
-    "Dance Wave! | MP3": "http://stream1.dancewave.online:8080/dance.mp3",
+    "Dance Wave! | MP3": {
+      "default": "http://stream1.dancewave.online:8080/dance.ogg",
+      "streams": [
+        {
+          "url": "http://stream1.dancewave.online:8080/dance.ogg",
+          "bitrate": 160
+        },
+        {
+          "url": "http://31.192.216.10/DANCE",
+          "bitrate": 64
+        }
+      ]
+    },
     "DFM RUSSIAN DANCE": "https://dfm-dfmrusdance.hostingradio.ru/dfmrusdance96.aacp?0.9987259013359274",
     "Dance Wave Retro! | MP": "http://stream1.dancewave.online:8080/retrodance.mp3",
     "Frisky": "http://stream2.friskyradio.com/frisky_mp3_hi",

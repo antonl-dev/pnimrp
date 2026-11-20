@@ -1,16 +1,28 @@
 {
   "stations": {
-    "ROCK ANTENNE": "https://s6-webradio.webradio.de/rockantenne.aac",
-    "R Caroline": "https://stream.radiocaroline.net/rc128/",
-    "KBCO": "https://n2ba-e2.revma.ihrhls.com/zc2804/hls.m3u8?rj-ttl=5&rj-tok=AAABofV1XUkA2vM9ngQtOCmE2w",
+    "ROCK ANTENNE": "http://s5-webradio.rockantenne.de/deutschrock",
+    "R Caroline": {
+      "default": "http://78.129.202.200:8040/;",
+      "streams": [
+        {
+          "url": "http://78.129.202.200:8040/;",
+          "bitrate": 128
+        },
+        {
+          "url": "http://78.129.202.10:8010/;",
+          "bitrate": 52
+        }
+      ]
+    },
+    "KBCO": "https://n3aa-e2.revma.ihrhls.com/zc2804/hls.m3u8?rj-ttl=5&rj-tok=AAABofp8UrMAbh1qMQQebWKw3Q",
     "WAPL": "https://woodward-radio.streamb.live/SB00020",
     "Virgin Radio Türkiye": "https://provisioning.streamtheworld.com/pls/VIRGIN_RADIO.pls",
     "Rock 102": "https://rawlco.leanstream.co/CJDJFM",
     "R ROKS Ukraina": "https://195.95.206.13/RadioROKS_Live",
-    "1LIVE": "http://d141.rndfnk.com/ard/wdr/1live/live/mp3/128/stream.mp3?cid=01FBRZTS1K1TCD4KA2YZ1ND8X3&sid=3MKty8fC8X1XSVH0vPd9uPiuKA7&token=pl_YYLjUVt_TT_49Fo5T299AN0GZmcnztG_RjbpMYwI&tvf=XPZvfuWX6RhkMTQxLnJuZGZuay5jb20",
+    "1LIVE": "http://d111.rndfnk.com/ard/wdr/1live/live/mp3/128/stream.mp3?cid=01FBRZTS1K1TCD4KA2YZ1ND8X3&sid=3MNuC0l72ZvE6sp1oRRJsTF5ev0&token=dnq0jmwrJFunqIoqTRjnNgbd-dJC5a-jAJtr175r4QU&tvf=x1t6BnXr6RhkMTExLnJuZGZuay5jb20",
     "Oui FM": "https://ouifm.ice.infomaniak.ch/ouifm-high.aac",
     "SomaFM Left Coast 70s": "https://somafm.com/seventies320.pls",
-    "WJRR": "https://n22a-e2.revma.ihrhls.com/zc593/hls.m3u8?rj-ttl=5&rj-tok=AAABofV1Y2gA_PmkGKmd20X8-w",
+    "WJRR": "https://n46a-e2.revma.ihrhls.com/zc593/hls.m3u8?rj-ttl=5&rj-tok=AAABofp8WEEAwIaUJ-UqZpCo-g",
     "98.1 The Max": "https://27063.live.streamtheworld.com:443/WXMXFMAAC.aac",
     "1055 ROCK": "https://radio.1055rock.gr:31056/live",
     "ROCK FM": "http://nashe1.hostingradio.ru/rock-128.mp3",

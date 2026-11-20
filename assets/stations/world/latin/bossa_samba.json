@@ -7,14 +7,36 @@
     "MPB do Vinil AUDigital": "http://centova5.transmissaodigital.com:8339/live",
     "Soma Bossa Beyond": "https://ice2.somafm.com/bossa-128-mp3",
     "Bossa Jazz Brasil": "https://centova5.transmissaodigital.com:20104/live",
-    "SomaFM Secret Agent": "https://ice6.somafm.com/secretagent-128-mp3",
+    "SomaFM Secret Agent": {
+      "default": "https://ice6.somafm.com/secretagent-128-mp3",
+      "streams": [
+        {
+          "url": "https://ice6.somafm.com/secretagent-128-mp3",
+          "bitrate": 128
+        },
+        {
+          "url": "https://ice5.somafm.com/secretagent-64-aac",
+          "bitrate": 64
+        },
+        {
+          "url": "https://ice5.somafm.com/secretagent-32-aac",
+          "bitrate": 32
+        }
+      ]
+    },
     "radcap Bossa Nova": "http://79.111.14.76:8002/bossanova",
     "1.FM - Samba Hits Braz": "http://strm112.1.fm/samba_mobile_mp3",
-    "R Monte Carlo - Bossa": "https://mc-mcbossa.hostingradio.ru/mcbossa96.aacp?listening-from-radio-garden=1645969315",
+    "R Monte Carlo - Bossa": "https://mc-mcbossa.hostingradio.ru/mcbossa96.aacp",
     "Rádio Batuta MPB - A w": "http://radioims.out.airtime.pro:8000/radioims_a",
     "Klassik Radio - Brazil": "http://klassikr.streamabc.net/klr-brazil-mp3-128-2052435?sABC=6nss4415%230%23p5549n47p4p5199r236op6r02281377q%23&aw_0_1st.playerid=&amsparams=playerid:;skey:1795114005",
     "1.FM - Samba Rock Radi": "http://strm112.1.fm/sambarock_mobile_mp3",
     "Digital Jazz": "http://stm01.virtualcast.com.br:8190/live",
-    "R Art - Bossa Nova": "http://air-tunein.radioart.com/fBosa_nova.mp3"
+    "Onda Latina": "http://ondalatina.stream.laut.fm/ondalatina?uuid=cd253427-7e30-b744-6e02-674bc81ca14f&t302=2026-11-20_20-52-29",
+    "Rádio FM O Dia 99.7 FM": "https://wz7.servidoresbrasil.com:8274/stream",
+    "AshiyaRadio〜アシヤ・ラヂヲ〜": "https://s3.radio.co/sc8d895604/listen",
+    "R Art - Smooth Bossa N": "https://live.radioart.com/fSmooth_bossa_nova.mp3",
+    "BH FM 102,1 MHz ZYC690": "https://27583.live.streamtheworld.com:443/BHFMAAC.aac",
+    "Allzic Radio Brazil": "http://allzic19.ice.infomaniak.ch/allzic19.mp3",
+    "Exclusively Diana Kral": "https://nl4.mystreaming.net/er/dianakrall/icecast.audio"
   }
 }

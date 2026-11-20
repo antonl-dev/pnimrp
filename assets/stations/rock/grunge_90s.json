@@ -6,7 +6,6 @@
     "delta radio Grunge": "http://deltaradio.streamabc.net/regc-deltagrunge-mp3-192-7205779?sABC=6nss3n43%230%23p5549n47p4p5199r236op6r02281377q%23zrqvncynlre&aw_0_1st.playerid=mediaplayer&amsparams=playerid:mediaplayer;skey:1795111491",
     "DrGnu - Metallica": "http://regiocast.streamabc.net/regc-radiobobmetallica3164584-mp3-192-3532789?sABC=6nss3n49%230%23p5549n47p4p5199r236op6r02281377q%23zrqvncynlre&aw_0_1st.playerid=mediaplayer&amsparams=playerid:mediaplayer;skey:1795111497",
     "RADIO BOB! BOBs Grunge": "http://regiocast.streamabc.net/regc-radiobobgrunge4112801-mp3-192-5387631?sABC=6nss3n4n%230%23p5549n47p4p5199r236op6r02281377q%23fgernzf.enqvbobo.qr&aw_0_1st.playerid=streams.radiobob.de&amsparams=playerid:streams.radiobob.de;skey:1795111498",
-    "Exclusively Stone Temp": "https://streaming.exclusive.radio/er/stonetemplepilots/icecast.audio",
     "Big R Radio - Post Gru": "http://bigrradio.cdnstream1.com/5203_128",
     "Dare-FM": "http://hydra.cdnstream.com/1552_128?listenerId=874e5aaea897e6a11bc60184f95f9946&aw_0_1st.playerid=esPlayer&aw_0_1st.skey=1689285807",
     "DrGnu - Gothic": "http://regiocast.streamabc.net/regc-radiobobgothic6924976-mp3-192-2500754?sABC=6nss3n4p%230%23p5549n47p4p5199r236op6r02281377q%23zrqvncynlre&aw_0_1st.playerid=mediaplayer&amsparams=playerid:mediaplayer;skey:1795111500",
@@ -15,6 +14,13 @@
     "RadioBOB Grunge": "http://regiocast.streamabc.net/regc-radiobobgrunge4112801-aacplus-64-4023388?sABC=6nss3n50%230%23p5549n47p4p5199r236op6r02281377q%23zrqvncynlre&aw_0_1st.playerid=mediaplayer&amsparams=playerid:mediaplayer;skey:1795111504",
     "Pearl Jam Ten Club Rad": "https://radio.nugs.net/pearljam",
     "HD Radio - Rock (USA)": "http://hdradiorock-rfritschka.radioca.st/;",
-    "radcap Grunge": "http://79.120.39.202:8000/grunge"
+    "radcap Grunge": "http://79.120.39.202:8000/grunge",
+    "DrGnu - 70th Rock": "http://fluxfm.streamabc.net/flx-70er-mp3-320-4383769?sABC=6202qr25%230%237osorqnn86p8nnp979o1124290qqo247%23fgernzf.syhksz.qr&amsparams=playerid:streams.fluxfm.de;skey:1644355109",
+    "DrGnu - 80th Rock II": "https://fluxfm.streamabc.net/flx-80er-mp3-320-9596107?sABC=6202qrr6%230%23sorr1p583723p06268o324o2ps5n399q%23fgernzf.syhksz.qr&amsparams=playerid:streams.fluxfm.de;skey:1644355302",
+    "100Hitz - 90s Alternat": "http://pureplay.cdnstream1.com/6040_64.aac/playlist.m3u8",
+    "DrGnu - 90th Rock": "http://regiocast.streamabc.net/regc-radiobob90srock8400272-mp3-192-6033382?sABC=6o00n0r2%230%23o0qn71011p1s9n4n031ps6437nns5702%23zrqvncynlre&aw_0_1st.playerid=mediaplayer&amsparams=playerid:mediaplayer;skey:1795203298",
+    "Smells Like the 90s": "http://n12a-e2.revma.ihrhls.com/zc6437/hls.m3u8?rj-ttl=5&rj-tok=AAABofp9n9MA45GY_PNmtgV4Yw",
+    "Rockhausradio": "http://stream.rockhausradio.de/rockhausradio",
+    "DrGnu - Metal 1": "http://regiocast.streamabc.net/regc-radiobobmetal3070164-mp3-192-5354778?sABC=6o00n0r3%230%23o0qn71011p1s9n4n031ps6437nns5702%23zrqvncynlre&aw_0_1st.playerid=mediaplayer&amsparams=playerid:mediaplayer;skey:1795203299"
   }
 }

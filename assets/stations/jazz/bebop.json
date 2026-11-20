@@ -1,17 +1,25 @@
 {
   "stations": {
-    "181.fm Bebop": "https://listen.181fm.com/181-bebop_128k.mp3",
-    "181.fm Bebop -data": "https://listen.181fm.com/181-bebop_64k.aac",
-    "CZ Hard Bop": "http://streams.greenhost.nl:8080/hardbop",
-    "Adroit Jazz Undergroun": "https://icecast.walmradio.com:8443/jazz_opus",
-    "radcap Hard Bop": "http://79.111.14.76:8002/hardbop",
-    "radcap Hard Bob": "http://79.111.14.76:8000/hardbop",
-    "KJazz 88.1 HD2 The Beb": "https://das-edge62-live365-dal03.cdnstream.com/a45189_2",
-    "Exclusively Herbie Han": "https://2.mystreaming.net/er/herbiehancock/icecast.audio",
-    "Exclusively Ella Fitzg": "https://2.mystreaming.net/er/ellafitzgerald/icecast.audio",
-    "laut.fm jradio": "http://jradio.stream.laut.fm/jradio?uuid=293c073a-9636-85bb-e7a9-c6c8d3dbdbb4&t302=2026-11-19_18-50-47",
-    "Ella Radio - Bebop": "https://ella.stream46.radiohost.de/ella-bebop_mp3-192?ref=radio-browser&upd-meta=1&upd-scheme=https&_art=dD0xNzk1MTEwOTUwJmQ9NDg3ODZhZDc2NzlmMzQzNzZiNGQ",
-    "KJazz 88.1 HD2": "https://das-edge12-live365-dal02.cdnstream.com/a45189/playlist.m3u8",
+    "181.fm Bebop": {
+      "default": "https://listen.181fm.com/181-bebop_128k.mp3",
+      "streams": [
+        {
+          "url": "https://listen.181fm.com/181-bebop_128k.mp3",
+          "bitrate": 128
+        },
+        {
+          "url": "https://listen.181fm.com/181-bebop_64k.aac",
+          "bitrate": 64
+        }
+      ]
+    },
+    "CZ Hard Bop": "http://79.111.14.76:8002/hardbop",
+    "Adroit Jazz Undergroun": "https://icecast.walmradio.com:8443/jazz",
+    "KJazz 88.1 HD2 The Beb": "https://das-edge12-live365-dal02.cdnstream.com/a45189_2",
+    "Exclusively Herbie Han": "https://nl4.mystreaming.net/er/ellafitzgerald/icecast.audio",
+    "laut.fm jradio": "http://jradio.stream.laut.fm/jradio?t302=2026-11-20_20-39-42&uuid=5793ad80-d631-78d4-a3a7-c2c08a6a80ae",
+    "Ella Radio - Bebop": "https://ella.stream45.radiohost.de/ella-bebop_mp3-192?ref=radio-browser&upd-meta=1&upd-scheme=https&_art=dD0xNzk1MjAzODgzJmQ9OGNkNWRiMzE0YTgzNWM2MGZmMjI",
+    "KJazz 88.1 HD2": "https://das-edge62-live365-dal03.cdnstream.com/a45189/playlist.m3u8",
     "laut.fm - Soft Lounge": "https://soft-lounge-cinema.stream.laut.fm/soft-lounge-cinema?t302=2026-11-17_01-26-02&uuid=f190ae26-84c4-8804-7d16-a83a78735296",
     "KracRadio Jazz": "https://stream.kracradio.com/listen/jazz/radio.mp3",
     "Podjazz Radio": "https://radio.podjazz.net/listen/podjazz_radio/radio.mp3",

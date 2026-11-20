@@ -1,7 +1,7 @@
 {
   "stations": {
     "HPR4: Bluegrass Gospel": "https://us2.maindigitalstream.com/ssl/7739",
-    "BigR Gospel": "https://bigrradio.cdnstream1.com/5199_128",
+    "BigR Gospel": "http://bigrradio.cdnstream1.com/5199_128",
     "Black Gospel R": "https://ice64.securenetsystems.net/BGRLIVE",
     "R Sound Black BR": "https://servidor35.brlogic.com:8572/live",
     "Gospel 90.3": "https://prod-44-202-199-86.amperwave.net/landmark-wlvffmaac-hlsc2.m3u8",
@@ -9,12 +9,12 @@
     "Rejoice 102.3": "https://ais-sa8.cdnstream1.com/pphmw4xd6g4/cq0clv82v6o",
     "Lighthouse FM CA": "https://usa4.fastcast4u.com/proxy/lighthousefm?mp=/1",
     "DWG Radio Bumese": "http://server32349.streamplus.de/;?type=http&#038;nocache=227",
-    "Nigerian Gospel Music": "http://stream-283.surfernetwork.com/3fmqr74a7f8uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiIzZm1xcjc0YTdmOHV2IiwiaG9zdCI6InN0cmVhbS0yODMuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJzblRSb2FLdVN4bUYydUtubjlpUGF3IiwiaWF0IjoxNzk1MTE5MTI4LCJleHAiOjE3OTUxMTkxODh9.TCOXMClisOHb8i4cRBd9DWlMYbicnOZNTqg5XhFHi5w",
-    "Gospel FM Jamaica": "https://stream-280.surfernetwork.com/zpksre88rm0uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJ6cGtzcmU4OHJtMHV2IiwiaG9zdCI6InN0cmVhbS0yODAuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJPRHJYRkZlT1RycXlNV2h3NmRLRHp3IiwiaWF0IjoxNzk1MTE5MTI4LCJleHAiOjE3OTUxMTkxODh9.CCcYQNbhaDn4p9PO83yFLT5mw0f6G77nzhD0P_YPrEc",
-    "Heaven FM Radio": "http://stream-176.surfernetwork.com/eequgfw72hhvv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJlZXF1Z2Z3NzJoaHZ2IiwiaG9zdCI6InN0cmVhbS0xNzYuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJ0RjRYYjd0aFM0aUxZUFpLajFwSVFBIiwiaWF0IjoxNzk1MTE5MTI4LCJleHAiOjE3OTUxMTkxODh9._8l4MKVX4ZHsGkCcyTeb5EpF9MW3Dod07K_9kQ2jHvY",
+    "Nigerian Gospel Music": "http://stream-283.surfernetwork.com/3fmqr74a7f8uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiIzZm1xcjc0YTdmOHV2IiwiaG9zdCI6InN0cmVhbS0yODMuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJobkEtX0ZNZVRRQzJtS3MwWGZacldRIiwiaWF0IjoxNzk1MjAzNTIxLCJleHAiOjE3OTUyMDM1ODF9.DFTmF40vWMJSbRGxmL196TcbIP5mjsIwmC9pLj_Cy2M",
+    "Gospel FM Jamaica": "https://stream-280.surfernetwork.com/zpksre88rm0uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJ6cGtzcmU4OHJtMHV2IiwiaG9zdCI6InN0cmVhbS0yODAuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJfQkRYV2FoLVFjeTExZ1ZWNlZIRUhBIiwiaWF0IjoxNzk1MjAzNTIxLCJleHAiOjE3OTUyMDM1ODF9.MGkF8uz3vWGeFGUrsc5mmjLScNIjmIy13lxq3GkbMiY",
+    "Heaven FM Radio": "http://stream-176.surfernetwork.com/eequgfw72hhvv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJlZXF1Z2Z3NzJoaHZ2IiwiaG9zdCI6InN0cmVhbS0xNzYuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJLZ0llZ1RyNlM2U1BVVWRtNEJ6Z0l3IiwiaWF0IjoxNzk1MjAzNTIxLCJleHAiOjE3OTUyMDM1ODF9.6-c7FQrH4_rDmrCOV_8AiFmIfIgc_XlLxH2_esUVx9Q",
     "Gospotainment Radio": "https://radio.gotright.net/radio/8000/radio.mp3",
-    "R Cristiana Venezuela": "https://stream-288.surfernetwork.com/r7zrx18xcfhvv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJyN3pyeDE4eGNmaHZ2IiwiaG9zdCI6InN0cmVhbS0yODguc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJmZVk3LU11V1RGYTBnak14RlZxeHZBIiwiaWF0IjoxNzk1MTE5MTI4LCJleHAiOjE3OTUxMTkxODh9.lRHLYNMsRECPNDGpKOQVn7-JHpI_l3JbiR9zUVoHGB8",
+    "R Cristiana Venezuela": "https://stream-288.surfernetwork.com/r7zrx18xcfhvv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJyN3pyeDE4eGNmaHZ2IiwiaG9zdCI6InN0cmVhbS0yODguc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiI2VUZlY3ZmVVEyU0cxXzN6aFp5NWNRIiwiaWF0IjoxNzk1MjAzNTIxLCJleHAiOjE3OTUyMDM1ODF9.kfu7jKUfOqsOpBqLMfPdCq6GVqprAlr5DDeQ0yA0lvk",
     "Gospel Radio East Afri": "https://c32.radioboss.fm:18451/stream?1641237600584",
-    "Afrobeats Gospel Radio": "https://stream-291.surfernetwork.com/zyd9stmdlnlvv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJ6eWQ5c3RtZGxubHZ2IiwiaG9zdCI6InN0cmVhbS0yOTEuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJaM0tRa2o2Y1NQMjVtMS1UR3o3U2ZBIiwiaWF0IjoxNzk1MTE5MTI5LCJleHAiOjE3OTUxMTkxODl9.BCX3uNhQ0fqyqk83SQ6IrsE9xGggujh90pN-lrJg11s"
+    "Afrobeats Gospel Radio": "https://stream-291.surfernetwork.com/zyd9stmdlnlvv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJ6eWQ5c3RtZGxubHZ2IiwiaG9zdCI6InN0cmVhbS0yOTEuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJ0NngtWHR3WFJwQ0RZWm5fcmV6Q2lnIiwiaWF0IjoxNzk1MjAzNTIxLCJleHAiOjE3OTUyMDM1ODF9.c-JvGnmCEghU623NicrEUg_snY446D4GWJDHzZO--f4"
   }
 }

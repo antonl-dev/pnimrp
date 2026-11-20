@@ -34,6 +34,12 @@ type
     audioHandle* = AudioContext
 
 type
+    StreamInfo* = object
+        url*: string
+        bitrate*: int         # kbps (e.g., 64, 128, 192, 320, 0 if unknown)
+        codec*: string       # e.g., "mp3", "aac", "ogg", "opus"
+        region*: string      # e.g., "US", "EU", "Main", or server description
+
     MenuError* = object of CatchableError # Custom error type for menu-related issues
     PlayerState* = object    # Structure to hold the player's current state
         isPaused*: bool      # Whether the player is paused
@@ -47,6 +53,8 @@ type
         currentSubsection*: string # Current menu subsection
         stationName*: string       # Name of the selected station
         stationUrl*: string        # URL of the selected station
+        streams*: seq[StreamInfo]  # Available streams/bitrates for this station
+        currentStreamIdx*: int     # Currently active stream index in streams
 
 const
     CheckIdleInterval* = 25 # Interval to check if the player is idle

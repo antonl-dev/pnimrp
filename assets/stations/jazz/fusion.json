@@ -1,20 +1,50 @@
 {
   "stations": {
-    "181.fm Fusion Jazz": "https://listen.181fm.com/181-fusionjazz_128k.mp3",
-    "181.fm Fusion Jazz -da": "https://listen.181fm.com/181-fusionjazz_64k.aac",
+    "181.fm Fusion Jazz": {
+      "default": "https://listen.181fm.com/181-fusionjazz_128k.mp3",
+      "streams": [
+        {
+          "url": "https://listen.181fm.com/181-fusionjazz_128k.mp3",
+          "bitrate": 128
+        },
+        {
+          "url": "https://listen.181fm.com/181-fusionjazz_64k.aac",
+          "bitrate": 64
+        }
+      ]
+    },
     "Dons Art DE": "https://donsart.stream.laut.fm/donsart?uuid=315a6bf4-728b-311b-2b9a-642442b368ec&t302=2026-11-19_18-51-38",
     "Jazz Radio Jazz Fusion": "https://jazz-radio-fusion.ice.infomaniak.ch/jazz-radio-fusion.mp3",
     "R Art Fusion GR": "https://live.radioart.com/fFusion.mp3",
     "radcap Jazz Fusion": "http://79.111.119.111:8002/jazzfusion",
     "4Drive Jazz": "http://radio.streemlion.com:1150/stream",
     "RMC Nights Story": "http://edge.radiomontecarlo.net/rmcweb012",
-    "EROTICA LOUNGE": "https://stream-281.surfernetwork.com/89asra0sfa0uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiI4OWFzcmEwc2ZhMHV2IiwiaG9zdCI6InN0cmVhbS0yODEuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJiV2dWN0lXdVNLU0JSdXc4YzN2S1hnIiwiaWF0IjoxNzk1MTE5MTk3LCJleHAiOjE3OTUxMTkyNTd9.YRYAUCK98ycNXFu2WIyN6ilaKtjSDIcIpE7A8EaTigw",
+    "EROTICA LOUNGE": "https://stream-281.surfernetwork.com/89asra0sfa0uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiI4OWFzcmEwc2ZhMHV2IiwiaG9zdCI6InN0cmVhbS0yODEuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiIyZ1VTY2MyVFRsYXNreENlcHFUR2lRIiwiaWF0IjoxNzk1MjAzNjE3LCJleHAiOjE3OTUyMDM2Nzd9.8_WCrxanToRxRA4dVrzws-SyRfUssAzwAmcWSn_fU5o",
     "100% ACID JAZZ": "https://mpc1.mediacp.eu:8356/stream",
     "Suite Jazz Radio": "https://jenny.torontocast.com:2000/stream/suitejazzradio",
-    "Exclusively Santana": "https://streaming.exclusive.radio/er/santana/icecast.audio",
+    "Exclusively Santana": "https://2.mystreaming.net/er/herbiehancock/icecast.audio",
     "SMOOTH JAZZ DELUXE": "https://cast1.torontocast.com:4490/;?type=http&nocache=1745925758",
     "The Jazz Groove (East)": "http://audio-edge-kk8xx.blr.d.radiomast.io/8a384ff3-6fd1-4e5d-b47d-0cbefeffe8d7",
     "Just Music Radio": "https://radiostream.neotel.mk/justmusicradio",
-    "R Art - Fusion": "http://live.radioart.com/fFusion.mp3"
+    "Jazz Rock Fusion": "http://jazzrockfusion.stream.laut.fm/jazzrockfusion?uuid=0186a9d8-e75e-011a-d40d-bc1e0a8576fc&t302=2026-11-20_20-40-17",
+    "#1 Splash Jazz": "https://ais-sa2.cdnstream1.com/2346_128.mp3",
+    "Adroit Jazz Undergroun": {
+      "default": "https://icecast.walmradio.com:8443/jazz",
+      "streams": [
+        {
+          "url": "https://icecast.walmradio.com:8443/jazz",
+          "bitrate": 320
+        },
+        {
+          "url": "https://icecast.walmradio.com:8443/jazz_opus",
+          "bitrate": 192
+        }
+      ]
+    },
+    "JazzRadio (MRG.fm)": "http://listen.mrg.fm:8040/stream",
+    "Laut.fm - After Hours": "https://after-hours.stream.laut.fm/after-hours?t302=2019-09-27_06-07-17&uuid=64f3acda-820a-4912-9df6-fe85b9cd99a2",
+    "Softlife Afrofusion Ra": "https://a10.asurahosting.com:7540/radio.mp3",
+    "Groovetime": "http://kotdt.com:8000/groovetime",
+    "laut.fm Freakout": "http://freakout.stream.laut.fm/freakout"
   }
 }

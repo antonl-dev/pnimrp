@@ -1,20 +1,36 @@
 {
   "stations": {
     "Best Of Rock.FM Altern": "https://radio21.streamabc.net/radio21-alternativerock-mp3-256-9941142?sABC=6nss39s5%230%23p5549n47p4p5199r236op6r02281377q%23orfgbsebpx.sz&aw_0_1st.playerid=bestofrock.fm&amsparams=playerid:bestofrock.fm;skey:1795111413",
-    "SomaFM Metal Detector": "https://ice5.somafm.com/metal-128-aac",
+    "SomaFM Metal Detector": {
+      "default": "https://ice5.somafm.com/metal-128-aac",
+      "streams": [
+        {
+          "url": "https://ice5.somafm.com/metal-128-aac",
+          "bitrate": 128
+        },
+        {
+          "url": "https://ice6.somafm.com/metal-64-aac",
+          "bitrate": 80
+        },
+        {
+          "url": "https://ice5.somafm.com/metal-32-aac",
+          "bitrate": 40
+        }
+      ]
+    },
     "Bob's Ska Radio": "http://51.255.235.165:5528/stream",
     "Rock Antenne - Punk Ro": "http://s8-webradio.rockantenne.de/punkrock.aac",
     "BBC Radio 6 Music": "http://as-hls-ww-live.akamaized.net/pool_81827798/live/ww/bbc_6music/bbc_6music.isml/bbc_6music-audio%3d320000.norewind.m3u8",
     "80s Forever - We Keep": "https://premium.shoutcastsolutions.com/radio/8050/256.mp3",
-    "Ultra Dark Radio": "http://ultradarkradio.stream.laut.fm/ultradarkradio?t302=2026-11-19_19-03-42&uuid=6afaaeb5-4628-b2ea-59aa-a9008180a9dd",
+    "Ultra Dark Radio": "http://ultradarkradio.stream.laut.fm/ultradarkradio?uuid=ae66461a-679e-349e-719b-c75934dc81e2&t302=2026-11-20_20-34-21",
     "Weymouth Rocks": "http://cast1.asurahosting.com:8621/med",
     "R Blackout": "https://giffard.streampunk.cc/_stream/blackout.ogg",
     "RADIO BOB! BOBs Punk": "http://regiocast.streamabc.net/regc-radiobobpunk9297074-mp3-192-5301995?sABC=6nss3n06%230%23p5549n47p4p5199r236op6r02281377q%23fgernzf.enqvbobo.qr&aw_0_1st.playerid=streams.radiobob.de&amsparams=playerid:streams.radiobob.de;skey:1795111430",
-    "Darksynth Radio": "http://darksynthradio.stream.laut.fm/darksynthradio?uuid=86bcd418-d071-d509-3ba7-b42e150d135e&t302=2026-11-19_19-03-50",
+    "Darksynth Radio": "http://darksynthradio.stream.laut.fm/darksynthradio?uuid=9054d4f6-4d85-b195-5e93-5e65cb44c811&t302=2026-11-20_20-34-21",
     "RADIO BOB! BOBs Gothic": "http://regiocast.streamabc.net/regc-radiobobgothic6924976-mp3-192-2500754?sABC=6nss3n08%230%23p5549n47p4p5199r236op6r02281377q%23fgernzf.enqvbobo.qr&aw_0_1st.playerid=streams.radiobob.de&amsparams=playerid:streams.radiobob.de;skey:1795111432",
-    "DARK ZERO RADIO": "http://darkzeroradio.stream.laut.fm/darkzeroradio?t302=2026-11-19_19-03-53&uuid=e2fb9d86-d7f9-841e-0c0a-4a8e00cc6c6d",
+    "DARK ZERO RADIO": "http://darkzeroradio.stream.laut.fm/darkzeroradio?uuid=2878196a-59c7-4022-da42-b84f255a1a8c&t302=2026-11-20_20-34-23",
     "Teenage Kicks Radio": "https://evcast.mediacp.eu:1165/stream",
     "REAL PUNK RADIO": "http://149.56.155.73:8080/stream",
-    "JR Radio": "http://stream-175.surfernetwork.com/pdkt234k698uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJwZGt0MjM0azY5OHV2IiwiaG9zdCI6InN0cmVhbS0xNzUuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJReGVIZDFqNlFoYWNWeGRxWUhQalBRIiwiaWF0IjoxNzk1MTE4ODk1LCJleHAiOjE3OTUxMTg5NTV9.XyKE5vwON4Tcdzyk2QzlxftPVwix4n2H2fAl_8jTE5c"
+    "JR Radio": "http://stream-175.surfernetwork.com/pdkt234k698uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJwZGt0MjM0azY5OHV2IiwiaG9zdCI6InN0cmVhbS0xNzUuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJZSHVVZm16WlRSbTdQVHV5LWpGLTR3IiwiaWF0IjoxNzk1MjAzMjYxLCJleHAiOjE3OTUyMDMzMjF9.47sbzcZY4Q77UL-62E8QOSOePJbSZ5YxjEe3QBdAGy8"
   }
 }

@@ -8,13 +8,19 @@
     "Allegheny Mountain Rad": "http://amber.streamguys.com:5750/",
     "Ichtys Radio": "http://server33109.streamplus.de/;?type=http&nocache=100024",
     "Abiding Radio - Bluegr": "https://streams.abidingradio.com/bluegrass",
-    "radcap Bluegrass": "http://79.111.14.76:8002/bluegrass",
     "WVPB 88.5 \"West Virgin": "https://wvpublic.streamguys1.com/wvpb256k.aac",
     "WIGN - 1550 AM Bluegra": "https://mountain.radioca.st/stream",
     "The Bluegrass Jamboree": "https://the-bluegrass-jamboree.radiocult.fm/stream",
     "American Roots Radio": "https://stream.americanrootsradio.com:3035/stream",
     "KWYG - Wyoming Gospel": "https://stationplaylist.com:7110/listen.aac",
     "WNRV The Ridge AM 990/": "http://stream.wnrvbluegrassradio.com/live-mp3",
-    "WGCS 91.1 \"The Globe\"": "http://icecast.goshen.edu:8000/wgcs-128vbr"
+    "WGCS 91.1 \"The Globe\"": "http://icecast.goshen.edu:8000/wgcs-128vbr",
+    "105.3 WJEN Cat Country": "https://ais-sa1.streamon.fm/7823_96k.aac",
+    "Country-Road-58,AutoDJ": "https://country-road-58.spcast.eu/stream",
+    "91.3 WYEP": "https://ais-sa3.cdnstream1.com/2557_128.mp3?",
+    "R.SA Country": "http://rsa.streamabc.net/regc-rsasachsen60erold5866133-mp3-192-1592541?sABC=6nso877s%230%236q8s7o7o3p7411o9n0871834qs5r90so%23fgernzf.efn-fnpufra.qr&aw_0_1st.playerid=streams.rsa-sachsen.de&amsparams=playerid:streams.rsa-sachsen.de;skey:1794869119",
+    "WPAQ 740AM 106.7FM Voi": "https://prod-3-82-3-164.amperwave.net/blueridgeradio-wpaqamaac-hlsc4.m3u8",
+    "WKNH Keene": "https://streams.radio.co/sa460c8a9d/listen",
+    "Bluegrass Planet Radio": "http://65.108.105.26:7966/stream"
   }
 }

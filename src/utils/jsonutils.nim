@@ -39,7 +39,7 @@ else:
     from privjsonstdlib import loadStationStdLib, loadQuotesStdLib
 
 
-proc loadStations*(filePath: string): tuple[names, urls: seq[string]] =
+proc loadStations*(filePath: string): tuple[names, urls: seq[string], streams: seq[seq[StreamInfo]]] =
     try:
         when defined(useJsmn):
             return loadStationJSMN(filePath)

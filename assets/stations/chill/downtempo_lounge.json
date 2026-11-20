@@ -1,13 +1,53 @@
 {
   "stations": {
     "101 SMOOTH JAZZ": "http://jking.cdnstream1.com/b22139_128mp3",
-    "SomaFM Groove Salad": "https://ice5.somafm.com/groovesalad-128-mp3",
+    "SomaFM Groove Salad": {
+      "default": "https://ice5.somafm.com/groovesalad-128-mp3",
+      "streams": [
+        {
+          "url": "https://ice5.somafm.com/groovesalad-128-mp3",
+          "bitrate": 128
+        },
+        {
+          "url": "https://ice5.somafm.com/groovesalad-64-aac",
+          "bitrate": 64
+        }
+      ]
+    },
     "Anon.FM": "https://icecast.anon.fm/radio",
-    "SomaFM Secret Agent": "https://ice6.somafm.com/secretagent-128-mp3",
+    "SomaFM Secret Agent": {
+      "default": "https://ice6.somafm.com/secretagent-128-mp3",
+      "streams": [
+        {
+          "url": "https://ice6.somafm.com/secretagent-128-mp3",
+          "bitrate": 128
+        },
+        {
+          "url": "https://ice5.somafm.com/secretagent-64-aac",
+          "bitrate": 64
+        },
+        {
+          "url": "https://ice5.somafm.com/secretagent-32-aac",
+          "bitrate": 32
+        }
+      ]
+    },
     "LOVE RADIO Only Love S": "http://shoutcast3.streamingmedia.it:3162/",
     "WALM - Old Time Radio": "https://icecast.walmradio.com:8443/otr_opus",
-    "SomaFM Left Coast 70s": "https://ice4.somafm.com/seventies-320-mp3",
-    "SomaFM Lush (128k MP3)": "https://ice4.somafm.com/lush-128-mp3",
+    "SomaFM Left Coast 70s": {
+      "default": "https://ice4.somafm.com/seventies-320-mp3",
+      "streams": [
+        {
+          "url": "https://ice4.somafm.com/seventies-320-mp3",
+          "bitrate": 320
+        },
+        {
+          "url": "https://ice5.somafm.com/seventies-128-mp3",
+          "bitrate": 128
+        }
+      ]
+    },
+    "SomaFM Lush": "https://ice4.somafm.com/lush-128-mp3",
     "101 SMOOTH JAZZ MELLOW": "http://ais-edge90-dal03.cdnstream.com/b48071_128mp3",
     "SMOOTH JAZZ 24/7": "http://jking.cdnstream1.com/b75154_128mp3",
     "Calm Radio - Solo Pian": "http://streams.calmradio.com:1228/",
@@ -15,6 +55,6 @@
     "Sunshine Live - Lounge": "http://sunsl.streamabc.net/sunsl-lounge-mp3-192-3652549?sABC=6nss41r0%230%23p5549n47p4p5199r236op6r02281377q%23fgernz.fhafuvar-yvir.qr&aw_0_1st.playerid=stream.sunshine-live.de&amsparams=playerid:stream.sunshine-live.de;skey:1795113440",
     "Classic Vinyl HD": "https://icecast.walmradio.com:8443/classic",
     "Classic Vinyl HD Opus": "https://icecast.walmradio.com:8443/classic_opus",
-    "- 0 N - Smooth Jazz on": "https://0n-smoothjazz.radionetz.de/0n-smoothjazz.aac"
+    "- 0 N - Smooth Jazz on": "https://0n-smoothjazz.radionetz.de/0n-smoothjazz.mp3"
   }
 }

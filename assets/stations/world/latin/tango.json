@@ -1,16 +1,14 @@
 {
   "stations": {
-    "Tango Pasión Radio": "http://nr11.newradio.it:9180/stream",
+    "Tango Pasión Radio": "https://nr1.newradio.it:19180/stream",
     "Tango Copenhagen Radio": "https://tangocopenhagen.stream.laut.fm/tangocopenhagen?t302=2021-01-15_18-47-40&uuid=64db9a91-4a6e-4bc8-ba24-26a2fa7f24d0",
     "R Art - Tango": "http://air.radioart.com/fTango.mp3",
     "Tango Nuevo": "http://tango-nuevo.stream.laut.fm/tango-nuevo?t302=2026-11-17_00-53-44&uuid=7067ca1a-9973-4828-27e1-d44924d3b26a",
     "Argentine Tango Radio": "https://ais-edge94-nyc04.cdnstream.com/2202_128.mp3",
-    "R Tango": "https://stream-284.surfernetwork.com/uxxf2xaxdzzuv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJ1eHhmMnhheGR6enV2IiwiaG9zdCI6InN0cmVhbS0yODQuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJvMjVWQzAxQlFBV0tXaTNaZGJiY3RnIiwiaWF0IjoxNzk1MTE5NTYxLCJleHAiOjE3OTUxMTk2MjF9._ZNgQxcQD9LaUsNeFxzvu0aTDVK0ngoTpEsu2T_YYEU",
+    "R Tango": "https://stream-284.surfernetwork.com/uxxf2xaxdzzuv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJ1eHhmMnhheGR6enV2IiwiaG9zdCI6InN0cmVhbS0yODQuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJNUzQ0R1Q5d1NiT2V0N2p3OTlEbmZ3IiwiaWF0IjoxNzk1MjA0MzI2LCJleHAiOjE3OTUyMDQzODZ9.ssBhDMWQaN6KI01uCEcskW4ta-lk4iPkg_TW6itaWvA",
     "Tango Berlin": "https://tango.stream.laut.fm/tango",
-    "R Santa Milonga - Tang": "https://stream-175.surfernetwork.com/h1bp8fqy3tzuv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJoMWJwOGZxeTN0enV2IiwiaG9zdCI6InN0cmVhbS0xNzUuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJfd2ttck5mT1RPdVFrYld0ZzRVeGFBIiwiaWF0IjoxNzk1MTE5NTYxLCJleHAiOjE3OTUxMTk2MjF9.PfyYOpx7_WJp1nrPLIqciPv_2YcNfwfUOrxc1hti7c4",
-    "radcap Tango": "http://79.120.39.202:8002/tango",
-    "Tango Copenhagen": "https://tangocopenhagen.stream.laut.fm/tangocopenhagen",
+    "R Santa Milonga - Tang": "http://stream-175.surfernetwork.com/h1bp8fqy3tzuv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJoMWJwOGZxeTN0enV2IiwiaG9zdCI6InN0cmVhbS0xNzUuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJHZkNCRWhOU1RMbV83S0Iwc3ZlU3BRIiwiaWF0IjoxNzk1MjA0MzI2LCJleHAiOjE3OTUyMDQzODZ9.dqMG2LrhhxR8hwvrAx_r_aNoBaTicYJSYzPu8eDf-pE&rj-ttl=5&rj-tok=AAABeSjJiZ8AxMCynkXvfjbXzA",
     "R Tango Uno": "https://radiotangouno-online.pl/radio/8000/radio.mp3",
-    "Tangoparabailar": "http://tangoparabailar.stream.laut.fm/tangoparabailar?uuid=f162f9c4-4fbe-29f4-e01f-c1edfaafb020&t302=2026-11-19_19-49-38"
+    "Tangoparabailar": "http://tangoparabailar.stream.laut.fm/tangoparabailar?uuid=7da0a294-013a-8328-a03c-05e255f8dcd8&t302=2026-11-20_20-52-06"
   }
 }

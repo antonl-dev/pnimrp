@@ -1,20 +1,20 @@
 {
   "stations": {
     "Tropicana Bogotá": "http://24383.live.streamtheworld.com/TROPICANA_SC",
-    "Olímpica Stereo": "https://26413.live.streamtheworld.com:443/OLP_MEDELLINAAC.aac",
+    "Olímpica Stereo": "https://26573.live.streamtheworld.com:443/OLP_MEDELLINAAC.aac",
     "Barranquilla Estereo": "http://radio.yaservers.com:8197/;stream.mp3",
     "La Mejor FM 98.9": "http://158.69.219.162:8024/stream",
     "YXY 105.7": "http://158.69.200.1:8020/stream",
-    "Tropicana Cali 93.1 fm": "http://27383.live.streamtheworld.com:80/TR_CALI.mp3",
+    "Tropicana Cali 93.1 fm": "http://27593.live.streamtheworld.com:80/TR_CALI.mp3",
     "Top Salsa Radio": "https://radio.dominiserver.com/proxy/topsalsaradio?mp=/stream",
     "El Sol (Medellín) 107.": "https://us-b4-p-e-qg12-audio.cdn.mdstrm.com/live-audio-aw/632c9d30aa9ace684913b853",
     "Z 92 (Miami) - 92.3 FM": "https://liveaudio.lamusica.com/MIA_WCMQ_icy",
     "Salsa One Radio": "http://server7.servistreaming.com:10006/stream",
-    "Tropical 100 Salsa": "https://stream-286.surfernetwork.com/cjgfujr8yhbvv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJjamdmdWpyOHloYnZ2IiwiaG9zdCI6InN0cmVhbS0yODYuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJKd1E5S1Fib1JDT3FOeXdrcnJHTGR3IiwiaWF0IjoxNzk1MTE5NTU0LCJleHAiOjE3OTUxMTk2MTR9.OyvMRhHkT_L210vlVb0MQUAymb_cR9Ys-UK_KzyE7Ak",
-    "La Salsa Maestra": "https://stream-178.surfernetwork.com/c1skkw28pfeuv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJjMXNra3cyOHBmZXV2IiwiaG9zdCI6InN0cmVhbS0xNzguc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJWSHhma25lTVE1S0tybkVfMmxDenB3IiwiaWF0IjoxNzk1MTE5NTUzLCJleHAiOjE3OTUxMTk2MTN9.6EHAeQYXexndJwUZi_sTs0LYr4iuxl95yMEz27St6Lw",
-    "Tropicana (Medellín) 9": "https://27573.live.streamtheworld.com:443/TR_MEDELLINAAC.aac",
-    "Caracas. Salsa Románti": "https://stream-285.surfernetwork.com/ftly191pojttv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJmdGx5MTkxcG9qdHR2IiwiaG9zdCI6InN0cmVhbS0yODUuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJnbm9COWY2dVEzT1ZSXzVFYlM2MVV3IiwiaWF0IjoxNzk1MTE5NTU1LCJleHAiOjE3OTUxMTk2MTV9.51jnlLUktuZO8SzXlTBrI_0E3RPJodE9K_OSnQ5bSlo",
-    "Tropical 100 Mix": "https://stream-287.surfernetwork.com/esgo1lafgtstv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJlc2dvMWxhZmd0c3R2IiwiaG9zdCI6InN0cmVhbS0yODcuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJESFA3SXJ4YlJGQ0hXaHhOV0hrTERBIiwiaWF0IjoxNzk1MTE5NTU0LCJleHAiOjE3OTUxMTk2MTR9.eR8naqM5Qk0lcXZh_3KKEf_QbEQZPTmrBPyJAuYTDiA",
+    "Tropical 100 Salsa": "https://stream-286.surfernetwork.com/cjgfujr8yhbvv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJjamdmdWpyOHloYnZ2IiwiaG9zdCI6InN0cmVhbS0yODYuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJveVhReE5fM1E0Q1JXQVVGSkhLYVd3IiwiaWF0IjoxNzk1MjA0MzA1LCJleHAiOjE3OTUyMDQzNjV9.9RF25UlIxj9WpgonI0ksIv2tbqJa2YjarXWJnkYOGEQ",
+    "La Salsa Maestra": "https://stream-178.surfernetwork.com/c1skkw28pfeuv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJjMXNra3cyOHBmZXV2IiwiaG9zdCI6InN0cmVhbS0xNzguc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiI4V1VQNFByclNpYUtMRm9wbmN4cFd3IiwiaWF0IjoxNzk1MjA0MzA5LCJleHAiOjE3OTUyMDQzNjl9.XSUv6GJcqllqYshFpLYJZQJ_3jkFVrH42DlOravWFwE",
+    "Tropicana (Medellín) 9": "https://24493.live.streamtheworld.com:443/TR_MEDELLINAAC.aac",
+    "Caracas. Salsa Románti": "https://stream-285.surfernetwork.com/ftly191pojttv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJmdGx5MTkxcG9qdHR2IiwiaG9zdCI6InN0cmVhbS0yODUuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJ6d0pDN3BWaVNwcWo3ZHZXODloSE1RIiwiaWF0IjoxNzk1MjA0MzEwLCJleHAiOjE3OTUyMDQzNzB9.sp-_HbrVVJjCHbhHNjNKZ2G9EjWxN_IuysMGZ4kRb1k",
+    "Tropical 100 Mix": "https://stream-287.surfernetwork.com/esgo1lafgtstv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJlc2dvMWxhZmd0c3R2IiwiaG9zdCI6InN0cmVhbS0yODcuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJBbnEwc2VocFNsVzcwR3owamlaa0ZnIiwiaWF0IjoxNzk1MjA0MzA5LCJleHAiOjE3OTUyMDQzNjl9.nd-67nrm5B_mgVL5-eb3EYzF8Q3yC5pC8xYqxQTVgPQ",
     "Colombia Salsa Dura": "https://play10.tikast.com/proxy/colsalsadura?mp=/stream"
   }
 }

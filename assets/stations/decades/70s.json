@@ -4,7 +4,7 @@
     "1000 HITS 80s": "http://c2.auracast.net:8048/stream",
     "Virgin Radio Rock '70": "http://icy.unitedradio.it/VirginRock70.mp3",
     "Power POP": "https://listen.powerapp.com.tr/powerpop/128/chunks.m3u8",
-    "- 0 N - 70s on Radio": "https://0n-70s.radionetz.de/0n-70s.mp3",
+    "- 0 N - 70s on Radio": "https://0n-70s.radionetz.de/0n-70s.aac",
     "Oldies Internet Radio": "http://162.244.81.98:8140/listen",
     "Rádio Disco Funk BR": "http://streaming12.hstbr.net:8084/live",
     "Nostalgie New York": "http://c32.radioboss.fm:8139/stream",
@@ -14,7 +14,7 @@
     "Laut.FM 1000 Oldies": "http://1000oldies.stream.laut.fm/1000oldies?t302=2018-01-16_15-40-29&uuid=37780fea-d865-4439-9a4a-66f3ec1715a0",
     "# RdMix Classic Rock 7": "https://cast1.torontocast.com:4610/stream",
     "My70sRadio": "http://usa14.fastcast4u.com:5132/stream",
-    "1000 Discohits": "http://1000discohits.stream.laut.fm/1000discohits?t302=2026-11-19_19-34-29&uuid=9f909a7c-9a82-6d30-fe23-9f3af95e1651",
+    "1000 Discohits": "http://1000discohits.stream.laut.fm/1000discohits?uuid=315223e2-50f0-0ec6-88d6-9a9befc9c9e5&t302=2026-11-20_20-46-48",
     "70s 80s Disco Funk Mod": "https://discofunk.streamingmedia.it/usa"
   }
 }

@@ -1,20 +1,26 @@
 {
   "stations": {
-    "surahquran.com": "http://n03.radiojar.com/8s5u5tpdtwzuv?rj-ttl=5&rj-tok=AAABofV5kJ0AW9aCeYfPlFimkQ",
+    "surahquran.com": "http://n07.radiojar.com/8s5u5tpdtwzuv?rj-ttl=5&rj-tok=AAABofqBQHkAdhNSqQHvv83apA",
     "Quran Radio Tafsir": "https://radio.quranradiotafsir.com/9992/stream",
     "mp3islam.com": "https://radio.mp3islam.com/listen/quran_radio/radio.mp3",
-    "Irib R Quran": "https://s1.cdn1.iranseda.ir/liveedge/radio-quran/playlist.m3u8",
-    "Aloula SA": "http://n07.radiojar.com/0tpy1h0kxtzuv?rj-ttl=5&rj-tok=AAABofV5lwYAYC-dfyP735xSsQ",
+    "Irib R Quran": "https://eustr73.mediatriple.net/videoonlylive/mtikoimxnztxlive/broadcast_5e3c1171d7d2a.smil/playlist.m3u8",
+    "Aloula SA": "http://n0b.radiojar.com/0tpy1h0kxtzuv?rj-ttl=5&rj-tok=AAABofqBTiEAUQcVc6bliRuO1A",
     "FM 100 Pakistan": "http://162.244.80.118:4900/;stream.mp3",
     "Quran Radio Station-Na": "http://www.quran-radio.org:8002/",
     "Alseraj Radio Quran": "http://192.99.170.8:5550/stream",
     "Darusalam Radio": "https://streams.radio.co/s0975ec186/listen",
     "Alseraj Radio Islam": "https://eu4.fastcast4u.com/proxy/aabdul00?mp=/1",
-    "Quran Radio راديو القر": "https://radio.mp3islam.com/listen/sudais/radio.mp3",
+    "Quran Radio راديو القر": "https://radio.mp3islam.com/listen/abdulbasit/radio.mp3",
     "Gözyaşı FM": "http://yayin1.canliyayin.org:8700/;*.mp3",
-    "Akra FM": "https://d3r5bwwuab2v60.cloudfront.net/akracanli2/_definst_/livestream_aac/playlist.m3u8",
-    "Diyanet Kur'an Radyo": "https://eustr73.mediatriple.net/videoonlylive/mtikoimxnztxlive/broadcast_5e3c14192aa92.smil/playlist.m3u8",
     "Aziz Mustaphi": "https://d3ctxlq1ktw2nl.cloudfront.net/production/2022-0-3/240607172-44100-2-afb2485b0c30e.mp3",
-    "Hayat FM": "https://dc1.serverse.com/proxy/kjxwtpdt/stream"
+    "Hayat FM": "https://dc1.serverse.com/proxy/kjxwtpdt/stream",
+    "Al-Faruq Purwokerto Ba": "http://alfaruq.radioislam.my.id:12000/",
+    "Ribat FM": "http://yayin1.canliyayin.org:7010/;*.mp3",
+    "Nasheed FM": "http://stereo.nasyidfm.com:8000/",
+    "Allahu Akbar Radio": "http://66.45.232.132:9996/;",
+    "Voice of Islam": "http://voiceofislam.appsunder.com:8000/voiceofislam.mp3",
+    "R Klate Kito": "http://s6.voscast.com:9748/",
+    "R Indah Siar Cirebon": "https://az2.radioislam.my.id:8150/;stream.nsv",
+    "PeaceRadio": "http://stream.peaceradio.com:8000/high"
   }
 }

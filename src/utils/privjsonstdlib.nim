@@ -4,28 +4,73 @@ from ../link/linkbase import normalizeUrl
 
 import utilstypes
 
-proc loadStationStdLib*(filePath: string): tuple[names, urls: seq[string]] =
+proc loadStationStdLib*(filePath: string): tuple[names, urls: seq[string], streams: seq[seq[StreamInfo]]] =
     let jsonData = parseJson(readFile(filePath))
 
     if not jsonData.hasKey("stations"):
         raise newException(JSONParseError, "Missing 'stations' key in JSON file.")
 
     let stations = jsonData["stations"]
-    result = (names: newSeq[string](), urls: newSeq[string]())
+    result = (names: newSeq[string](), urls: newSeq[string](), streams: newSeq[seq[StreamInfo]]())
 
     var countCap: uint8
-    for stationName, stationUrlNode in stations.pairs:
-        if countCap == 20: break #exceed too much
+    for stationName, stationNode in stations.pairs:
+        if countCap == 20: break # exceed too much
 
-        let stationNameStr = stationName
-        let stationUrlStr = stationUrlNode.getStr
+        var defUrl = ""
+        var streamList: seq[StreamInfo] = @[]
 
-        # Normalize the URL using linkbase.normalizeUrl
-        let normalizedUrl = normalizeUrl(stationUrlStr)
+        if stationNode.kind == JString:
+            let rawUrl = stationNode.getStr
+            let norm = normalizeUrl(rawUrl)
+            defUrl = norm
+            streamList.add(StreamInfo(url: norm, bitrate: 0, codec: "", region: ""))
+        elif stationNode.kind == JObject:
+            if stationNode.hasKey("default"):
+                defUrl = normalizeUrl(stationNode["default"].getStr(""))
+            elif stationNode.hasKey("url"):
+                defUrl = normalizeUrl(stationNode["url"].getStr(""))
 
-        result.names.add(stationNameStr)
-        result.urls.add(normalizedUrl)
-        countCap += 1
+            if stationNode.hasKey("streams") and stationNode["streams"].kind == JArray:
+                for item in stationNode["streams"]:
+                    if item.kind == JObject:
+                        let sUrl = normalizeUrl(item.getOrDefault("url").getStr(""))
+                        if sUrl.len > 0:
+                            let sBitrate = item.getOrDefault("bitrate").getInt(0)
+                            let sCodec = item.getOrDefault("codec").getStr("")
+                            let sRegion = item.getOrDefault("region").getStr("")
+                            streamList.add(StreamInfo(url: sUrl, bitrate: sBitrate, codec: sCodec, region: sRegion))
+                    elif item.kind == JString:
+                        let sUrl = normalizeUrl(item.getStr)
+                        if sUrl.len > 0:
+                            streamList.add(StreamInfo(url: sUrl, bitrate: 0, codec: "", region: ""))
+
+            if defUrl.len == 0 and streamList.len > 0:
+                defUrl = streamList[0].url
+
+            if streamList.len == 0 and defUrl.len > 0:
+                streamList.add(StreamInfo(url: defUrl, bitrate: 0, codec: "", region: ""))
+        elif stationNode.kind == JArray:
+            for item in stationNode:
+                if item.kind == JObject:
+                    let sUrl = normalizeUrl(item.getOrDefault("url").getStr(""))
+                    if sUrl.len > 0:
+                        let sBitrate = item.getOrDefault("bitrate").getInt(0)
+                        let sCodec = item.getOrDefault("codec").getStr("")
+                        let sRegion = item.getOrDefault("region").getStr("")
+                        streamList.add(StreamInfo(url: sUrl, bitrate: sBitrate, codec: sCodec, region: sRegion))
+                elif item.kind == JString:
+                    let sUrl = normalizeUrl(item.getStr)
+                    if sUrl.len > 0:
+                        streamList.add(StreamInfo(url: sUrl, bitrate: 0, codec: "", region: ""))
+            if streamList.len > 0:
+                defUrl = streamList[0].url
+
+        if defUrl.len > 0:
+            result.names.add(stationName)
+            result.urls.add(defUrl)
+            result.streams.add(streamList)
+            countCap += 1
 
     # Validate station names (only if it's not the quotes file)
     #if not filePath.endsWith("qoute.json"):

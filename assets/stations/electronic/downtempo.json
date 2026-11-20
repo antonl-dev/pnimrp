@@ -1,20 +1,66 @@
 {
   "stations": {
-    "radcap (Downtempo)": "http://79.120.77.11:8002/downtempo",
-    "Soma GrooveSalad Cls": "https://ice6.somafm.com/gsclassic-64-aac",
+    "radcap (Downtempo)": "http://79.120.77.11:8004/downtempo",
+    "Soma GrooveSalad Cls": {
+      "default": "https://ice4.somafm.com/gsclassic-128-mp3",
+      "streams": [
+        {
+          "url": "https://ice4.somafm.com/gsclassic-128-mp3",
+          "bitrate": 160
+        },
+        {
+          "url": "https://ice6.somafm.com/gsclassic-64-aac",
+          "bitrate": 64
+        }
+      ]
+    },
     "1.FM Ambient Psychill": "https://strmreg.1.fm/ambientpsy_mobile_mp3",
     "Blend FM": "https://blendfm.stream.laut.fm/blendfm?t302=2026-11-19_21-10-09&uuid=e36b1332-1e3e-0987-bf06-b3711ade38b8",
     "Lodge -Copenhagen": "https://radio.streemlion.com:1160/;",
-    "Lodge Copenhagen": "https://radio.streemlion.com:1760/stream",
     "Chilltrax": "https://streamssl.chilltrax.com/live",
     "Chillout Zone": "https://chilloutzone.stream.laut.fm/chilloutzone?t302=2026-11-19_21-10-10&uuid=4685b1d4-a47c-a848-e4e1-c4cd3205491a",
-    "ChilloutTreePines R": "https://n0b.radiojar.com/n4dzb3znn3quv?rj-ttl=5&rj-tok=AAABofV3fPYAGDuKnhDcO_VwLg",
+    "ChilloutTreePines R": "https://n01.radiojar.com/n4dzb3znn3quv?rj-ttl=5&rj-tok=AAABofp-8ssA-rgQUSNyYqsdqw",
     "Hotel Costes": "https://s3.radio.co/s39c195d74/listen",
     "Smoothlounge": "https://smoothlounge.stream.laut.fm/smoothlounge?uuid=49f7459b-7a93-5936-b772-0c4bcab9a7a6&t302=2026-11-19_21-10-11",
-    "SomaFM Groove Salad": "https://ice5.somafm.com/groovesalad-128-mp3",
+    "SomaFM Groove Salad": {
+      "default": "https://ice5.somafm.com/groovesalad-128-mp3",
+      "streams": [
+        {
+          "url": "https://ice5.somafm.com/groovesalad-128-mp3",
+          "bitrate": 128
+        },
+        {
+          "url": "https://ice5.somafm.com/groovesalad-64-aac",
+          "bitrate": 64
+        }
+      ]
+    },
     "Anon.FM": "https://icecast.anon.fm/radio",
-    "SomaFM Secret Agent": "https://ice6.somafm.com/secretagent-128-mp3",
+    "SomaFM Secret Agent": {
+      "default": "https://ice6.somafm.com/secretagent-128-mp3",
+      "streams": [
+        {
+          "url": "https://ice6.somafm.com/secretagent-128-mp3",
+          "bitrate": 128
+        },
+        {
+          "url": "https://ice5.somafm.com/secretagent-64-aac",
+          "bitrate": 64
+        },
+        {
+          "url": "https://ice5.somafm.com/secretagent-32-aac",
+          "bitrate": 32
+        }
+      ]
+    },
     "GDS.FM": "http://gdsfm.out.airtime.pro:8000/gdsfm_a",
-    "1.FM - Ambient Psychil": "http://strm112.1.fm/ambientpsy_mobile_mp3"
+    "Brokenbeats": "https://stream.brokenbeats.net/tune",
+    "SomaFM Beat Blender": "https://ice4.somafm.com/beatblender-128-mp3",
+    "radcap Erotic": "http://79.120.39.202:8000/erotic",
+    "Deep Radio": "http://25243.live.streamtheworld.com:80/DEEP_RADIO.mp3",
+    "Lounge.FM - 100% Austr": "https://s35.derstream.net/100austria.mp3",
+    "RadiOzora Chill": "http://chill.out.airtime.pro:8000/chill_a",
+    "R Antalya": "https://my.radiolize.com/radio/8000/radio.mp3",
+    "Nordic Chillout Radio": "https://listen.radioking.com/radio/672094/stream/736489"
   }
 }

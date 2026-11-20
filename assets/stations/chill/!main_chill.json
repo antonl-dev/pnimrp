@@ -1,20 +1,38 @@
 {
   "stations": {
     "freeCodeCamp": "https://coderadio-admin-v2.freecodecamp.org//listen/coderadio/radio.mp3",
-    "freeCodeCamp[DATA]": "https://coderadio-admin-v2.freecodecamp.org//listen/coderadio/low.mp3",
     "Rainy Mood Radio": "https://rainyday-mynoise.radioca.st/stream",
     "Synth LautFM": "https://synthwave.stream.laut.fm/synthwave?uuid=36535240-4ebf-5622-2487-32cacc26234a&t302=2026-11-19_19-35-45",
     "Nightride FM Datawave": "https://stream.nightride.fm/datawave.mp3",
-    "Coffee Shop Radio": "https://cloud.revma.ihrhls.com/zc6698?rj-org=n0ba-e2&rj-ttl=5&rj-tok=AAABofV9dcsAooAKQcxDUReBXQ",
+    "Coffee Shop Radio": "https://cloud.revma.ihrhls.com/zc6698?rj-org=n16a-e2&rj-ttl=5&rj-tok=AAABofqI4n4ACE6oUR5C09B7eg",
     "R Art DeepFocus": "https://air.radioart.com/fDeep_focus.mp3",
     "Classic Vinyl HD": "https://icecast.walmradio.com:8443/classic",
     "Your Classical - Relax": "http://relax.stream.publicradio.org/relax.mp3",
     "Ambient Sleeping Pill": "http://radio.stereoscenic.com/asp-h",
     "Classic Vinyl HD Opus": "https://icecast.walmradio.com:8443/classic_opus",
     "SomaFM Groove Salad": "https://ice5.somafm.com/groovesalad-128-mp3",
-    "SomaFM Secret Agent": "https://ice6.somafm.com/secretagent-128-mp3",
+    "SomaFM Secret Agent": {
+      "default": "https://ice6.somafm.com/secretagent-128-mp3",
+      "streams": [
+        {
+          "url": "https://ice6.somafm.com/secretagent-128-mp3",
+          "bitrate": 128
+        },
+        {
+          "url": "https://ice5.somafm.com/secretagent-32-aac",
+          "bitrate": 32
+        }
+      ]
+    },
     "SomaFM Space Station S": "https://ice4.somafm.com/spacestation-128-aac",
     "Antenne Bayern - Chill": "http://s6-webradio.antenne.de/chillout",
-    "Smooth Chill": "https://media-ssl.musicradio.com/ChillMP3"
+    "Smooth Chill": "https://media-ssl.musicradio.com/ChillMP3",
+    "Радыё Relax": "http://live.humorfm.by:8000/radiorelax",
+    "Total instrumental": "http://total-instrumental.stream.laut.fm/total-instrumental?t302=2026-11-20_20-47-24&uuid=41ba89fb-c5cc-abd1-01c1-6706901f6c29",
+    "- 0 N - Chillout on Ra": "https://0n-chillout.radionetz.de/0n-chillout.aac",
+    "Radyo Voyage": "http://voyagewmp.radyotvonline.com/;stream.mp3",
+    "SomaFM Drone Zone": "https://ice5.somafm.com/dronezone-128-mp3",
+    "Ambient Modern": "http://radio.stereoscenic.com/mod-h",
+    "Nature Radio Rain": "https://maggie.torontocast.com:2020/stream/natureradiorain"
   }
 }

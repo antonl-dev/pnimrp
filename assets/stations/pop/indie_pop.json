@@ -1,20 +1,130 @@
 {
   "stations": {
-    "R Paradise Main Mix": "http://stream-uk1.radioparadise.com/aac-320",
-    "TMM 1": "https://listen-msmn.sharp-stream.com/nme1.mp3",
-    "SomaFM Indie Pop Rocks": "https://ice5.somafm.com/indiepop-128-aac",
-    "R Paradise Rock Mix 32": "http://stream.radioparadise.com/rock-320",
-    "R Paradise Mellow Mix": "http://stream.radioparadise.com/mellow-320",
+    "R Paradise Main Mix": {
+      "default": "http://stream-uk1.radioparadise.com/flacm",
+      "streams": [
+        {
+          "url": "http://stream-uk1.radioparadise.com/flacm",
+          "bitrate": 1441
+        },
+        {
+          "url": "http://stream-uk1.radioparadise.com/mp3-128",
+          "bitrate": 128
+        },
+        {
+          "url": "http://stream-uk1.radioparadise.com/aac-64",
+          "bitrate": 64
+        }
+      ]
+    },
+    "TMM 1": "https://listen-msmn.sharp-stream.com/nme1high.mp3",
+    "SomaFM Indie Pop Rocks": {
+      "default": "https://ice5.somafm.com/indiepop-128-aac",
+      "streams": [
+        {
+          "url": "https://ice5.somafm.com/indiepop-128-aac",
+          "bitrate": 128
+        },
+        {
+          "url": "https://ice5.somafm.com/indiepop-64-aac",
+          "bitrate": 64
+        },
+        {
+          "url": "https://ice6.somafm.com/indiepop-32-aac",
+          "bitrate": 32
+        }
+      ]
+    },
+    "R Paradise Rock Mix 32": {
+      "default": "http://stream.radioparadise.com/rock-192",
+      "streams": [
+        {
+          "url": "http://stream.radioparadise.com/rock-192",
+          "bitrate": 192
+        },
+        {
+          "url": "https://stream.radioparadise.com/rock-64",
+          "bitrate": 64
+        }
+      ]
+    },
+    "R Paradise Mellow Mix": {
+      "default": "https://stream.radioparadise.com/mellow-flac",
+      "streams": [
+        {
+          "url": "https://stream.radioparadise.com/mellow-flac",
+          "bitrate": 1441
+        },
+        {
+          "url": "https://stream.radioparadise.com/mellow-64",
+          "bitrate": 64
+        }
+      ]
+    },
     "R Paradise Main Mix 12": "http://stream.radioparadise.com/aac-128",
-    "Indie X FM": "http://kathy.torontocast.com:2690/stream",
-    "R Paradise Rock Mix FL": "https://stream.radioparadise.com/rock-flac",
+    "Indie X FM": "https://kathy.torontocast.com:2695/stream",
+    "R Paradise Rock Mix FL": "http://stream.radioparadise.com/rock-flacm",
     "80s Forever - We Keep": "https://premium.shoutcastsolutions.com/radio/8050/256.mp3",
-    "R Paradise Main Mix FL": "https://stream.radioparadise.com/flac",
-    "R Paradise World/Etc M": "https://stream.radioparadise.com/world-etc-320",
+    "R Paradise Main Mix FL": "https://stream.radioparadise.com/flacm",
+    "R Paradise World/Etc M": {
+      "default": "https://stream.radioparadise.com/world-etc-flac",
+      "streams": [
+        {
+          "url": "https://stream.radioparadise.com/world-etc-flac",
+          "bitrate": 1441
+        },
+        {
+          "url": "http://stream.radioparadise.com/world-etc-192",
+          "bitrate": 192
+        },
+        {
+          "url": "https://stream.radioparadise.com/world-etc-64",
+          "bitrate": 64
+        }
+      ]
+    },
     "NEU RADIO": "https://nr9.newradio.it/proxy/ebaruffa?mp=/stream",
     "RNE Radio 3": "https://rtvelivestream.rtve.es/rtvesec/rne/rne_r3_main.m3u8",
     "R Sherwood": "http://radiosherwood.ice.infomaniak.ch/radiosherwood-96.mp3",
-    "R Paradise Rock Mix 12": "http://stream.radioparadise.com/rock-128",
-    "R Paradise Main Mix 32": "http://stream.radioparadise.com/aac-320"
+    "R Paradise Main Mix 32": "http://stream.radioparadise.com/aac-320",
+    "R Paradise Main Mix AA": {
+      "default": "https://stream.radioparadise.com/aac-64",
+      "streams": [
+        {
+          "url": "https://stream.radioparadise.com/aac-64",
+          "bitrate": 64
+        },
+        {
+          "url": "http://stream.radioparadise.com/aac-32",
+          "bitrate": 32
+        },
+        {
+          "url": "http://stream.radioparadise.com/aac-24",
+          "bitrate": 24
+        }
+      ]
+    },
+    "Le Son Parisien": "http://stream.lesonparisien.com/hi.mp3",
+    "R Paradise Eclectic Mi": {
+      "default": "http://stream.radioparadise.com/eclectic-320",
+      "streams": [
+        {
+          "url": "http://stream.radioparadise.com/eclectic-320",
+          "bitrate": 320
+        },
+        {
+          "url": "http://stream.radioparadise.com/eclectic-192",
+          "bitrate": 192
+        },
+        {
+          "url": "http://stream.radioparadise.com/eclectic-128",
+          "bitrate": 128
+        }
+      ]
+    },
+    "Indieselect": "http://indieselect.stream.laut.fm/indieselect?uuid=b78389ff-cf03-e7fe-0d8b-9f583b134622&t302=2026-11-20_20-32-40",
+    "R Paradise Global Mix": "http://stream.radioparadise.com/global-flacm",
+    "iHeart Indie Radio": "https://n22a-e2.revma.ihrhls.com/zc7189/hls.m3u8?rj-ttl=5&rj-tok=AAABofp7gkgAuSTKcd-pm_Joxg",
+    "Trión Ciudad de México": "http://n0e.radiojar.com/4f89tufzv9duv?rj-ttl=5&rj-tok=AAABofp7gr8A1lnFUEi2d2hHzg"
   }
 }

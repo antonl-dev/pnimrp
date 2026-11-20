@@ -1,20 +1,54 @@
 {
   "stations": {
-    "radcap AvantGarde": "http://79.111.119.111:8000/avantgardejazz",
-    "Adroit Jazz Undergroun": "https://icecast.walmradio.com:8443/jazz_opus",
+    "radcap AvantGarde": "http://79.111.119.111:8002/avantgardejazz",
+    "Adroit Jazz Undergroun": {
+      "default": "https://icecast.walmradio.com:8443/jazz",
+      "streams": [
+        {
+          "url": "https://icecast.walmradio.com:8443/jazz",
+          "bitrate": 320
+        },
+        {
+          "url": "https://icecast.walmradio.com:8443/jazz_opus",
+          "bitrate": 192
+        }
+      ]
+    },
     "Fango Radio": "https://pantano.ovh:8444/pantano",
     "In Between DE": "https://inbetween.stream.laut.fm/inbetween?t302=2026-11-19_18-51-16&uuid=404a4814-33c3-368f-4587-b6ef9a1b7fc3",
     "radcap Cls Avantgarde": "http://213.141.131.10:8002/classavant",
-    "Freakout DE": "https://freakout.stream.laut.fm/freakout?uuid=4d6f1854-761d-8e5e-5b10-82a45a148835&t302=2026-11-19_18-51-19",
-    "SomaFM Sonic Universe": "https://ice5.somafm.com/sonicuniverse-128-mp3",
+    "Freakout DE": "http://freakout.stream.laut.fm/freakout",
+    "SomaFM Sonic Universe": {
+      "default": "https://ice5.somafm.com/sonicuniverse-128-mp3",
+      "streams": [
+        {
+          "url": "https://ice5.somafm.com/sonicuniverse-128-mp3",
+          "bitrate": 128
+        },
+        {
+          "url": "https://ice6.somafm.com/sonicuniverse-64-aac",
+          "bitrate": 64
+        },
+        {
+          "url": "https://ice6.somafm.com/sonicuniverse-32-aac",
+          "bitrate": 32
+        }
+      ]
+    },
     "100% ACID JAZZ": "https://mpc1.mediacp.eu:8356/stream",
     "Suite Jazz Radio": "https://jenny.torontocast.com:2000/stream/suitejazzradio",
     "Rockserwis.fm": "http://stream9.nadaje.com:8002/live",
-    "Avant-Garde Jazz/Free": "http://79.111.119.111:8004/avantgardejazz",
     "radcap Free Jazz": "http://79.111.14.76:8002/freejazz",
-    "Classical avant-garde": "http://213.141.131.10:8004/classavant",
     "CZ X-Rated": "http://streams.greenhost.nl:8080/concertzenderlive",
     "Experimental/Avant-gar": "http://79.111.119.111:8004/experimentalmusic",
-    "Path through the Fores": "http://paththroughtheforest.stream.laut.fm/path_through_the_forest?t302=2026-11-17_02-32-03&uuid=3a96286a-2b25-f613-c045-b51fb751bd6f"
+    "Path through the Fores": "http://paththroughtheforest.stream.laut.fm/path_through_the_forest?t302=2026-11-17_02-32-03&uuid=3a96286a-2b25-f613-c045-b51fb751bd6f",
+    "Le Grigri": "https://listen.radioking.com/radio/139090/stream/273715",
+    "Avant-Prog/Rock in Opp": "http://79.111.119.111:8004/avantprog",
+    "#1 Splash Jazz": "https://ais-sa2.cdnstream1.com/2346_128.mp3",
+    "Laut.fm - After Hours": "https://after-hours.stream.laut.fm/after-hours?t302=2019-09-27_06-07-17&uuid=64f3acda-820a-4912-9df6-fe85b9cd99a2",
+    "laut.fm jradio": "http://jradio.stream.laut.fm/jradio?uuid=d7d8daa0-2515-de38-4b03-9e746b459fc5&t302=2026-11-20_20-40-02",
+    "Experimental/Avant Roc": "http://213.141.131.10:8004/avantrock",
+    "Friends of 'CSB": "https://s20.myradiostream.com:18792/listen.mp3",
+    "Jazz Radio Spain": "https://server5.mediasector.es:8020/jazzradiospain.mp3"
   }
 }

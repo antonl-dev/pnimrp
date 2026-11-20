@@ -1,7 +1,9 @@
 import
     menuui,
     commonui,
+    strutils,
     ../utils/utils,
+    ../utils/utilstypes,
     ../audio/equalizer,
     tables
 
@@ -16,8 +18,19 @@ proc drawHeaderPlayerUI(appState: AppState, section: string) =
         setCursorPos(0, 0) # Line 0
         say(AppNameShort & " > " & section, fgYellow)
 
-proc drawStatusAndVolumePlayerUI*(appState: AppState, status: string, volume: int, eqPresetName: string = "") =
-    ## Draws the status, volume, and active equalizer preset in the player UI.
+proc formatStreamBadge*(stream: StreamInfo, idx: int = 0, total: int = 0): string =
+    if stream.bitrate > 0:
+        if total > 1:
+            result = $stream.bitrate & "k (" & $(idx + 1) & "/" & $total & ")"
+        else:
+            result = $stream.bitrate & "k"
+    elif total > 1:
+        result = "Stream " & $(idx + 1) & "/" & $total
+    else:
+        result = ""
+
+proc drawStatusAndVolumePlayerUI*(appState: AppState, status: string, volume: int, eqPresetName: string = "", streamBadge: string = "") =
+    ## Draws the status, volume, active equalizer preset, and stream/bitrate badge in the player UI.
     setCursorPos(0, 3)
     eraseLine()
     setCursorPos(0, 3)
@@ -30,17 +43,23 @@ proc drawStatusAndVolumePlayerUI*(appState: AppState, status: string, volume: in
         else:
             eqName = "Flat"
 
-    let isNarrow = appState.termWidth < 60
+    let isNarrow = appState.termWidth < 68
     if isNarrow:
         stdout.styledWrite(fgGreen, "Status: " & status & " | Vol: ")
         stdout.styledWrite(volumeColor, $volume & "%")
         stdout.styledWrite(fgGreen, " | EQ: ")
         stdout.styledWrite(fgMagenta, eqName)
+        if streamBadge.len > 0:
+            stdout.styledWrite(fgGreen, " | ")
+            stdout.styledWrite(fgCyan, streamBadge)
     else:
         stdout.styledWrite(fgGreen, "Status: " & status & "    | Volume: ")
         stdout.styledWrite(volumeColor, $volume & "%")
         stdout.styledWrite(fgGreen, "    | EQ: ")
         stdout.styledWrite(fgMagenta, eqName)
+        if streamBadge.len > 0:
+            stdout.styledWrite(fgGreen, "    | Stream: ")
+            stdout.styledWrite(fgCyan, streamBadge)
     stdout.flushFile()
 
 proc drawNowPlayingPlayerUI(appState: AppState, nowPlaying: string) =
@@ -59,9 +78,9 @@ proc drawNowPlayingPlayerUI(appState: AppState, nowPlaying: string) =
         if not nowPlaying.checkIfTooLongForUI(appState.termWidth):
             stdout.styledWrite(fgCyan, nowPlaying)
 
-proc updateVolumePlayerUI*(appState: AppState, newVolume: int, status: string = "") =
+proc updateVolumePlayerUI*(appState: AppState, newVolume: int, status: string = "", streamBadge: string = "") =
     let st = if status.len > 0: status else: (if appState.terminalSupportsEmoji: "🎵" else: "[>]")
-    appState.drawStatusAndVolumePlayerUI(st, newVolume)
+    appState.drawStatusAndVolumePlayerUI(st, newVolume, streamBadge = streamBadge)
 
 proc updateCurrentSongPlayerUI*(appState: AppState, songName: string) =
     setCursorPos(0, 2) # Line 2 (below the separator)
@@ -70,9 +89,9 @@ proc updateCurrentSongPlayerUI*(appState: AppState, songName: string) =
     appState.drawNowPlayingPlayerUI(songName)
     stdout.flushFile()
 
-proc updatePlayMutedStatePlayerUI*(appState: AppState, status: string, volume: int = -1) =
+proc updatePlayMutedStatePlayerUI*(appState: AppState, status: string, volume: int = -1, streamBadge: string = "") =
     let vol = if volume >= 0: volume else: (if appState != nil: appState.lastVolume else: 100)
-    appState.drawStatusAndVolumePlayerUI(status, vol)
+    appState.drawStatusAndVolumePlayerUI(status, vol, streamBadge = streamBadge)
 
 proc drawPlayerUIInternal(appState: AppState, section, nowPlaying,
         status: string, volume: int) =

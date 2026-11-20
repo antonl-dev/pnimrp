@@ -8,13 +8,19 @@
     "France Musique Opéra": "https://icecast.radiofrance.fr/francemusiqueopera-hifi.aac",
     "Classicnl Opera": "https://stream.classic.nl/classicnl-opera.mp3",
     "WNYC Operavore": "http://opera-stream.wqxr.org/operavore.aac",
-    "Klassik Radio - Pure V": "http://klassikr.streamabc.net/klr-opera-mp3-128-2609490?sABC=6nss3970%230%23p5549n47p4p5199r236op6r02281377q%23&aw_0_1st.playerid=&amsparams=playerid:;skey:1795111280",
     "BBC Radio 3": "http://as-hls-ww-live.akamaized.net/pool_23461179/live/ww/bbc_radio_three/bbc_radio_three.isml/bbc_radio_three-audio=320000.norewind.m3u8",
-    "Classical Radio - Verd": "https://drive.uber.radio/uber/crverdi/icecast.audio",
+    "Classical Radio - Verd": "https://streaming.exclusive.radio/er/andreabocelli/icecast.audio",
     "OperaRadio-MRG.Fm": "http://listen.mrg.fm:8110/;",
     "听·越剧": "https://lhttp.qtfm.cn/live/20500178/64k.mp3",
-    "上海戏剧曲艺广播": "https://lhttp.qingting.fm/live/269/64k.mp3",
-    "苏州戏曲广播": "http://lhttp.qingting.fm/live/20211622/64k.mp3",
-    "naxi radio - classical": "http://naxidigital-classic128.streaming.rs:8030/;stream.nsv"
+    "naxi radio - classical": "http://naxidigital-classic128.streaming.rs:8030/;stream.nsv",
+    "Klassik Radio - Pure V": "http://klassikr.streamabc.net/klr-opera-mp3-128-2609490?sABC=6o00n2n5%230%23o0qn71011p1s9n4n031ps6437nns5702%23&aw_0_1st.playerid=&amsparams=playerid:;skey:1795203749",
+    "Antena 2 Ópera": "https://streaming-live.rtp.pt/liveradio/antena2opera80a/playlist.m3u8",
+    "Cyberspazio Radio": "http://37.156.244.223:8000/stream",
+    "Malvern Radio Internat": "https://cast2.asurahosting.com/proxy/radiomalvernint/stream",
+    "Clasic Radio_Opera -Bu": "https://live.radioclasic.com/listen/radio_clasic_opera/live.mp3",
+    "Antenna 2 Opera": "http://radiocast.rtp.pt/antena2opera80a.mp3",
+    "WQED-FM 89.3": "https://ice-1.streamhoster.com/lv_wqed--893",
+    "上海戏剧曲艺广播 AM1197 FM97.2": "https://lhttp-hw.qtfm.cn/live/269/64k.mp3",
+    "AdagioRadio": "https://stream.tunerplay.com/radio/8010/adagioradio.mp3"
   }
 }

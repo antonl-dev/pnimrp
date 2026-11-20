@@ -2,19 +2,37 @@
   "stations": {
     "Cladrite Radio": "https://das-edge93-live365-dal05.cdnstream.com/a43564",
     "Got Radio Jazz Joint": "https://pureplay.cdnstream1.com/6004_64.aac",
-    "Jazz Club Bandstand": "https://cast1.torontocast.com:2060/;",
-    "R Art Big Bands GR": "https://air.radioart.com/fBig_bands.mp3",
+    "Jazz Club Bandstand": "https://cast1.torontocast.com:2060/;.mp3",
+    "R Art Big Bands GR": "http://air-tunein.radioart.com/fBig_bands.mp3",
     "radcap Big Band": "http://79.120.39.202:8000/bigband",
     "WZQR Gold Big Band": "https://c3.radioboss.fm:18065/stream",
     "Classic Vinyl HD Opus": "https://icecast.walmradio.com:8443/classic_opus",
-    "Jazz Radio Electro Swi": "http://jazz-wr04.ice.infomaniak.ch/jazz-wr04-128.mp3",
+    "Jazz Radio Electro Swi": {
+      "default": "http://jazz-wr04.ice.infomaniak.ch/jazz-wr04-128.mp3",
+      "streams": [
+        {
+          "url": "http://jazz-wr04.ice.infomaniak.ch/jazz-wr04-128.mp3",
+          "bitrate": 128
+        },
+        {
+          "url": "https://jazz-wr04.ice.infomaniak.ch/jazz-wr04-64.aac?i=67090",
+          "bitrate": 64
+        }
+      ]
+    },
     "Instrumentals Forever": "http://quincy.torontocast.com:1910/stream",
-    "Instrumentals forever": "http://quincy.torontocast.com:1920/stream",
-    "- 0 N - Jazz on Radio": "https://0n-jazz.radionetz.de/0n-jazz.mp3",
-    "Exclusively Frank Sina": "https://2.mystreaming.net/er/franksinatra/icecast.audio",
-    "Radio1920": "http://radio1920.stream.laut.fm/radio1920?t302=2026-11-19_18-54-04&uuid=894a5b0c-8aa8-a925-7a71-af987f180c46",
+    "- 0 N - Jazz on Radio": "https://0n-jazz.radionetz.de/0n-jazz.aac",
+    "Exclusively Frank Sina": "https://nl4.mystreaming.net/er/louisarmstrong/icecast.audio",
+    "Radio1920": "http://radio1920.stream.laut.fm/radio1920?t302=2026-11-20_20-41-20&uuid=386bff79-6f8a-4b6e-e0ab-2b729007478e",
     "Classic Vinyl HD": "https://icecast.walmradio.com:8443/classic",
-    "Exclusively Nat King C": "https://streaming.exclusive.radio/er/natkingcole/icecast.audio",
-    "1940s Radio HS - Pumpk": "https://cast2.asurahosting.com/proxy/1940sradio/stream"
+    "1940s Radio HS - Pumpk": "https://cast2.asurahosting.com/proxy/1940sradio/stream",
+    "Crooner Radio Swing": "http://croonerradio_swing.ice.infomaniak.ch/croonerradio-swing-midfi.mp3",
+    "WGMC \"Swing & Blues\" S": "http://greece-media.monroe.edu/wgmc3.mp3",
+    "swingsalon": "http://swingsalon.stream.laut.fm/swingsalon",
+    "WKHR": "http://ice64.securenetsystems.net/WKHR",
+    "Smart Radio": "http://stream.glueckserver.de:8000/smartradio.mp3",
+    "radcap Swing / Neo-swi": "http://79.120.39.202:8002/swing",
+    "KNCT - Simply Beautifu": "http://ice41.securenetsystems.net/KNCT",
+    "#1 Splash Jazz": "https://ais-sa2.cdnstream1.com/2346_128.mp3"
   }
 }

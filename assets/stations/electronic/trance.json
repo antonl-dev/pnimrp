@@ -3,16 +3,28 @@
     "TranceBase.FM": "https://listener3.aach.tb-group.fm:443/trb-high.aac",
     "radcap Trance": "http://79.120.77.11:8000/trance",
     "TranceFm": "http://cast1.asurahosting.com:7709/listen.mp3",
-    "1.fm AbsEuro Trance": "https://strm112.1.fm/trance_mobile_mp3",
-    "1.fm Amsterdam": "https://strm112.1.fm/atr_mobile_mp3",
-    "1.fm BOM PsyTrance": "https://strm112.1.fm/psytrance_mobile_mp3",
+    "1.fm AbsEuro Trance": "http://strm112.1.fm/trance_mobile_mp3",
+    "1.fm Amsterdam": "http://strm112.1.fm/atr_mobile_mp3",
+    "1.fm BOM PsyTrance": "http://strm112.1.fm/psytrance_mobile_mp3",
     "101.ru Trance": "https://pub0102.101.ru:8443/stream/trust/mp3/128/19",
     "Powertrance One": "https://powertrance-one.stream.laut.fm/powertrance-one?t302=2026-11-19_21-09-16&uuid=d9f466e4-d25c-2f4c-8357-a4592acac4e6",
-    "radiOzora Trance": "https://trance.out.airtime.pro:8000/trance_a",
+    "radiOzora Trance": "http://trance.out.airtime.pro:8000/trance_a",
     "Play Trance Uplifting": "https://streaming.playtrance.com/playtrance-uplifting-high",
     "Lifted Trance Radio": "https://liftedtrancemusicradio.stream.laut.fm/liftedtrancemusicradio?uuid=c91c7e6f-12ab-bd7d-fb42-b7a040e9c8ec&t302=2026-11-19_21-09-17",
-    "Anima Amoris Trance": "https://stream5.radiogoose.ru/listen/bigroom/play",
-    "Dance Wave! | MP3": "http://stream1.dancewave.online:8080/dance.mp3",
+    "Anima Amoris Trance": "https://stream5.radiogoose.ru/listen/trance/play",
+    "Dance Wave! | MP3": {
+      "default": "http://stream1.dancewave.online:8080/dance.ogg",
+      "streams": [
+        {
+          "url": "http://stream1.dancewave.online:8080/dance.ogg",
+          "bitrate": 160
+        },
+        {
+          "url": "http://stream1.dancewave.online:8080/dance.aac",
+          "bitrate": 64
+        }
+      ]
+    },
     "Intense Radio - We lov": "https://secure.live-streams.nl/main",
     "Anon.FM": "https://icecast.anon.fm/radio",
     "TranceBase.FM - AAC HD": "http://listener3.aachd.tb-group.fm:80/trb-hd.aac"

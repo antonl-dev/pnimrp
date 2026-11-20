@@ -6,7 +6,19 @@
     "101 SMOOTH JAZZ": "http://jking.cdnstream1.com/b22139_128mp3",
     "Classic Vinyl HD Opus": "https://icecast.walmradio.com:8443/classic_opus",
     "Anon.FM": "https://icecast.anon.fm/radio",
-    "SomaFM Secret Agent": "https://ice6.somafm.com/secretagent-128-mp3",
+    "SomaFM Secret Agent": {
+      "default": "https://ice6.somafm.com/secretagent-128-mp3",
+      "streams": [
+        {
+          "url": "https://ice6.somafm.com/secretagent-128-mp3",
+          "bitrate": 128
+        },
+        {
+          "url": "https://ice5.somafm.com/secretagent-32-aac",
+          "bitrate": 32
+        }
+      ]
+    },
     "Antena 1 São Paulo, SP": "http://antena1.newradio.it/stream?ext=.mp3",
     "France Musique": "http://icecast.radiofrance.fr/francemusique-midfi.mp3",
     ".977 Smooth Jazz": "http://29319.live.streamtheworld.com/977_SMOOJAZZ_SC",

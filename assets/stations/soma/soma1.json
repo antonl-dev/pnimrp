@@ -3,18 +3,102 @@
     "Groove Salad": "https://ice.somafm.com/groovesalad-128-mp3",
     "Drone Zone": "https://ice.somafm.com/dronezone-128-mp3",
     "Indie Pop Rocks!": "https://ice.somafm.com/indiepop-128-mp3",
-    "Deep Space One": "https://ice.somafm.com/deepspaceone-128-mp3",
-    "Groove Salad Cls": "https://ice.somafm.com/gsclassic-128-mp3",
+    "Deep Space One": {
+      "default": "https://ice.somafm.com/deepspaceone-128-mp3",
+      "streams": [
+        {
+          "url": "https://ice.somafm.com/deepspaceone-128-mp3",
+          "bitrate": 128
+        },
+        {
+          "url": "https://ice6.somafm.com/deepspaceone-64-aac",
+          "bitrate": 64
+        },
+        {
+          "url": "https://ice5.somafm.com/deepspaceone-32-aac",
+          "bitrate": 32
+        }
+      ]
+    },
+    "Groove Salad Cls": {
+      "default": "https://ice4.somafm.com/gsclassic-128-mp3",
+      "streams": [
+        {
+          "url": "https://ice4.somafm.com/gsclassic-128-mp3",
+          "bitrate": 160
+        },
+        {
+          "url": "https://ice.somafm.com/gsclassic-128-mp3",
+          "bitrate": 128
+        }
+      ]
+    },
     "Space Station Soma": "https://ice.somafm.com/spacestation-128-mp3",
-    "Secret Agent": "https://ice.somafm.com/secretagent-128-mp3",
-    "Underground 80s": "https://ice.somafm.com/u80s-128-mp3",
+    "Secret Agent": {
+      "default": "https://ice.somafm.com/secretagent-128-mp3",
+      "streams": [
+        {
+          "url": "https://ice.somafm.com/secretagent-128-mp3",
+          "bitrate": 128
+        },
+        {
+          "url": "https://ice5.somafm.com/secretagent-64-aac",
+          "bitrate": 64
+        },
+        {
+          "url": "https://ice5.somafm.com/secretagent-32-aac",
+          "bitrate": 32
+        }
+      ]
+    },
+    "Underground 80s": {
+      "default": "https://ice4.somafm.com/u80s-256-mp3",
+      "streams": [
+        {
+          "url": "https://ice4.somafm.com/u80s-256-mp3",
+          "bitrate": 256
+        },
+        {
+          "url": "https://ice.somafm.com/u80s-128-mp3",
+          "bitrate": 128
+        },
+        {
+          "url": "https://ice4.somafm.com/u80s-32-aac",
+          "bitrate": 32
+        }
+      ]
+    },
     "Lush": "https://ice.somafm.com/lush-128-mp3",
     "DEF CON Radio": "https://ice.somafm.com/defcon-128-mp3",
     "Synphaera Radio": "https://ice.somafm.com/synphaera-128-mp3",
-    "Left Coast 70s": "https://ice.somafm.com/seventies-128-mp3",
+    "Left Coast 70s": {
+      "default": "https://ice4.somafm.com/seventies-320-mp3",
+      "streams": [
+        {
+          "url": "https://ice4.somafm.com/seventies-320-mp3",
+          "bitrate": 320
+        },
+        {
+          "url": "https://ice.somafm.com/seventies-128-mp3",
+          "bitrate": 128
+        }
+      ]
+    },
     "Folk Forward": "https://ice.somafm.com/folkfwd-128-mp3",
     "Beat Blender": "https://ice.somafm.com/beatblender-128-mp3",
-    "Boot Liquor": "https://ice.somafm.com/bootliquor-128-mp3",
+    "Boot Liquor": {
+      "default": "https://ice4.somafm.com/bootliquor-320-mp3",
+      "streams": [
+        {
+          "url": "https://ice4.somafm.com/bootliquor-320-mp3",
+          "bitrate": 320
+        },
+        {
+          "url": "https://ice.somafm.com/bootliquor-128-mp3",
+          "bitrate": 128
+        }
+      ]
+    },
     "The Trip": "https://ice.somafm.com/thetrip-128-mp3"
   }
 }

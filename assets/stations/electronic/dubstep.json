@@ -1,20 +1,38 @@
 {
   "stations": {
     "Dubstep.FM": "https://stream.dubstep.fm/128mp3",
-    "Sub.FM": "http://kiyi.radioca.st:9053/SubFMMount",
+    "Sub.FM": "https://subfm.radioca.st/",
     "Dubplate.fm DubBass": "https://sc2.dubplate.fm/radio/8000/dubandbass/uhifi",
     "Dubterrain.net[AutoDJ]": "http://ic2255.c471.fast-serv.com/autodj",
     "HCT DE": "https://hct.stream.laut.fm/hct?uuid=d05ee8be-ab68-9691-ea13-faca98f21aba&t302=2026-11-19_21-09-47",
     "LWR": "https://lwrdubstep-zaklwr10.radioca.st/stream",
-    "R1 BG": "https://stream-175.surfernetwork.com/xcaubmtj5dquv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJ4Y2F1Ym10ajVkcXV2IiwiaG9zdCI6InN0cmVhbS0xNzUuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJYNDdDbm90RFJFR3Jod3RNcjVaNUt3IiwiaWF0IjoxNzk1MTE4OTg3LCJleHAiOjE3OTUxMTkwNDd9.yNqrzQ5meZwW39BNkvH2NAlDP_BWOzcsBpkJ5EbUnFo",
+    "R1 BG": "https://stream-175.surfernetwork.com/xcaubmtj5dquv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJ4Y2F1Ym10ajVkcXV2IiwiaG9zdCI6InN0cmVhbS0xNzUuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJWWE5TaEFjaFFoR09kMm90SFJXNE9RIiwiaWF0IjoxNzk1MjAzMzY0LCJleHAiOjE3OTUyMDM0MjR9.nIy4rU3ULoOt5zt_tN9ZecO5zTALnFD0_TZVNekpZoM",
     "radcap Riddim": "http://79.111.119.111:8002/riddimdubstep",
-    "radcap Dubtep": "http://79.120.39.202:8002/dubstep",
+    "radcap Dubtep": {
+      "default": "https://ice4.somafm.com/dubstep-256-mp3",
+      "streams": [
+        {
+          "url": "https://ice4.somafm.com/dubstep-256-mp3",
+          "bitrate": 256
+        },
+        {
+          "url": "https://ice5.somafm.com/dubstep-128-mp3",
+          "bitrate": 128
+        }
+      ]
+    },
     "Sensimedia Bass Radio": "https://sensibass.radioca.st/;",
     "DnBEDM ChillStep": "https://edmdnb.com:448/radio/8000/radio.mp3",
     "BreakingBassAir RU": "https://aircast.breaking-bass.ru:8443/air",
-    "Uturn Dubstep": "https://listen.uturnradio.com/dubstep_32",
     "Line FM Gaming": "https://linefmgaming.stream.laut.fm/linefmgaming?uuid=a9eb0766-5fe3-1682-a9c9-46388fb3089e&t302=2026-11-19_21-09-49",
-    "ElectroDanceWorld Radi": "http://stream-178.surfernetwork.com/s70bvdgqks8uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJzNzBidmRncWtzOHV2IiwiaG9zdCI6InN0cmVhbS0xNzguc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJMbnA2RFJta1Q1MjhxeXJZVzNCYm93IiwiaWF0IjoxNzk1MTE5MDAzLCJleHAiOjE3OTUxMTkwNjN9.HUM-UDdVgD3tqCiwDo78SmsXzqzHIQV87VGOSYdOVqU",
-    "PulseEDM Dance Music R": "http://pulseedm.cdnstream1.com:8124/1373_128"
+    "ElectroDanceWorld Radi": "http://stream-178.surfernetwork.com/s70bvdgqks8uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJzNzBidmRncWtzOHV2IiwiaG9zdCI6InN0cmVhbS0xNzguc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJ1WFlHQnNlblRycWJaOEpNc0IyamdBIiwiaWF0IjoxNzk1MjAzMzY5LCJleHAiOjE3OTUyMDM0Mjl9.FFzSV3B6apJwc445MjNiWS0lm1B3Q-4_l4J9SnD6TBE",
+    "PulseEDM Dance Music R": "http://pulseedm.cdnstream1.com:8124/1373_128",
+    "Rastapuls Reggae Music": "http://radio.rastapuls.com:8000/rastapuls",
+    "HouseTime.FM": "https://listener3.aachd.tb-group.fm:443/ht-hd.aac",
+    "HardBase.FM": "http://listener1.mp3.tb-group.fm:80/hb.mp3",
+    "radcap Future Garage /": "http://79.120.39.202:8002/futuregarage",
+    "UK Bass Radio": "https://s2.ssl-stream.com/listen/uk_bass_radio/stream",
+    "DubTerrain": "http://ic2255.c471.fast-serv.com/listen",
+    "1.FM - Dubstep Forward": "http://strm112.1.fm/dubstep_mobile_mp3"
   }
 }
