@@ -2,17 +2,17 @@
   "stations": {
     "La Kalle": "http://24363.live.streamtheworld.com/LA_KALLE_SC",
     "Llegó El Mariachi": "https://13743.live.streamtheworld.com:443/ACIR34_S01AAC.aac",
-    "XHTIM \"La Mejor\" 90.7": "http://14223.live.streamtheworld.com/XHTIM_SC",
-    "Musiquera 93.3 FM": "https://stream-291.surfernetwork.com/83h238tqsceuv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiI4M2gyMzh0cXNjZXV2IiwiaG9zdCI6InN0cmVhbS0yOTEuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJ5dzhSOGF2NFNaMmJHZmozQnlFR0RRIiwiaWF0IjoxNzk1MTEzOTU2LCJleHAiOjE3OTUxMTQwMTZ9.8tUQZmYUgxodNHd1oaQhTbNOKtmMNfqnp_Ui4a-a7Kg",
-    "R Ranchito (Morelia) -": "https://drmx.streamguys1.com/ranchito",
-    "Viva El Mariachi": "https://stream-291.surfernetwork.com/gs4xg5s0csmtv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJnczR4ZzVzMGNzbXR2IiwiaG9zdCI6InN0cmVhbS0yOTEuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJMSHVQUUxTalFtT3U1b1NLektDU0R3IiwiaWF0IjoxNzk1MTEzOTYxLCJleHAiOjE3OTUxMTQwMjF9.WmxgvKe7iqR7KzO-1ezcHWUMAh0FcgzC4pCVap-bRFs",
+    "Musiquera 93.3 FM": "https://stream-291.surfernetwork.com/83h238tqsceuv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiI4M2gyMzh0cXNjZXV2IiwiaG9zdCI6InN0cmVhbS0yOTEuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJNZzVoOV95YVJIYTNVRi1iWTBEVHJ3IiwiaWF0IjoxNzk1MTE5NTcxLCJleHAiOjE3OTUxMTk2MzF9.3RTChPL4Nj6Nm7V3PtmrPUeoSnin_uK5-b75FH_NDnQ",
+    "R Ranchito (Morelia)": "https://drmx.streamguys1.com/ranchito",
+    "Viva El Mariachi": "https://stream-286.surfernetwork.com/gs4xg5s0csmtv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJnczR4ZzVzMGNzbXR2IiwiaG9zdCI6InN0cmVhbS0yODYuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJhRkU3Y01HTlRGbTVRM2tHRVYwVU1BIiwiaWF0IjoxNzk1MTE5NTcxLCJleHAiOjE3OTUxMTk2MzF9.GP8TFy1dskEPS_OTuokYeI2niHyqxAvsPynLzODcSsc",
     "La Jefa 1300 AM": "https://sonic.paulatina.co/7046/stream",
     "El toque FM": "http://us10a.serverse.com:8207/",
     "Hasta que el Cuerpo Ag": "https://s01.digitalserver.org/8110/stream",
     "Stereo Beso 94.5 FM": "https://a9.asurahosting.com:7140/",
-    "LA TAPATIA 103.5 (GDL)": "https://stream-288.surfernetwork.com/urxmpmn1qa0uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJ1cnhtcG1uMXFhMHV2IiwiaG9zdCI6InN0cmVhbS0yODguc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJfRWxudGkxQ1MzU0FwV2l2RW5ZdUtnIiwiaWF0IjoxNzk1MTEzOTY4LCJleHAiOjE3OTUxMTQwMjh9.cbDCz95i6ajnzLZjKNwHgaIIRMxQa9TLD4c4-WrYsys",
+    "LA TAPATIA 103.5 (GDL)": "https://stream-288.surfernetwork.com/urxmpmn1qa0uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJ1cnhtcG1uMXFhMHV2IiwiaG9zdCI6InN0cmVhbS0yODguc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJqNzJSUWtxOFFtdXJwYTZNaC13dHpRIiwiaWF0IjoxNzk1MTE5NTc0LCJleHAiOjE3OTUxMTk2MzR9.d1--7HXW6u-wKbkmCr_FC2ZSiWioXYaBPuG0hP-_ef4",
     "R Recuerdos 1230 AM": "https://radio35.virtualtronics.com/proxy/radiorecuerdos?mp=/;",
-    "La Ranchera de Cuauhté": "https://stream-289.surfernetwork.com/u1q3a220974tv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJ1MXEzYTIyMDk3NHR2IiwiaG9zdCI6InN0cmVhbS0yODkuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJLOHJpM2VJT1NjbVIwM2Qxd0hVMHV3IiwiaWF0IjoxNzk1MTEzOTcyLCJleHAiOjE3OTUxMTQwMzJ9.aVGFyEmqUlra5i4cid53uHyFp1pzV9lSzfdNrZkwru8",
-    "R Ranchito (Calvillo)": "https://streamingcwsradio30.com:7006/stream.mp3"
+    "La Ranchera de Cuauhté": "https://stream-289.surfernetwork.com/u1q3a220974tv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJ1MXEzYTIyMDk3NHR2IiwiaG9zdCI6InN0cmVhbS0yODkuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJjS0gyLXZuWlNmLXg1dVdtRFdfYWRRIiwiaWF0IjoxNzk1MTE5NTczLCJleHAiOjE3OTUxMTk2MzN9.uV4P5epwbz9dNry1hs1TRyU6zAx64v49oSgtAwqndJQ",
+    "R Ranchito (Calvillo)": "https://streamingcwsradio30.com:7006/stream.mp3",
+    "La Lupe 105.3 FM Monte": "https://us-b4-p-e-zs14-audio.cdn.mdstrm.com/live-audio-aw/6737993c9422ca09f9b9ea70?aid=579bd29dc99290cf08362c3b&pid=xaWawbttzjSWM0TaZdglmMsw9xnJmTe3&sid=hIE73LancW5kSCJeyv3ee2yQwFnna3Rx&uid=Nn43mb64Nqs7CrKs7FaZm7NIV8tNpDSd&es=us-b4-p-e-zs14-audio.cdn.mdstrm.com&ote=1795205977145&ot=C9_s-6fBHtkUtBovCaKfOA&proto=https&pz=us&cP=96000&awCollectionId=579bd29dc99290cf08362c3b&aw_0_1st.playerId=multimedios-radio-app-web&liveId=6737993c9422ca09f9b9ea70&propertyName=multimedios-radio-app-web&listenerId=Nn43mb64Nqs7CrKs7FaZm7NIV8tNpDSd"
   }
 }

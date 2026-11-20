@@ -1,5 +1,9 @@
 {
   "stations": {
-    "Classical Music": "https://listen.181fm.com/181-classical_128k.mp3"
+    "Classical Music": "https://listen.181fm.com/181-classical_128k.mp3",
+    "181.fm Classical Guita": "http://listen.181fm.com/181-classicalguitar_128k.mp3",
+    "181.fm Classical Music": "http://listen.181fm.com/181-classical_128k.mp3",
+    "181.FM Classical Music": "http://listen.livestreamingservice.com/181-classical_128k.mp3",
+    "181.fm classical music": "http://icyrelay.181.fm/181-classical_128k.mp3"
   }
 }

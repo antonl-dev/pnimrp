@@ -1,5 +1,20 @@
 {
   "stations": {
-    "Jewish Music Stream": "http://stream2.jewishmusicstream.com:10000/stream"
+    "Jewish Music Stream": "http://stream2.jewishmusicstream.com:10000/stream",
+    "radcap Jewish Music/Kl": "http://79.120.39.202:8002/klezmer",
+    "קול חי - Kol Chai": "https://live.kcm.fm/live-new",
+    "Chabad.org Jewish Musi": "https://stream.radio.co/sdfd68a101/listen",
+    "קול חי מיוזיק - Kol Ch": "https://live.kcm.fm/livemusic",
+    "Chabad.org Torah Class": "https://streams.radio.co/s9f35c3afc/listen",
+    "R Shalom Besançon": "http://radioshalombesancon.ice.infomaniak.ch/radioshalombesancon-128.mp3",
+    "Jewish music channel": "https://stream.jewishmusicstream.com:8000/",
+    "NSN - Nachum Segal Net": "https://nsn.streamguys1.com/nsnstream",
+    "J-AIR - Melbourne - 88": "http://s19.myradiostream.com:4918/",
+    "ברסלב פוריו: הלכות ודף": "https://cast.breslevforyou.co.il/listen/halachot/radio.mp3",
+    "ברסלב פוריו: קצר וקולע": "https://cast.breslevforyou.co.il/listen/shorts/radio.mp3",
+    "ברסלב פוריו: ספרי ברסל": "https://cast.breslevforyou.co.il/listen/books/radio.mp3",
+    "R Judaïca Bruxelles": "http://radiojudaica.ice.infomaniak.ch/radiojudaica-128.mp3",
+    "WMDI 107.9 \"Kol Bramah": "https://us2.maindigitalstream.com/stream/kolbramah",
+    "R Jai 96.3": "https://vivo.solumedia.com:19360/jaitv/jaitv.m3u8"
   }
 }

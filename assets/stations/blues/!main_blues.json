@@ -13,8 +13,8 @@
     "radcap Louisiana Blue": "http://213.141.131.10:8002/louisianablues",
     "radcap Texas Blues": "http://79.111.14.76:8002/texasblues",
     "radcap Piano Blues": "http://79.111.14.76:8002/pianoblues",
-    "radcap Electric Blues": "http://79.111.14.76:8002/pianoblues",
     "radcap Jump Blues": "http://213.141.131.10:8002/jumpblues",
-    "1.FM - Blues Radio": "http://strm112.1.fm/blues_mobile_mp3"
+    "1.FM - Blues Radio": "http://strm112.1.fm/blues_mobile_mp3",
+    "181.fm True Blues": "http://listen.181fm.com/181-blues_128k.mp3"
   }
 }

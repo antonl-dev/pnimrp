@@ -1,26 +1,20 @@
 {
   "stations": {
-    "TranceBase.FM": "https://aach.stream.tb-group.fm/trb-high.aac",
-    "Discover Trance": "paris.discovertrance.com:8006/; ",
+    "TranceBase.FM": "https://listener3.aach.tb-group.fm:443/trb-high.aac",
     "radcap Trance": "http://79.120.77.11:8000/trance",
     "TranceFm": "http://cast1.asurahosting.com:7709/listen.mp3",
     "1.fm AbsEuro Trance": "https://strm112.1.fm/trance_mobile_mp3",
     "1.fm Amsterdam": "https://strm112.1.fm/atr_mobile_mp3",
     "1.fm BOM PsyTrance": "https://strm112.1.fm/psytrance_mobile_mp3",
-    "1Mix Radio Trance": "http://fr4.1mix.co.uk:8000/128",
     "101.ru Trance": "https://pub0102.101.ru:8443/stream/trust/mp3/128/19",
-    "rm.fm Trance": "https://trance-high.rautemusik.fm/;",
-    "ETN FM Trance Channel": "ch1relay1.etn.fm:8100/;",
-    "Party Vibe Trance": "www.partyvibe.com:8010/;",
-    "Powertrance One": "https://stream.laut.fm/powertrance-one",
-    "Promo DJ Full Moon": "https://radio.promodj.com/fullmoon",
-    "radcap Uplifting Tranc": "79.111.119.111:8004/upliftingtrance",
+    "Powertrance One": "https://powertrance-one.stream.laut.fm/powertrance-one?t302=2026-11-19_21-09-16&uuid=d9f466e4-d25c-2f4c-8357-a4592acac4e6",
     "radiOzora Trance": "https://trance.out.airtime.pro:8000/trance_a",
     "Play Trance Uplifting": "https://streaming.playtrance.com/playtrance-uplifting-high",
-    "Lifted Trance Radio": "https://stream.laut.fm/liftedtrancemusicradio",
-    "Joint Radio Beat": "radio.jointil.net:9986/;",
-    "Space Unicorn Radio": "107.161.29.166:8000/;",
-    "TranceTechnic": "s11.ssl-stream.com:8034/;",
-    "Anima Amoris Trance": "https://stream.radiogoose.ru/listen/bigroom/play"
+    "Lifted Trance Radio": "https://liftedtrancemusicradio.stream.laut.fm/liftedtrancemusicradio?uuid=c91c7e6f-12ab-bd7d-fb42-b7a040e9c8ec&t302=2026-11-19_21-09-17",
+    "Anima Amoris Trance": "https://stream5.radiogoose.ru/listen/bigroom/play",
+    "Dance Wave! | MP3": "http://stream1.dancewave.online:8080/dance.mp3",
+    "Intense Radio - We lov": "https://secure.live-streams.nl/main",
+    "Anon.FM": "https://icecast.anon.fm/radio",
+    "TranceBase.FM - AAC HD": "http://listener3.aachd.tb-group.fm:80/trb-hd.aac"
   }
 }

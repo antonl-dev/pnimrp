@@ -1,7 +1,7 @@
 {
   "stations": {
     "All India Radio AIR Pu": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio138/chunklist.m3u8",
-    "Jesus Alive Radio": "http://stream-284.surfernetwork.com/qyb8s75nsceuv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJxeWI4czc1bnNjZXV2IiwiaG9zdCI6InN0cmVhbS0yODQuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJPOEZwVTFvcVFxcVR6U3BfU1FudXN3IiwiaWF0IjoxNzk1MTE0MDYxLCJleHAiOjE3OTUxMTQxMjF9.oLDSEbwN8jNUwvsGyUaQMFKElXWIO_CvpNWMjzPVKpQ",
+    "Jesus Alive Radio": "https://stream-284.surfernetwork.com/qyb8s75nsceuv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJxeWI4czc1bnNjZXV2IiwiaG9zdCI6InN0cmVhbS0yODQuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJpR3Qzb1UyNFNsbVdyVWJ3X3VpMkpnIiwiaWF0IjoxNzk1MTE5NjA0LCJleHAiOjE3OTUxMTk2NjR9.NLzk4p5ZBqVQ_Ylq5gUXn0vTQZSt2c-y7Lpj83pcxwk",
     "BBC Asian Network": "http://as-hls-ww-live.akamaized.net/pool_22108647/live/ww/bbc_asian_network/bbc_asian_network.isml/bbc_asian_network-audio%3d128000.norewind.m3u8",
     "Harman Radio Australia": "http://harmanradio.net:8000/main_48.mp3",
     "R Central 24": "http://138.201.52.248:8459/stream",

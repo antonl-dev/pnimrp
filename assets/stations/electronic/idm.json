@@ -1,13 +1,20 @@
 {
   "stations": {
     "SomaFM cliqhopIDM": "https://ice1.somafm.com/cliqhop-128-mp3",
-    "Brainwave Radio": "https://listen.radioking.com/radio/121066/stream/162115",
-    "Systrum Ambient": "https://systrum.net/SSR1",
-    "radioFunk ": "https://icecast.westerfunk.net/radiofunk.mp3",
+    "Systrum Ambient": "https://systrum.net:8443/SSR1",
+    "radioFunk": "https://icecast.westerfunk.net/radiofunk.mp3",
     "Anima Amoris IDM": "https://amoris.sknt.ru/idm.mp3",
     "Soma GrooveSalad": "https://ice2.somafm.com/groovesalad-128-aac",
     "Soma GrooveSaladCls": "https://ice5.somafm.com/gsclassic-128-mp3",
     "radcap IDM Ambient": "http://213.141.131.10:8002/idmambient",
-    "radcap IDM": "http://79.111.14.76:8004/idm"
+    "radcap IDM": "http://79.111.14.76:8004/idm",
+    "SomaFM CliqHop IDM": "https://ice5.somafm.com/cliqhop-128-mp3",
+    "dinamo.fm smog": "http://channels.dinamo.fm/smog-mp3",
+    "radcap Glitch / Glitch": "http://79.111.14.76:8002/glitch",
+    "FluxFM - Eclectic Elec": "http://fluxfm.streamabc.net/flx-fluxfmberlin-mp3-320-3394445?sABC=6nss57s8%231%23cynl.z3%23nhqvb&aw_0_1st.playerid=audio&amsparams=playerid:audio;skey:1795119096",
+    "Elektronisch Querbeat": "http://elektronischquerbeat.stream.laut.fm/elektronisch_querbeat?uuid=b851cd31-504f-7865-2d7c-4e661592d7eb&t302=2026-11-19_21-11-36",
+    "Verdure Station": "http://air.verdure.net:8881/stream",
+    "radcap Breakcore": "http://79.111.119.111:8004/breakcore",
+    "Dirty Radio for Underw": "https://live.dirty.radio/stream/"
   }
 }

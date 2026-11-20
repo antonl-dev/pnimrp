@@ -1,6 +1,5 @@
 {
   "stations": {
-    "radcap Orthodox": "http://79.111.14.76:9127/",
     "RS Argolidos 105.2": "http://eco.onestreaming.com:8556/",
     "Agios Oikoumenios 102": "http://s5.onweb.gr:8508/",
     "M Diakonia 87.5": "http://eco.onestreaming.com:8019/;stream.mp3",
@@ -8,8 +7,14 @@
     "orthodoxiya.org": "http://s5.viastreaming.net:7040/;",
     "Alitheia FM 96.3": "http://sc2.streamwithq.com:8070/",
     "Ancient Faith Radio": "https://ancientfaith.streamguys1.com/talk",
-    "OCR Rudder 24": "http://radio.myocn.net:8080/stream",
     "Orthodox-Chants.ru": "http://orthodox-chants.ru:8000/128kb",
-    "Orthodox-Chants DATA": "http://orthodox-chants.ru:8000/64kb"
+    "Orthodox-Chants DATA": "http://orthodox-chants.ru:8000/64kb",
+    "Ethiopian Orthodox Chu": "https://stream-283.surfernetwork.com/pfaho9uockwuv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJwZmFobzl1b2Nrd3V2IiwiaG9zdCI6InN0cmVhbS0yODMuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJNdzhtOUxoZVR5LTd3TXFrWGhiVnJBIiwiaWF0IjoxNzk1MTE5MTQ1LCJleHAiOjE3OTUxMTkyMDV9.borh3RSXnOsV8mu1FPyF4EoLC6I2FLuox0579oBhA7g",
+    "Ι.Μ. Σπάρτης 88.8": "http://s4.onweb.gr:8862/",
+    "R Svetigora": "http://svetigoralive.com:8879/;",
+    "Град Петров": "http://stream.grad-petrov.ru:8093/aac",
+    "Ράδιο Άγιος Δημήτριος": "http://eco.onestreaming.com:8474/",
+    "Ράδιο Κιβωτός 99.2": "http://s3.onweb.gr:8452/",
+    "Ιερά Μονή Παμμεγίστων": "http://eco.onestreaming.com:8019/"
   }
 }

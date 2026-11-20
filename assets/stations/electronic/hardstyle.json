@@ -1,19 +1,20 @@
 {
   "stations": {
     "RealHardStyle.Nl": "https://stream.realhardstyle.nl",
-    "Q-dance Radio": "https://playerservices.streamtheworld.com/api/livestream-redirect/Q_DANCEAAC.aac",
-    "Hardstyle.FM": "https://stream.laut.fm/hardstylefm",
-    "HardBase.FM": "https://aacl.stream.tb-group.fm/hb-low.aac",
-    "NRJ Hard": "https://scdn.nrjaudio.fm/adwz1/fr/56708/mp3_128.mp3",
-    "Welike to jump DE": "https://stream.laut.fm/weliketojump",
+    "Q-dance Radio": "https://28973.live.streamtheworld.com:443/Q_DANCEAAC.aac",
+    "Hardstyle.FM": "https://hardstylefm.stream.laut.fm/hardstylefm?uuid=94aabc1c-8d79-9048-fc61-a52ca5658c97&t302=2026-11-19_21-11-15",
+    "HardBase.FM": "https://listener3.aacl.tb-group.fm:443/hb-low.aac",
+    "Welike to jump DE": "https://weliketojump.stream.laut.fm/weliketojump?t302=2026-11-19_21-11-15&uuid=cc1b9f81-f5da-2dae-0fae-7590c239cc6c",
     "ADM Hard": "https://kathy.torontocast.com:2900/stream",
-    "AU Digital Hard": "http://abm22.com.au:8000/CONTAINER33",
-    "Der Bemsi": "https://stream.laut.fm/derbemsi",
-    "EliteDance": "https://stream.laut.fm/elitedance",
-    "KroneHit Hard": "https://secureonair.krone.at/kronehit16.mp3",
-    "ILoveMusic Hard": "https://streams.ilovemusic.de/iloveradio21.mp3",
-    "NXOne": "https://stream.laut.fm/nxone",
+    "Der Bemsi": "https://derbemsi.stream.laut.fm/derbemsi?uuid=87941bb9-ae27-4a6c-cc2c-cae09b3533c0&t302=2026-11-19_21-11-15",
+    "EliteDance": "https://elitedance.stream.laut.fm/elitedance?uuid=d0699458-f0ff-08e6-58e1-3b66d1969f9c&t302=2026-11-19_21-11-15",
+    "ILoveMusic Hard": "https://ilm.stream27.radiohost.de/ilm_ilovehardstyle_mp3-192?upd-meta=1&upd-scheme=https&_art=dD0xNzk1MTE5Mzc3JmQ9NDNhNjMzZTZkOWY5Nzk3NjEwMjA",
+    "NXOne": "https://nxone.stream.laut.fm/nxone?uuid=86fdd34c-d05f-f426-73bc-697d742a2ed8&t302=2026-11-19_21-11-16",
     "Primal.FM": "https://main.stream.primal.fm/dresden",
-    "radcap": "http://79.111.14.76:8002/hardstyle"
+    "radcap": "http://79.111.14.76:8002/hardstyle",
+    "ElectroDanceWorld Radi": "http://stream-178.surfernetwork.com/s70bvdgqks8uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJzNzBidmRncWtzOHV2IiwiaG9zdCI6InN0cmVhbS0xNzguc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJhVXBCSzVqeVRXMldrSURILU5JaDRnIiwiaWF0IjoxNzk1MTE5MDgzLCJleHAiOjE3OTUxMTkxNDN9.95HSb-tg2izNKVGA1Q7ATk7lwBlRE9XUt0oQ68GnfOA",
+    "R Record Hardstyle": "https://radiorecord.hostingradio.ru/teo96.aacp",
+    "Hardcore Radio": "http://shoutcast1.hardcoreradio.nl/",
+    "Crucial Velocity Radio": "http://ais-sa2.cdnstream1.com/1369_128"
   }
 }

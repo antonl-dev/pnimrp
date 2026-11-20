@@ -1,15 +1,20 @@
 {
   "stations": {
     "TechnoBase.FM": "https://listener1.aach.tb-group.fm/tb-high.aac",
-    "Fnoob Techno Radio": "https://streams.radiomast.io/8846a94e-9874-4692-a1a0-ec7aadbe2771",
-    "Radio Techno Zagreb": "http://mercury.reliastream.com:8085/stream.mp3",
-    "Sunshine Live Techno": "https://stream.sunshine-live.de/techno/mp3-128",
+    "R Techno Zagreb": "http://mercury.reliastream.com:8085/stream.mp3",
+    "Sunshine Live Techno": "https://sunsl.streamabc.net/sunsl-techno-mp3-128-2432010?sABC=6nss5764%230%23p5549n47p4p5199r236op6r02281377q%23&aw_0_1st.playerid=&amsparams=playerid:;skey:1795118948",
     "1.FM Techno": "https://strm112.1.fm/deeptech_mobile_mp3",
-    "Techno Paradize": "https://stream.laut.fm/techno-paradize",
+    "Techno Paradize": "https://techno-paradize.stream.laut.fm/techno-paradize?uuid=f4463a63-16ce-2a94-5cde-a4fa5126e911&t302=2026-11-19_21-09-07",
     "MABU Beatz Techno": "https://audio.mabu-beatz-radio.com:8003/techno",
-    "101.ru Techno": "https://pub0102.101.ru:8443/stream/trust/mp3/128/18",
     "313 FM": "http://icecast.313.fm:8000/burst.ogg",
     "radcap Techno": "http://79.120.77.11:8002/techno",
-    "TOPspinning30": "https://playerservices.streamtheworld.com/api/livestream-redirect/TOPSPINNINGAAC_48.aac"
+    "TOPspinning30": "https://27913.live.streamtheworld.com:443/TOPSPINNINGAAC_48.aac",
+    "Intense Radio - We lov": "https://secure.live-streams.nl/main",
+    "TranceBase.FM - AAC HD": "http://listener1.aachd.tb-group.fm:80/trb-hd.aac",
+    "1.FM - Deep House Radi": "http://strm112.1.fm/deephouse_mobile_mp3",
+    "1.FM - Deep Techno & D": "http://strm112.1.fm/deeptech_mobile_mp3",
+    "90s90s Techno HQ": "http://regiocast.streamabc.net/regc-90s90stechno2195701-mp3-192-2408420?sABC=6nss5768%230%23p5549n47p4p5199r236op6r02281377q%23enqvbqr&aw_0_1st.playerid=radiode&amsparams=playerid:radiode;skey:1795118952",
+    "Techno.FM": "http://stream.techno.fm/radio.mp3",
+    "ElectroDanceWorld Radi": "http://stream-178.surfernetwork.com/s70bvdgqks8uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJzNzBidmRncWtzOHV2IiwiaG9zdCI6InN0cmVhbS0xNzguc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJraDBsVk1QRlNTcUdnZDJsZGNKU2VBIiwiaWF0IjoxNzk1MTE4OTUyLCJleHAiOjE3OTUxMTkwMTJ9.Tskng0DHyQAuHIrq13rtNSuafXPx6FPgUMDzFPszTYI"
   }
 }

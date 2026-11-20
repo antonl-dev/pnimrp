@@ -3,7 +3,6 @@
     "WWOZ 90.7 FM": "https://wwoz-sc.streamguys1.com/wwoz-hi.mp3",
     "ABC Jazz (AUS)": "https://streaming.abc-cdn.net.au/audio/hls/abcjazz.m3u8",
     "Jazz.FM91 (Canada)": "https://jazzfm91.streamb.live/SB00009",
-    "Classic Vinyl HD": "https://icecast.walmradio.com:8443/classic",
     "101 SMOOTH JAZZ": "http://jking.cdnstream1.com/b22139_128mp3",
     "Classic Vinyl HD Opus": "https://icecast.walmradio.com:8443/classic_opus",
     "Anon.FM": "https://icecast.anon.fm/radio",
@@ -15,6 +14,7 @@
     "Jazz London Radio": "http://radio.canstream.co.uk:8075/live.mp3",
     "FIP Jazz": "http://icecast.radiofrance.fr/fipjazz-hifi.aac",
     "Jazz Radio Only Women": "http://jazz-wr16.ice.infomaniak.ch/jazz-wr16-128.mp3",
-    "101 SMOOTH JAZZ MELLOW": "http://ais-edge90-dal03.cdnstream.com/b48071_128mp3"
+    "101 SMOOTH JAZZ MELLOW": "http://ais-edge90-dal03.cdnstream.com/b48071_128mp3",
+    "Classic Vinyl HD": "https://icecast.walmradio.com:8443/classic"
   }
 }

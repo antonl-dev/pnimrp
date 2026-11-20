@@ -1,8 +1,6 @@
 {
   "stations": {
-    "Classic Vinyl HD": "https://icecast.walmradio.com:8443/classic",
     "101 SMOOTH JAZZ": "http://jking.cdnstream1.com/b22139_128mp3",
-    "Classic Vinyl HD Opus": "https://icecast.walmradio.com:8443/classic_opus",
     "SomaFM Groove Salad": "https://ice5.somafm.com/groovesalad-128-mp3",
     "Anon.FM": "https://icecast.anon.fm/radio",
     "SomaFM Secret Agent": "https://ice6.somafm.com/secretagent-128-mp3",
@@ -15,6 +13,8 @@
     "Calm Radio - Solo Pian": "http://streams.calmradio.com:1228/",
     "Hi On Line Lounge Radi": "http://mediaserv33.live-streams.nl:8036/live",
     "Sunshine Live - Lounge": "http://sunsl.streamabc.net/sunsl-lounge-mp3-192-3652549?sABC=6nss41r0%230%23p5549n47p4p5199r236op6r02281377q%23fgernz.fhafuvar-yvir.qr&aw_0_1st.playerid=stream.sunshine-live.de&amsparams=playerid:stream.sunshine-live.de;skey:1795113440",
-    "Brokenbeats": "https://stream.brokenbeats.net/tune"
+    "Classic Vinyl HD": "https://icecast.walmradio.com:8443/classic",
+    "Classic Vinyl HD Opus": "https://icecast.walmradio.com:8443/classic_opus",
+    "- 0 N - Smooth Jazz on": "https://0n-smoothjazz.radionetz.de/0n-smoothjazz.aac"
   }
 }

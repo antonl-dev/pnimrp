@@ -2,8 +2,8 @@
   "stations": {
     "WKWF": "https://sh.fl-us.audio-stream.com/proxy/rconne02?mp=/stream",
     "TraxxFM": "https://traxx014.ice.infomaniak.ch/traxx014-low.mp3",
-    "radcap Dixieland": "http://79.120.39.202:8002/dixieland",
     "Exclusively Louis Arms": "https://nl4.mystreaming.net/er/louisarmstrong/icecast.audio",
-    "Dixieland Oasis": "http://149.28.117.85/listen/dixieland_oasis_radio/radio.mp3"
+    "Dixieland Oasis": "http://149.28.117.85/listen/dixieland_oasis_radio/radio.mp3",
+    "radcap Dixieland": "http://79.120.39.202:8002/dixieland"
   }
 }

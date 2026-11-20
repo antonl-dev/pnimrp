@@ -1,8 +1,8 @@
 {
   "stations": {
     "R France Mouv": "https://listen.radioking.com/radio/255529/stream/300106",
-    "Z100 (NY)": "https://cloud.revma.ihrhls.com/zc1469?rj-org=n25a-e2&rj-ttl=5&rj-tok=AAABofUcqGcATMaBuPUtYeTnNg",
-    "102.7 KIIS FM (LA)": "https://cloud.revma.ihrhls.com/zc185?rj-org=n18a-e2&rj-ttl=5&rj-tok=AAABofUcrr4AYxh_SKmTDFPpwA",
+    "Z100 (NY)": "https://cloud.revma.ihrhls.com/zc1469?rj-org=n44a-e2&rj-ttl=5&rj-tok=AAABofV1BiUAG_iSRSnV16fujw",
+    "102.7 KIIS FM (LA)": "https://cloud.revma.ihrhls.com/zc185?rj-org=n14a-e2&rj-ttl=5&rj-tok=AAABofV1BrAAVrgNNQFJsPHgTA",
     "NRJ FR": "https://streaming.nrjaudio.fm/oumvmk8fnozc?origine=redirection_https_nrj",
     "RDS - R Dimensione Suo": "https://stream.rds.radio/audio/rds.stream_aac64/playlist.m3u8",
     "RTL 102.5": "https://streamcdnf31-dd782ed59e2a4e86aabf6fc508674b59.msvdn.net/live/S97044836/tbbP8T1ZRPBL/playlist_audio.m3u8",

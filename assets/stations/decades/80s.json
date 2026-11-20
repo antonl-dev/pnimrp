@@ -1,7 +1,5 @@
 {
   "stations": {
-    ".977 80s": "http://29318.live.streamtheworld.com/977_80_SC",
-    ".977 The Mix": "http://15113.live.streamtheworld.com:3690/977_MIX_SC",
     "Big R Radio - 80s Meta": "http://bigrradio.cdnstream1.com/5186_128",
     "Heart 80s": "https://media-ssl.musicradio.com/Heart80sMP3",
     "100% Radio 80": "http://100radio-80.ice.infomaniak.ch/100radio-80-128.mp3",
@@ -15,6 +13,8 @@
     "Virgin Radio Rock '80": "http://icy.unitedradio.it/VirginRock80.mp3",
     "Power POP": "https://listen.powerapp.com.tr/powerpop/128/chunks.m3u8",
     "KISS FM 100.6": "http://live.radiokiss.gr/kissfm1006hq.mp3",
-    "Oxygen The 80s Hits": "https://oxygenmusic.hu:8443/oxygenthe80shits"
+    "Oxygen The 80s Hits": "https://oxygenmusic.hu:8443/oxygenthe80shits",
+    ".977 80s": "http://29318.live.streamtheworld.com/977_80_SC",
+    "Retro Rádió": "https://icast.connectmedia.hu/5001/live.mp3"
   }
 }

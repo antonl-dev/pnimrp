@@ -1,23 +1,20 @@
 {
   "stations": {
     "House Nation": "https://streaming.radio.co/s06bd9d805/listen",
-    "Chicago House AutoDJ": "http://dione.shoutca.st:8379/autodj",
     "0N": "https://0n-house.radionetz.de/0n-house.aac",
-    "HouseTime.FM": "https://aach.stream.tb-group.fm/ht-high.aac",
-    "Radio Danz": "https://streamssl.radiodanz.com",
+    "HouseTime.FM": "https://listener1.aach.tb-group.fm:443/ht-high.aac",
+    "R Danz": "https://streamssl.radiodanz.com",
     "MoveDaHouse": "https://uk7.internet-radio.com/proxy/movedahouse?mp=/;",
-    "Ibiza Sonica": "https://streams.radio.co/sddfa96b70/listen",
     "Strictly House": "https://radio.hearme.fm:8020/stream",
-    "DI Funky": "http://prem4.di.fm/funkyhouse_hi?6a40af94924ae467",
-    "DI Tribal": "http://prem3.di.fm/tribalhouse_hi?20a1d1bf879e76",
     "globalhardhouse": "https://globalhardhouse.radioca.st/;",
-    "StyleCore Hard": "https://sonic.sistemahost.es:7011/;",
-    "AUDigital AcidHouse": "http://abm22.com.au:8000/CONTAINER1",
-    "AUDigitalNet AfroHouse": "http://abm22.com.au:8000/CONTAINER53",
-    "GubiFM": "https://stream.laut.fm/gubifm",
-    "AUDigital BassHouse": "http://abm22.com.au:8000/CONTAINER5",
-    "Der Ansorge DE": "https://stream.laut.fm/deransorge",
-    "RadioDayNigth Chill": "https://radiodaynigth.radioca.st/;",
-    "Alfa Deep RU": "https://mp4.apachan.ru:8000/royal_deep"
+    "GubiFM": "https://gubifm.stream.laut.fm/gubifm?t302=2026-11-19_21-08-41&uuid=789af0a2-b5c7-d963-0eb1-dd0bd1c16d90",
+    "Der Ansorge DE": "https://deransorge.stream.laut.fm/deransorge?t302=2026-11-19_21-08-41&uuid=ec4eb78b-65b4-a623-1950-4ee7a8a811f5",
+    "Dance Wave! | MP3": "http://stream1.dancewave.online:8080/dance.mp3",
+    "Intense Radio - We lov": "https://secure.live-streams.nl/main",
+    "Ibiza Global Radio": "http://cdn-peer031.streaming-pro.com:8024/ibizaglobalradio.mp3",
+    "1.FM - Deep House Radi": "http://strm112.1.fm/deephouse_mobile_mp3",
+    "Deep House Radio - Buc": "http://live.dancemusic.ro:7000/radio.mp3",
+    "ORBITAL": "http://centova.radios.pt:8401/;listen.pls",
+    "Mixadance FM": "https://stream.mixadance.fm/mixadance"
   }
 }

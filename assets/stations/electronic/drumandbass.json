@@ -1,13 +1,20 @@
 {
   "stations": {
     "DnB Radio": "https://source.dnbradio.com/stream/300/;",
-    "JungleTrain": "http://stream5.jungletrain.net:8000/;",
     "radcap": "http://79.111.14.76:8002/drumbass",
     "Khomyak FM": "https://misato.ru-hoster.com:8075/dnbpg_live",
-    "247 Drums.ro": "http://radio.drums.ro:8000/;",
-    "Alfa DNB": "https://alfa.apachan.ru:8000/RoyalDrum",
     "BassDrive": "https://www.bassdrive.com/bassdrive.m3u",
     "Skerce FM": "http://skerce.com:8000/listen",
-    "FMBase": "https://stream.laut.fm/fmbase"
+    "FMBase": "https://fmbase.stream.laut.fm/fmbase?uuid=949c0c08-a59f-dabf-2272-ec590c5ecfeb&t302=2026-11-19_21-09-25",
+    "Anon.FM": "https://icecast.anon.fm/radio",
+    "Bassdrive": "http://au.bassdrive.co:8000/",
+    "ElectroDanceWorld Radi": "http://stream-178.surfernetwork.com/s70bvdgqks8uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJzNzBidmRncWtzOHV2IiwiaG9zdCI6InN0cmVhbS0xNzguc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJPbkxUMzROV1JscURnR2FWRGpJSXZRIiwiaWF0IjoxNzk1MTE4OTgyLCJleHAiOjE3OTUxMTkwNDJ9.QvEFGQFO89JFaPgOrN6AGhNMMzla5h_suevmXTeme9k",
+    "HouseTime.FM": "https://listener1.aachd.tb-group.fm:443/ht-hd.aac",
+    "Sunshine Live - Drum '": "http://sunsl.streamabc.net/sunsl-drumnbass-mp3-192-9834247?sABC=6nss5787%230%23p5549n47p4p5199r236op6r02281377q%23fgernz.fhafuvar-yvir.qr&aw_0_1st.playerid=stream.sunshine-live.de&amsparams=playerid:stream.sunshine-live.de;skey:1795118983",
+    "DnB&EDM": "https://edmdnb.com:448/radio/8000/radio.mp3",
+    "radcap Drum 'n' Bass": "http://79.111.14.76:8000/drumbass",
+    "DNB FM": "https://air.dnbfm.ru/listen/player/play",
+    "Kniteforce Radio": "https://kniteforce.out.airtime.pro/kniteforce_a",
+    "UK Bass Radio": "https://s2.ssl-stream.com/listen/uk_bass_radio/stream"
   }
 }

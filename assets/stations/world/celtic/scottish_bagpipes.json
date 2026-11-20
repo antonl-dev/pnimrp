@@ -1,7 +1,6 @@
 {
   "stations": {
     "radcap Celtic": "http://79.111.14.76:8000/celtic",
-    "Celtic Music Radio": "https://uksoutha.streaming.broadcast.radio/celtic",
     "WCUW": "http://peridot.streamguys.com:5490/live"
   }
 }

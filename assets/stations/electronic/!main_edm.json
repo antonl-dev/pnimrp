@@ -1,18 +1,20 @@
 {
   "stations": {
     "AH.FM -data": "https://nl.ah.fm/mobile",
-    "AH.FM -high": "https://ah.fm/live.m3u",
-    "Ambient Sleeping Pill": "radio.stereoscenic.com/asp-s",
-    "Ibiza Global Radio": "http://ibizaglobalradio.streaming-pro.com:8024",
-    "Radio Seven": "80.86.106.32:8000/radio7.mp3",
-    "AB Chillout": "stream.antenne.de/chillout",
-    "Frisky": "stream2.friskyradio.com/frisky_mp3_hi",
-    "Nirvana Radio": "streaming.exclusive.radio/er/nirvana/icecast.audio",
+    "Ibiza Global Radio": "http://cdn-peer031.streaming-pro.com:8024/ibizaglobalradio.mp3",
     "Puls Radio": "http://puls-radio.ru:8000/puls",
     "Puls Radio Club": "https://str3.openstream.co/2138",
-    "Puls Radio Trance": "https://icecastlb.pulsradio.com/pulstranceHD.mp3",
-    "Fnoob Techno Radio": "https://streams.radiomast.io/8846a94e-9874-4692-a1a0-ec7aadbe2771",
+    "Puls Radio Trance": "https://sc5.gergosnet.com/pulstranceHD.mp3",
     "House Nation": "https://streaming.radio.co/s06bd9d805/listen",
-    "DnB Radio": "https://source.dnbradio.com/stream/300/;"
+    "DnB Radio": "https://source.dnbradio.com/stream/300/;",
+    "Dance Wave! | MP3": "http://stream1.dancewave.online:8080/dance.mp3",
+    "DFM RUSSIAN DANCE": "https://dfm-dfmrusdance.hostingradio.ru/dfmrusdance96.aacp?0.9987259013359274",
+    "Dance Wave Retro! | MP": "http://stream1.dancewave.online:8080/retrodance.mp3",
+    "Frisky": "http://stream2.friskyradio.com/frisky_mp3_hi",
+    "Intense Radio - We lov": "https://secure.live-streams.nl/main",
+    "EuroDance 90 radio": "https://stream-eurodance90.fr/radio/8000/128.mp3?1627933323",
+    "Chocolate FM": "http://streaming5.elitecomunicacion.es:8082/live.mp3",
+    "R Meuh": "http://radiomeuh.ice.infomaniak.ch/radiomeuh-128.mp3",
+    "1000 HITS 80s": "http://c2.auracast.net:8048/stream"
   }
 }

@@ -2,7 +2,6 @@
   "stations": {
     "DFM Дискач 90-х": "https://dfm-disc90.hostingradio.ru/disc9096.aacp",
     "Dance Wave Retro! | MP": "http://stream1.dancewave.online:8080/retrodance.mp3",
-    ".977 The Mix": "http://15113.live.streamtheworld.com:3690/977_MIX_SC",
     "EuroDance 90 radio": "https://stream-eurodance90.fr/radio/8000/128.mp3?1627933323",
     "LOVE RADIO Only Love S": "http://shoutcast3.streamingmedia.it:3162/",
     "90s90s Hits": "http://regiocast.streamabc.net/regc-90s90spop4760822-mp3-192-9403761?sABC=6nss4157%230%23p5549n47p4p5199r236op6r02281377q%23fgernzf.90f90f.qr&aw_0_1st.playerid=streams.90s90s.de&amsparams=playerid:streams.90s90s.de;skey:1795113303",
@@ -15,6 +14,7 @@
     "KISS FM 100.6": "http://live.radiokiss.gr/kissfm1006hq.mp3",
     "Retro Rádió": "https://icast.connectmedia.hu/5001/live.mp3",
     "Rádio Disco Funk BR": "http://streaming12.hstbr.net:8084/live",
-    "Sláger FM": "http://92.61.114.159:7812/slagerfm256.mp3"
+    "Sláger FM": "http://92.61.114.159:7812/slagerfm256.mp3",
+    "Nostalgie New York": "http://c32.radioboss.fm:8139/stream"
   }
 }

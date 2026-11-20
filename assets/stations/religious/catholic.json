@@ -1,7 +1,20 @@
 {
   "stations": {
     "RadioVaticana": "https://radio.vaticannews.va/stream-en",
-    "Relevant R Catholic": "https://17653.live.streamtheworld.com/RR_MAIN.mp3",
-    "EWTN Global Catholic": "https://ssl-2.stream.miriamtech.net/grn/KATH910AM.mp3"
+    "EWTN Global Catholic": "https://ssl-2.stream.miriamtech.net/grn/KATH910AM.mp3",
+    "R Maria": "http://dreamsiteradiocp.com:8092/;",
+    "RADIO MARIA TOGO": "http://dreamsiteradiocp.com:8050/stream",
+    "R Don Bosco": "http://onair15.xdevel.com:9248/;",
+    "RADIO MARIA INDIA": "http://dreamsiteradiocp.com:8002/stream",
+    "R Silesia": "http://s1.slotex.pl:7926/",
+    "RADIO MARIA TANZANIA": "http://dreamsiteradiocp2.com:8034/stream",
+    "RADIO MARIA DEM.REP. C": "http://dreamsiteradiocp.com:8116/stream",
+    "RADIO MARIA MALAWI": "http://dreamsiteradiocp.com:8040/stream",
+    "RADIO MARÍA ESPAÑA": "http://dreamsiteradiocp2.com:8006/stream",
+    "Rádio Lumen": "http://audio.lumen.sk:8000/live128.mp3",
+    "R María El Salvador 10": "http://dreamsiteradiocp.com:8098/stream",
+    "RADIO MARIA BURUNDI": "http://dreamsiteradiocp.com:8058/stream",
+    "RADIO MARIA ECUADOR": "http://dreamsiteradiocp4.com:8010/stream",
+    "RADIO MARIA GUATEMALA": "http://dreamsiteradiocp.com:8072/stream"
   }
 }

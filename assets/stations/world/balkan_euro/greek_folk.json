@@ -7,14 +7,14 @@
     "Glenti 89.2 FM": "http://s2.e-resellers.gr:8076/",
     "Minore Kallonis": "https://i4.streams.ovh/ic/minore/stream",
     "Adelin FM": "http://cast.magicstreams.gr:8050/",
-    "R Deilina 103": "https://cast2.radiohost.ovh/dilina103?mp=/stream",
     "R Thessalia 96": "https://webradio.northbridge.gr/proxy/thessaliafm/stream",
     "Prima R 91.3": "https://solid55.streamupsolutions.com/proxy/gygasbfj?mp=/live",
     "Laiki Kivotos": "http://everest.streams.ovh:1310/stream",
-    "Laiko 107": "https://stream-285.surfernetwork.com/58uqx820dnzuv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiI1OHVxeDgyMGRuenV2IiwiaG9zdCI6InN0cmVhbS0yODUuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJxSE1iX1pnX1N6YWlLc1ZLbDZibTd3IiwiaWF0IjoxNzk1MTEzODEyLCJleHAiOjE3OTUxMTM4NzJ9.sKH1JeDgtHLIuUWx-nVm8BPMkFtGTgyQBPJB9fQ8bN4",
+    "Laiko 107": "https://stream-285.surfernetwork.com/58uqx820dnzuv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiI1OHVxeDgyMGRuenV2IiwiaG9zdCI6InN0cmVhbS0yODUuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJrR2N5bkxHQVRRMjVDOG90OHFNckx3IiwiaWF0IjoxNzk1MTE5NTQ0LCJleHAiOjE3OTUxMTk2MDR9.TIa7Yt7qXnVWO5bcBFLhcXAGHT734NaY82htLcBx1vM",
     "Hot Mix": "http://sp2.streams.ovh:8098/stream",
     "Gavdos 88.8": "https://sc2.streamwithq.com:2000/stream/GavdosFm",
     "Derti 90.5": "https://sh.onweb.gr/9050/stream",
-    "1o Ερασιτεχνικό Πρόγρα": "http://i2.streams.ovh:7109/stream?type=http&nocache=11373"
+    "1o Ερασιτεχνικό Πρόγρα": "http://i2.streams.ovh:7109/stream?type=http&nocache=11373",
+    "Makedonia 1386": "https://webinternetradio.eu:48238/"
   }
 }

@@ -4,12 +4,17 @@
     "Sunshine Radio": "http://stream.sunshinefm.hu:8100/sunshine",
     "0N": "https://0n-disco.radionetz.de/0n-disco.aac",
     "Blast FM Radio": "https://45.33.5.23:8000/;",
-    "Circus Radio": "http://radio.rpointernet.com.br:5788/;",
     "DiscoRhythmn AUTODJ": "http://kiyi.radioca.st:8108/autodj",
     "FlashDiscoDance": "http://stm1.ifantasy.com.br:21764/;",
     "Italo Radio": "http://danceradio1.shoutcaststream.com:8102/;",
     "radcap Disco": "http://79.120.77.11:8002/disco",
     "radcap NuDisco": "http://79.111.119.111:8004/nudisco",
-    "1.fm Disco": "https://strm112.1.fm/disco_128"
+    "1.fm Disco": "https://strm112.1.fm/disco_128",
+    "1000 HITS 80s": "http://c2.auracast.net:8048/stream",
+    "Rádio Disco Funk BR": "http://streaming12.hstbr.net:8084/live",
+    "70s 80s Disco Funk Mod": "https://discofunk.streamingmedia.it/usa",
+    "Nostalgie New York": "http://c32.radioboss.fm:8139/stream",
+    "RMF 80s Disco": "http://195.150.20.9/80SDISCO",
+    "1000 Discohits": "http://1000discohits.stream.laut.fm/1000discohits?uuid=dbeb1095-d215-290c-fa28-f28dea3b2c2f&t302=2026-11-19_21-11-00"
   }
 }

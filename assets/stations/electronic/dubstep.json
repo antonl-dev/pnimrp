@@ -4,18 +4,17 @@
     "Sub.FM": "http://kiyi.radioca.st:9053/SubFMMount",
     "Dubplate.fm DubBass": "https://sc2.dubplate.fm/radio/8000/dubandbass/uhifi",
     "Dubterrain.net[AutoDJ]": "http://ic2255.c471.fast-serv.com/autodj",
-    "HCT DE": "https://stream.laut.fm/hct",
+    "HCT DE": "https://hct.stream.laut.fm/hct?uuid=d05ee8be-ab68-9691-ea13-faca98f21aba&t302=2026-11-19_21-09-47",
     "LWR": "https://lwrdubstep-zaklwr10.radioca.st/stream",
-    "PartyVibeRadio UK": "http://partyvibe.com:8040/stream3",
-    "R1 BG": "https://stream.zeno.fm/xcaubmtj5dquv",
+    "R1 BG": "https://stream-175.surfernetwork.com/xcaubmtj5dquv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJ4Y2F1Ym10ajVkcXV2IiwiaG9zdCI6InN0cmVhbS0xNzUuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJYNDdDbm90RFJFR3Jod3RNcjVaNUt3IiwiaWF0IjoxNzk1MTE4OTg3LCJleHAiOjE3OTUxMTkwNDd9.yNqrzQ5meZwW39BNkvH2NAlDP_BWOzcsBpkJ5EbUnFo",
     "radcap Riddim": "http://79.111.119.111:8002/riddimdubstep",
     "radcap Dubtep": "http://79.120.39.202:8002/dubstep",
     "Sensimedia Bass Radio": "https://sensibass.radioca.st/;",
     "DnBEDM ChillStep": "https://edmdnb.com:448/radio/8000/radio.mp3",
-    "RadioSpinner Chillstep": "https://live.radiospinner.com/chillstep-32",
     "BreakingBassAir RU": "https://aircast.breaking-bass.ru:8443/air",
     "Uturn Dubstep": "https://listen.uturnradio.com/dubstep_32",
-    "Promo DJ 300 kmh": "http://radio.promodj.com:8000/300kmh-192",
-    "Line FM Gaming": "https://stream.laut.fm/linefmgaming"
+    "Line FM Gaming": "https://linefmgaming.stream.laut.fm/linefmgaming?uuid=a9eb0766-5fe3-1682-a9c9-46388fb3089e&t302=2026-11-19_21-09-49",
+    "ElectroDanceWorld Radi": "http://stream-178.surfernetwork.com/s70bvdgqks8uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJzNzBidmRncWtzOHV2IiwiaG9zdCI6InN0cmVhbS0xNzguc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJMbnA2RFJta1Q1MjhxeXJZVzNCYm93IiwiaWF0IjoxNzk1MTE5MDAzLCJleHAiOjE3OTUxMTkwNjN9.HUM-UDdVgD3tqCiwDo78SmsXzqzHIQV87VGOSYdOVqU",
+    "PulseEDM Dance Music R": "http://pulseedm.cdnstream1.com:8124/1373_128"
   }
 }

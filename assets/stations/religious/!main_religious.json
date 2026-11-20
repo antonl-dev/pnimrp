@@ -1,9 +1,20 @@
 {
   "stations": {
     "Ancient Faith Radio": "https://ancientfaith.streamguys1.com/talk",
-    "radcap Orthodox": "http://79.111.14.76:9127/",
     "RadioVaticana": "https://radio.vaticannews.va/stream-en",
-    "LiveQuranRadio": "http://104.167.2.55:2199/tunein/qasiuran.pls",
-    "Jewish Music Stream": "http://stream2.jewishmusicstream.com:10000/stream"
+    "Jewish Music Stream": "http://stream2.jewishmusicstream.com:10000/stream",
+    "WALM 2 HD": "https://icecast.walmradio.com:8443/walm2",
+    "R Mojdeh": "http://ic2326.c1261.fast-serv.com/rm128",
+    "R Mojdeh - Iranian Far": "https://ic2326.c1261.fastserv.com/rm128",
+    "R Maria": "http://dreamsiteradiocp.com:8092/;",
+    "RADIO MARIA TOGO": "http://dreamsiteradiocp.com:8050/stream",
+    "RADIO MARIA RWANDA": "http://dreamsiteradiocp.com:8044/stream",
+    "RADIO MARÍA ESPAÑA": "http://dreamsiteradiocp2.com:8006/stream",
+    "Rádio Lumen": "http://audio.lumen.sk:8000/live128.mp3",
+    "R María El Salvador 10": "http://dreamsiteradiocp.com:8098/stream",
+    "DWG Radio Bumese": "http://server32349.streamplus.de/;?type=http&#038;nocache=227",
+    "RADIO MARIA BURUNDI": "http://dreamsiteradiocp.com:8058/stream",
+    "Nigerian Gospel Music": "http://stream-283.surfernetwork.com/3fmqr74a7f8uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiIzZm1xcjc0YTdmOHV2IiwiaG9zdCI6InN0cmVhbS0yODMuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJaSXpjb1FPcFFXNnZEQWc4NHV4UWZRIiwiaWF0IjoxNzk1MTE5MTE1LCJleHAiOjE3OTUxMTkxNzV9.t1LLZi5qbvljdyOQLtU4Z-7UoYnAFaLsnIZbHEWtooI",
+    "R Sholawat": "https://stream-177.surfernetwork.com/us5bsznu3rptv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJ1czVic3pudTNycHR2IiwiaG9zdCI6InN0cmVhbS0xNzcuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJmenNJdHVuWlQ5TzBOMnFtRWV0bzFnIiwiaWF0IjoxNzk1MTE5MTE2LCJleHAiOjE3OTUxMTkxNzZ9.YoNJ5Tle1zG7N5DXHgiKOOpMMSVSynrCYnKU74Z9yJ0"
   }
 }
