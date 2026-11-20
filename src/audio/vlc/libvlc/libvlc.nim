@@ -23,7 +23,7 @@ when not defined(nlvm):
     {.pop.}
 
 export #base
-    instance, media, mediaPlayer, errmsg
+    instance, media, mediaPlayer, equalizer, errmsg
 
 export #media
     meta, mediaGetMeta, mediaGetState, mediaRelease, mediaNewLocation,
@@ -34,4 +34,8 @@ export #mediaPlayer
     mediaPlayerRelease, mediaPlayerNewFromMedia,
     mediaPlayerPlay, mediaPlayerPause, mediaPlayerStop,
     mediaPlayerGetState,
-    mediaPlayerIsPlaying
+    mediaPlayerIsPlaying,
+    audioEqualizerNew, audioEqualizerRelease,
+    audioEqualizerSetPreamp, audioEqualizerGetPreamp,
+    audioEqualizerSetAmpAtIndex, audioEqualizerGetAmpAtIndex,
+    mediaPlayerSetEqualizer

@@ -1,0 +1,125 @@
+{
+  "activePreset": "flat",
+  "enabled": true,
+  "presets": {
+    "flat": {
+      "name": "Flat",
+      "description": "Neutral uncolored sound",
+      "preamp": 0.0,
+      "bands": {
+        "60": 0.0,
+        "170": 0.0,
+        "310": 0.0,
+        "600": 0.0,
+        "1000": 0.0,
+        "3000": 0.0,
+        "6000": 0.0,
+        "12000": 0.0,
+        "14000": 0.0,
+        "16000": 0.0
+      }
+    },
+    "bass_boost": {
+      "name": "Bass Boost",
+      "description": "Deep low-end punch for Electronic, Dance, and Hip-Hop",
+      "preamp": -2.0,
+      "bands": {
+        "60": 7.0,
+        "170": 5.0,
+        "310": 3.0,
+        "600": 0.0,
+        "1000": 0.0,
+        "3000": 0.0,
+        "6000": 0.0,
+        "12000": 1.0,
+        "14000": 1.0,
+        "16000": 1.0
+      }
+    },
+    "vocal": {
+      "name": "Vocal / Talk Radio",
+      "description": "Speech clarity for news, podcasts, and talk radio",
+      "preamp": 0.0,
+      "bands": {
+        "60": -4.0,
+        "170": -2.0,
+        "310": 0.0,
+        "600": 2.5,
+        "1000": 4.5,
+        "3000": 5.0,
+        "6000": 3.0,
+        "12000": 0.0,
+        "14000": -2.0,
+        "16000": -4.0
+      }
+    },
+    "rock": {
+      "name": "Rock & Metal",
+      "description": "Punchy lows, crisp highs, and slightly scooped mids",
+      "preamp": -1.5,
+      "bands": {
+        "60": 5.0,
+        "170": 3.5,
+        "310": 1.0,
+        "600": -1.0,
+        "1000": -1.5,
+        "3000": 1.0,
+        "6000": 3.5,
+        "12000": 5.0,
+        "14000": 5.0,
+        "16000": 5.0
+      }
+    },
+    "electronic": {
+      "name": "Electronic / Club",
+      "description": "Tight sub-bass and snappy treble for EDM & Techno",
+      "preamp": -2.0,
+      "bands": {
+        "60": 6.5,
+        "170": 5.0,
+        "310": 1.0,
+        "600": 0.0,
+        "1000": -1.0,
+        "3000": 2.0,
+        "6000": 4.0,
+        "12000": 5.5,
+        "14000": 6.0,
+        "16000": 6.0
+      }
+    },
+    "jazz": {
+      "name": "Jazz & Acoustic",
+      "description": "Warm upright bass and smooth natural highs",
+      "preamp": 0.0,
+      "bands": {
+        "60": 3.0,
+        "170": 2.0,
+        "310": 0.0,
+        "600": 1.0,
+        "1000": 1.5,
+        "3000": 1.0,
+        "6000": 2.0,
+        "12000": 3.0,
+        "14000": 3.0,
+        "16000": 2.0
+      }
+    },
+    "classical": {
+      "name": "Classical",
+      "description": "Clean dynamic clarity for orchestral and chamber music",
+      "preamp": 0.0,
+      "bands": {
+        "60": -1.0,
+        "170": 0.0,
+        "310": 0.0,
+        "600": 0.0,
+        "1000": 0.5,
+        "3000": 1.5,
+        "6000": 2.5,
+        "12000": 3.0,
+        "14000": 2.5,
+        "16000": 1.0
+      }
+    }
+  }
+}

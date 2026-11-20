@@ -80,6 +80,21 @@ type
 const
     AsciiFrames* = [$'#', "%"]
     EmojiFrames* = ["🎵", "🎶"]
+    IsoBands* = ["60", "170", "310", "600", "1000", "3000", "6000", "12000", "14000", "16000"]
+
+type
+    EqPreset* = object
+        id*: string
+        name*: string
+        description*: string
+        preamp*: float
+        bands*: Table[string, float]
+
+    EqualizerConfig* = object
+        enabled*: bool
+        activePreset*: string
+        presetOrder*: seq[string]
+        presets*: Table[string, EqPreset]
 
 when not defined(simple):
     type
@@ -105,6 +120,7 @@ type
             mpvCtx*: ptr Handle
         lastVolume*: int
         fullMediaTitle*: string
+        equalizerConfig*: EqualizerConfig
 
         # Theme
         theme*: Theme
@@ -152,7 +168,13 @@ proc newAppState*(
       animationFrame: 0,
       lastAnimationUpdate: now(),
       startingX: 0,
-      terminalSupportsEmoji: (when defined(noEmoji): false else: true)
+      terminalSupportsEmoji: (when defined(noEmoji): false else: true),
+      equalizerConfig: EqualizerConfig(
+        enabled: true,
+        activePreset: "flat",
+        presetOrder: @["flat"],
+        presets: initTable[string, EqPreset]()
+      )
     )
     when not defined(simple):
         result.emojiPositions = newSeqOfCap[(int, int)](32)

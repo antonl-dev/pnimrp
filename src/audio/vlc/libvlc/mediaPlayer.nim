@@ -30,5 +30,26 @@ proc mediaPlayerRelease*(p_mi: ptr mediaPlayer)
 proc mediaPlayerNewFromMedia*(p_md: ptr media): ptr mediaPlayer
     {.importc: "libvlc_media_player_new_from_media".}
 
+proc audioEqualizerNew*(): ptr equalizer
+    {.importc: "libvlc_audio_equalizer_new".}
+
+proc audioEqualizerRelease*(p_equalizer: ptr equalizer)
+    {.importc: "libvlc_audio_equalizer_release".}
+
+proc audioEqualizerSetPreamp*(p_equalizer: ptr equalizer, f_preamp: cfloat): cint
+    {.importc: "libvlc_audio_equalizer_set_preamp".}
+
+proc audioEqualizerGetPreamp*(p_equalizer: ptr equalizer): cfloat
+    {.importc: "libvlc_audio_equalizer_get_preamp".}
+
+proc audioEqualizerSetAmpAtIndex*(p_equalizer: ptr equalizer, f_amp: cfloat, u_band: cuint): cint
+    {.importc: "libvlc_audio_equalizer_set_amp_at_index".}
+
+proc audioEqualizerGetAmpAtIndex*(p_equalizer: ptr equalizer, u_band: cuint): cfloat
+    {.importc: "libvlc_audio_equalizer_get_amp_at_index".}
+
+proc mediaPlayerSetEqualizer*(p_mi: ptr mediaPlayer, p_equalizer: ptr equalizer): cint
+    {.importc: "libvlc_media_player_set_equalizer".}
+
 when not defined(nlvm):
     {.pop.}

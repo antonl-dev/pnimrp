@@ -1,7 +1,9 @@
 import
     menuui,
     commonui,
-    ../utils/utils
+    ../utils/utils,
+    ../audio/equalizer,
+    tables
 
 import
     terminal
@@ -14,16 +16,32 @@ proc drawHeaderPlayerUI(appState: AppState, section: string) =
         setCursorPos(0, 0) # Line 0
         say(AppNameShort & " > " & section, fgYellow)
 
-proc drawStatusAndVolumePlayerUI(appState: AppState, status: string, volume: int) =
-    ## Draws the status and volume section of the player UI.
-
+proc drawStatusAndVolumePlayerUI*(appState: AppState, status: string, volume: int, eqPresetName: string = "") =
+    ## Draws the status, volume, and active equalizer preset in the player UI.
     setCursorPos(0, 3)
     eraseLine()
     setCursorPos(0, 3)
     let volumeColor = volumeColor(volume)
-    say("Status: " & status & "    | Volume: ", fgGreen, xOffset = 0,
-            shouldEcho = false)
-    styledEcho(" ", volumeColor, $volume & "%")
+    var eqName = eqPresetName
+    if eqName.len == 0 and appState != nil:
+        if appState.equalizerConfig.presets.len > 0:
+            let actPreset = appState.equalizerConfig.getActivePreset()
+            eqName = actPreset.name
+        else:
+            eqName = "Flat"
+
+    let isNarrow = appState.termWidth < 60
+    if isNarrow:
+        stdout.styledWrite(fgGreen, "Status: " & status & " | Vol: ")
+        stdout.styledWrite(volumeColor, $volume & "%")
+        stdout.styledWrite(fgGreen, " | EQ: ")
+        stdout.styledWrite(fgMagenta, eqName)
+    else:
+        stdout.styledWrite(fgGreen, "Status: " & status & "    | Volume: ")
+        stdout.styledWrite(volumeColor, $volume & "%")
+        stdout.styledWrite(fgGreen, "    | EQ: ")
+        stdout.styledWrite(fgMagenta, eqName)
+    stdout.flushFile()
 
 proc drawNowPlayingPlayerUI(appState: AppState, nowPlaying: string) =
     when defined(simple):
@@ -41,14 +59,9 @@ proc drawNowPlayingPlayerUI(appState: AppState, nowPlaying: string) =
         if not nowPlaying.checkIfTooLongForUI(appState.termWidth):
             stdout.styledWrite(fgCyan, nowPlaying)
 
-proc updateVolumePlayerUI*(appState: AppState, newVolume: int) =
-    setCursorPos(24, 3)
-    let volumeColor = volumeColor(newVolume)
-    if not appState.terminalSupportsEmoji:
-        stdout.write "  "
-    stdout.write " "
-    stdout.styledWrite(volumeColor, $newVolume & "% ") #when go from 100 to less
-    stdout.flushFile()
+proc updateVolumePlayerUI*(appState: AppState, newVolume: int, status: string = "") =
+    let st = if status.len > 0: status else: (if appState.terminalSupportsEmoji: "🎵" else: "[>]")
+    appState.drawStatusAndVolumePlayerUI(st, newVolume)
 
 proc updateCurrentSongPlayerUI*(appState: AppState, songName: string) =
     setCursorPos(0, 2) # Line 2 (below the separator)
@@ -57,13 +70,9 @@ proc updateCurrentSongPlayerUI*(appState: AppState, songName: string) =
     appState.drawNowPlayingPlayerUI(songName)
     stdout.flushFile()
 
-proc updatePlayMutedStatePlayerUI*(appState: AppState, status: string) =
-    setCursorPos(8, 3)
-    stdout.styledWrite(fgGreen, status)
-    if not appState.terminalSupportsEmoji:
-        stdout.write " "
-    stdout.write " "
-    stdout.flushFile()
+proc updatePlayMutedStatePlayerUI*(appState: AppState, status: string, volume: int = -1) =
+    let vol = if volume >= 0: volume else: (if appState != nil: appState.lastVolume else: 100)
+    appState.drawStatusAndVolumePlayerUI(status, vol)
 
 proc drawPlayerUIInternal(appState: AppState, section, nowPlaying,
         status: string, volume: int) =
@@ -96,7 +105,7 @@ proc drawPlayerUIInternal(appState: AppState, section, nowPlaying,
 
     # Display footer options
     setCursorPos(0, 5) # Line 5
-    let footerOptions = "[P] Pause/Play   [-/+] Adjust Volume   [Q] Quit"
+    let footerOptions = getFooterOptions(isMainMenu = false, isPlayerUI = true)
     say(footerOptions, fgYellow, xOffset = (appState.termWidth -
             footerOptions.len) div 2)
 

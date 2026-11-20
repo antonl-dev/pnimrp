@@ -2,6 +2,7 @@ type
     instance* = distinct object
     media* = distinct object
     mediaPlayer* = distinct object
+    equalizer* = distinct object
 
 const dynlibName* =
     when defined(windows): "libvlc.dll"

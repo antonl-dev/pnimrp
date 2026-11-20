@@ -1,5 +1,6 @@
-import strutils
+import strutils, tables
 import libvlc/[libvlc, base]
+import ../../utils/utilstypes
 
 type VlcError* = object of CatchableError
 
@@ -14,6 +15,7 @@ type libvlcHandle* = object
     mediaDscptr*: ptr media
     mediaPlayerCtx*: ptr mediaPlayer
     stateInfo: libvlcStateInfo
+    currentEq*: ptr equalizer
 
 proc checkError*(status: cint, msg: cstring) =
     if status == -1:
@@ -115,8 +117,13 @@ proc initNewCtx*(): ref libvlchandle =
 proc deinitPlayer*(Handle) =
     if Handle == nil: return
     if Handle.mediaPlayerCtx != nil:
+        if Handle.currentEq != nil:
+            discard libvlc.mediaPlayerSetEqualizer(Handle.mediaPlayerCtx, nil)
         libvlc.mediaPlayerRelease(Handle.mediaPlayerCtx)
         Handle.mediaPlayerCtx = nil
+    if Handle.currentEq != nil:
+        libvlc.audioEqualizerRelease(Handle.currentEq)
+        Handle.currentEq = nil
     if Handle.mediaDscptr != nil:
         libvlc.mediaRelease(Handle.mediaDscptr)
         Handle.mediaDscptr = nil
@@ -136,6 +143,37 @@ proc allocateJobVlc*(Handle; url: string) =
     Handle.mediaPlayerCtx = libvlc.mediaPlayerNewFromMedia(Handle.mediaDscptr)
     if Handle.stateInfo.currentVol > 0:
         discard audioSetVolume(Handle.mediaPlayerCtx, Handle.stateInfo.currentVol)
+    if Handle.currentEq != nil and Handle.mediaPlayerCtx != nil:
+        discard libvlc.mediaPlayerSetEqualizer(Handle.mediaPlayerCtx, Handle.currentEq)
+
+proc setEqualizerVlc*(Handle; preset: EqPreset) =
+    if Handle == nil: return
+
+    var isAllZero = (preset.preamp == 0.0)
+    if isAllZero:
+        for b in IsoBands:
+            if preset.bands.getOrDefault(b, 0.0) != 0.0:
+                isAllZero = false
+                break
+
+    if isAllZero:
+        if Handle.mediaPlayerCtx != nil:
+            discard libvlc.mediaPlayerSetEqualizer(Handle.mediaPlayerCtx, nil)
+        if Handle.currentEq != nil:
+            libvlc.audioEqualizerRelease(Handle.currentEq)
+            Handle.currentEq = nil
+        return
+
+    if Handle.currentEq == nil:
+        Handle.currentEq = libvlc.audioEqualizerNew()
+
+    if Handle.currentEq != nil:
+        discard libvlc.audioEqualizerSetPreamp(Handle.currentEq, cfloat(preset.preamp))
+        for i, freq in IsoBands:
+            let gain = preset.bands.getOrDefault(freq, 0.0)
+            discard libvlc.audioEqualizerSetAmpAtIndex(Handle.currentEq, cfloat(gain), cuint(i))
+        if Handle.mediaPlayerCtx != nil:
+            discard libvlc.mediaPlayerSetEqualizer(Handle.mediaPlayerCtx, Handle.currentEq)
 
 proc setAllyOptionsVlc*(Handle) =
     libvlc.setUserAgent(Handle.ctx, "pnimrp/0.1", "pnimrp/0.1")

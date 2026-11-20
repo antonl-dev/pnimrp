@@ -7,6 +7,7 @@ import
     ../vendor/illwill, playeruiutils, menuui,
 
     ../audio/audio,
+    ../audio/equalizer,
     ../audio/mpv/[
         player
     ],
@@ -136,25 +137,34 @@ proc handlePlayerKeyInput*(
         state.isPaused = not state.isPaused
         ctx.pause(state.isPaused)
         appState.updatePlayMutedStatePlayerUI(currentStatusEmoji(
-                currentStatus(state), appState.terminalSupportsEmoji))
+                currentStatus(state), appState.terminalSupportsEmoji), state.volume)
 
     of Key.M:
         state.isMuted = not state.isMuted
         ctx.mute(state.isMuted)
         appState.updatePlayMutedStatePlayerUI(currentStatusEmoji(
-                currentStatus(state), appState.terminalSupportsEmoji))
+                currentStatus(state), appState.terminalSupportsEmoji), state.volume)
 
     of Key.Slash, Key.Plus:
         state.volume = min(state.volume + VolumeStep, MaxVolume)
         appState.lastVolume = state.volume
         ctx.setVolume(state.volume)
-        appState.updateVolumePlayerUI(state.volume)
+        appState.updateVolumePlayerUI(state.volume, currentStatusEmoji(
+                currentStatus(state), appState.terminalSupportsEmoji))
 
     of Key.Asterisk, Key.Minus:
         state.volume = max(state.volume - VolumeStep, MinVolume)
         appState.lastVolume = state.volume
         ctx.setVolume(state.volume)
-        appState.updateVolumePlayerUI(state.volume)
+        appState.updateVolumePlayerUI(state.volume, currentStatusEmoji(
+                currentStatus(state), appState.terminalSupportsEmoji))
+
+    of Key.E:
+        if appState != nil and appState.equalizerConfig.presets.len > 0:
+            let nextPreset = appState.equalizerConfig.cycleNextPreset()
+            ctx.applyEqualizer(nextPreset)
+            let statusEmoji = currentStatusEmoji(currentStatus(state), appState.terminalSupportsEmoji)
+            appState.drawStatusAndVolumePlayerUI(statusEmoji, state.volume, nextPreset.name)
 
     of Key.R, Key.BackSpace:
         when defined(volumeFade):
@@ -281,6 +291,10 @@ proc playStation*(appState: AppState, config: MenuConfig) =
         var animationCounter: int = 0
 
     ctx.allocateJob(config.stationUrl)
+
+    if appState != nil and appState.equalizerConfig.enabled:
+        let activePreset = appState.equalizerConfig.getActivePreset()
+        ctx.applyEqualizer(activePreset)
 
     when defined(volumeFade):
         ctx.setVolume(0)

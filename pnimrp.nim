@@ -8,6 +8,7 @@ import
         menu, vendor/illwill, ui/hidestderr, ui/menuui,
         utils/utils,
         audio/audio,
+        audio/equalizer,
         audio/mpv/player,
     ]
 
@@ -46,6 +47,7 @@ proc validateEnvironment(appState: AppState) =
 
     assertAssetNotFound configDir / "qoute.json", isDir = false
     assertAssetNotFound configDir / "themes.json", isDir = false
+    assertAssetNotFound configDir / "equalizer.json", isDir = false
     assertAssetNotFound configDir / "sounds" / "bell.ogg", isDir = false
 
     when not defined(simple):
@@ -141,6 +143,12 @@ proc main() =
         when not defined(vlc):
             appState.mpvCtx = MpvAudioContext(appState.audioCtx).mpvHandle
         defer: appState.audioCtx.deinitAudio()
+
+        # Load equalizer configuration and apply active preset
+        let eqConfigPath = appState.configDir / "equalizer.json"
+        appState.equalizerConfig = loadEqualizerConfig(eqConfigPath)
+        let activeEq = appState.equalizerConfig.getActivePreset()
+        appState.audioCtx.applyEqualizer(activeEq)
 
         # Start the main menu with the configured assets directory
         appState.drawMainMenu(appState.stationsDir)

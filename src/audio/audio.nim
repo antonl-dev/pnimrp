@@ -4,6 +4,7 @@ const isVlc* =
         defined(vlc)
 
 import os, tables, strutils
+import equalizer
 
 when isVlc:
     import vlc/helper
@@ -156,6 +157,26 @@ proc setVolume*(ctx: AudioContext, vol: int) =
         let mpv = MpvAudioContext(ctx)
         if mpv.mpvHandle != nil:
             mpv.mpvHandle.setVolumeMpv(vol)
+
+proc setAudioFilter*(ctx: AudioContext, filterStr: string) =
+    if ctx == nil: return
+    when isVlc:
+        discard
+    else:
+        let mpv = MpvAudioContext(ctx)
+        if mpv.mpvHandle != nil:
+            mpv.mpvHandle.setAudioFilterMpv(filterStr)
+
+proc applyEqualizer*(ctx: AudioContext, preset: EqPreset) =
+    if ctx == nil: return
+    when isVlc:
+        let vlc = VlcAudioContext(ctx)
+        if vlc.vlcHandle != nil:
+            vlc.vlcHandle.setEqualizerVlc(preset)
+    else:
+        let mpv = MpvAudioContext(ctx)
+        if mpv.mpvHandle != nil:
+            mpv.mpvHandle.setAudioFilterMpv(preset.toFilterString())
 
 proc stopCurrentJob*(ctx: AudioContext) =
     if ctx == nil: return

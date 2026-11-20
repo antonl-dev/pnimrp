@@ -242,5 +242,12 @@ export
 proc setVolumeMpv*(ctx; vol: int) =
     cE ctx.setOptionString("volume", cstring $vol)
 
+proc setAudioFilterMpv*(ctx; filterStr: string) =
+    if ctx == nil: return
+    try:
+        cE ctx.setPropertyString("af", cstring(filterStr))
+    except Exception:
+        discard
+
 proc deinitPlayer*(ctx) =
     ctx.terminateDestroy()
