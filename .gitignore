@@ -12,3 +12,5 @@ findDead/findDead
 /src/txt
 .statuscache
 history.txt
+__pycache__/
+*.py[cod]
